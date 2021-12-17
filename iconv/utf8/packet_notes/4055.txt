@@ -1,0 +1,11 @@
+Previous (outdated) O-A 2233 cell type was split into this active cell type and an 0233 suspended cell type.
+<p>
+Target pyramidal cells (dendrites, somata, AND axon initial segment) as well as other interneurons (dendrites).
+<p>
+The Lacaille papers were previously considered inadequate for the creation of an active cell class.  That decision was revisited.
+<p>
+According to the Lacaille 1990 paper, 50% of the cells have D:SLM and 50% do not.  Unfortunately, the extent of the dendrites in the latter case is unclear and the cell type is suspended.  See also:  CA1 0233 O-A.
+<p>
+Lacaille 1987 mentions other (unspecified) morphologies and contains some troubling/vague phrasing, but there is enough evidence in their text to push this through as a class.
+<p>
+Lacaille 1990 does not contain axonal information and is in a separate species (rat, rather than guinea pig), BUT since the first author is the same and he makes the statement that these cells have "similar morphology," the information is considered linked and is used.

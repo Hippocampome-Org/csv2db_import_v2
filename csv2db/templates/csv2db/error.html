@@ -1,0 +1,9 @@
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'csv2db/css/style.css' %}" />
+
+<ol>
+    <li><h2>start...</h2></li>
+    <li><h2>KeyError - likely selected wrong file type</h2></li>
+    <li><a href="{% url 'csv2db:index' %}">back</a></li>
+</ol>

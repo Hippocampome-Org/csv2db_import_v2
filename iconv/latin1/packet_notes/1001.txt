@@ -1,0 +1,13 @@
+All SGC neurons have D:SMo_SMi and A:H.
+<p>
+In Williams (2007), 4 of 10 reconstructions have A:SM, which is later restated as not all reconstructions have A:SMi.  3 of these 4 reconstructions have A:SG.
+<p>
+Unable to infer about the presence of A:SG when there is no A:SMi, so insufficient data to establish a second (suspended) class.
+<p>
+SGCs and GCs share polarized dendrites, similar sized somata, and a primary axon directed toward H.
+<p>
+Contact mossy cells and interneurons in the hilus.
+<p>
+In Larimer (2010), perforant path stimulation is interpreted as D:SMo.
+<p>
+In Larimer (2010), the youngest rats may be adolescents.

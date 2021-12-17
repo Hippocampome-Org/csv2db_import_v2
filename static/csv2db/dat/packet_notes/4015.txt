@@ -1,0 +1,4 @@
+This class is a merger of<br>
+&emsp;CA1 2311 Schaffer collateral-associated (SCA) cells (earliest citations by Cossart et al., 1998, and Vida et al., 1998)<br>
+&emsp;CA1 2311 trilaminar cells (in Pawelzik et al., 2002)<br>
+&emsp;CA1 2311 apical dendrite-innervating (ADI) cells (in Klausberger et al., 2005)

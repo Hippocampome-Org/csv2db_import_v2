@@ -1,0 +1,59 @@
+process order,csv filename,tables populated,derived from
+1,type.csv,Type(all but notes field),type_v1.0.xlsx
+2,packet_notes.csv,Type(updates notes field),packet_notes_v1.0.csv
+3,known_connections.csv,TypeTypeRel,conndata.xlsx
+4,synonym.csv,"Synonym, SynonymTypeRel",synonyms.csv
+5,article.csv,"Article, ArticleAuthorRel, Author",article_v1.0.xlsx
+6,attachment_morph.csv,"Attachment, FragmentTypeRel",attachment_morph_v1.0.xlsx
+7,attachment_marker.csv,Attachment,attachment_marker_v1.0.xlsx
+8,attachment_ephys.csv,Attachment,attachment_ephys_v1.0.xlsx
+9,attachment_fp.csv,Attachment,attachment_FP_v1.0.xlsx
+10,morph_fragment.csv,"ArticleEvidenceRel, Evidence, EvidenceFragmentRel, Fragment, FragmentTypeRel(updates Fragment_id field)",URD_morph_v1.0.xlsx
+11,marker_fragment.csv,"ArticleEvidenceRel, Evidence, EvidenceFragmentRel, Fragment",URD_marker_v1.0.xlsx
+12,ep_fragment.csv,"ArticleEvidenceRel, Evidence, EvidenceFragmentRel, Fragment",URD_ephys_v1.0.xlsx
+13,fp_fragment.csv,"ArticleEvidenceRel, Evidence, EvidenceFragmentRel, Fragment",URD_FP_v1.0.xlsx
+14,markerdata.csv,"ArticleSynonymRel, Evidence, EvidenceEvidenceRel, EvidenceMarkerdataRel, EvidencePropertyTypeRel, Markerdata, Property",Hippocampome-Markers_DE-INF_v1.0.xlsx
+15,epdata.csv,"ArticleEvidenceRel, ArticleSynonymRel, Epdata, EpdataEvidenceRel, Evidence, EvidenceEvidenceRel, EvidenceFragmentRel, EvidencePropertyTypeRel, Fragment, Property",EP_values_all_data_v1.0.csv
+16,morphdata.csv,"ArticleSynonymRel, EvidencePropertyTypeRel, Property",Hippocampome_axon-dendrite-soma_v1.0.xlsx
+17,fp_definitions.csv,FiringPattern,FP_definitions.xlsx
+18,fp_parameters.csv,"FiringPattern, FiringPatternRel",FPparameters_v1.0.xlsx
+19,material_method.csv,MaterialMethod,FP-Materials-Methods_v1.0.xlsx
+20,conn_fragment.csv,"ArticleEvidenceRel, Evidence, EvidenceFragmentRel, ConnFragment",connfragment.csv
+21,conndata.csv,Conndata,conndata.xlsx
+22,term.csv,Term,term.csv
+23,onhold_types_pmids.csv,Onhold,Help_On-hold_Types.docx
+24,izhmodels_single.csv,Izhmodels,IzhModels_Matrix_v1.0.csv
+25,user.csv,User,user.csv
+26,attachment_neurite.csv,attachment_neurite,attachment_neurite_v1.0.xlsx
+27,neurite_quantified.csv,neurite_quantified,neurites_quantified_v1.0.xlsx
+28,neurite.csv,neurite,URD_neurite_v1.0.xlsx
+29,potential_synapses.csv,potential_synapses,Potential Synapses 4.0.xlsx
+30,number_of_contacts.csv,number_of_contacts,Potential Synapses 4.0.xlsx
+31,attachment_conn.csv,attachment_connectivity,attachment_conn_v1.0.xlsx
+32,fragment_nbyk.csv,"SynproFragment, SynproArticleEvidenceRel, SynproEvidenceFragmentRel",fragment_nbyk.xlsx
+33,evi_pro_type_rel_nbyk.csv,SynproEvidencePropertyTypeRel,evi_pro_type_rel_nbyk.xlsx
+34,fragment_nbym.csv,"SynproFragment, SynproArticleEvidenceRel, SynproEvidenceFragmentRel",fragment_nbym.xlsx
+35,evi_pro_type_rel_nbym.csv,SynproEvidencePropertyTypeRel,evi_pro_type_rel_nbym.xlsx
+36,synpro_prop_parcel_rel.csv,SynproPropParcelRel,synpro_prop_parcel_rel.xlsx
+37,synpro_type_type_rel.csv,SynproTypeTypeRel,synpro_type_type_rel.xlsx
+38,attachment_neurite_rar.csv,attachment_neurite_rar2,attachment_neurite_rar_v1_0_update_022720.xlsx
+39,SynproCP.csv,SynproCP,SynproCP.csv
+40,SynproCPTotal.csv,SynproCPTotal,SynproCPTotal.csv
+41,SynproNOC.csv,SynproNOC,SynproNOC.csv
+42,SynproNOCTotal.csv,SynproNOCTotal,SynproNOCTotal.csv
+43,SynproNoPS.csv,SynproNoPS.csv,SynproNoPS.csv
+44,SynproNPSTotal.csv,SynproNPSTotal.csv,SynproNPSTotal.csv
+45,SynproParcelVolumes.csv,SynproParcelVolumes.csv,SynproParcelVolumes.csv
+46,SynproSubLayers.csv,SynproSubLayers.csv,SynproSubLayers.csv
+47,SynproVolumesSelected.csv,SynproVolumesSelected.csv,SynproVolumesSelected.csv
+48,phases.csv,phases,phases_v2.0.csv
+49,phases_fragment.csv,phases_fragment,URD_phases_v2.0.xlsx
+50,attachment_phases.csv,attachment_phases,attachment_phases_v2.0.xlsx
+51,phases_evidence_type_rel.csv,phases_evidence_type_rel,phases_evidence_type_rel.xlsx
+52,phases_evidence_fragment_rel.csv,phases_evidence_fragment_rel,phases_evidence_fragment_rel.xlsx
+53,markerdata.csv,"ArticleSynonymRel, Evidence, EvidenceEvidenceRel, EvidenceMarkerdataRel, EvidencePropertyTypeRel, Markerdata, Property",Hippocampome-Markers_DE-INF_v1.0.xlsx
+54,counts.csv,counts,counts.xlsx
+55,counts_fragment.csv,counts_fragment,URD_counts_v1.0.xlsx
+56,counts_evidence_type_rel.csv,counts_evidence_type_rel,counts_evidence_type_rel.xlsx
+57,counts_evidence_fragment_rel.csv,counts_evidence_fragment_rel,counts_evidence_fragment_rel.xlsx
+58,attachment_counts.csv,attachment_counts,attachment_counts_v1.0.xlsx

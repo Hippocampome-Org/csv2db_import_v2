@@ -1,0 +1,10 @@
+Rejected merger with CA1 (-)3220 peforant path-associated (PPA) neurons, which is now merged into CA1 (-)3222 peforant path-associated (PPA) neurons.
+<p>
+Related classes:<br>
+&emsp;CA1 (-)1002 oriens-lacunosum moleculare (O-LM) neurons (active)<br>
+&emsp;CA1 (-)1003 oriens-lacunosum moleculare (O-LM) neurons (active)<br>
+&emsp;CA1 (-)1102p-CA3 10000 oriens-lacunosum moleculare (O-LM) neurons (suspended)
+<p>
+Cited by Somogyi & Klausberger 2005 but not picked up in their later papers.
+<p>
+In Figure 4, borderline axons in SR are considered less than 15% since the authors report extensive branching in SLM but "axons could only be followed for short distances after entering SLM because they became obscured by the high density of other EGFP-expressing axonal processes."

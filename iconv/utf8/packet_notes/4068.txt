@@ -1,0 +1,5 @@
+Axonal arbor is very wide and extent of projections is somewhat unclear.  The subject is not discussed in Katona (1999) and Losonczy (2002) admit that the arbor was likely "severly truncated" due to slicing.
+<p>
+The cell in Losonczy's Fig 5a does not project to CA3, though the authors speculate that 40% of oriens-bistratified cells project both there and to the subiculum.
+<p>
+Electrophysiology and chemical marker (SST+) data in Losonczy (2002).

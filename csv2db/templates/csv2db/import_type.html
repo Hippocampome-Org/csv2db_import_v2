@@ -1,0 +1,10 @@
+<form enctype="multipart/form-data" method="post" action="/krasnow/csv2db/import_type/">
+    {% csrf_token %}
+    <h1>Import Type</h1>
+    <h2>populates table Type (all but notes field)</h2>
+    <h3>type.csv</h3>
+    <table>
+        {{ form.as_table }}
+    </table>
+    <input type="submit" value="Submit"/>
+</form>

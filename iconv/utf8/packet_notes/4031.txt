@@ -1,0 +1,5 @@
+This cell type is a merger of CA1 (-)0102 IS-I and CA1 (-)0112 IS-I
+<p>
+Previous merger of CA1 (-)0102 IS-I with CA1 0103 O-R (aka oriens-bistratified) was rejected due to the lack of axonal evidence in SO.  Namely, even with six consecutive 80 &# 956;m sections, axons were not significantly present.
+<p>
+According to Guly&#225;s, the CR interneurons in this cell type innervate mostly if not exclusively other GABAergic neurons via multiple synapses

@@ -1,0 +1,11 @@
+ul li {
+    list-style-type: disc;
+    margin-left: 2em;
+    color: teal;
+}
+ul li a {
+    color: fuchsia;
+}
+body {
+    background: white url("../img/Krasnow.png") no-repeat fixed center;
+}

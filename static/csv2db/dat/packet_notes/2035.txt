@@ -1,0 +1,5 @@
+The articles in this cell type were part of the old MFA 03332p cell type.  That cell type has been split into this cell type and the 03330p cell type.
+<p>
+Borderline:  some axonal presence in SO and SR
+<p>
+Axons have not been counted in SR for this cell, despite the personal communication from Dr Soltesz suggesting that MFA's make synapses with the dendrites of CA3 granule cells in SR, because the cells identified in the Soltesz work show the 03330p pattern.

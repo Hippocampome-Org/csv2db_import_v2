@@ -1,0 +1,31 @@
+Background references checked and included in another cell type:
+<p>
+&emsp;Spruston et al., 1997 (CA3 03331 lucidum cells)
+<p>
+&emsp;Spruston et al., 1997 (CA3 03320 lucidum cells)
+<p>
+&emsp;T&#243;th and McBain, 1998 (CA3 02330 lucidum cells)
+<p>
+&emsp;T&#243;th and McBain, 1998 (CA3 00300 lucidum cells)
+<p>
+Background references checked and omitted:
+<p>
+&emsp;Aaron et al., 2003: unable to stain axons
+<p>
+&emsp;Acs&#225;dy et al., 1997: no axonal information
+<p>
+&emsp;Acs&#225;dy et al., 1998: no axonal information    
+<p>
+&emsp;Guly&#225;s et al., 1992: unable to stain axons
+<p>
+&emsp;Hsu and BuzsÃÂÃÂ¡ki, 1993: ischemic cells only
+<p>
+&emsp;Jinno et al., 2007: single CA3 cell that projects to CA1:SR_SP
+<p>
+&emsp;Soriano and Frotscher, 1993: unable to stain axons
+<p>
+&emsp;Szabadics et al., 2010: no axonal information
+<p>
+&emsp;Tak&#225;cs et al., 2008: unable to stain axons
+<p>
+&emsp;Wittner et al., 2006: no axonal or dendritic details

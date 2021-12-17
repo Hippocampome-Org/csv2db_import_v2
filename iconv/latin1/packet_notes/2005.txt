@@ -1,0 +1,3 @@
+This class is a merger of<br>
+&emsp;CA3 33200 L-M cells<br>
+&emsp;CA3 33200 R cells

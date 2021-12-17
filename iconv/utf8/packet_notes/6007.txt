@@ -1,0 +1,1 @@
+This cell type was approved when it defined by a total of three references.  Its patterning has not changed.  The cell type had to be split because this cell is excitatory and the other two are inhibitory.  The other two cells are in the pyramid-looking III cell type.

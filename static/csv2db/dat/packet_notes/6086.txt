@@ -1,0 +1,5 @@
+This cell type represents a merger between EC (+)000333p-SUB 111 multipolar projecting V neurons and EC (+)000033 multipolar-pyramid VI neurons.
+<p>   
+Excitatory cells (Gloveli 2001 -> GABA negative, projecting, similar EP characteristics to principal neurons; Canto & Witter 201X LEC preprint -> projecting, spiny, "principal"; Canto 2008 -> spiny, projecting).
+<p>
+The former 000033 class contains an unspecified axonal projection to the subiculum, and the former 000333 class is known to project to all 3 layers of the subiculum.  In 000033, evidence for axons and dendrites in IV is subthreshold, but there is a presence, so an aggressive merger was approved.

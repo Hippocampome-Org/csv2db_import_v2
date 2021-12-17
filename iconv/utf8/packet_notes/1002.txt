@@ -1,0 +1,27 @@
+Axonal lengths (avg. of 3 cells): SMo = 4%, SMi = 57%, SG = 7%, H = 26%, CA3 = 3%, CA1 = 1%.
+<p>
+Axonal synapses: H = 15%, SG = 3%, SMi = 82%.
+<p>
+No A:SG contacts in deep SG and only sparse A:SG contacts onto dendritic spines and shafts and a GC soma.
+<p>
+Amaral (1978) states D:SM in young (<14 d) and old (18 m) but not at 28 d.
+<p>
+Ribak et al. (1985) states occasional D:SM_SG but rarely in mature brain.
+<p>
+Dendrites appear to avoid CA3.
+<p>
+Thorny excrescences on proximal dendrites and somata and spines on distal dendrites.
+<p>
+Excitatory asymmetric synapses.
+<p>
+A:H primarily contact GABA-positive dendritic shafts, some somata, and GABA-negative dendritic spines. 
+<p>
+A:SG contact dendritic spines and shafts and GC somata.
+<p>
+A:SMi primarily contact GC proximal dendritic spines.
+<p>
+In L&#252;bke et al. (1998) some of the youngest rats may be adolescents.
+<p>
+The spiny hilar cells of Scharfman (1990) were considered for this cell type and rejected due to D:SMo_SMi and no axonal information.
+<p>
+The mossy cells of Soltesz et al. (1993) were considered for cell this type and determined to be DG (+)2323 mossy cells in another cell type.

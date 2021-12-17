@@ -1,0 +1,8 @@
+This cell type is a result of a merger between CA1 2300 IS-1 and 2310 IS-1
+<p>
+
+Unable to merge with CA1 SCA 2300 because of target specificiy.
+<p>
+This merger is a combination of two n=1 classes.
+<p>
+In this merger case, contrary to the usual hippocampome rule, axons in SP are NOT counted because somatic targeting in the principal layer is less relevant for IS interneurons.

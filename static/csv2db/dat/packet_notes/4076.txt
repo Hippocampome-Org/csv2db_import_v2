@@ -1,0 +1,8 @@
+This cell type is a result of a merger between CA1 (-)3220 perforant path-associated (PPA) neurons and CA1 (-)3202 perforant path-associated (PPA) neurons.
+<p>
+Rejected merger between CA1 (-)3202 perforant path-associated (PPA) neurons and CA1 (-)1202 pyramidal/radiatum-lacunosum moleculare (PR-LM) neurons. 
+<p>
+Related classes:<br>
+&emsp;CA1 (-)3200p-DG 1000-SUB 100 perforant path II (PP II) neurons (active)
+<p>
+Tricoire (2011): Borderline D:SLM.

@@ -1,0 +1,19 @@
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'csv2db/css/style.css' %}" />
+
+<ul>
+    <li><a href="{% url 'csv2db:import_all'        %}">Import All</a></li>
+    <li><a href="{% url 'csv2db:import_article'    %}">Import Article</a></li>
+    <li><a href="{% url 'csv2db:import_attachment' %}">Import Attachment</a></li>
+    <li><a href="{% url 'csv2db:import_connection' %}">Import Connection</a></li>
+    <li><a href="{% url 'csv2db:import_epdata'     %}">Import Epdata</a></li>
+    <li><a href="{% url 'csv2db:import_fragment'   %}">Import Fragment</a></li>
+    <li><a href="{% url 'csv2db:import_markerdata' %}">Import Markerdata</a></li>
+    <li><a href="{% url 'csv2db:import_morphdata'  %}">Import Morphdata</a></li>
+    <li><a href="{% url 'csv2db:import_notes'      %}">Import Notes</a></li>
+    <li><a href="{% url 'csv2db:import_synonym'    %}">Import Synonym</a></li>
+    <li><a href="{% url 'csv2db:import_term'       %}">Import Term</a></li>
+    <li><a href="{% url 'csv2db:import_type'       %}">Import Type</a></li>
+    <li><a href="{% url 'csv2db:import_type_dev'   %}">Import Type (dev='true')</a></li>
+</ul>

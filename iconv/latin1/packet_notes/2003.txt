@@ -1,0 +1,5 @@
+n = 7 out of 10.
+<p>
+The authors do not speculate as to whether the cells are E or I, choosing instead to remark that the class has properties of both. Our best estimate is that they are excitatory.
+<p>
+CA1 2201 RGCs also exist and are known to be excitatory.

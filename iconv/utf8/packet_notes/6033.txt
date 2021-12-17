@@ -1,0 +1,3 @@
+Failed unofficial merger proposal with 002331 globular IV/V because evidence in that cell type is too weak.
+<p>
+Likely excitatory cells (Canto & Witter 201X MEC preprint -> projecting, spiny to sparsely spiny, "principal").

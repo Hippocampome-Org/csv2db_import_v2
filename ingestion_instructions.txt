@@ -1,0 +1,22 @@
+1. Step 1: Changing username, password and dbname in krasnow/settings.py
+At line no 77 you can see something like this
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'krasnow',
+        # 'NAME': 'neuronterm',
+        'USER': 'root',
+        'PASSWORD': 'root',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
+		'OPTIONS': {'charset': 'utf8mb4'}, 
+    }
+}
+Just change user, password and name(it is DBname - in my laptop its krasnow. Make sure db is empty without any tables to run ingestion).
+2. Change to base directory
+3. Execute 
+$ ./run_csv2db_import.sh 
+or 
+$ echo 'yes' | ./run_csv2db_import.sh 
+if it is not expected that any database migration questions will be asked (if tables change the scripts will need confirming changes with yes|no questions at times).
+

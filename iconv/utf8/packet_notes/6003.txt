@@ -1,0 +1,8 @@
+Axonal presence in CA1 has been removed since it is below 15% and unsupported by the conclusions of the authors.
+<p>
+This cell type is defined by primary literature, in order of primacy from:<br>
+&emsp;Tamamaki and Nojyo, 1993 (EC layer II stellate cells)<br>
+&emsp;Canto and Witter, MEC prepreint (EC layer II stellate cells)<br>
+&emsp;Jones, 1994 (EC layer II type I & II stellate cells)<br>
+&emsp;Beed et al., 2010, (EC layer II stellate cells)<br>
+&emsp;Schwartz and Coleman, 1981, (EC layer II stellate cells)

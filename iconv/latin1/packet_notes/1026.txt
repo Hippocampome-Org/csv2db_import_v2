@@ -1,0 +1,5 @@
+N = 3 cells are spiny, N = 4 cells are aspiny.
+<p>
+Both spiny and aspiny cells are able to form basket-like bouton arrays on GC somata and somata of other hilar neurons.
+<p>
+The youngest rats may be adolescents.

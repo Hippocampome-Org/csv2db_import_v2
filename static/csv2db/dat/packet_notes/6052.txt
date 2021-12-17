@@ -1,0 +1,10 @@
+This cell type is a result of a merger between MEC 000023 pyramidal VI and EC 000023 polymorphic V.
+<p>
+Likely excitatory cells (Canto 201X MEC preprint -> "sparsely spiny to spiny," projecting; Hamam 2000 -> short spines, projecting).
+<p>
+Notes on MEC 000023 pyramidal cell type:<br>
+- dendrites and axons in the white matter
+<p>
+Notes on EC 000023 polymorphic cell type:<br>
+- weak evidence on axons<br>
+- unclear whether dendrites project to the subiculum or to the presubiculum.

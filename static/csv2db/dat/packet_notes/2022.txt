@@ -1,0 +1,5 @@
+Axonal evidence is a little bit weak; they were myelinated and disappeared into white matter towards the fimbria.  Target is likely the medial septum.
+<p>
+Other CA3 calbindin cell types exist:<br>
+- CA3 03000 calbindin<br>
+- CA3 02200 calbindin

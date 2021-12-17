@@ -1,0 +1,10 @@
+Merger approved with EC 230000 multipolar inhibitory (MPI) II neurons.
+<p>
+
+Failed unofficial merger with MEC 333000 type 4 III and EC 233000 MPI 1 III.
+<p>
+BC synapse somata of stellate II, pyramidal II, and other neurons
+<p>
+MPI cells are inhibitory, since Germroth describes the cells as nearly spineless, which takes precedence over the fact that they are projecting (axons project to the white matter).
+<p>
+Strong potential for future subclasses because of target specificity and because MPIs project to the hippocampus but there is no evidence that baskets do this.

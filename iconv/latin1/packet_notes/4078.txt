@@ -1,0 +1,12 @@
+Axo-axonic cells exclusively target pyramidal cells while basket cells are also known to target other interneurons.
+<p>
+Other classes of CA1 basket cells:<br>
+- basket 0012 cells are in the 0012 PTI cell type<br>
+- basket 2113 neurons mentioned by Fuentealba (2010) are n=1<br>
+- basket PV wide-arbour neurons mentioned by Pawelzik (2002) are considered ivy-like cells and are included in the 0333 cell type<br>
+- basket 0232 neurons mentioned by Freund & Buzs&#225;ki (1996) likely also have dendritic invasion in SLM (evidence based on Pawelzik (2002), meaning they are really basket 2232
+<p>
+perisomatic axonal targeting interpreted as PCL
+<p>
+
+extended interpretation of SP in apical and basal directions

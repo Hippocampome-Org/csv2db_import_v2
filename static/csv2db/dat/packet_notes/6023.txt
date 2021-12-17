@@ -1,0 +1,3 @@
+Rejected merger with LEC (+)113330 multipolar neurons 1 III (MPN 1 III), since these cells have "no main apical dendrite traveling up to the pia" and, for MPN 1 III, "Within LI the diameter of the apical dendritic tree can be up to 400 [micro]m." 
+<p>
+Likely excitatory cells (Canto 201X MEC preprint -> "principal," spiny to sparsely spiny).

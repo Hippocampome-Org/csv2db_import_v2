@@ -1,0 +1,20 @@
+This cell type is a result of a merger between CA1 0300 SCA-SR and CA1 0300 calbindin SR.
+<p>
+
+Rejected merger with CA1 (-)1300 SLM-SR due to strength of A:SLM. 
+<p>
+Possible future subclasses based on expression of chemical markers (SCA-SR type appears to be CCK+; CB-SR cell type is CB+)
+<p>
+CA1 0300 SCA-SR notes:<br>
+- Language of various authors indicates that dendrites can enter SLM or SO, but they do so "rarely" (Freund & Buzs&#225;ki, 1996).<br>
+- SCA-ADI 2311 cell type also exists<br>
+- SCA 2300 cell type no longer exists.  It was n=1 and that cell (Vida 1998) is now included here (same cell as Vida 2010, which was already in this cell type)<br>
+- SCA neurons in this cell type are CCK+ (Cope 2002; Pawelzik 2002)
+<p>
+CA1 0300 calbindin SR notes:<br>
+- Other CA1 calbindin cell types exist:<br>
+&emsp;* CA1 calbindin 3100<br>
+&emsp;* CA1 calbindin 0303<br>
+&emsp;* CA1 calbindin-IS-1 0302<br>
+&emsp;* CA1 calbindin-SO-SO 0003<br>
+- CA3 calbindin cell types also exist.

@@ -1,0 +1,10 @@
+<form enctype="multipart/form-data" method="post" action="/krasnow/csv2db/import_fragment/">
+    {% csrf_token %}
+    <h1>Import Fragment</h1>
+    <h2>populates table Fragment</h2>
+    <h3>morph_fragment.csv or marker_fragment.csv</h3>
+    <table>
+        {{ form.as_table }}
+    </table>
+    <input type="submit" value="Submit"/>
+</form>
