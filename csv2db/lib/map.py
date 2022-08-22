@@ -8,13 +8,15 @@ from datetime import datetime as dt
 from io import TextIOWrapper
 from ..models import Article, ArticleAuthorRel, ArticleEvidenceRel, Attachment, Author, Conndata, ConndataFragmentRel
 from ..models import ConnFragment, Evidence, EvidenceFragmentRel, Fragment, FragmentTypeRel, ingest_errors, Onhold, Synonym
-from ..models import SynonymTypeRel, Term, Type, TypeTypeRel,potential_synapses, number_of_contacts,neurite
+from ..models import SynonymTypeRel, Term, Type, TypeTypeRel, potential_synapses, number_of_contacts,neurite
 from ..models import neurite_quantified, attachment_neurite, attachment_connectivity, EvidencePropertyTypeRel
 from ..models import SynproEvidencePropertyTypeRel, article_not_found, izhmodels_single, user
 from ..models import SynproPropParcelRel, SynproTypeTypeRel, attachment_neurite_rar
 from ..models import SynproCP, SynproCPTotal, SynproNOC, SynproNOCTotal, SynproNoPS, SynproNPSTotal
 from ..models import SynproParcelVolumes, SynproSubLayers, SynproVolumesSelected
 from ..models import phases, phases_fragment, attachment_phases, PhasesEvidenceTypeRel, PhasesEvidenceFragmentRel
+from ..models import counts, counts_fragment, CountsEvidenceTypeRel, CountsEvidenceFragmentRel, Epdata
+from ..models import attachment_counts, citations, Hippocampome_to_NMO
 from .epdata_string_field import EpdataPropertyRecords, EpdataStringField
 from .fragment_string_field import FragmentStringField
 from .markerdata_string_field import MarkerdataStringField
@@ -249,7 +251,19 @@ class Map:
             elif order == '52':
                 Map.phases_evidence_fragment_rel(self)
             elif order == '53':
-                markerdata_flag = Map.markerdata_to_markerdata(self, markerdata_flag)
+                Map.counts(self)
+            elif order == '54':
+                Map.counts_fragment(self)
+            elif order == '55':
+                Map.counts_evidence_type_rel(self)                
+            elif order == '56':
+                Map.counts_evidence_fragment_rel(self)
+            elif order == '57':
+                Map.attachment_counts(self)
+            elif order == '58':
+                Map.citations(self)
+            elif order == '59':
+                Map.Hippocampome_to_NMO(self)
             else:
                 pass
             try:
@@ -495,6 +509,8 @@ class Map:
             if connection_status_string == '1':
                 connection_status = 'positive'
             elif connection_status_string == '0':
+                connection_status = 'negative'
+            elif connection_status_string == '-1':
                 connection_status = 'negative'
             elif connection_status_string == '4':
                 connection_status = 'positive'
@@ -758,7 +774,7 @@ class Map:
     # ingests morphdata.csv and populates ArticleSynonymRel, EvidencePropertyTypeRel, Property
     def morphdata_to_morphdata(self):
         # intial lines skipped still actual rows
-        count = 9
+        count = 13
         MorphdataPropertyRecords.save()
         for row in self.rows:
             try:
@@ -1050,6 +1066,12 @@ class Map:
                 short_name = row['short_name']
                 if len(short_name) == 0:
                     short_name = None
+                CARLsim_name = row['CARLsim_name']
+                if len(CARLsim_name) == 0:
+                    CARLsim_name = None
+                supertype = row['supertype']
+                if len(supertype) == 0:
+                    supertype = None
                 type_subtype = row['type_subtype']
                 if len(type_subtype) == 0:
                     type_subtype = None   
@@ -1057,6 +1079,26 @@ class Map:
                     position = position_HC_standard
                     short_name = intermediate_name
                 excit_inhib = row['excit_inhib']
+                if len(excit_inhib) == 0:
+                    excit_inhib = None          
+#                ranks = int(row['Ranks'])
+#                if len(ranks) == 0:
+#                    ranks = None
+                try:
+                    ranks = int(row['Ranks'])
+                except ValueError:
+                    ranks = None
+                try:
+                    v2p0 = int(row['v2.0'])
+                except ValueError:
+                    v2p0 = 0
+                mec_lec = row['pre_subregion_modifier']
+                if len(mec_lec) == 0:
+                    mec_lec = None          
+                try:
+                    interneuron_specific = int(row['interneuron_specific_flag'])
+                except ValueError:
+                    interneuron_specific = 0
                 notes = None
                 try:
                     row_object = Type.objects.get(id=id)
@@ -1069,16 +1111,22 @@ class Map:
                         subregion=subregion,
                         name=full_name,
                         nickname=short_name,
+                        carlsim_name=CARLsim_name,
                         excit_inhib=excit_inhib,
+                        supertype=supertype,
                         type_subtype=type_subtype,
                         status=status,
+                        ranks=ranks,
+                        v2p0=v2p0,
+                        mec_lec=mec_lec,
+                        interneuron_specific=interneuron_specific,
                         notes=notes
                     )
                     row_object.save()
             # end if status == 'active':
         # end for row in self.rows:
-
     # end def type_to_type(self):
+
     def izhmodels_to_izhmodels(self):
         try:
             for row in self.rows:
@@ -1666,6 +1714,162 @@ class Map:
                 user_object = PhasesEvidenceFragmentRel(
                     Evidence_id=row['Evidence_id'],
                     Fragment_id=row['Fragment_id']
+                )
+                user_object.save()
+        except Exception as e:
+            print(e)
+
+    def counts(self):
+        try:
+            for row in self.rows:
+                user_object = counts(
+                    neuron_type=row['Neuron Type'],
+                    unique_ID=row['Unique ID'],
+                    counts=row['Count'],
+                    lower_bound=row['Lower Bound'],
+                    upper_bound=row['Upper Bound']
+                )
+                user_object.save()
+        except Exception as e:
+            print(e)
+
+    def counts_fragment(self):
+        try:
+            for row in self.rows:
+                user_object = counts_fragment(
+                    referenceID=row['ReferenceID'],
+                    cellID=row['CellID'],
+                    variable=row['Variable'],
+                    cell_type=row['CellType'],
+                    material_used=row['Material Used'],
+                    location_in_reference=row['Location in reference'],
+                    measurement_equation=row['Measurement Equation'],
+                    interpretation=row['Interpretation'],
+                    authors=row['Authors'],
+                    title=row['Title'],
+                    journal=row['Journal/Book'],
+                    year=row['Year'],
+                    PMID=row['PMID/ISBN'],
+                    pmid_isbn_page=row['pmid_isbn_page'],
+                    species=row['Species'],
+                    strain=row['Strain'],
+                    sex=row['Sex'],
+                    age_weight=row['Age or Weight']
+                )
+                user_object.save()
+        except Exception as e:
+            print(e)
+
+    def counts_evidence_type_rel(self):
+        try:
+            for row in self.rows:
+                user_object = CountsEvidenceTypeRel(
+                    evidence_ID=row['evidence_ID'],
+                    neurite_ID=row['neurite_ID'],
+                    type_ID=row['type_ID'],
+                    original_id=row['original_id'],
+                    fragment_id=row['fragment_id'],
+                    Article_id=row['Article_id'],
+                    priority=row['priority'],
+                    conflict_note=row['conflict_note'],
+                    unvetted=row['unvetted'],
+                    linking_quote=row['linking_quote'],
+                    interpretation_notes=row['interpretation_notes'],
+                    property_type_explanation=row['property_type_explanation'],
+                    pc_flag=row['pc_flag'],
+                    soma_pcl_flag=row['soma_pcl_flag'],
+                    ax_de_pcl_flag=row['ax_de_pcl_flag'],
+                    perisomatic_targeting_flag=row['perisomatic_targeting_flag'],
+                    supplemental_pmids=row['supplemental_pmids']
+                )
+                user_object.save()
+        except Exception as e:
+            print(e)
+
+    def counts_evidence_fragment_rel(self):
+        try:
+            for row in self.rows:
+                user_object = CountsEvidenceFragmentRel(
+                    Evidence_id=row['Evidence_id'],
+                    Fragment_id=row['Fragment_id']
+                )
+                user_object.save()
+        except Exception as e:
+            print(e)
+
+    def attachment_counts(self):
+        try:
+            for row in self.rows:
+                user_object = attachment_counts(
+                    authors=row['Authors'],
+                    title=row['Title'],
+                    journal_or_Book=row['Journal/Book'],
+                    year=row['Year'],
+                    PMID_or_ISBN=row['PMID/ISBN'],
+                    cell_identifier=row['Cell Identifier'],
+                    neuron_type=row['Neuron Type'],
+                    variable=row['Variable'],
+                    name_of_file_containing_figure=row['Name of file containing figure'],
+                    reference_ID=row['Reference_ID']
+                )
+                user_object.save()
+        except Exception as e:
+            print(e)
+
+    def citations(self):
+        try:
+            for row in self.rows:
+                user_object = citations(
+                    citation_ID=row['citation_ID'],
+                    brief_citation=row['brief_citation'],
+                    full_citation=row['full_citation']
+                )
+                user_object.save()
+        except Exception as e:
+            print(e)
+
+    def Hippocampome_to_NMO(self):
+        try:
+            for row in self.rows:
+                user_object = Hippocampome_to_NMO(
+                    Hippocampome_ID=row['Hippocampome_ID'],
+                    reason_for_inclusion=row['reason_for_inclusion'],
+                    inclusion_flag=row['inclusion_flag'],
+                    inclusion_caveat=row['inclusion_caveat'],
+                    NMO_neuron_id=row['neuron_id'],
+                    NMO_neuron_name=row['neuron_name'],
+                    NMO_archive=row['archive'],
+                    NMO_age_classification=row['age_classification'],
+                    NMO_brain_region_1=row['brain_region_1'],
+                    NMO_brain_region_2=row['brain_region_2'],
+                    NMO_brain_region_3=row['brain_region_3'],
+                    NMO_brain_region_4=row['brain_region_4'],
+                    NMO_brain_region_5=row['brain_region_5'],
+                    NMO_brain_region_6=row['brain_region_6'],
+                    NMO_brain_region_7=row['brain_region_7'],
+                    match_flag=row['match_flag'],
+                    NMO_cell_type_1=row['cell_type_1'],
+                    NMO_cell_type_2=row['cell_type_2'],
+                    NMO_cell_type_3=row['cell_type_3'],
+                    NMO_cell_type_4=row['cell_type_4'],
+                    NMO_cell_type_5=row['cell_type_5'],
+                    NMO_cell_type_6=row['cell_type_6'],
+                    NMO_cell_type_7=row['cell_type_7'],
+                    NMO_cell_type_8=row['cell_type_8'],
+                    NMO_cell_type_9=row['cell_type_9'],
+                    NMO_cell_type_10=row['cell_type_10'],
+                    NMO_cell_type_11=row['cell_type_11'],
+                    NMO_cell_type_12=row['cell_type_12'],
+                    NMO_cell_type_13=row['cell_type_13'],
+                    NMO_cell_type_14=row['cell_type_14'],
+                    NMO_cell_type_15=row['cell_type_15'],
+                    NMO_cell_type_16=row['cell_type_16'],
+                    NMO_species=row['species'],
+                    NMO_strain=row['strain'],
+                    NMO_experiment_condition=row['experiment_condition'],
+                    NMO_protocol=row['protocol'],
+                    NMO_domain=row['domain'],
+                    NMO_physical_integrity=row['physical_Integrity']
                 )
                 user_object.save()
         except Exception as e:

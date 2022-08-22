@@ -49,7 +49,7 @@ class EnumTypeTypeSubtype(EnumField, models.CharField):
 
 class EnumTypeStatus(EnumField, models.CharField):
     def __init__(self, *args, choices=[], **kwargs):
-        values = [('active', 'Active'), ('frozen', 'Frozen')]
+        values = [('active', 'Active'), ('on-hold', 'On-hold')]
         super(EnumTypeStatus, self).__init__(*args, choices=values, **kwargs)
 
 class EnumTypeTypeConnectionStatus(EnumField, models.CharField):
@@ -69,7 +69,7 @@ class Article(models.Model):
     pmcid          = models.CharField(max_length=16, null=True)
     nihmsid        = models.CharField(max_length=16, null=True)
     doi            = models.CharField(max_length=640, null=True)
-    open_access    = models.NullBooleanField(null=True)
+    open_access    = models.BooleanField(null=True)
     dt             = models.DateTimeField(auto_now_add=True)
     title          = models.CharField(max_length=512, null=True)
     publication    = models.CharField(max_length=128, null=True)
@@ -176,7 +176,7 @@ class Epdata(models.Model):
     unit      = models.CharField(max_length=8, null=True)
     location  = models.CharField(max_length=128, null=True)
     rep_value = models.CharField(max_length=128, null=True)
-    gt_value  = models.NullBooleanField(null=True)
+    gt_value  = models.BooleanField(null=True)
     class Meta:
         db_table = 'Epdata'
 
@@ -228,15 +228,15 @@ class EvidencePropertyTypeRel(models.Model):
     Article_id                = models.IntegerField(db_index=True, unique=False, null=True)
     priority                  = models.IntegerField(null=True)
     conflict_note             = models.CharField(max_length=64, null=True)
-    unvetted                  = models.NullBooleanField(null=True)
+    unvetted                  = models.BooleanField(null=True)
     linking_quote             = models.TextField(null=True)
     interpretation_notes      = models.TextField(null=True)
     property_type_explanation = models.TextField(null=True)
-    pc_flag                   = models.NullBooleanField(null=True)
-    soma_pcl_flag             = models.NullBooleanField(null=True)
+    pc_flag                   = models.BooleanField(null=True)
+    soma_pcl_flag             = models.BooleanField(null=True)
     ax_de_pcl_flag            = models.IntegerField(unique=False,null=True)
     perisomatic_targeting_flag= models.IntegerField(unique=False,null=True)
-    supplemental_pmids        = models.CharField(max_length=256, null=True)
+    supplemental_pmids        = models.CharField(max_length=1024, null=True)
     class Meta:
         db_table = 'EvidencePropertyTypeRel'
 
@@ -410,7 +410,7 @@ class FragmentTypeRel(models.Model):
     dt          = models.DateTimeField(auto_now_add=True)
     Fragment_id = models.IntegerField(db_index=True, unique=False, null=True)
     Type_id     = models.IntegerField(db_index=True, unique=False, null=True)
-    priority    = models.NullBooleanField(null=True)
+    priority    = models.BooleanField(null=True)
     class Meta:
         db_table = 'FragmentTypeRel'
 
@@ -565,17 +565,23 @@ class Term(models.Model):
         db_table = 'Term'
 
 class Type(models.Model):
-    id                = models.AutoField(primary_key=True)
-    position          = models.IntegerField(null=True)
-    dt                = models.DateTimeField(auto_now_add=True)
-    explanatory_notes = models.CharField(max_length=5000, null=True)
-    subregion         = models.CharField(max_length=8, null=True)
-    name              = models.CharField(max_length=255, null=True)
-    nickname          = models.CharField(max_length=64, null=True)
-    excit_inhib       = EnumTypeExcitInhib(max_length=1, null=True) # enum('e','i')
-    type_subtype      = models.CharField(max_length=7, null=True)
-    status            = EnumTypeStatus(max_length=6, null=True) # enum('active','frozen')
-    notes             = models.TextField(null=True)
+    id                   = models.AutoField(primary_key=True)
+    dt                   = models.DateTimeField(auto_now_add=True)
+    position             = models.IntegerField(null=True)
+    explanatory_notes    = models.CharField(max_length=5000, null=True)
+    subregion            = models.CharField(max_length=8, null=True)
+    name                 = models.CharField(max_length=255, null=True)
+    nickname             = models.CharField(max_length=64, null=True)
+    carlsim_name         = models.CharField(max_length=100, null=True)
+    excit_inhib          = EnumTypeExcitInhib(max_length=1, null=True) # enum('e','i')
+    supertype            = models.CharField(max_length=255, null=True)
+    type_subtype         = EnumTypeTypeSubtype(max_length=7, null=True) # enum('type','subtype')
+    status               = EnumTypeStatus(max_length=7, null=True) # enum('active','on-hold')
+    ranks                = models.IntegerField(null=True)
+    v2p0                 = models.IntegerField(null=True)
+    mec_lec              = models.CharField(max_length=1, null=True)
+    interneuron_specific = models.IntegerField(null=True)
+    notes                = models.TextField(null=True)
     class Meta:
         db_table = 'Type'
 
@@ -846,12 +852,12 @@ class SynproEvidencePropertyTypeRel(models.Model):
     Article_id                = models.IntegerField(db_index=True, unique=False, null=True)
     priority                  = models.IntegerField(null=True)
     conflict_note             = models.CharField(max_length=64, null=True)
-    unvetted                  = models.NullBooleanField(null=True)
+    unvetted                  = models.BooleanField(null=True)
     linking_quote             = models.TextField(null=True)
     interpretation_notes      = models.TextField(null=True)
     property_type_explanation = models.TextField(null=True)
-    pc_flag                   = models.NullBooleanField(null=True)
-    soma_pcl_flag             = models.NullBooleanField(null=True)
+    pc_flag                   = models.BooleanField(null=True)
+    soma_pcl_flag             = models.BooleanField(null=True)
     ax_de_pcl_flag            = models.IntegerField(unique=False,null=True)
     perisomatic_targeting_flag= models.IntegerField(unique=False,null=True)
     supplemental_pmids        = models.CharField(max_length=256, null=True)
@@ -1148,3 +1154,135 @@ class PhasesEvidenceFragmentRel(models.Model):
     Fragment_id               = models.IntegerField(null=True)
     class Meta:
         db_table = 'phases_evidence_fragment_rel'
+
+class counts(models.Model):
+    id                                    = models.AutoField(primary_key=True)
+    neuron_type                               = models.CharField(max_length=400, null=True)
+    unique_ID                                 = models.CharField(max_length=4, null=True)
+    counts                       = models.CharField(max_length=10, null=True)
+    lower_bound                                  = models.CharField(max_length=10, null=True)
+    upper_bound                          = models.CharField(max_length=10, null=True)
+    class Meta:
+        db_table = 'counts'
+
+class counts_fragment(models.Model):
+    id                  = models.AutoField(primary_key=True)
+    referenceID                       = models.CharField(max_length=10, null=True)
+    cellID                            = models.CharField(max_length=4, null=True)
+    variable                          = models.CharField(max_length=4, null=True)
+    cell_type                         = models.CharField(max_length=400, null=True)
+    material_used                     = models.CharField(max_length=2000, null=True)
+    location_in_reference             = models.CharField(max_length=400, null=True)
+    measurement_equation              = models.CharField(max_length=400, null=True)
+    interpretation                    = models.CharField(max_length=400, null=True)
+    authors                           = models.CharField(max_length=400, null=True)
+    title                             = models.CharField(max_length=400, null=True)
+    journal                           = models.CharField(max_length=400, null=True)
+    year                              = models.CharField(max_length=4, null=True)
+    PMID                              = models.CharField(max_length=20, null=True)
+    pmid_isbn_page                    = models.CharField(max_length=10, null=True)
+    species                           = models.CharField(max_length=100, null=True)
+    strain                            = models.CharField(max_length=100, null=True)
+    sex                               = models.CharField(max_length=100, null=True)
+    age_weight                        = models.CharField(max_length=100, null=True)
+    class Meta:
+        db_table = 'counts_fragment'
+
+class CountsEvidenceTypeRel(models.Model):
+    id                        = models.AutoField(primary_key=True)
+    dt                        = models.DateTimeField(auto_now_add=True)
+    evidence_ID               = models.TextField(null=True)
+    neurite_ID                = models.TextField(null=True)
+    type_ID                   = models.TextField(null=True)
+    original_id               = models.TextField(null=True)
+    fragment_id               = models.IntegerField(null=True)
+    Article_id                = models.TextField(null=True)
+    priority                  = models.TextField(null=True)
+    conflict_note             = models.TextField(null=True)
+    unvetted                  = models.TextField(null=True)
+    linking_quote             = models.TextField(null=True)
+    interpretation_notes              = models.TextField(null=True)
+    property_type_explanation         = models.TextField(null=True)
+    pc_flag                   = models.TextField(null=True)
+    soma_pcl_flag             = models.TextField(null=True)
+    ax_de_pcl_flag            = models.TextField(null=True)
+    perisomatic_targeting_flag         = models.TextField(null=True)
+    supplemental_pmids        = models.TextField(null=True)
+    class Meta:
+        db_table = 'counts_evidence_type_rel'
+
+class CountsEvidenceFragmentRel(models.Model):
+    id                        = models.AutoField(primary_key=True)
+    dt                        = models.DateTimeField(auto_now_add=True)
+    Evidence_id               = models.IntegerField(null=True)
+    Fragment_id               = models.IntegerField(null=True)
+    class Meta:
+        db_table = 'counts_evidence_fragment_rel'
+
+class attachment_counts(models.Model):
+    id                                    = models.AutoField(primary_key=True)
+    authors                               = models.CharField(max_length=400, null=True)
+    title                                 = models.CharField(max_length=400, null=True)
+    journal_or_Book                       = models.CharField(max_length=400, null=True)
+    year                                  = models.CharField(max_length=10, null=True)
+    PMID_or_ISBN                          = models.CharField(max_length=30, null=True)
+    cell_identifier                       = models.CharField(max_length=10, null=True)
+    neuron_type                           = models.CharField(max_length=100, null=True)
+    variable                              = models.CharField(max_length=10, null=True)
+    name_of_file_containing_figure        = models.CharField(max_length=400, null=True)
+    reference_ID                          = models.CharField(max_length=20, null=True)
+    class Meta:
+        db_table = 'attachment_counts'
+
+class citations(models.Model):
+    id                                    = models.AutoField(primary_key=True)
+    dt                                    = models.DateTimeField(auto_now_add=True)
+    citation_ID                           = models.CharField(max_length=4, null=True)
+    brief_citation                        = models.CharField(max_length=1024, null=True)
+    full_citation                         = models.CharField(max_length=1024, null=True)
+    class Meta:
+        db_table = 'citations'
+
+class Hippocampome_to_NMO(models.Model):
+    id                                  = models.AutoField(primary_key=True)
+    Hippocampome_ID                     = models.CharField(max_length=50, null=True)
+    reason_for_inclusion                = models.CharField(max_length=300, null=True)
+    inclusion_flag                      = models.IntegerField(null=True)
+    inclusion_caveat                    = models.CharField(max_length=255, null=True)
+    NMO_neuron_id                       = models.IntegerField(null=True)
+    NMO_neuron_name                     = models.CharField(max_length=100, null=True)
+    NMO_archive                         = models.CharField(max_length=50, null=True)
+    NMO_age_classification              = models.CharField(max_length=20, null=True)
+    NMO_brain_region_1                  = models.CharField(max_length=50, null=True)
+    NMO_brain_region_2                  = models.CharField(max_length=50, null=True)
+    NMO_brain_region_3                  = models.CharField(max_length=50, null=True)
+    NMO_brain_region_4                  = models.CharField(max_length=50, null=True)
+    NMO_brain_region_5                  = models.CharField(max_length=50, null=True)
+    NMO_brain_region_6                  = models.CharField(max_length=50, null=True)
+    NMO_brain_region_7                  = models.CharField(max_length=50, null=True)
+    match_flag                          = models.IntegerField(null=True)
+    NMO_cell_type_1                     = models.CharField(max_length=100, null=True)
+    NMO_cell_type_2                     = models.CharField(max_length=100, null=True)
+    NMO_cell_type_3                     = models.CharField(max_length=100, null=True)
+    NMO_cell_type_4                     = models.CharField(max_length=100, null=True)
+    NMO_cell_type_5                     = models.CharField(max_length=100, null=True)
+    NMO_cell_type_6                     = models.CharField(max_length=100, null=True)
+    NMO_cell_type_7                     = models.CharField(max_length=100, null=True)
+    NMO_cell_type_8                     = models.CharField(max_length=100, null=True)
+    NMO_cell_type_9                     = models.CharField(max_length=100, null=True)
+    NMO_cell_type_10                    = models.CharField(max_length=100, null=True)
+    NMO_cell_type_11                    = models.CharField(max_length=100, null=True)
+    NMO_cell_type_12                    = models.CharField(max_length=100, null=True)
+    NMO_cell_type_13                    = models.CharField(max_length=100, null=True)
+    NMO_cell_type_14                    = models.CharField(max_length=100, null=True)
+    NMO_cell_type_15                    = models.CharField(max_length=100, null=True)
+    NMO_cell_type_16                    = models.CharField(max_length=100, null=True)
+    NMO_species                         = models.CharField(max_length=20, null=True)
+    NMO_strain                          = models.CharField(max_length=100, null=True)
+    NMO_experiment_condition            = models.CharField(max_length=200, null=True)
+    NMO_protocol                        = models.CharField(max_length=15, null=True)
+    NMO_domain                          = models.CharField(max_length=40, null=True)
+    NMO_physical_integrity              = models.CharField(max_length=60, null=True)
+    class Meta:
+        db_table = 'Hippocampome_to_NMO'
+
