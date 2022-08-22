@@ -34,6 +34,10 @@ DG chandelier cell,1010
 DG hilar perforant path-associated cell,1013
 DG HIPP cell,1013
 DG SOM+ GPP cell,1013
+DG spiny hilar interneuron,1014
+characteristics of [DG] HIPP cells,1014
+DG molecular layer neuron,1024
+DG MOPP,1024
 DG aspiny hilar interneurons with projections to the outer molecular layer,1026
 DG spiny hilar interneurons with projections to the outer molecular layer,1026
 DG aspiny interneuron with axonal projection to the inner molecular layer,1027
@@ -72,6 +76,34 @@ DG mossy cell,1043
 DG mossy cell with a molecular layer dendrite,1043
 DG mossy cell with low threshold,1043
 DG spiny hilar cell,1043
+DG ivy/neurogliaform,1045
+DG interneuron located in the hilus,1045
+DG HIPP,1046
+DG HIPP-like,1046
+DG immature GC,1047
+immature DGC,1047
+DG 14-d-old neurons,1047
+DG newborn GCs,1047
+DG HIPP,1049
+DG spiny calretinin-immunoreactive neurons,1049
+DG hilar interneuron,1049
+DG Cajal-Retzius cells,1050
+DG basket cell,1063
+DG PV+ fast-spiking basket cells,1063
+DG axo-axonic cell,1064
+DG chandelier cell,1064
+DG axo-axonic chandelier cell,1064
+DG subiculum-projecting interneurons in the OML,1075
+DG class M4 ML-like,1075
+DG ML-like,1078
+DG molecular layer interneuron,1078
+DG Cajal-Retzius cells,1093
+DG hilar-associated interneuron,1094
+DG hilar interneuron,1094
+DG hilus-projecting cell,1103
+DG bistratified cell,1104
+DG hilus-projecting cell,1105
+DG molecular layer-projecting cell,1106
 CA3 pyramidal cell,2000
 CA3a pyramidal cell,2000
 CA3a pyramidal neuron,2000
@@ -102,10 +134,9 @@ CA3 aspiny neuron with cell body in stratum lucidum,2013
 CA3 aspiny stratum lucidum cell,2013
 CA3 spiny neuron in stratum lucidum,2013
 CA3 spiny stratum lucidum neuron,2013
-CA3 aspiny neuron in stratum lucidum,2014
-CA3 aspiny neuron with cell body in stratum lucidum,2014
 CA3 spiny neuron in stratum lucidum,2014
-CA3 spiny stratum lucidum neuron,2014
+CA3 aspiny neurons in stratum lucidum,2014
+CA3 neuron with giant depolarizing potentials,2014
 CA3 stratum lucidum interneuron,2017
 CA3 SLC,2019
 CA3 spiny lucidum cell,2019
@@ -131,6 +162,8 @@ CA3 radiatum cell,2023
 CA3 RC,2023
 CA3 type I CB-containing interneuron,2023
 CA3 type I CB-IR cell,2023
+CA3 spiny stratum lucidum neuron,2027
+CA3 stratum lucidum interneurons,2027
 CA3 AA,2028
 CA3 AAC,2028
 CA3 axo-axonic cell,2028
@@ -169,6 +202,20 @@ CA3 cell LM,2049
 CA3 O-LM cell,2049
 CA3 oriens lacunosum-moleculare associated cell,2049
 CA3 stratum lacunosum-moleculare 'selective' cell,2049
+CA3 O-LM interneuron,2050
+CA3 CB1-positive basket cell,2051
+CA3 ivy cell,2052
+CA3 stratum lacunosum-moleculare interneuron,2060
+CA3c pyramidal cell,2115
+CA3 pyramidal neuron,2115
+proximal CA3 pyramidal cell,2115
+CA3 pyramidal cell,2115
+CA3 bursting neuron,2121
+CA3 pyramidal cell,2121
+CA3 CB1-expressing mossy fiber-associated,2125
+CA3 CB1-expressing basket,2125
+CA3 regular-spiking basket,2125
+CA3 MFA interneuron,2125
 CA2 pyramid,3000
 CA2 pyramidal cell,3000
 CA2 pyramidal neuron,3000
@@ -205,21 +252,14 @@ CA1 NG,4012
 CA1 NG cell,4012
 CA1 NGFC,4012
 CA1 bistratified cell,4013
-CA1 BSC,4013
 CA1 radial trilaminar cell,4013
-CA1 TLC,4013
-CA1 trilaminar cell,4013
-CA1 apical dendrite innervating cell,4015
-CA1 apical dendrite-innervating cell,4015
-CA1 apical dendrite-innervating neuron,4015
-CA1 SCA,4015
-CA1 SCA cell,4015
-CA1 SCA interneuron,4015
-CA1 Schaffer collateral-associated cell,4015
-CA1 Schaffer collateral/commissural pathway-associated interneuron,4015
-CA1 Schaffer-associated cell,4015
-CA1 Schaffer-associated interneuron,4015
-CA1 trilaminar cell,4015
+CA1 ivy,4013
+CA1 Schaffer-associated interneurons,4015
+CA1 CCK+ SCA,4015
+CA1 Schaffer collateral-associated,4015
+CA1 CCK-IR trilaminar cell,4015
+"CA1 CCK-expressing, apical dendrite-innervating cell",4015
+CA1 apical dendrite innervating,4015
 CA1 IN-specific-III,4020
 CA1 interneuron-specific-III,4020
 CA1 interneurone specific cell III,4020
@@ -255,35 +295,15 @@ CA1 backprojection interneuron,4023
 CA1 backprojection neuron,4023
 CA1 BP cell,4023
 CA1 feedback neuron,4023
-CA1 CaBP positive nonpyramidal cell,4028
-CA1 CaBP-containing non-pyramidal cell,4028
-CA1 CaBP-immunoreactive interneuron,4028
-CA1 CaBP-immunoreactive non-pyramidal cell,4028
-CA1 CaBP-immunoreactive nonpyramidal neuron,4028
-CA1 CaBP-positive interneuron,4028
-CA1 CaBP-positive neuron,4028
-CA1 CaBP-positive non-pyramidal cell,4028
-CA1 calbindin D28k-containing non-pyramidal cell,4028
-CA1 calbindin D28k-containing nonpyramidal cell,4028
-CA1 calbindin D28k-immunoreactive non-pyramidal cell,4028
-CA1 CB-immunoreactive interneuron,4028
-CA1 CB-IR cell,4028
-CA1 CB-IR interneuron,4028
-CA1 neuron with axons and dendrites in stratum radiatum,4028
-CA1 SCA cell,4028
-CA1 SCA interneuron,4028
-CA1 SchA,4028
-CA1 Schaffer collateral-associated cell,4028
-CA1 Schaffer collateral-associated interneuron,4028
-CA1 Schaffer collateral-associated interneurone,4028
-CA1 Schaffer collateral/commissural pathway-associated interneuron,4028
-CA1 Schaffer-associated cell,4028
-CA1 Schaffer-associated interneuron,4028
-CA1 Schaffer-associated interneurone,4028
-CA1 type I calbindin D28k (CB)-immunoreactive nonprincipal neuron,4028
-CA1 type I CB-containing interneuron,4028
-CA1 type I CB-IR cell,4028
 CA1 type II nonpyramidal cell,4028
+CA1 neurons with axons and dendrites in stratum radiatum,4028
+CA1 Schaffer-associated interneuron,4028
+CA1 Schaffer collateral associated,4028
+CA1 Schaffer associated,4028
+CA1 Type II cells,4028
+CA1 CaBP-LI (CaBP-like immunoreactivity),4028
+CA1 CaBP-ir,4028
+CA1 CaBP-positive neurons,4028
 CA1 calretinin-immunoreactive interneuron,4031
 CA1 CR-IR cell,4031
 CA1 CR-IR neuron,4031
@@ -331,14 +351,16 @@ CA1 ENK-expressing interneuron,4041
 CA1 ENK-expressing projection neuron,4041
 CA1 ENK-immunopositive cell,4041
 CA1 enkephalin-expressing cell,4041
+CA1 type I CB-IR interneuron,4048
+CA1 O-OR,4048
+CA1 R-OR,4048
 CA1 PLP neuron,4054
 CA1 pyramidal-like principal neuron,4054
 CA1 radiatum giant cell,4054
 CA1 RG,4054
 CA1 RGC,4054
-CA1 O-A interneuron,4055
-CA1 O/A interneuron,4055
-CA1 oriens/alveus interneuron,4055
+CA1 O/A interneurons,4055
+CA1 interneurons in O-A,4055
 CA1 calretinin-immunoreactive interneuron,4056
 CA1 CR-containing inhibitory interneuron,4056
 CA1 CR-IR cell,4056
@@ -357,8 +379,9 @@ CA1 R-LM cell,4066
 CA1 SR interneuron,4066
 CA1 O-Bi cell,4068
 CA1 oriens-bistratified cell,4068
-CA1 somatostatin-immunoreactive neuron,4068
+CA1 somatostatin-immunoreactive interneurons,4068
 CA1 somatostatin-positive neuron,4068
+CA1 Oriens-Bistratified Projecting [v1.x],4068
 CA1 horizontal cell,4069
 CA1 horizontal O-A interneurone,4069
 CA1 O-LM cell,4069
@@ -395,24 +418,20 @@ CA1 BSC,4080
 CA1 wide-arbour PV-IR basket cell,4080
 CA1 ivy cell,4081
 CA1 ivy interneuron,4081
-CA1 O-BiC,4083
-CA1 O-Bistratified,4083
-CA1 O-R,4083
-CA1 oriens-bistratified cell,4083
-CA1 oriens-radiatum cell,4083
-m2-IR neurons with horizontally running dendrites in the CA1,4083
-CA1 bistratified cell,4084
+CA1 interneurons with horizontal cell bodies in SO,4083
+CA1 m2 muscarinic acetylcholine receptor-immunoreactive interneurons,4083
+CA1 oriens-bistratified cells,4083
+CA1 oriens-radiatum cells,4083
+CA1 Schaffer-collateral-associated cells,4084
 CA1 bistratified interneuron,4084
-CA1 ivy cell,4084
-CA1 RAD interneuron,4084
-CA1 SC-AC,4084
-CA1 Schaffer-collateral-associated cell,4084
-CA1 stratum radiatum interneuron,4084
-CA1 O-LM cell,4087
-CA1 OLM cell,4087
-CA1 OLM interneuron,4087
-CA1 oriens-lacunosum-moleculare cell,4087
+CA1 classical-Bistratified (c-Bistrat),4084
+CA1 C-Bistratified [v1.x],4084
+CA1 SR/SLM interneuron,4084
+CA1 ivy cells,4084
+CA1 type I CB-containing interneurons,4084
 CA1 stratum oriens interneuron,4087
+CA1 O-LM cell,4087
+CA1 oriens-lacunosum-moleculare (OLM) cell,4087
 CA1 horizontal cell,4089
 CA1 O-A interneurone,4089
 CA1 O-LM cell,4089
@@ -433,6 +452,48 @@ CA1 PYR/RAD INs positive for vasoactive intestinal polypeptide,4093
 CA1 type III interneuron-specific interneuron,4093
 CA1 type III ISI,4093
 CA1 Cajal-Retzius,4094
+CA1 R-V-RP,4095
+CA1 SCA,4095
+CA1 IS3 cell,4096
+CA1 R-OR,4100
+CA1 non-basket cell (CBIR+),4100
+CA1 CCK-SCA,4100
+CA1 R-OPR,4101
+CA1 L-H-L,4102
+CA1 R-LM,4102
+CA1 depolarization interneuron,4102
+CA1 O-V-P,4104
+CA1 interneuron,4104
+CA1 O-P,4104
+CA1 R-P,4104
+CA1 PV basket,4104
+CA1 basket,4104
+CA1 perisomatic projecting SO interneuron,4104
+CA1 PV-expressing basket,4104
+CA1 CCK+ BC,4105
+CA1 CCK+ basket cell,4105
+CA1 CCK BC,4105
+CA1 CCK-BC,4105
+CA1 chandelier,4106
+CA1 axo-axonic,4106
+CA1 L-H-R,4107
+CA1 stratum radiatum interneuron,4107
+CA1 SCA,4107
+CA1 non-fast spiking basket cell,4139
+CA1 CCK-expressing basket cell,4139
+CA1 FS basket cell,4145
+CA1 basket cell,4145
+CA1 PV interneuron,4145
+CA1 O-LM cell,4146
+CA1 interneuron innervating stratum radiatum,4146
+CA1 O-LM interneuron,4146
+CA1 Cajal-Retzius cells,4172
+CA1 CRH neuron,4173
+CA1 VIP+ long-range projecting,4186
+CA1 subiculum-projecting VIP+,4186
+pH- and bupivacaine-sensitive cell,4187
+OLM interneurons,4187
+SOM+ interneuron,4187
 burst firing subicular neuron,5001
 deep subicular cell,5001
 regular spiking subicular neuron,5001
@@ -448,6 +509,9 @@ superficial subicular cell,5001
 subicular chandelier cell,5002
 subicular pyramidal cell,5005
 subicular pyramidal neuron,5005
+Sub Chrna2 cell,5012
+Sub Chrna2 cell,5013
+Sub parvalbumin-expressing interneurons,5015
 MEC deep layer V pyramidal neuron,6002
 MEC layer V pyramidal cell,6002
 MEC layer V pyramidal neuron,6002
@@ -480,6 +544,7 @@ EC layer III pyramidal neuron,6017
 LEC layer III pyramidal cell,6017
 MEC layer III pyramidal cell,6017
 MEC LIII small spiny pyramidal neuron,6017
+EC LIII Pyramidal [v1.x],6017
 LEC layer III spiny stellate cell,6018
 LEC LIII spiny stellate cell,6018
 MEC LIII SC,6018
@@ -590,6 +655,7 @@ LEC layer III pyramidal neuron,6092
 LEC LIII simple spiny pyramidal neuron,6092
 MEC layer III pyramidal cell,6092
 MEC layer III type 1 pyramidal cell,6092
+EC LIII Pyramidal-Stellate [v1.x],6092
 EC layer I small multipolar cell,6094
 EC layer I small spherical multipolar neuron,6094
 LEC LI multipolar principal neuron,6094
@@ -613,3 +679,7 @@ LEC superficial layer V pyramidal neuron,6095
 MEC layer IV pyramid,6095
 MEC layer IV pyramidal cell,6095
 MEC layer II basket cell,6096
+EC SOM+ interneuron,6113
+EC NPY non-NGF,6113
+MEC GABAergic neuron,6118
+MEC non-fast spiking GABAergic neuron,6118
