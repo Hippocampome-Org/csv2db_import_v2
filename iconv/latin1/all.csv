@@ -19,7 +19,7 @@ process order,csv filename,tables populated,derived from
 18,fp_parameters.csv,"FiringPattern, FiringPatternRel",FPparameters_v1.0.xlsx
 19,material_method.csv,MaterialMethod,FP-Materials-Methods_v1.0.xlsx
 20,conn_fragment.csv,"ArticleEvidenceRel, Evidence, EvidenceFragmentRel, ConnFragment",connfragment.csv
-21,conndata.csv,Conndata,conndata.xlsx
+21,known_connections.csv,Conndata,conndata.xlsx
 22,term.csv,Term,term.csv
 23,onhold_types_pmids.csv,Onhold,Help_On-hold_Types.docx
 24,izhmodels_single.csv,Izhmodels,IzhModels_Matrix_v1.0.csv
@@ -51,9 +51,10 @@ process order,csv filename,tables populated,derived from
 50,attachment_phases.csv,attachment_phases,attachment_phases_v2.0.xlsx
 51,phases_evidence_type_rel.csv,phases_evidence_type_rel,phases_evidence_type_rel.xlsx
 52,phases_evidence_fragment_rel.csv,phases_evidence_fragment_rel,phases_evidence_fragment_rel.xlsx
-53,markerdata.csv,"ArticleSynonymRel, Evidence, EvidenceEvidenceRel, EvidenceMarkerdataRel, EvidencePropertyTypeRel, Markerdata, Property",Hippocampome-Markers_DE-INF_v1.0.xlsx
-54,counts.csv,counts,counts.xlsx
-55,counts_fragment.csv,counts_fragment,URD_counts_v1.0.xlsx
-56,counts_evidence_type_rel.csv,counts_evidence_type_rel,counts_evidence_type_rel.xlsx
-57,counts_evidence_fragment_rel.csv,counts_evidence_fragment_rel,counts_evidence_fragment_rel.xlsx
-58,attachment_counts.csv,attachment_counts,attachment_counts_v1.0.xlsx
+53,counts.csv,counts,counts.xlsx
+54,counts_fragment.csv,counts_fragment,URD_counts_v1.0.xlsx
+55,counts_evidence_type_rel.csv,counts_evidence_type_rel,counts_evidence_type_rel.xlsx
+56,counts_evidence_fragment_rel.csv,counts_evidence_fragment_rel,counts_evidence_fragment_rel.xlsx
+57,attachment_counts.csv,attachment_counts,attachment_counts_v1.0.xlsx
+58,citations.csv,citations,citations_v2.0.xlsx
+59,Hippocampome_to_NMO.csv,Hippocampome_to_NMO,NMO2HC.xlsx
