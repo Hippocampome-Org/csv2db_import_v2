@@ -331,14 +331,17 @@ class EpdataStringField:
                                 error_string = error_string_split[1]
                                 error = error_string
                             elif '_' in error_string:
-                                error_string = re.sub(r'\[', r'', error_string)
-                                error_string = re.sub(r'\]', r'', error_string)
-                                error_string_split = error_string.split('_',1)
-                                error1 = float(error_string_split[0])
-                                error2 = float(error_string_split[1])
-                                error = (error1 + error2)/2.0
-                                error = str(round(error,1))
-                                error_string = str(error)
+                                error_string2 = error_string
+                                error_string = error_string.replace('_', ', ')
+                                error = None
+                                error_string2 = re.sub(r'\[', r'', error_string2)
+                                error_string2 = re.sub(r'\]', r'', error_string2)
+                                error_string_split = error_string2.split('_',1)
+                                value1 = error_string_split[0]
+                                value2 = error_string_split[1]
+                                # error = (error1 + error2)/2.0
+                                # error = str(round(error,1))
+                                # error_string = str(error)
                             else:
                                 error_string = ''
                                 error = None
@@ -350,8 +353,11 @@ class EpdataStringField:
                         elif std_sem_string == 'SDEV':
                             std_sem        = 'std'
                             std_sem_string = ''
+                        elif std_sem_string == 'Range':
+                            std_sem = 'range'
+                            std_sem_string = ''
                         else:
-                            std_sem        = 'N/A'
+                            std_sem        = 'single_value'
                             std_sem_string = ''
                         # n
                         n_string = row[col_property[col_property_set+col_property_offset_n]]
@@ -359,6 +365,8 @@ class EpdataStringField:
                             n = None
                         else:
                             n = n_string
+                            if std_sem == 'range':
+                                n = 2
                         # istim
                         if col_property[col_property_set+col_property_offset_istim] == '':
                             istim_string = ''
@@ -423,6 +431,12 @@ class EpdataStringField:
                         # raw
                         raw = pmid_isbn + ' {' + location + '; ' + value1_string + ' ± ' + error_string + ' @' + istim_string + '@' + time_string + ' (' + n_string + std_sem_string + ')}'
                         #example: raw = 9497429 {Table 1, wild type; 0.6 ± 0.4 @250@1000 (16 SEM)}
+                        if '[' in error_string:
+                            raw = pmid_isbn + ' {' + location + '; ' + value1_string + ' ' + error_string + ' @' + istim_string + '@' + time_string + ' (' + n_string + std_sem_string + ')}'
+                            #example: raw = 9497429 {Table 1, wild type; 0.6 [0.3, 0.9] @250@1000 (16 SEM)}
+                        if error_string == '':
+                            raw = pmid_isbn + ' {' + location + '; ' + value1_string + ' @' + istim_string + '@' + time_string + ' (' + n_string + std_sem_string + ')}'
+                            #example: raw = 9497429 {Table 1, wild type; 0.6 @250@1000 (16 SEM)}
                         # parameter
                         parameter = parameters[col_unit]
                         row_object = Epdata(
@@ -468,6 +482,7 @@ class EpdataStringField:
                             linking_quote          = None
                             linking_page_location  = None
                             try:
+                                type = 'data'
                                 # from ep_fragment.csv where type='data'
                                 row_object  = Fragment.objects.filter(pmid_isbn=pmid_isbn,cell_id=cell_id,parameter=parameter,type='data',original_id=original_id).order_by('id').first()
                                 #original_id            = row_object.original_id
