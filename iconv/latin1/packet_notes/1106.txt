@@ -1,0 +1,80 @@
+<html>
+        <head>
+                <style>
+                        .redtext {
+                                color: red;
+                        }
+                        .bluetext {
+                                color: #0000FF; /* blue */
+                        }
+                        .greentext {
+                                color: #008000; /* dark green */
+                        }
+                        .purpletext {
+                                color: #800080; /* dark purple */
+                        }
+                        .orangetext {
+                                color: #FF6820; /* orange */
+                        }
+                </style>
+        </head>
+        <body>
+                <p style="font-family: courier">
+                        <b>DG (i)2322 Interneuron-Specific Inner MOlecular layer-Targeting (IS IMOT) cells [1106]</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Related types:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        DG (i)2322 HICAP (v1.0 active)
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes: These cells are VIP+ and are speculated by the authors to be interneuron specific, which distinguishes them from the active type, which are inferred to be CR- and VIP-.</b>
+                </p>
+                <p style="font-family: courier">
+                        VIP+. Ephys. FP. Lengths.
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        After review of DG (i) 2322 IS HICAP (#1106), I am in agreement with the evidence as presented in the provided packet and approve this type for v2.0. - JDK 11/22/2021
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I approve the new type, but I'm not convinced by the name. I don't think we should adopt the same name (except for the IS part) for IS and non-IS neurons, as this can create unneeded confusion (I'm already regretting "IS LM-R" vs "LMR" in CA1, but at least we have an extra hyphen there). Perhaps we could consider something like IS-IMOT (inner molecular targeting), but I'm also open to other proposals. - GAA 01/25/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        The authors refer to the cells as molecular layer-projecting (MP) cells. Perhaps we could amend that into Interneuron Specific Inner MOlecular layer-Projecting (IS IMOP) cells? - DWW 01/28/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I am in agreement with GAA's comments and favor changing the name to either IS IMOT or IS IMOP. As far as choosing between  the two, I am in favor of IMOT despite the author's referral to these cell as molecular layer-projecting. My rationale is that we have used the "projecting" nomenclature so far to denote axonal presence for a neuron type outside of the layer its somata have been found, and the "targeting" nomenclature for within the same layer. Therefore, I think that IMOT is a better choice for describing this new neuron type. - JDK 01/28/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=100></td>
+                                <td style="font-family: courier" class="redtext">
+                                        That logic makes sense. I am in agreement with your suggestion for IS IMOT. - DWW 01/28/2022
+                                </td>
+                        </tr>
+                </table>
+        </body>
+</html>

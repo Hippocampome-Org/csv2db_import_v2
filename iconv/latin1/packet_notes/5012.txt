@@ -1,0 +1,70 @@
+<html>
+        <head>
+                <style>
+                        .redtext {
+                                color: red;
+                        }
+                        .bluetext {
+                                color: #0000FF; /* blue */
+                        }
+                        .greentext {
+                                color: #008000; /* dark green */
+                        }
+                        .purpletext {
+                                color: #800080; /* dark purple */
+                        }
+                        .orangetext {
+                                color: #FF6820; /* orange */
+                        }
+                </style>
+        </head>
+        <body>
+                <p style="font-family: courier">
+                        <b>Sub (i)023 Wide-arbor Polymorphic (wPo) cells [5012]</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Related types:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        Sub (i)133 Recurrent Polymorphic-Moleculare
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes:</b>
+                </p>
+                <p style="font-family: courier">
+                        FP present. Chrna2+. SOM+. Ephys present.
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        p6 -> The slicing orientation was unusual to me. I am unable to judge without layers being marked.
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        Four cells had axons in SUB:SM. Will they be SUB:113 type? - KM 05/24/2018
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I agree it is a little difficult to interpret given the minimal layer lines provided; however, I am willing to be on the generous side given the scarcity of neuron types we have in the subiculum. - DWW 06/05/2018
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        The interpretation of the axons and dendrites had been accidentally reversed in the previous iteration of this packet. There is now also a second packet that reflects the extension of the axons into Sub:SM. - 06/05/2018
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        OK. However, the presence of Dendrites in SM is fuzzy. I am not so happy about these packets. I was thinking. Is it possible to contact the authors to get all 8 reconstructions or anything they are ready to share. - KM 06/09/2018
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        OK. tentatively approve both [Sub Chrna2] packets. - GAA 07/18/2018
+                                </td>
+                        </tr>
+                </table>
+        </body>
+</html>

@@ -1,23 +1,23 @@
-Claiborne (1986), in the Figure 16 caption, clearly states that contact is made with both the apical and basal dendrites of CA3 pyramidal neurons, which substantiates the A:CA3:SP interpretation.
-<p> 
-Small collaterals can extend into SG and SMi.  A:SG are more dorsal than ventral and only contact through en passant boutons.
-<p>
-Buckmaster (1999) and Blasco-Ib&#225;&#241;ez (2000): evidence for some A:SMi, in particular at the temporal pole of the hippocampus.
-<p>
-Claiborne (1986): axons pass through CA3c SR.
-<p>
-Blaabjerg (2007): the most temporal levels in rat have A:CA1; BALB/cJ mice have only an intrapyramidal bundle; SM/J mice have only an infrapyramidal bundle; septally there are almost equal infrapyramidal and suprapyramidal projections with minor intrapyramidal projections; transitioning more temporally the infra- and intrapyramidal projections go away; and infrapyramidal is interpreted as an extended part of SP.
-<p>
-Axons form asymmetric synapses.  Mossy boutons contact DG mossy cells and CA3 pyramidal neurons.  Fine filopodial processes contact GABAergic and peptidergic interneurons in DG:H and CA3.  A:DG:SG contact dendrites and somata of non-GCs, and A:DG:H & A:CA3 contact somata, dendrites, and spines of GABAergic interneurons.
-<p>
-Claiborne (1990): 63% of dendritic branch points and 30% of the length in SMi_SG.  37% of branch points and 70% of the length in SMo.
-<p>
-Desmond (1982): most 1st-order D's in SG and lengths depend on depth of somata in SG; mostly 2nd-, 3rd-, 4th-order dendrites in SMi; mostly 3rd-, 4th-, 5th-order dendrites in SMo; most dendritic branching occurs in SG and SMi; and most dendritic segments located in and terminate in distal SM.
-<p>
-Dendrites are spiny.  
-<p>
-D:SG within 100 [microm of the soma are considered to be part of the soma.
-<p>
-In Geiger (1997) and L&#252;bke (1998) the youngest rats may be adolescents.
-<p>
+On page 20, Claiborne (1986), in the Figure 16 caption, clearly states that contact is made with both the apical and basal dendrites of CA3 pyramidal neurons, which substantiates the A:CA3:SP interpretation.
+ 
+Small collaterals can extend into SG and SMi.  A:SG are more dorsal than ventral and only contact through en passant boutons.
+
+Buckmaster (1999) and Blasco-Ibáñez (2000): evidence for some A:SMi, in particular at the temporal pole of the hippocampus.
+
+Claiborne (1986): axons pass through CA3c SR.
+
+Blaabjerg (2007): the most temporal levels in rat have A:CA1; European hedgehogs have A:CA1:SL; BALB/cJ mice have only an intrapyramidal bundle; SM/J mice have only an infrapyramidal bundle; septally there are almost equal infrapyramidal and suprapyramidal projections with minor intrapyramidal projections; transitioning more temporally the infra- and intrapyramidal projections go away; and infrapyramidal is interpreted as an extended part of SP.
+
+Axons form asymmetric synapses.  Mossy boutons contact DG mossy cells and CA3 pyramidal neurons.  Fine filopodial processes contact GABAergic and peptidergic interneurons in DG:H and CA3.  A:DG:SG contact dendrites and somata of non-GCs, and A:DG:H & A:CA3 contact somata, dendrites, and spines of GABAergic interneurons.
+
+Claiborne (1990): 63% of dendritic branch points and 30% of the length in SMi_SG.  37% of branch points and 70% of the length in SMo.
+
+Desmond (1982): most 1st-order D’s in SG and lengths depend on depth of somata in SG; mostly 2nd-, 3rd-, 4th-order dendrites in SMi; mostly 3rd-, 4th-, 5th-order dendrites in SMo; most dendritic branching occurs in SG and SMi; and most dendritic segments located in and terminate in distal SM.
+
+Dendrites are spiny.  
+
+D:SG within 100 microm of the soma are considered to be part of the soma.
+
+In Geiger (1997) and Lübke (1998) the youngest rats may be adolescents.
+
 Hosseini-Sharifabad and Nyengaard (2007): 0.24-2.17 million GC's depending on species.

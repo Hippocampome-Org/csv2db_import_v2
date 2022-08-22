@@ -1,9 +1,9 @@
-This cell type is a result of a merger between EC (+)220233 pyramidal V neurons, EC (+)020233p-DG 1000 pyramidal projection V neurons, and EC (+)220031 horizontal V neurons.
-<p>
-Likely excitatory cells (Lingenh&#246;hl -> spiny; Gloveli 2001 -> GABA negative, projecting, "similar EP characteristics to principal neurons"; Hamam 2002 -> projecting, sparsely spiny).
-<p>
-There is limited axonal info for Lingenh&#246;hl & Finch cell 13.  L&F's cell 10 was removed because NO axonal information is reported.
-<p>
-Lingenh&#246;hl & Finch no longer have access to their reconstructions and could not provide the neurolucida data.
-<p>
+This cell type is a result of a merger between EC (+)220233 pyramidal V neurons, EC (+)020233p-DG 1000 pyramidal projection V neurons, and EC (+)220031 horizontal V neurons.
+
+Likely excitatory cells (Lingenhohl -> spiny; Gloveli 2001 -> GABA negative, projecting, "similar EP characteristics to principal neurons"; Hamam 2002 -> projecting, sparsely spiny).
+
+There is limited axonal info for Lingenhöhl & Finch cell 13.  L&F's cell 10 was removed because NO axonal information is reported.
+
+Lingenhöhl & Finch no longer have access to their reconstructions and could not provide the neurolucida data.
+
 Gloveli's Figure 2 is a representative example (n > 1).  D:I are borderline, which is complicated by the fact that the layer I/II border is not shown.

@@ -1,0 +1,190 @@
+<html>
+        <head>
+                <style>
+                        .redtext {
+                                color: red;
+                        }
+                        .bluetext {
+                                color: #0000FF; /* blue */
+                        }
+                        .greentext {
+                                color: #008000; /* dark green */
+                        }
+                        .purpletext {
+                                color: #800080; /* dark purple */
+                        }
+                        .orangetext {
+                                color: #FF6820; /* orange */
+                        }
+                </style>
+        </head>
+        <body>
+                <p style="font-family: courier">
+                        <b>CA1 O-LM 1102 neurons</b>
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        DWW
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        CW, CLR 04/06/2011 
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Good examples of 0012 & 0103 too - GAA 
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        Do you approve of merging these two cell classes under the name, CA1 (-)1102 stratum radiatum-targeting oriens-lacunosum moleculare (SR O-LM) neurons?
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier">
+                                        CA1 (-)1102 SR O-LM neurons
+                                        <br>
+                                        CA1 (-)1102 O-LM neurons 
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier" class="redtext">
+                        DWW 01/16/2013
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        CLR, CW 01/17/2013 
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Good! - GAA 
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>CA1 (i)1102 O-LMR neurons [4087]</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Related types:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        CA1 (i)1002 O-LM (v1.0 active)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA1 (i)1112 O-LMRP (v2.0 on-hold)
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes:</b>
+                </p>
+                <p style="font-family: courier">
+                        Svboda et al (1999) was removed and added to CA1 (i)1003 O-LM packet due to above-threshold A:SO. Packet now contains McBain papers (1994 and  2007) and Zemankovics (2010). Cell counts in each are unclear relative to "traditional" 1002 O-LM cells.
+                </p>
+                <p style="font-family: courier">
+                        Zemankovics (2010) contains EP data.
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        I am in agreement with keeping these two types (CA1 O-LMRP and O-LMR) separated based on the extremely sparse axons in the 1102 reconstructions. - JDK 11/03/2021
+                </p>
+                <p style="font-family: courier">
+                        <b>Update: Principal cell layer invoked rule:</b> record axons in the PCL when boutons are present or when axons are branching and ostensibly targeting the PCL and not just passing through, but discount dendrites. - 11/15/2021
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        After re-review based on our updated new invoked rule, I am still in favor with keeping these two types (CA1 O-LMRP and O-LMR) separated based on the extremely sparse axons in the 1102 reconstructions. - JDK 11/22/2021
+                </p>
+                <p style="font-family: courier">
+                        Reassessment of merger of CA1 (i)1112 O-LMRP into CA1 (i)1102 O-LMR.
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        I agree to have at least one more packet out of this material, and I can go with either pattern [CA1 (i)0102 vs. CA1 (i)0112], but I’m frankly not convinced that we want two distinct neuron types. I believe that in v1.0 we have systematically merged all these cases. Do we have any example of 2 types that only differ in axonal presence in PCL? Unless there’s direct evidence that one of the two makes synapses with the soma and the other does not, I’d probably just merge them. If you agree, I suggest 0112, but am also happy with 0102. If there are other similar cases in v2.0, please consider merging. - GAA 02/01/2022
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Tough call. The Quattrocolo neuron appears to be targeting the PCL vs. an original v1.0 neuron type. - DWW 02/03/2022 
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        So in re-reviewing each potential merger within the packet Diek has kindly provided, I had a few questions arise pertinent to favoring merging unless there is direct evidence that one neuron type makes synapses with the soma and the other does not:
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        1. How does this impact the new invoked rule defined in the provided packet, namely that we will "record axons in the PCL when boutons are present or when axons are branching and ostensibly targeting the PCL and not just passing through, but discount dendrites?" Shall we disregard it?
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        2. If we favor the route of merging unless we have direct evidence of one neuron type establishing synapses with the soma while the other does not, which AD pattern should be preferred? The AD pattern exhibited by the majority of the reconstructions or the AD pattern of a single reconstruction that shows axonal presence (e.g. the 0102 & 0112 case that led to this discussion)? Perhaps this should be a case by case basis depending on what evidence makes the most sense to us? - JDK 02/06/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I would suggest that we utilize the PCL invoked rule as our fallback position, when we do not have overriding motivation to merge two or more neuron types. As to which way to merge, I would suggest, since we have not been consistent in the past, that we evaluate on a case-by-case basis. - DWW 02/07/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=100></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I concur. - GAA 02/07/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=125></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Thank you for answering my questions and this route sounds good to me. In light of utilizing the PCL invoked rule as a fallback position, I am okay with merging in all cases in the "Axons in the PCL" packet except for the 0103 and 0113 merger where we have a text description directly stating that the X-OPR (0113 O-RPO) axons display en passant boutons in SP whereas the X-OR (0103 O-BiC) do not. - JDK 02/07/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=150></td>
+                                <td style="font-family: courier" class="redtext">
+                                        After re-examining all of the original comments, I’m ok with keeping separate and on-hold. - GAA 02/13/2022
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        It was agreed by GAA, JDK, and DWW to void the potential merger. - 02/15/2022
+                </p>
+        </body>
+</html>

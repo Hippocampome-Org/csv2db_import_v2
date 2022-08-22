@@ -1,0 +1,187 @@
+<html>
+        <head>
+                <style>
+                        .redtext {
+                                color: red;
+                        }
+                        .bluetext {
+                                color: #0000FF; /* blue */
+                        }
+                        .greentext {
+                                color: #008000; /* dark green */
+                        }
+                        .purpletext {
+                                color: #800080; /* dark purple */
+                        }
+                        .orangetext {
+                                color: #FF6820; /* orange */
+                        }
+                </style>
+        </head>
+        <body>
+                <p style="font-family: courier">
+                        <b>DG (i)2210 Basket with GRAnule-Like DENdrites (BC GRALDEN) cells [1063]</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Related types:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        DG (i)2232 Basket (v1.0 active)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"> </td>
+                                <td style="font-family: courier">
+                                        DG (i)2232 Basket CCK+ (v1.0 active)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"> </td>
+                                <td style="font-family: courier">
+                                        DG (i)2210 TML-Axo-axonic (v2.0 active)
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes: This is a merger proposal between the on-hold cells from Markwardt and the new cells from Vaden. These cells have no dendrites in DG:SG_H, which distinguishes them from the v1.0 neuron types. These cells are stated by the authors to be basket cells, and the axons do not have the typical chandelier look, which distinguishes them from the TML-AA type.</b>
+                </p>
+                <p style="font-family: courier" class="bluetext">
+                        Markwardt: high-freq firing. FP present. APwidth.
+                </p>
+                <table>
+                        <tr>
+                                <td width=300 style="font-family: courier" class="bluetext">
+                                        cell on pg. 4:
+                                </td>
+                                <td style="font-family: courier" class="bluetext">
+                                        cell on pg. 6:
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=300 style="font-family: courier" class="bluetext">
+                                        length 2,493 &mu;m
+                                </td>
+                                <td style="font-family: courier" class="bluetext">
+                                        D length 3,136 &mu;m
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=300 style="font-family: courier" class="bluetext">
+                                        partial A length 3,320 &mu;m
+                                </td>
+                                <td style="font-family: courier" class="bluetext">
+                                        A length 12,600 &mu;m
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier" class="greentext">
+                        Vaden: FP present. PV+. APwidth. APampl. fAHP.
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        Based on the morphology and synonym for the DG Total Molecular Layer cell, I’m confused on the usage of the nomenclature for this proposed neuron type for v2.0. These cells do not have axons in either molecular layer nor do they diffusely spread across both molecular layers as exemplified by the DG TML cell type. Based on the provided packet, I am in agreement with the A-D pattern and calling this cell type a basket cell. However I’d like to better understand why the total molecular layer prefix has been appended – can you elaborate on why you had included this prefix for the cell type? - JDK 10/13/2021
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        You have struck upon one of the more difficult aspect of typing cells, which is what we should name them. I was trying to distinguish them from the canonical 2232 patterning for Basket cells. If you have any ideas for what to call this newly active type, I am all ears. In DG, acronyms are very common, such as HIPP, MOPP, HICAP, etc. - DWW 10/13/2021
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Perhaps we could create an acronym for the neuron type based on somata location? Possible names could be MOG (MOlecular Granule) Basket or SMOG (Stratum MOleculare Granule) Basket. From what I gather, nomenclature when using acronyms usually focuses on the use of axon or dendrite location, but no acronyms I could think of were making sense to me (I was thinking of incorporating the evidence that the hilus does not have dendrites or axons into a possible acronym). Let me know what you think. - JDK 10/14/2021
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Since we already have a formal neuron type called Mossy MOLDEN, because of its MOlecular Layer DENdrites, we could call them MOLDEN Basket or Basket MOLDEN. - DWW 10/14/2021
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=100></td>
+                                <td style="font-family: courier" class="redtext">
+                                        DG Basket cells also have dendrites within the molecular layer, so I’m not certain if that is the most apt way to distinguish this new type. I like it better though than the MOG or SMOG naming. What do you think of HILDEN Basket, HIlus Lacking DENdrites Basket? - JDK 10/14/2021
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=125></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I have not been able to contrive any other acronyms, so I propose we move forward with HILDEN Basket and await GAA’s input on this matter. - DWW 10/15/2021
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=125></td>
+                                <td style="font-family: courier" class="redtext">                        
+                                        I would like to propose a name change for the DG HILus lacking DENdrites (HILDEN) Basket cells. Similar to DG Mossy MOLDEN, I prefer the name DG Basket with MOLecular layer DENdrites. - DWW 12/01/2021
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=150></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I am okay with this name change, although I still favor HILDEN as a means of distinguishing from the canonical basket type in this region, as it also has molecular layer dendrites. - JDK 12/02/2021
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=175></td>
+                                <td style="font-family: courier" class="redtext">
+                                        My hesitation with HILDEN is that it emphasizes what is lacking, as opposed to all other adjectives used so far, which emphasize what is present. - DWW 12/02/2021
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=200></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Understood. Then let's go with MOLDEN. - JDK 12/02/2021
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=225></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Type approved. Name alternative proposal: BC-GraLDen (granule-like dendrites). Reasoning: MolDen sounds nice but I agree that regular DG basket also have dendrites in molecular layer, so the logic doesn’t parallel that of Mossy MolDen. I also dislike HiLDen because it emphasizes what is missing. In areas CA3-CA1, regular baskets (as opposed to horizontal) are sometimes referred to as having pyramidal-like dendrites, hence the idea of granule-like dendrites here. - GAA 01/19/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=250></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I think the reasoning for the new name is sound. - DWW 01/20/2022
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=250></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I concur that the reasoning is sound and support the new name of GC-GraLDen for the proposed v2.0 neuron type. - JDK 01/20/2022
+                                </td>
+                        </tr>
+                </table>
+        </body>
+</html>

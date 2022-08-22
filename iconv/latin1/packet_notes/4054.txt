@@ -1,11 +1,11 @@
-Merger of CA1 (+)2221 pyramidal-like principal (PLP) cells and CA1 (+)2201 radiatum giant cells (RGC).
-<p>
-CA1 PLP 2221 cell type contains unverified connections to SUB and EC.
-<p>
-There is no CLEAR evidence for dendrites in SP in either cell type.
-<p>
-The PLP cell type text mentions "soma located approximately 50 [micro]m from the SP."  Based on the scale bar, basal dendrites are located near the SR/SP border and just within fuzzy boundaries for the principal layer.
-<p>
-The RGC cell type has Guly&#225;s (1998) Fig 2, which shows the soma of cells 1-3 also located about 50-100 [micro]m from the SR/SP border, and it looks like the dendrites have similar extent to PLP cells.  Cell #5 does not have dendrites near SP, so it likely will NOT fit into a 2221 interpretation.
-<p>
+Merger of CA1 (+)2221 pyramidal-like principal (PLP) cells and CA1 (+)2201 radiatum giant cells (RGC).
+
+CA1 PLP 2221 cell type contains unverified connections to SUB and EC.
+
+There is no CLEAR evidence for dendrites in SP in either cell type.
+
+The PLP cell type text mentions "soma located approximately 50 microm from the SP."  Based on the scale bar, basal dendrites are located near the SR/SP border and just within fuzzy boundaries for the principal layer.
+
+The RGC cell type has Gulyas (1998) Fig 2, which shows the soma of cells 1-3 also located about 50-100 microm from the SR/SP border, and it looks like the dendrites have similar extent to PLP cells.  Cell #5 does not have dendrites near SP, so it likely will NOT fit into a 2221 interpretation.
+
 In the PLP cell type, Poolos et al declare PLPs to be a subset of RGCs based on bifurcation patterns of the apical dendrites and soma shape.  However, there appears to be no current basis for hippocampome subclasses.

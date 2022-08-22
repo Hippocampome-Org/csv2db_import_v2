@@ -1,0 +1,53 @@
+<html>
+        <head>
+                <style>
+                        .redtext {
+                                color: red;
+                        }
+                        .bluetext {
+                                color: #0000FF; /* blue */
+                        }
+                        .greentext {
+                                color: #008000; /* dark green */
+                        }
+                        .purpletext {
+                                color: #800080; /* dark purple */
+                        }
+                        .orangetext {
+                                color: #FF6820; /* orange */
+                        }
+                </style>
+        </head>
+        <body>
+                <p style="font-family: courier">
+                        <b>DG (i)2201 Interneuron Specific Hilus-Projecting (IS HIPRO) cells [1103]</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Related types:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        DG (i)2203 HIMOLD (v2.0 on-hold unapproved)
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes: This type has no dendrites in DG:H, which distinguishes it from the 2203 neuron type. These cells are VIP+ and are speculated by the authors to be interneuron specific.</b>
+                </p>
+                <p style="font-family: courier">
+                        VIP+. Ephys. FP. Lengths. NMO reconstructions.
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        After review of DG (i)2201 IS HIPRO [#1103], I am in agreement with the evidence provided in the packet and approve of this neuron type for v2.0. - JDK 11/22/2021
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I approve. Only requested change, pre-pend IS to the formal name on page 1 of the packet. Also add tag indicating presence of reconstructions in NMO on page 1? - GAA 0125/2022
+                                </td>
+                        </tr>
+                </table>
+        </body>
+</html>

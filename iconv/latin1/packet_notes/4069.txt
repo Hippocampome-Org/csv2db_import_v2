@@ -1,13 +1,16 @@
-Related classes:<br>
-&emsp;CA1 (-)1102 O-LM w/o back-proj neurons<br>
-&emsp;CA1 (-)1003 oriens-lacunosum moleculare (O-LM) neurons
-<p>
-Sik (1995) reports that 91.5% of the axon collaterals are in SLM; only 7% are in SO.  According to hippocampome rules, this represents a below-threshold presence.
-<p>
-Axonal presence in SR is variable but consists mostly of continuing branches, with the exception of McBain's (1994) Fig 4A.
-<p>
-Axonal presence in SO is also variable and under threshold.  Unless known connections are reported in the future, this presence will not be counted as per hippocampome rules.
-<p>
-Zemankovics (2010) contains EP data; Losonczy (2002) and Tricoire (2011) contain chemical marker and EP data.
-<p>
+This cell type is a merger of CA1 (-)1002 oriens-lacunosum moleculare (O-LM) neurons, CA1 (-)1003 oriens-lacunosum moleculare (O-LM) neurons, and CA1 (-)1102 oriens-lacunosum moleculare (O-LM) w/o back-projection neurons.
+
+Related classes:
+CA1 (-)1102 O-LM w/o back-proj neurons (suspended)
+
+CA1 (-)1003 oriens-lacunosum moleculare (O-LM) neurons and CA1 (-)1102 oriens-lacunosum moleculare (O-LM) w/o back-projection neurons are also being maintained as suspended classes since A:SR and A:SO were very close calls.
+
+Sik (1995) reports that 91.5% of the axon collaterals are in SLM; only 7% are in SO.  According to hippocampome rules, this represents a below-threshold presence.
+
+Axonal presence in SR is variable but consists mostly of continuing branches, with the exception of McBain's (1994) Fig 4A.
+
+Axonal presence in SO is also variable and under threshold.  Unless known connections are reported in the future, this presence will not be counted as per hippocampome rules.
+
+Zemankovics (2010) contains EP data; Losonczy (2002) and Tricoire (2011) contain chemical marker and EP data.
+
 MGE-derived (Tricoire, 2011).

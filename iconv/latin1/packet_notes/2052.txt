@@ -1,0 +1,179 @@
+<html>
+        <head>
+                <style>
+                        .redtext {
+                                color: red;
+                        }
+                        .bluetext {
+                                color: #0000FF; /* blue */
+                        }
+                        .greentext {
+                                color: #008000; /* dark green */
+                        }
+                        .purpletext {
+                                color: #800080; /* dark purple */
+                        }
+                        .orangetext {
+                                color: #FF6820; /* orange */
+                        }
+                </style>
+        </head>
+        <body>
+                <p style="font-family: courier">
+                        <b>CA3 (i)00330 Bilayer Ivy neurons [2052]</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Related types:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        CA3 (i)03333 Ivy cells
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA3 (i)03330p Mossy Fiber-Associated
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA3 (i)03300 Lucidum-Radiatum
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA3 (i)02310 Lucidum LAX
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA3 (i)00300 Lucidum
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes:</b>
+                </p>
+                <p style="font-family: courier">
+                        smooth dendrites
+                </p>
+                <p style="font-family: courier">
+                        PV-, CCK-
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        I am not comfortable with making this interpretation without the SR/SL border. If all of the dendrites are in SL, then SL is as wide as SP. - CW 02/11/2015
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Even if SL is half the width of SP, is there sufficient penetration into SR to count the neurites there? - DWW 02/12/2015
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I sign off on 00330. - CLR 02/15/2015
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        If SL were half of SP, I think there would be enough dendrites in SR to count them. I still do not approve this one. - CW 02/18/2015
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=100></td>
+                                <td style="font-family: courier" class="redtext">
+                                        So is your interpretation 02330 or 03330? - DWW 09/10/2015
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=125></td>
+                                <td style="font-family: courier" class="redtext">
+                                        02330 with axons in SR below 15% - CW 09/16/2015
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=150></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I'm sticking with 00330. In some figures I see on our portal, SL is the same approximate width as SP. Sometimes SL is show as slightly wider. If the dendrites do make it into SR, they don't make it far. - CLR 10/10/2015
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=175></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I agree with 00330. - DWW 10/19/2015
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=200></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Name?? Where distinct from existing Ivy and/or BC? - GAA 11/29/2015
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=225></td>
+                                <td style="font-family: courier" class="redtext">
+                                        These cells have now been semi-formally named CA3 (00330) Bilayer Ivy cells. - DWW 04/20/2016
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=250></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I approve and like the name. - CLR 05/04/2016
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=275></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Okay with 0330 and name - CW 05/04/2016
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=300></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Ok (sigh) add related types! (Lucidum LAX?) - GAA 05/25/2016
+                                </td>
+                        </tr>
+                </table>
+        </body>
+</html>

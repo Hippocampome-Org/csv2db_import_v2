@@ -1,3 +1,3 @@
-The 03331 and 03301 classes have been mapped into this 03311 class, since they differ only by axons and dendrites in SP.
-<p>
-Borderline dendrites in SP
+The 03331 and 03301 classes have been mapped into this 03311 class, since they differ only by axons and dendrites in SP.
+
+Borderline dendrites in SP

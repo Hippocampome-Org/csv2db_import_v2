@@ -1,0 +1,101 @@
+<html>
+        <head>
+                <style>
+                        .redtext {
+                                color: red;
+                        }
+                        .bluetext {
+                                color: #0000FF; /* blue */
+                        }
+                        .greentext {
+                                color: #008000; /* dark green */
+                        }
+                        .purpletext {
+                                color: #800080; /* dark purple */
+                        }
+                        .orangetext {
+                                color: #FF6820; /* orange */
+                        }
+                </style>
+        </head>
+        <body>
+                <p style="font-family: courier">
+                        <b>CA3 (i)32000 Perforant Path-Associated (PPA) cells [2060]</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Related types:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        CA3 30000 SLM (v1.0 on-hold)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA3 33000 LMR (v2.0 on-hold unapproved)
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes: This neuron type has a clear presence of dendrites in CA3:SR, which distinguishes it from the 30000 neuron type, and a lack of A:CA3:SR, which distinguishes it from the 33000 neuron type.</b>
+                </p>
+                <p style="font-family: courier">
+                        FP. CB1+. maxFR.
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        After reviewing the provided packet [for CA3 (i)32000], I concur with the interpretations and approve of this neuron type for v2.0. - JDK 10/13/2021
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        [From the CA3 (i)33000 packet] To further confound the situation, I now notice that we have a CA3 (i)32000 PPA neuron type, also from Szabo et al., which is why it is named such that it is. In a radical proposal, is there any way that we could merge the 33000 cells into the 32000 cells, if we declare the axons in Szabo Figure 4D_#3 to be below the 15% threshold? Giorgio’s cell could likely be interpreted as 32000 given the dendrites that are protruding down. If we can’t squeeze in 4D_#3 into 32000, we could always merge in Giorgio’s cell and put 4D_#3 on hold by itself.
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        One reason for my proposal is that the PPA label better fits a 32000 pattern than a 33000 one. - DWW 11/15/2021
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I believe that the reconstruction from Szabo et al., 2014 Fig 4D_#3 does have axonal presence in SR above the 15% threshold, so I favor the merger Giorgio’s cell with the 32000 PPA neuron type, and putting the reconstruction in Fig 4D_#3 on hold by itself. And I concur, after reading the Klausberger 2009 article for the CA1 PPA neuron type that the PPA label fits it better. - JDK 11/15/2021
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I'm lost here. The 2.0 browse matrix doesn't have a new 33000 type but has a 32000 type with the same name. This packet does list the 32000 cell as a related neuron, and when I open THAT packet, it refers to the 33000 type as 'on hold'. At any rate, two different patterns should not have the same name! I'll let it sort it all out and not evaluate this one for the time being… - GAA 01/26/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=100></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I apologize for the confusion. I believe I have now straightened everything out. The 32000 type is the one to be evaluated for active status, and is to be named PPA. The 33000 type is to be eventually evaluated for on-hold status, and has been renamed LMR in parallel with the CA1 3300 type. - DWW 02/02/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=125></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Much clearer, thanks. Happy to approve. - GAA 02/02/2022
+                                </td>
+                        </tr>
+                </table>
+        </body>
+</html>

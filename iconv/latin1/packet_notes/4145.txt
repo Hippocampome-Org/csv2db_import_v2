@@ -1,0 +1,66 @@
+<html>
+        <head>
+                <style>
+                        .redtext {
+                                color: red;
+                        }
+                        .bluetext {
+                                color: #0000FF; /* blue */
+                        }
+                        .greentext {
+                                color: #008000; /* dark green */
+                        }
+                        .purpletext {
+                                color: #800080; /* dark purple */
+                        }
+                        .orangetext {
+                                color: #FF6820; /* orange */
+                        }
+                </style>
+        </head>
+        <body>
+                <p style="font-family: courier">
+                        <b>CA1 (i)0210 R-P Basket cells (R-P BC) [4145]</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Related types:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        CA1 (i)0230 RP-P BC CCK+ (v2.0 unapproved on-hold)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA1 (i)0211 R-PO BC CCK+ (v2.0 unapproved on-hold)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA1 (i)0210 R-P BC CCK+ (v2.0 unapproved on-hold)
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes: These cells are tagged either as CB1R-, PV+, or they do not report their associated markers at all, which differentiates these cells from the CCK+ cells. These cells lack a D presence in SP, which the 0230 cell exhibits. This cell lacks A penetrating deep into So, which the 0211 cell has.</b>
+                </p>
+                <p style="font-family: courier">
+                        Firing pattern. CB1R-. PV+.
+                </p>
+                <p style="font-family: courier">
+                        M&eacute;ndez cell is currently on-hold.
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        p9 &rarr; CA1:0330 - KM 11/29/2017
+                </p>
+                <p style="font-family: courier">
+                        One of the Evstratova 2011 cells has been moved to a 0330 packet. - 12/05/2017
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        Approved - GAA 12/12/2017
+                </p>
+        </body>
+</html>

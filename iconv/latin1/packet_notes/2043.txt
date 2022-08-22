@@ -1,6 +1,5 @@
-Axo-axonic cells exclusively target pyramidal cells while basket cells are known to also target other interneurons.
-<p>
-perisomatic axonal targeting interpreted as PCL
-<p>
+Axo-axonic cells exclusively target pyramidal cells while basket cells are known to also target other interneurons.
+
+perisomatic axonal targeting interpreted as PCL
 
-extended interpretation of SP in apical and basal directions
+extended interpretation of SP in apical and basal directions

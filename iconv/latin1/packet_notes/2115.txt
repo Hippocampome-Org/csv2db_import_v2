@@ -1,0 +1,202 @@
+<html>
+        <head>
+                <style>
+                        .redtext {
+                                color: red;
+                        }
+                        .bluetext {
+                                color: #0000FF; /* blue */
+                        }
+                        .greentext {
+                                color: #008000; /* dark green */
+                        }
+                        .purpletext {
+                                color: #800080; /* dark purple */
+                        }
+                        .orangetext {
+                                color: #FF6820; /* orange */
+                        }
+                </style>
+        </head>
+        <body>
+                <p style="font-family: courier">
+                        <b>CA3 (e)23223p-DG_0001-CA2_0100-CA1_0100 CA3c Pyramidal (CA3c PC) cells</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Related types:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        CA3 (e)23223p-CA2_0101-CA1_0101 CA3 Pyramidal (v1.0 active)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA3c (e)23223p-DG_0002 Pyramidal (unapproved v2.0 on-hold)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA3c (e)23223p-DG_0001 Pyramidal (unapproved v2.0 on-hold)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA3c (e)03223p-DG_0101-CA2_0101-CA1_0101-SUB_100 Pyramidal (v1.0 active)
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes: The canonical is not a CA3c PC, which the current cell is. The canonical CA3c cell does not have dendrites in CA3:SLM, which the current cell does. The other two CA3c cells do not project into CA2 and CA1, which the current cell does.</b>
+                </p>
+                <p style="font-family: courier">
+                        Ephys parameters. Firing pattern. Synaptic properties.
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        OK - KM 02/16/2018
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        OK, but I think there's enough evidence of a subset of canonical CA3c PC that push dendrites in SLM ("umbrella" pyramids). Ishizuka + Amaral in their 1995 DENDRITE paper show some. So this could/should become ACTIVE. cf cell C12877 in NMO also C12873, C11471 and others C80764 C53063 + C60463 - GAA 03/01/2018
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>CA3c (e)23223p-DG_0001 Umbrella Pyramidal (CA3c uPC) cells</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Related types:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        CA3 (e)23223p-CA2_0101-CA1_0101 CA3 Pyramidal (v1.0 active)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA3c (e)23223p-DG_0002 Pyramidal (unapproved v2.0 on-hold)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA3c (e)23223p-DG_0001-CA2_0100-CA1_0100 Pyramidal (unapproved v2.0 on-hold)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA3c (e)03223p-DG_0101-CA2_0101-CA1_0101-SUB_100 Pyramidal (v1.0 active)
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes: The canonical CA3 pyramidal cell is not found in CA3c, which the current is. Two of the CA3c cells project into CA2 and CA1, which <u>the current cell does not</u>. The last CA3c cell projects dendrites into DG:H, whereas the current cell projects axons into DG:H.</b>
+                </p>
+                <p style="font-family: courier">
+                        Ephys parameters. Firing pattern. Synaptic properties.
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        OK - KM 02/16/2018
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I think that the axon is incomplete and this is a classic CA3c PC.
+                                        <br>
+                                        "the current cell does not" -> Unless the explicitly say so in paper ... - GAA 03/01/2018
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>CA3c (e)23223p-DG_0002 Pyramidal (CA3c PC) cells</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Related types:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        CA3 (e)23223p-CA2_0101-CA1_0101 CA3 Pyramidal (v1.0 active)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA3c (e)23223p-DG_0001-CA2_0100-CA1_0100 Pyramidal (unapproved v2.0 on-hold)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA3c (e)23223p-DG_0001 Pyramidal (unapproved v2.0 on-hold)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA3c (e)03223p-DG_0101-CA2_0101-CA1_0101-SUB_100 Pyramidal (v1.0 active)
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes: The canonical cells are not found in CA3c, which the current cell is. Two of the other CA3c cells project into CA2 and CA1, which <u>the current cell does not</u>. The remaining CA3c cell projects axons into DG:H, whereas the current cell projects dendrites into DG:H.</b>
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        OK - KM 02/16/2018
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Not totally convinced. The axon is clearly incomplete, and the dendrites do not necessarily enter the hilus. I think this is a classic CA3c PC and would add to that packet. "the current cell does not" -> unless they say so explicitly in paper. - GAA 03/01/2018
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>CA3c (e)23223p-DG_0001-CA2_0100-CA1_0100 Umbrella Pyramidal (CA3c uPC) cells [2115]</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Related types:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        CA3 (e)23223p-CA2_0101-CA1_0101 CA3 Pyramidal (v1.0 active)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA3c (e)03223p-DG_0101-CA2_0101-CA1_0101-SUB_100 Pyramidal (v1.0 active)
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes: This packet is a proposed merger of 3 unapproved v2.0 on-hold cells. The canonical PC is not a CA3c PC, which the current cells are. The canonical CA3c cell does not have dendrites in CA3:SLM, which the current cells do.</b>
+                </p>
+                <p style="font-family: courier">
+                        Ephys parameters. Firing pattern. Synaptic properties.
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        OK - KM 04/14/2018
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        OK - GAA 05/01/2018
+                                </td>
+                        </tr>
+                </table>
+        </body>
+</html>

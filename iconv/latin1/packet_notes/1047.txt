@@ -1,0 +1,207 @@
+<html>
+        <head>
+                <style>
+                        .redtext {
+                                color: red;
+                        }
+                        .bluetext {
+                                color: #0000FF; /* blue */
+                        }
+                        .greentext {
+                                color: #008000; /* dark green */
+                        }
+                        .purpletext {
+                                color: #800080; /* dark purple */
+                        }
+                        .orangetext {
+                                color: #FF6820; /* orange */
+                        }
+                </style>
+        </head>
+        <body>
+                <p style="font-family: courier">
+                        <b>DG (e) 2203p Adult-born Immature Granule cells (ABI-GC) [1047]</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Related types:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        DG 2201p Granule cells (v1.0 active)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        DG 2203p Hilar Ectopic Granule Cells (v1.0 active)
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes:</b>
+                </p>
+                <p style="font-family: courier">
+                        All evidence in this packet refers to 2-week-old mice. Mice lag rats in maturation by 1-2 weeks.
+                </p>
+                <p style="font-family: courier">
+                        axonal fibers form in H and CA3 by 2 weeks.
+                </p>
+                <p style="font-family: courier">
+                        forming synapses with CA3 PCs - unknown synapse formation with CA2 PCs.
+                </p>
+                <p style="font-family: courier">
+                        spineless apical dendritic tree.
+                </p>
+                <p style="font-family: courier">
+                        GABA depolarizing. slow GABAA current.
+                </p>
+                <p style="font-family: courier">
+                        input from hilar GABAergic interneurons.
+                </p>
+                <p style="font-family: courier">
+                        no glutamatergic input.
+                </p>
+                <p style="font-family: courier">
+                        just a few spikes not repetitive spiking.
+                </p>
+                <p style="font-family: courier">
+                        Vrest = -45.6 ± 2.3 (24) mV, Rin = 2.9 ± 0.4 (24) GOhm, APpeak = 43.8 ± 3.7 (23) mV, AHP = 6.1 ± 1.1 mV
+                </p>
+                <p style="font-family: courier">
+                        Vrest = -37.8 ± 0.8 (7) mV, Rin = 3024 ± 236 (7) MOhm, tau = 67.4 ± 6.8 (7) ms, Cm = 20.6 ± 2.1 (7) pF, Ithresh = 20.8 ± 2 (7) pA, APampl = 15.8 ± 3.1 (7) mV, maxFR < 0.5 Hz
+                </p>
+                <p style="font-family: courier">
+                        NeuN+, Prox1+, NeuroD+ (same as for mature GCs)
+                </p>
+                <p style="font-family: courier">
+                        <b>Differences from mature GCs:</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=550 style="font-family: courier">
+                                        <u>ABI-GC</u>
+                                </td>                                 
+                                <td width=550 style="font-family: courier">
+                                        <u>GC</u>
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=550 style="font-family: courier">
+                                        [Y:D:DG:H]
+                                </td>                             
+                                <td width=550 style="font-family: courier">
+                                        [N:D:DG:H]
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=550 style="font-family: courier">
+                                        DCX+, PSA-NCAM+, CR+, CB- (implied)
+                                </td>    
+                                <td width=550 style="font-family: courier">
+                                        DCX- (implied), PSA-NCAM- (implied), CR- (implied), CB+
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=550 style="font-family: courier">
+                                        Vrest > -50 mV
+                                </td>                         
+                                <td width=550 style="font-family: courier">
+                                        Vrest < -70 mV
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=550 style="font-family: courier">
+                                        Rin > 2 GOhm
+                                </td>                           
+                                <td width=550 style="font-family: courier">
+                                        Rin < 300 MOhm
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=550 style="font-family: courier">
+                                        tau > 55 ms
+                                </td>                            
+                                <td width=550 style="font-family: courier">
+                                        tau < 30 ms
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=550 style="font-family: courier">
+                                        fAHP < 8 mV
+                                </td>                            
+                                <td width=550 style="font-family: courier">
+                                        fAHP > 10 mV
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=550 style="font-family: courier">
+                                        APampl < 20 mV
+                                </td>                         
+                                <td width=550 style="font-family: courier">
+                                        APampl > 60 mV
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=550 style="font-family: courier">
+                                        maxFR < 0.5 Hz
+                                </td>                         
+                                <td width=550 style="font-family: courier">
+                                        maxFR > 60 Hz
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=550 style="font-family: courier">
+                                        GABA depolarizing
+                                </td>                      
+                                <td width=550 style="font-family: courier">
+                                        GABA hyperpolarizing
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=550 style="font-family: courier">
+                                        no glutamatergic input
+                                </td>                 
+                                <td width=550 style="font-family: courier">
+                                        input from MCs, CA3c PCs, LEC, MEC
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=550 style="font-family: courier">
+                                        spineless apical dendritic tree
+                                </td>        
+                                <td width=550 style="font-family: courier">
+                                        spiny apical dendritic tree
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=550 style="font-family: courier">
+                                        a few isolated spikes
+                                </td>                  
+                                <td width=550 style="font-family: courier">
+                                        repetitive spiking
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier" class="redtext">
+                        CLR 01/15/2016
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        DWW 01/20/2016
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        GAA 01/21/2016
+                                </td>
+                        </tr>
+                </table>
+        </body>
+</html>

@@ -1,0 +1,134 @@
+<html>
+        <head>
+                <style>
+                        .redtext {
+                                color: red;
+                        }
+                        .bluetext {
+                                color: #0000FF; /* blue */
+                        }
+                        .greentext {
+                                color: #008000; /* dark green */
+                        }
+                        .purpletext {
+                                color: #800080; /* dark purple */
+                        }
+                        .orangetext {
+                                color: #FF6820; /* orange */
+                        }
+                </style>
+        </head>
+        <body>
+                <p style="font-family: courier">
+                        <b>DG (i)2101 Interneuron-Specific Collateral-Targeting (IS COLTAR) cells [1104]</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Related types:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        DG (i)2313p-CA3_03000-CA1_2000 IS-3 projection (v1.0 on-hold)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"> </td>
+                                <td style="font-family: courier">
+                                        DG (i)2303 non-FS interneuron (v1.0 on-hold)
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes: This type has no dendrites in DG:SMi_H, which distinguishes it from the v1.0 neuron types. This type does not project into CA3, which distinguishes it from the other IS projection type. These cells are VIP+ and are speculated by the authors to be interneuron specific.</b>
+                </p>
+                <p style="font-family: courier">
+                        VIP+. Ephys. FP. Lengths.
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        After reviewing DG (i)2101p IS COLTAR Proj [#1104], I am unsure where the evidence of projection to CA1 SLM for this neuron type is coming from. Is this an inference made based off evidence from the on-hold IS-3 projection neuron type? Otherwise I am not seeing any textual evidence or evidence from the provided figures to support this conclusion (Figure 3b from the provided packet does not support a projection to CA1 based on somata locations relative to CA1 in our reference van Strien figure). - JDK 11/22/2021
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        When I look at the possible somata locations for each of the four Bis neurons as shown in 3b I don’t think any of them would be positioned to extend into CA1 SLM. - JDK 11/23/2021
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        It is hard to judge based on no information from the authors, but they definitely project outside of the DG.
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        You would picture them projecting more into the subiculum or the presubiculum? - DWW 11/23/2021
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I concur they definitely project outside of DG. And ahh I see, noted on what you had in mind.
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Yes I could see them projecting to either subiculum SM or presubiculum based on the somata locations provided by the reference. - JDK 11/23/2021
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=100></td>
+                                <td style="font-family: courier" class="redtext">
+                                        After taking a closer look at the somata location provided by the authors and comparing their schematic to Figure 1C of van Strien et al., 2009, I think we have been too conservative in our assessment of the somata locations. I now think they are more parallel to the presubiculum and parasubiculum than to the subiculum. - DWW 11/30/2021
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=125></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I can see this being the case. With that said, should we just not include that it projects? This would constitute a new neuron type just from its A-D pattern in DG. - JDK 11/30/2021
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=150></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I agree that we should still include this as a new neuron type. I will add comments that the dendrites project outside of the entire hippocampal formation and, therefore, will not be considered in the A-D pattern. - DWW 12/01/2021
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=175></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I agree with the proposed solution. - JDK 12/02/2021
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=200></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I approve. Only requested change, remove the p-CA1_2000 appendix from the formal name on page 1 of the packet in light of the notes thereafter. - GAA 01/25/2022
+                                </td>
+                        </tr>
+                </table>
+        </body>
+</html>

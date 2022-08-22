@@ -1,20 +1,396 @@
-This cell type is a result of a merger between CA1 0300 SCA-SR and CA1 0300 calbindin SR.
-<p>
-
-Rejected merger with CA1 (-)1300 SLM-SR due to strength of A:SLM. 
-<p>
-Possible future subclasses based on expression of chemical markers (SCA-SR type appears to be CCK+; CB-SR cell type is CB+)
-<p>
-CA1 0300 SCA-SR notes:<br>
-- Language of various authors indicates that dendrites can enter SLM or SO, but they do so "rarely" (Freund & Buzs&#225;ki, 1996).<br>
-- SCA-ADI 2311 cell type also exists<br>
-- SCA 2300 cell type no longer exists.  It was n=1 and that cell (Vida 1998) is now included here (same cell as Vida 2010, which was already in this cell type)<br>
-- SCA neurons in this cell type are CCK+ (Cope 2002; Pawelzik 2002)
-<p>
-CA1 0300 calbindin SR notes:<br>
-- Other CA1 calbindin cell types exist:<br>
-&emsp;* CA1 calbindin 3100<br>
-&emsp;* CA1 calbindin 0303<br>
-&emsp;* CA1 calbindin-IS-1 0302<br>
-&emsp;* CA1 calbindin-SO-SO 0003<br>
-- CA3 calbindin cell types also exist.
+<html>
+        <head>
+                <style>
+                        .redtext {
+                                color: red;
+                        }
+                        .bluetext {
+                                color: #0000FF; /* blue */
+                        }
+                        .greentext {
+                                color: #008000; /* dark green */
+                        }
+                        .purpletext {
+                                color: #800080; /* dark purple */
+                        }
+                        .orangetext {
+                                color: #FF6820; /* orange */
+                        }
+                </style>
+        </head>
+        <body>
+                <p style="font-family: courier">
+                        <b>CA1 SR</b>
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        I would x-out S:SP and combine these 2 classes into a single CA1 SR combo-class. - DWW
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Agree soma in SR only - CW 
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Are you including SCA in this group? - CW 
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        On this (esp. terminology) let's discuss post-summary - GAA 
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        S:SP removed. To be eventually combined with SC 0300 class - CLR 02/25/2011 
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>CA1 Schaffer collateral-associated 0300 neurons</b>
+                </p>
+                <p style="font-family: courier">
+                        Propose combining with SR 0300 and large calbindin 0300.
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        CLR
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        CW 03/08/2011 
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I would remove citations that mention neurites in SLM and SO. These are generous interpretations by the authors but do not qualify under our rules. - DWW 
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        OK - to review with all packets pertaining to CLR's CA1 summary (and with the summary itself) - GAA 
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>CA1 Schaffer collateral-associated 0300 cells (fully approved)</b>
+                        <br>
+                        <b>CA1 SR 0300 cells (fully approved)</b>
+                </p>
+                <p style="font-family: courier">
+                        1) Do you approve of merging these two cell classes?
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        Yes - DWW, CW, CLR, GAA
+                </p>
+                <p style="font-family: courier">
+                        2) Assuming merger, what unified class name?
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        SR: stratum radiatum? - DWW, CW, CLR
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        SC: Schaffer collateral-associated? *? Not sure yet - GAA 
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>CA1 0300 Schaffer collateral-associated--stratum radiatum (SCA-SR) neurons</b>
+                </p>
+                <p style="font-family: courier">
+                        This class is a merger of
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier">
+                                        CA1 0300 Schaffer collateral-associated (SCA) cells 
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier">
+                                        CA1 0300 stratum radiatum (SR) cells 
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier" class="redtext">
+                        CLR 07/23/2011
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        DWW, CW, GAA 
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>CA1 calbindin SR 0300 neuron</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier">
+                                        Axons or dendrites may extend to SO in some cases. 
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier">
+                                        Also exist in CA3. 
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier">
+                                        Note: these may or may not be the "large" calbindin cells referred to by Klausberger & Somogyi. 
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier" class="redtext">
+                        CW
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        All 4 cells taken together from Gulyas [et al., 1991] Fig. 1B would conform to the K&S [Klausberger & Somogyi] patterning. - DWW
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Other 0300 neurons?! (Freund IS perhaps) - GAA
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>CA1 calbindin SR 0300 neuron</b>
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        This is my attempt at compiling a packet for the calbindin class. I believe there is enough evidence for an 0300 class (other classes appear to be sub-threshold).
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        Note: I found evidence for the "large calbindin" cells referred to in the Klausberger & Somogyi series (included at the end of the packet). It's possible that these cells originate from a "lumping together" of the evidence in Gulyas and Freund's Figure 2 (see pg 5). An email to Klausberger or Somogyi may be the next step. - CLR 07/05/2011
+                </p>
+                <p style="font-family: courier">
+                        <b>CA1 calbindin SR 0300 neuron</b>
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        There are also calbindin SLM 3000 and calbindin SO 0003 packets.
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        Note: I found evidence for the "large calbindin" cells referred to in the Klausberger & Somogyi series (included at the end of the packet). It's possible that these cells originate from a "lumping together" of the evidence in Gulyas and Freund's Figure 2 (see pg 5). An email to Klausberger or Somogyi may be the next step. - CLR 07/20/2011
+                </p>
+                <p style="font-family: courier">
+                        Propose combining with SR-SCA 0300.
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        Yes. - DWW 07/21/2011
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Agree - CW 07/21/2011
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Excellent! - GAA
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>CA1 (i)0300 Radiatum (R) neurons [4028]</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Related types:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        CA1 (i)0310 L-H-RP (v2.0 on-hold)
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Merger status:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        This packet is a result of a merger between CA1 (i)0300 SCA-SR and CA1 (i)0300 calbindin SR.
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        Rejected merger with CA1 (i)1300 SLM-SR due to strength of A:SLM.
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        Rejected merger proposal with CA1 2300 IS1 due to target specificity.
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes:</b>
+                </p>
+                <p style="font-family: courier">
+                        Possible future subclasses based on expression of chemical markers (SCA-SR type appears to be CCK+; CB-SR cell type is CB+)
+                </p>
+                <p style="font-family: courier">
+                        <u>CA1 0300 SCA-SR notes:</u>
+                </p>
+                <p style="font-family: courier">
+                        Language of various authors indicates that dendrites can enter SLM or SO, but they do so "rarely" (Freund & Buzsaki, 1996).
+                </p>
+                <p style="font-family: courier">
+                        <u>CA1 0300 calbindin SR notes:</u>
+                </p>
+                <p style="font-family: courier">
+                        Other CA1 calbindin cell types exist:
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier">
+                                        CA1 calbindin 3100 
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier">
+                                        CA1 calbindin 0303 
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier">
+                                        CA1 calbindin-IS-1 0302 
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier">
+                                        CA1 calbindin-SO-SO 0003 
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        CA3 calbindin cell types also exist.
+                </p>
+                <p style="font-family: courier">
+                        <b>Principal cell layer invoked rule:</b> record axons in the PCL when boutons are present or when axons are branching and ostensibly targeting the PCL and not just passing through, but discount dendrites.
+                </p>
+                <p style="font-family: courier">
+                        Assessment of merger of CA1 (i)0310 L-H-RP into CA1 (i)0300 Radiatum.
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        I agree to have at least one more packet out of this material, and I can go with either pattern [CA1 (i)0102 vs. CA1 (i)0112], but I’m frankly not convinced that we want two distinct neuron types. I believe that in v1.0 we have systematically merged all these cases. Do we have any example of 2 types that only differ in axonal presence in PCL? Unless there’s direct evidence that one of the two makes synapses with the soma and the other does not, I’d probably just merge them. If you agree, I suggest 0112, but am also happy with 0102. If there are other similar cases in v2.0, please consider merging. - GAA 02/01/2022
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Proposal: merge 0310 into 0300 - DWW 02/03/2022 
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        So in re-reviewing each potential merger within the packet Diek has kindly provided, I had a few questions arise pertinent to favoring merging unless there is direct evidence that one neuron type makes synapses with the soma and the other does not:
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        1. How does this impact the new invoked rule defined in the provided packet, namely that we will "record axons in the PCL when boutons are present or when axons are branching and ostensibly targeting the PCL and not just passing through, but discount dendrites?" Shall we disregard it?
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        2. If we favor the route of merging unless we have direct evidence of one neuron type establishing synapses with the soma while the other does not, which AD pattern should be preferred? The AD pattern exhibited by the majority of the reconstructions or the AD pattern of a single reconstruction that shows axonal presence (e.g. the 0102 & 0112 case that led to this discussion)? Perhaps this should be a case by case basis depending on what evidence makes the most sense to us? - JDK 02/06/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I would suggest that we utilize the PCL invoked rule as our fallback position, when we do not have overriding motivation to merge two or more neuron types. As to which way to merge, I would suggest, since we have not been consistent in the past, that we evaluate on a case-by-case basis. - DWW 02/07/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=100></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I concur. - GAA 02/07/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=125></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Thank you for answering my questions and this route sounds good to me. In light of utilizing the PCL invoked rule as a fallback position, I am okay with merging in all cases in the "Axons in the PCL" packet except for the 0103 and 0113 merger where we have a text description directly stating that the X-OPR (0113 O-RPO) axons display en passant boutons in SP whereas the X-OR (0103 O-BiC) do not. - JDK 02/07/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=150></td>
+                                <td style="font-family: courier" class="redtext">
+                                        This is the same scenario as that of CA1 (i)2311 Schaffer Collateral-Associated & CA1 (i)2301 R-S-RO (v2.0 on-hold), so for coherence I would keep that separate. - GAA 02/13/2022
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        It was agreed by GAA, JDK, and DWW to adhere to the interpretations of the authors of schematics and void the potential merger. - 02/15/2022
+                </p>
+        </body>
+</html>

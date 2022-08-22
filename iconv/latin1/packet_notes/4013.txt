@@ -1,3 +1,196 @@
-This is a combo-class composed of<br>
-&emsp;CA1 2333 bistratified (bi) cells<br>
-&emsp;CA1 2333 radial trilaminar (tri) cells
+<html>
+        <head>
+                <style>
+                        .redtext {
+                                color: red;
+                        }
+                        .bluetext {
+                                color: #0000FF; /* blue */
+                        }
+                        .greentext {
+                                color: #008000; /* dark green */
+                        }
+                        .purpletext {
+                                color: #800080; /* dark purple */
+                        }
+                        .orangetext {
+                                color: #FF6820; /* orange */
+                        }
+                </style>
+        </head>
+        <body>
+                <p style="font-family: courier">
+                        Do you approve of merging these two cell classes?
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier">
+                                        CA1 bistratified 2333 cells (fully approved)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier">
+                                        CA1 radial trilaminar 2333 cells (fully approved)
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier" class="redtext">
+                        Yes - DWW, CW, CLR
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Yes to merger. We'll need actually to decide whether to keep 2 sub-classes depending on soma location since one of them could receive basket input and the other doesn't! This can be done on the basis of the "red box" logic in the connectivity matrix. Not sure about name yet. We need complete mapping of synonyms in both sources. For example, couldn't these be SCA? (Somogyi/Klausberger?!) Pawelzik & Thompson's paper should also be added! - GAA
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        Merger has been approved by DWW, CW, CLR, <u>and</u> GAA.
+                </p>
+                <p style="font-family: courier">
+                        Notes have been added to internal packets indicating that Pawelzik's bistrat cells (with dendrites in SLM) do not meet our rules. These cells appear in the bistrat 0333 packet instead.
+                </p>
+                <p style="font-family: courier">
+                        <b>CA1 (-)2333 bistratified cells-trilaminar cells (BiC-TriC)</b>
+                </p>
+                <p style="font-family: courier">
+                        This is a combo-class composed of
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier">
+                                        CA1 2333 bistratified (bi) cells
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier">
+                                        CA1 2333 trilaminar (tri) cells
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        Proposal to merge CA1 (i)2323 Ivy into CA1 (i)2333 Radial Trilaminar.
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        I am in agreement with compression of the 2323 Ivy with the 2333 Radial Trilaminar to be considered as 2333. - JDK 11/03/2021
+                </p>
+                <p style="font-family: courier">
+                        <b>Update: Principal cell layer invoked rule:</b> record axons in the PCL when boutons are present or when axons are branching and ostensibly targeting the PCL and not just passing through, but discount dendrites.
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        After re-review based on our updated new invoked rule, I don’t think that the axons of the Ivy cell are clearly targeting SP. Therefore I am in favor of keeping these two cell types distinct. What do you think upon re-review? - JDK 11/22/2021
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I agree. The axons are not targeting SP. We will keep the two types separate. - DWW 11/22/2021
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>CA1 (i)2333 Radial Trilaminar cells (Radial TriC) [4013]</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Related types:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        CA1 (i)2333 IS3 (v2.0 on-hold)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA1 (i)0333 Ivy (v1.0 active)
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes:</b>
+                </p>
+                <p style="font-family: courier">
+                        Lapray: [Y:A:CA1:SP{low}]. NK1R+. nNOS+. NPY+.
+                </p>
+                <p style="font-family: courier">
+                        Reassessment of merger of CA1 (i)2323 Ivy into CA1 (i)2333 Radial Trilaminar.
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        I agree to have at least one more packet out of this material, and I can go with either pattern [CA1 (i)0102 vs. CA1 (i)0112], but I’m frankly not convinced that we want two distinct neuron types. I believe that in v1.0 we have systematically merged all these cases. Do we have any example of 2 types that only differ in axonal presence in PCL? Unless there’s direct evidence that one of the two makes synapses with the soma and the other does not, I’d probably just merge them. If you agree, I suggest 0112, but am also happy with 0102. If there are other similar cases in v2.0, please consider merging. - GAA 02/01/2022
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Proposal: merge 2323 into 2333 - DWW 02/03/2022 
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        So in re-reviewing each potential merger within the packet Diek has kindly provided, I had a few questions arise pertinent to favoring merging unless there is direct evidence that one neuron type makes synapses with the soma and the other does not:
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        1. How does this impact the new invoked rule defined in the provided packet, namely that we will "record axons in the PCL when boutons are present or when axons are branching and ostensibly targeting the PCL and not just passing through, but discount dendrites?" Shall we disregard it?
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        2. If we favor the route of merging unless we have direct evidence of one neuron type establishing synapses with the soma while the other does not, which AD pattern should be preferred? The AD pattern exhibited by the majority of the reconstructions or the AD pattern of a single reconstruction that shows axonal presence (e.g. the 0102 & 0112 case that led to this discussion)? Perhaps this should be a case by case basis depending on what evidence makes the most sense to us? - JDK 02/06/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=100></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I would suggest that we utilize the PCL invoked rule as our fallback position, when we do not have overriding motivation to merge two or more neuron types. As to which way to merge, I would suggest, since we have not been consistent in the past, that we evaluate on a case-by-case basis. - DWW 02/07/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=125></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I concur. - GAA 02/07/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=150></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Thank you for answering my questions and this route sounds good to me. In light of utilizing the PCL invoked rule as a fallback position, I am okay with merging in all cases in the "Axons in the PCL" packet except for the 0103 and 0113 merger where we have a text description directly stating that the X-OPR (0113 O-RPO) axons display en passant boutons in SP whereas the X-OR (0103 O-BiC) do not. - JDK 02/07/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=175></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I agree. - GAA 02/13/2022
+                                </td>
+                        </tr>
+                </table>
+        </body>
+</html>

@@ -1,0 +1,83 @@
+<html>
+        <head>
+                <style>
+                        .redtext {
+                                color: red;
+                        }
+                        .bluetext {
+                                color: #0000FF; /* blue */
+                        }
+                        .greentext {
+                                color: #008000; /* dark green */
+                        }
+                        .purpletext {
+                                color: #800080; /* dark purple */
+                        }
+                        .orangetext {
+                                color: #FF6820; /* orange */
+                        }
+                </style>
+        </head>
+        <body>
+                <p style="font-family: courier">
+                        <b>CA1 (i)0003p-Sub_010 SO-SO Projecting (SO-SO Proj) cells [4186]</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Related types:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        CCA1 (i)0113p-Sub_111 Trilaminar (v1.0 active)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA1 (i)0003 SO-SO (v1.0 active)
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes: This neuron type has axons in Sub:SP, which distinguishes it from the canonical SO-SO type. This neuron type does not have axons in CA1:SR_SP, which distinguishes it from the canonical Trilaminar type. This neuron type is VIP+, which distinguishes it from both of the other types and suggests that the type may be interneuron specific.</b>
+                </p>
+                <p style="font-family: courier">
+                        VIP+. Markers. Ephys. FP. Lengths.
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        Since the parcels are not well defined for SUB in these figures, are you just assuming that all of the axon resides in SUB SP? For the reconstruction in Francavilla et al., 2018, it looks like some of the axon may be residing in SM… - JDK 11/17/2021
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        It is a very hard call as to where Sub:SP ends and Sub:SM begins. We also have to judge whether the amount of axonal presence in the hypothetical Sub:SM is greater than 15%. - DWW 11/17/2021
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Thank you for the van Strien parcel figure to help clarify boundaries between layers. What makes matters more difficult is that there isn’t a text description that we can rely on that states layer specific axonal presence within SUB, just that the axons had reached SUB. With that said, I’m open to just assuming that the axon resides entirely within SP. - JDK 11/18/2021
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Reviewing my response, I don’t think I made it clear my preference. Thinking about this more, I am in agreement with the assumption that the axon resides entirely within SP based off the evidence we have. Therefore, I approve of the evidence as provided in this packet and support the inclusion of this neuron type for v2.0. - JDK 11/23/2021
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I approve. - GAA 02/01/2022
+                                </td>
+                        </tr>
+                </table>
+        </body>
+</html>

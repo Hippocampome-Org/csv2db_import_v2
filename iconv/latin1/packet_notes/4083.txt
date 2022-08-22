@@ -1,0 +1,357 @@
+<html>
+        <head>
+                <style>
+                        .redtext {
+                                color: red;
+                        }
+                        .bluetext {
+                                color: #0000FF; /* blue */
+                        }
+                        .greentext {
+                                color: #008000; /* dark green */
+                        }
+                        .purpletext {
+                                color: #800080; /* dark purple */
+                        }
+                        .orangetext {
+                                color: #FF6820; /* orange */
+                        }
+                </style>
+        </head>
+        <body>
+                <p style="font-family: courier">
+                        <b>CA1 0103 oriens-radiatum (O-R) neurons</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier">
+                                        Unspecified projection to the subiculum.  
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier">
+                                        AKA oriens-bistratified.  
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier" class="redtext">
+                        Does Zemonkovics belong to the oriens-bistratified class, which is strictly located within CA1, or should it be folded into ORP or DP, since it has unspecified projections to the subiculum? - DWW
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I would keep this paper where it is (with oriens-bistratified), mostly because it is an unspecified projection and there's no way to know whether to fold it into DP or ORP. also, it's <u>possible</u> that the O-bi in Maccaferri's [et al., 2000] Fig 4 projects to Sub, too, and is just unspecified. The axonal arbor there is very wide. I like the current grouping. - CLR 05/05/2011  
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Agree w. including Zemonkovics cell with O-bi. - CW 05/05/2011  
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Could absence in SP (and subiculum) be due to slicing? Possible merger with 0113 oriens-trilaminar?? To be discussed ... - GAA  
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        If the lack of axons in SP is due to slicing, what are the odds that this would happen all 7 times? I would wager low. That being said, I would not interpret N:A:SP. In directly compsing Ferraguti's [et al., 2005] 0113 trilaminar with Maccaferri's 0103 oriens-bistrat, it looks like Ferraguti's 2nd slice matches the axonal density in the other fig; however, that slice lacks any dendrites or the soma. Ferraguti used [65] [micro]m-thick slices and Maccaferri used 300 [micro]m-thick slices, so 4 of Ferraguti's slice would compare to the 1 of Maccaferri. - DWW  
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Maccaferri: "Recovered cell were reconstructed from the serial 60 [micro] thick sections" - CW
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>CA1 0103 oriens-radiatum (O-R) neurons</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier">
+                                        Unspecified projection to the subiculum.  
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier">
+                                        <b>Synonyms:</b>  
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier">
+                                        oriens-bistratified (Maccaferri et al., 2000)
+                                        <br>
+                                        O-R (Zemankovics et al., 2010) 
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier">
+                                        Axons in SP may be lost here due to slicing? 
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier">
+                                        At GAA's request, this class is up for merger consideration with CA1 trilaminar 0113, CA1 0113 oriens-retrohippocampal projection (ORP) (axons are now being counted in SP for this class), and CA1 0103 double projection (DP) cells (axons are now being counted in SP for this class, too).
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier">
+                                        Strong potential exists for future subclasses, possibly based on septal projections.
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier" class="redtext">
+                        IMHO either we merge (with cautionary notes & subclassification) or we state explicitly N:A:SP! - GAA
+                </p>
+                <p style="font-family: courier">
+                        <b>CA1 0113 ORP-DP-trilaminar horizontal (fully approved)</b>
+                        <br>
+                        <b>CA1 0103 O-R (fully approved)</b>
+                </p>
+                <p style="font-family: courier">
+                        Do you approve of merging these two cell classes under the hyphenated meganame, CA1 0113 trilaminar horizontal-ORP-DP-OR (aka TO-DO cells)? The combined class would have [A:SUB:SM_SP_PL].
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        Yes - CLR 08/09/2011
+                </p>
+                <p style="font-family: courier">
+                        <b>Merger notes:</b>
+                </p>
+                <p style="font-family: courier">
+                        <b>Axons in SP</b> - the CA1 0103 O-R packet has borderline evidence (Maccaferri et al., 2000) or no evidence (Zemankovics et al., 2010), but neither paper has convincing evidence that there is no SP presence. Therefore, under hippocampome rules, when compressing classes we leave axons in PCL because of the issue of target specificity. Possible subclasses will exist in a future release once the data is quantified.
+                </p>
+                <p style="font-family: courier">
+                        <b>Projection to SUB</b> - the ORP-DP-trilaminar horizontal packet has been approved with [A:SUB:SM_SP_PL] (horiz trilaminar cells match this; ORP cells have clear axons in SUB:SM_SP and borderline axons in PL; DP cell axons could not be followed to terminals so could not be traced further than SUB:SP). The O-R 0103 packet has an unspecified projection to SUB.
+                </p>
+                <p style="font-family: courier">
+                        <b>Septal projection</b> - potential for subclasses. DP cells project into the septal area and ORP cells do not. Unknown for trilaminar-horizontal and O-R.
+                </p>
+                <p style="font-family: courier">
+                        <b>CA1 0113 oriens retrohippocampal projection (ORP) cells (axons now counted in SP)</b>
+                        <br>
+                        <b>CA1 0113 double projection (DP) cells (axons now counted in SP)</b>
+                        <br>
+                        <b>CA1 0103 oriens-radiatum (O-R) cells (aka oriens-bistratified, axonal difference in SP may be due to slicing)</b>
+                        <br>
+                        <b>CA1 0113 trilaminar horizontal</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier">
+                                        There is a strong potential for subclasses, possibly based on septal projections. DP cells project into the septal area, ORP cells do not, and there is no mention either way for O-R cells or trilaminar.  
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier" class="redtext">
+                        The two issues are A:CA1:SP and the projection to the subiculum.
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        I suggest combining with [A:SUB:SM_SP_PL], which seems to be the case in the trilaminar cells. For the ORP class, we have panel F [from Jinno et al., 2007] on p. 5 [of the packet] (with clear axons in SUB:SM_SP and borderline axons in PL). The SUB evidence for the DP class appears to come solely from the schematic [from Jinno et al., 2007] on p. 6 [of the packet] (but the authors state that the axons could not be followed to the terminals). Evidence for CA1 0103 O-R contains an unspecified projection to the SUB. - CLR
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I would merge ORP, DP, y tri into 0113-SUB111, but I would leave O-R as 0103 with a note of possible future merger if we decide SP doesn't count unless somata are targeted.  
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I would merge ISI-I 0103 with DP 0103. - DWW 07/14/2011  
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I approve merger of O-R, ORP, DP, + trilaminar and suspension of IS 0103. - CW  
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>CA1 (-)0103 oriens-radiatum (O-R) neurons</b>
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        These cells remind me of Maccaferri (2000) Fig 4, which we placed in CA1 (-)0113 TH-ORP-DP-OR. Also Zemankovics (2010) Fig 1. I think I would put them there.
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        The M2R story would work with the TH-ORP-DP-OR packet, too. - CLR 01/16/2013
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Since the Maccaferri and Zemankovics cells have no clear evidence of projection to the subiculum, I would lean towards extracting them from the TH-ORP-DP-OR packet and merging them with these cells as 0103. - DWW 01/16/2013  
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        CLR  
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        CW 01/17/2013  
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=100></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Yes, (O-BI!) 7 clean up! - GAA  
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>CA1 (i)0103 oriens-bistratified cells (O-BiC) [4083]</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Related types:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        CA1 (i)0113 O-RPO (v2.0 on-hold)
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes:</b>
+                </p>
+                <p style="font-family: courier">
+                        Maccaferri 2000 and Zemankovics 2010 have been transferred from CA1 (i)0113p Trilaminar neurons to this packet.
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        I am in agreement with keeping these two types (CA1 X-OPR and O-BiC) separated based on Cossart et al.'s determination. - JDK 11/03/2021
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        After re-review, I still support these two neuron types be separated based on Cossart et al.’s determination. - JDK 11/22/2021
+                </p>
+                <p style="font-family: courier">
+                        <b>Principal cell layer invoked rule:</b> record axons in the PCL when boutons are present or when axons are branching and ostensibly targeting the PCL and not just passing through, but discount dendrites.
+                </p>
+                <p style="font-family: courier">
+                        Reassessment of merger of CA1 (i)0113 O-RPO into CA1 (i)0103 Oriens-Bistratified.
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        I agree to have at least one more packet out of this material, and I can go with either pattern [CA1 (i)0102 vs. CA1 (i)0112], but I’m frankly not convinced that we want two distinct neuron types. I believe that in v1.0 we have systematically merged all these cases. Do we have any example of 2 types that only differ in axonal presence in PCL? Unless there’s direct evidence that one of the two makes synapses with the soma and the other does not, I’d probably just merge them. If you agree, I suggest 0112, but am also happy with 0102. If there are other similar cases in v2.0, please consider merging. - GAA 02/01/2022
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Tough call. The Cossart neuron has en passant boutons in the PCL vs. an original v1.0 neuron type. - DWW 02/03/2022  
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        So in re-reviewing each potential merger within the packet Diek has kindly provided, I had a few questions arise pertinent to favoring merging unless there is direct evidence that one neuron type makes synapses with the soma and the other does not:
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        1. How does this impact the new invoked rule defined in the provided packet, namely that we will "record axons in the PCL when boutons are present or when axons are branching and ostensibly targeting the PCL and not just passing through, but discount dendrites?" Shall we disregard it?
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        2. If we favor the route of merging unless we have direct evidence of one neuron type establishing synapses with the soma while the other does not, which AD pattern should be preferred? The AD pattern exhibited by the majority of the reconstructions or the AD pattern of a single reconstruction that shows axonal presence (e.g. the 0102 & 0112 case that led to this discussion)? Perhaps this should be a case by case basis depending on what evidence makes the most sense to us? - JDK 02/06/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I would suggest that we utilize the PCL invoked rule as our fallback position, when we do not have overriding motivation to merge two or more neuron types. As to which way to merge, I would suggest, since we have not been consistent in the past, that we evaluate on a case-by-case basis. - DWW 02/07/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=100></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I concur. - GAA 02/07/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=125></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Thank you for answering my questions and this route sounds good to me. In light of utilizing the PCL invoked rule as a fallback position, I am okay with merging in all cases in the "Axons in the PCL" packet except for the 0103 and 0113 merger where we have a text description directly stating that the X-OPR (0113 O-RPO) axons display en passant boutons in SP whereas the X-OR (0103 O-BiC) do not. - JDK 02/07/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=150></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I agree with Jeffrey and would keep separate. - GAA 02/13/2022
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        It was agreed by GAA, JDK, and DWW to void the potential merger. - 02/15/2022
+                </p>
+        </body>
+</html>

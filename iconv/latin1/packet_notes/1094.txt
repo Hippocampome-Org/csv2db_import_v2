@@ -1,0 +1,65 @@
+<html>
+        <head>
+                <style>
+                        .redtext {
+                                color: red;
+                        }
+                        .bluetext {
+                                color: #0000FF; /* blue */
+                        }
+                        .greentext {
+                                color: #008000; /* dark green */
+                        }
+                        .purpletext {
+                                color: #800080; /* dark purple */
+                        }
+                        .orangetext {
+                                color: #FF6820; /* orange */
+                        }
+                </style>
+        </head>
+        <body>
+                <p style="font-family: courier">
+                        <b>DG (i)0003 Hilus-Associated Interneurons (HAI) [1094]</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Related types:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        DG (i)0003 chandelier (v1.0 on-hold)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        DG (i)0003 IS-3 (v1.0 on-hold)
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes: The current cell is not known to specifically target either axon initial segments or other interneurons.</b>
+                </p>
+                <p style="font-family: courier">
+                        FP. Ephys. SOM+.
+                </p>
+                <p style="font-family: courier">
+                        neurite lengths.
+                </p>
+                <p style="font-family: courier">
+                        synaptic information
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        OK - KM 05/24/2018
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        OK - GAA 07/18/2018
+                                </td>
+                        </tr>
+                </table>
+        </body>
+</html>

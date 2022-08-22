@@ -1,16 +1,16 @@
-This cell type is a merger of EC (+)223331 horizontal V neurons, EC (+)233331 bipolar V neurons, EC (+)223331 large pyramidal III neurons, and LEC (+)223333 large pyramidal cells V.
-<p>
-Excitatory (Lingenh&#246;hl -> spiny; Quilichini -> principal, spiny, excitatory; Canto 2008 -> projecting; Canto 201X LEC preprint -> spiny, "principal," projecting; Tahvildari -> sparsely spiny, projecting; Canto 2011 LEC -> spiny, "principal," projecting; Canto 2008 -> spiny).
-<p>
-Notes on EC (+)223331 horizontal V neurons<br>
-- Re-added Lingenh&#246;hl & Finch cell #7.  This cell was previously mislabeled as inhibitory but is in fact excitatory based on the fact that the dendrites have spines, which is usually an indication that a cell is excitatory.<br>
-- The overall interpretation of this cell type now includes D:III because of Quilichini's Supplementary Table 1 and Lingenh&#246;hl & Finch's cell #7, which has at-threshold presence in this layer.<br>
-- Threshold: D:II and D:III
-<p>
-Notes on EC (+)233331 bipolar V neurons<br>
-- n=4 in Canto LEC preprint<br>
-- Added Lingenh&#246;hl & Finch cell #9 (formerly classified as 223330 in suspended animation)<br>
-- Threshold: A:II
-<p>
-Notes on LEC (+)223333 large pyramidal cells V<br>
+This cell type is a merger of EC (+)223331 horizontal V neurons, EC (+)233331 bipolar V neurons, EC (+)223331 large pyramidal III neurons, and LEC (+)223333 large pyramidal cells V.
+
+Excitatory (Lingenhöhl -> spiny; Quilichini -> principal, spiny, excitatory; Canto 2008 -> projecting; Canto 201X LEC preprint -> spiny, "principal," projecting; Tahvildari -> sparsely spiny, projecting; Canto 2011 LEC -> spiny, "principal," projecting; Canto 2008 -> spiny).
+
+Notes on EC (+)223331 horizontal V neurons
+- Re-added Lingenhohl & Finch cell #7 at GAA's suggestion.  This cell was previously mislabeled as inhibitory but is in fact excitatory based on the fact that the dendrites have spines, which is usually an indication that a cell is excitatory.
+- The overall interpretation of this cell type now includes D:III because of Quilichini's Supplementary Table 1 and Lingenhohl & Finch's cell #7, which has at-threshold presence in this layer.
+- Threshold: D:II and D:III
+
+Notes on EC (+)233331 bipolar V neurons
+- n=4 in Canto LEC preprint
+- Added Lingenhohl & Finch cell #9 (formerly classified as 223330 in suspended animation) at Giorgio's suggestion
+- Threshold: A:II
+
+Notes on LEC (+)223333 large pyramidal cells V
 - It is unclear whether this cell type exists in MEC.

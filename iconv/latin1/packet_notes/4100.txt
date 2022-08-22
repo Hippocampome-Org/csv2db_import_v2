@@ -1,0 +1,149 @@
+<html>
+        <head>
+                <style>
+                        .redtext {
+                                color: red;
+                        }
+                        .bluetext {
+                                color: #0000FF; /* blue */
+                        }
+                        .greentext {
+                                color: #008000; /* dark green */
+                        }
+                        .purpletext {
+                                color: #800080; /* dark purple */
+                        }
+                        .orangetext {
+                                color: #FF6820; /* orange */
+                        }
+                </style>
+        </head>
+        <body>
+                <p style="font-family: courier">
+                        <b>CA1 (i)0301 R-RO neurons [4100]</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Related types:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        CA1 (i)0331 RP-RPO (v2.0 active)
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes:</b>
+                </p>
+                <p style="font-family: courier">
+                        N = 7
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        - Add caption for Fig. 1
+                        <br>
+                        - Consider not including the second figure in the X-O/R panel. The axons in SP look sparse. - CW 02/11/2015
+
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        - The axons look no sparser than those in SR or those in SP in the other panel, so I would keep the current interpretation. - DWW 02/12/2015
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        - Looks good. [Consider merging with 0311] - GAA
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        Cells reinterpreted due to new understanding of Cossart interpretations. type was 0331, but is now 0301. - 07/20/2015
+                </p>
+                <p style="font-family: courier">
+                        Nissen (2010) added - 07/20/2015
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        DWW 09/03/2015
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I support all of these aggressive mergers and sign off on the packets. - CLR 09/08/2015
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        okay - CW 09/08/2015
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=100></td>
+                                <td style="font-family: courier" class="redtext">
+                                        OK. Strong candidate for superclass with 0331 ... - GAA 11/29/2015
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier" class="redtext">
+                        The cell by Cea-del Rio et al., 2011 (on second look, it might be a 0301) - DWW 11/16/2021
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I'm in agreement with your second look – this appears to be a 0301. I do not have access to the 0301 type packet (CA1 R-RO), but we could add these biophysics values for this type.
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        After review of the R-RO packet, I am in favor of adding the ephys information for the Cea-del Rio et al., 2011 cell to the CA1 R-RO neuron type. - JDK 11/17/2021
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        Cea-del Rio et al., 2011, is being added to this packet to take advantage of its reported membrane biophysics. - 11/19/2021
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        I approve the addendum but would like to consider a merger with 0331. - GAA 02/01/2022
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        The difficulty with merging the 0301 and 0331 cells lies with the cells from Cossart et al., 2006: "The major difference is that X-OPR [0331] cell axons display boutons en passant within stratum pyramidale while X-OR [0301] cell axons do not. Therefore, X-OPR and X-OR cells belong to two different morphological families." - DWW 02/03/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        In addition to the description from Cossart et al., 2006, another consideration with this merger is that only two of the 9 cells (R-OR 172T1 of Cossart et al., 2006 and the cell in Cea-del Rio et al., 2011) I could see meeting the criteria of having dendrites in SP. We'd need dendritic along with axonal presence for this merger to occur, which I currently don’t think from the provided packet we have. I am open to discussing further though! - JDK 02/03/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        IWith those clarifications added, I’m ok to (re-)approve both packets. Thanks! - GAA 02/03/2022
+                                </td>
+                        </tr>
+                </table>
+        </body>
+</html>

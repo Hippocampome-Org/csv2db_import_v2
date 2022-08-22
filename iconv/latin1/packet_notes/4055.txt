@@ -1,11 +1,379 @@
-Previous (outdated) O-A 2233 cell type was split into this active cell type and an 0233 suspended cell type.
-<p>
-Target pyramidal cells (dendrites, somata, AND axon initial segment) as well as other interneurons (dendrites).
-<p>
-The Lacaille papers were previously considered inadequate for the creation of an active cell class.  That decision was revisited.
-<p>
-According to the Lacaille 1990 paper, 50% of the cells have D:SLM and 50% do not.  Unfortunately, the extent of the dendrites in the latter case is unclear and the cell type is suspended.  See also:  CA1 0233 O-A.
-<p>
-Lacaille 1987 mentions other (unspecified) morphologies and contains some troubling/vague phrasing, but there is enough evidence in their text to push this through as a class.
-<p>
-Lacaille 1990 does not contain axonal information and is in a separate species (rat, rather than guinea pig), BUT since the first author is the same and he makes the statement that these cells have "similar morphology," the information is considered linked and is used.
+<html>
+        <head>
+                <style>
+                        .redtext {
+                                color: red;
+                        }
+                        .bluetext {
+                                color: #0000FF; /* blue */
+                        }
+                        .greentext {
+                                color: #008000; /* dark green */
+                        }
+                        .purpletext {
+                                color: #800080; /* dark purple */
+                        }
+                        .orangetext {
+                                color: #FF6820; /* orange */
+                        }
+                </style>
+        </head>
+        <body>
+                <p style="font-family: courier">
+                        <b>CA1 O-A</b>
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        Dendrites in SLM in Lacaille 1990 observed in 3/6 cells. 3/6 had dend. just to SR. Second class?? - CW
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Lacaille 1987 - Not all neurons displayed the characteristics they describe.
+                                        <br>
+                                        Lacaille 1990 - No axonal information
+                                        <br>
+                                        Therefore, I propose rejecting this class. - DWW 03/10/2011 
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        CLR, CW 
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        OK, but isn't this the same evidence used by Bernard & Wheal - GAA 
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>CA1 O-A 0233</b>
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        CLR, CW 09/13/2011
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Status:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        active?
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        Previously existed as a suspended class in an outdated packet with dendrites in SLM. This packet replaces that one.
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Merger status:</b>
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        No current merger proposals.
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes:</b>
+                </p>
+                <p style="font-family: courier">
+                        The Lacaille papers were previously considered inadequate for the creation of an active cell class. I believe that decision needs revisited.
+                </p>
+                <p style="font-family: courier">
+                        It is true that the Lacaille 1987 paper mentions other (unspecified) morphologies and contains some troubling/vague phrasing, but there may be enough evidence in their text to push ths through as a class.
+                </p>
+                <p style="font-family: courier">
+                        Lacaille 1990 does not contain axonal information.
+                </p>
+                <p style="font-family: courier">
+                        Packet contains papers with electrophysiology data.
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        I would remove Lacaille 1990 (and in turn B&W) since there is no axonal info and it describes a different species from Lacaille 1987. I am OK with this active class based just on the Lacaille 87 paper. - DWW 09/13/2011
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I disagree. L 1990 show clearer fig. of dendrites than the 1987 paper. - CW 
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>CA1 oriens-alveus (O-A) 2233</b>
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        CLR 09/14/2011
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Status:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        active?
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        Previous (outdated) O-A 2233 packet was suspended (see below).
+                                        <br>
+                                        There are now two potential O-A classes -- 0233 and 2233.
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Merger status:</b>
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        No current merger proposals.
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes:</b>
+                </p>
+                <p style="font-family: courier">
+                        Lacaille 1990 indicates that 50% (3/6) have dendrites extending into SLM and 50% do not (see the 0233 O-A packet)
+                </p>
+                <p style="font-family: courier">
+                        The Lacaille papers were previously considered inadequate for the creation of an active cell class. That decision is being revisited.
+                </p>
+                <p style="font-family: courier">
+                        The Lacaille 1987 paper mentions other (unspecified) morphologies and contains some troubling/vague phrasing, but there may be enough evidence in their text to push ths through as a class.
+                </p>
+                <p style="font-family: courier">
+                        Lacaille 1990 does not contain axonal information but has a nice picture of dendrites. In spite of the lack of axonal information, neurons in the two Lacaille papers are said to have "similar morphologies," but it should be noted that one is in guinea pig and one is in rat.
+                </p>
+                <p style="font-family: courier">
+                        Packet contains papers with electrophysiology data.
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        I still disagree with the cross-specied evidence when the axons are totally lacking in one reference. Rejected. - DWW 09/14/2011
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Alright. I would remove L 1987 and B+W + suspend this as 2222. - CW 09/14/2011 
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>CA1 (-)2233 oriens-alveus (O-A)</b>
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        CLR 09/15/2011
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        CW 09/16/2011 
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        DWW 09/19/2011 
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Status:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        active?
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        Previous (outdated) O-A 2233 packet was suspended (see below).
+                                        <br>
+                                        It was split into two potentially active packets: 2233 and 0233
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Merger status:</b>
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        No current merger proposals.
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes:</b>
+                </p>
+                <p style="font-family: courier">
+                        Target pyramidal cells (dendrites & somata) & other interneuron (dendrites).
+                </p>
+                <p style="font-family: courier">
+                        The Lacaille papers were previously considered inadequate for the creation of an active cell class. That decision is being revisited.
+                </p>
+                <p style="font-family: courier">
+                        The Lacaille 1987 paper mentions other (unspecified) morphologies and contains some troubling/vague phrasing, but there may be enough evidence in their text to push ths through as a class.
+                </p>
+                <p style="font-family: courier">
+                        Lacaille 1990 does not contain axonal information and is in a separate species (rat, rather than guinea pig), BUT since the first author is the same and he makes the statement that these cells have "similar morphology," the information is considered linked and is used.
+                </p>
+                <p style="font-family: courier">
+                        According to the 1990 paper, 50% of the cells have D:SLM and 50% do not. See also: 0233 O-A packet
+                </p>
+                <p style="font-family: courier">
+                        Packet contains papers with electrophysiology data.
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        <u>Nice</u> Some more info for AOk too (see abstract) - GAA
+                </p>
+                <p style="font-family: courier">
+                        <b>CA1 (i)2233 Oriens/Alveus (O/A) neurons [4055]</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Related types:</b> none
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes:</b>
+                </p>
+                <p style="font-family: courier">
+                        Previous (outdated) O-A 2233 cell type was split into this active cell type and an 0233 suspended cell type.
+                </p>
+                <p style="font-family: courier">
+                        Target pyramidal cells (dendrites, somata, AND axon initial segment) as well as other interneurons (dendrites).
+                </p>
+                <p style="font-family: courier">
+                        The Lacaille papers were previously considered inadequate for the creation of an active cell class. That decision was revisited.
+                </p>
+                <p style="font-family: courier">
+                        According to the 1990 paper, 50% of the cells have D:SLM and 50% do not. Unfortunately, the extent of the dendrites in the latter case is unclear and the cell type is suspended. See also: CA1 0233 O-A.
+                </p>
+                <p style="font-family: courier">
+                        Lacaille 1987 mentions other (unspecified) morphologies and contains some troubling/vague phrasing, but there is enough evidence in their text to push this through as a class.
+                </p>
+                <p style="font-family: courier">
+                        Lacaille 1990 does not contain axonal information and is in a separate species (rat, rather than guinea pig), BUT since the first author is the same and he makes the statement that these cells have "similar morphology," the information is considered linked and is used.
+                </p>
+                <p style="font-family: courier">
+                        Packet contains papers with abundant electrophysiology data.
+                </p>
+                <p style="font-family: courier">
+                        <b>Principal cell layer invoked rule:</b> record axons in the PCL when boutons are present or when axons are branching and ostensibly targeting the PCL and not just passing through, but discount dendrites.
+                </p>
+                <p style="font-family: courier">
+                        Assessment of merger of CA1 (i)2223 radiatum interneuron into CA1 (i)2233 Oriens/Alveus.
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        I agree to have at least one more packet out of this material, and I can go with either pattern [CA1 (i)0102 vs. CA1 (i)0112], but I’m frankly not convinced that we want two distinct neuron types. I believe that in v1.0 we have systematically merged all these cases. Do we have any example of 2 types that only differ in axonal presence in PCL? Unless there’s direct evidence that one of the two makes synapses with the soma and the other does not, I’d probably just merge them. If you agree, I suggest 0112, but am also happy with 0102. If there are other similar cases in v2.0, please consider merging. - GAA 02/01/2022
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Proposal: merge 2301 into 2311 - DWW 02/03/2022 
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        So in re-reviewing each potential merger within the packet Diek has kindly provided, I had a few questions arise pertinent to favoring merging unless there is direct evidence that one neuron type makes synapses with the soma and the other does not:
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        1. How does this impact the new invoked rule defined in the provided packet, namely that we will "record axons in the PCL when boutons are present or when axons are branching and ostensibly targeting the PCL and not just passing through, but discount dendrites?" Shall we disregard it?
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        2. If we favor the route of merging unless we have direct evidence of one neuron type establishing synapses with the soma while the other does not, which AD pattern should be preferred? The AD pattern exhibited by the majority of the reconstructions or the AD pattern of a single reconstruction that shows axonal presence (e.g. the 0102 & 0112 case that led to this discussion)? Perhaps this should be a case by case basis depending on what evidence makes the most sense to us? - JDK 02/06/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I would suggest that we utilize the PCL invoked rule as our fallback position, when we do not have overriding motivation to merge two or more neuron types. As to which way to merge, I would suggest, since we have not been consistent in the past, that we evaluate on a case-by-case basis. - DWW 02/07/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=100></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I concur. - GAA 02/07/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=125></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Thank you for answering my questions and this route sounds good to me. In light of utilizing the PCL invoked rule as a fallback position, I am okay with merging in all cases in the "Axons in the PCL" packet except for the 0103 and 0113 merger where we have a text description directly stating that the X-OPR (0113 O-RPO) axons display en passant boutons in SP whereas the X-OR (0103 O-BiC) do not. - JDK 02/07/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=150></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Isn't there a good enough reason (in the abstract at least!) to think that chamberlain’s cell is interneuron-specific? If this is corroborated in the main text, it should be indicated as such on the cover and in the neuron name, and kept separate. - GAA 02/13/2022
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        It was agreed by GAA, JDK, and DWW to declare the CA1 (i)2223 radiatum interneuron to be statistically (17 out of 23) interneuron specific and void the potential merger. - 02/15/2022
+                </p>
+        </body>
+</html>

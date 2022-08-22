@@ -1,5 +1,5 @@
-Merger with 220233 was rejected.
-<p>
-Likely excitatory cells (Hamam 2000 -> spiny; Hamam 2002 -> projecting, spiny; Canto 2008 -> spiny, projecting; Canto 201X MEC preprint -> projecting, "principal," sparsely spiny).
-<p>
-Canto & Witter 2008 schematic remains in this cell type because the authors cite Hamam in the text.  Evidence for D:IV in this schematic is minimal to threshold.
+Merger with 220233 was rejected.
+
+Likely excitatory cells (Hamam 2000 -> spiny; Hamam 2002 -> projecting, spiny; Canto 2008 -> spiny, projecting; Canto 201X MEC preprint -> projecting, "principal," sparsely spiny).
+
+Canto & Witter 2008 schematic remains in this cell type because the authors cite Hamam in the text.  Evidence for D:IV in this schematic is minimal to threshold.

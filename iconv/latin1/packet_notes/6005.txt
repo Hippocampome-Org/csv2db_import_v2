@@ -1,18 +1,17 @@
-This class is composed of an amalgam of author-defined classes.
-<p>
+This class is composed of an amalgam of author-defined classes.
 
-Failed unofficial merger proposals with MEC 331111 stellate II, EC 231000 FOMP, and EC 221100 oblique pyramidal-stellate II.
-<p>
-Sparsely spiny to spiny, projecting -> excitatory.
-<p>
-The figure of the between pyramidal and stellate cell depicts an axon that dies off in L:VI, which is not substantial enough for an A:VI interpretation.
-<p>
-C&W's LEC description of a pyramidal cell matches 331000.  They also describe a second class (333000) that is n=2 (by itself an insufficient percentage to establish a separate class).  However, since the 333000 class does exist, this evidence is included in that cell type.
-<p>
-The Canto MEC pyramidal neuron from Figure 5 was added, even though it has borderline dendrites in VI.
-<p>
-Borderline:<br>
-&emsp;A:IV (Canto 201X LEC preprint fan -- figure)<br>
-&emsp;A:V (Canto 201X LEC preprint fan -- text)<br>
-&emsp;A:VI (Canto 201X MEC preprint pyramidal)<br>
-&emsp;D:III (Tahvildari 2005 fan; Empson 1995 PLN)
+Failed unofficial merger proposals with MEC 331111 stellate II, EC 231000 FOMP, and EC 221100 oblique pyramidal-stellate II.
+
+Sparsely spiny to spiny, projecting -> excitatory.
+
+The figure of the between pyramidal and stellate cell depicts an axon that dies off in L:VI, which is not substantial enough for an A:VI interpretation. - DWW
+
+C&W's LEC description of a pyramidal cell matches 331000.  They also describe a second class (333000) that is n=2 (by itself an insufficient percentage to establish a separate class).  However, since the 333000 class does exist, this evidence is included in that cell type.
+
+The Canto MEC pyramidal neuron from Figure 5 was added, even though it has borderline dendrites in VI.
+
+Borderline:
+A:IV (Canto 201X LEC preprint fan -- figure)
+A:V (Canto 201X LEC preprint fan -- text)
+A:VI (Canto 201X MEC preprint pyramidal)
+D:III (Tahvildari 2005 fan; Empson 1995 PLN)

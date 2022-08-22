@@ -1,5 +1,5 @@
-Rejected merger with MEC (+)213330 pyramidal cells V (PC V), since for these cells "Within LI the diameter of the apical dendritic tree can be up to 400 [micro]m," and PC V have "no main apical dendrite traveling up to the pia."  
-<p>   
-Axon to the angular bundle.
-<p>
-Excitatory because dendrites are spiny.
+Rejected merger with MEC (+)213330 pyramidal cells V (PC V), since for these cells "Within LI the diameter of the apical dendritic tree can be up to 400 microm," and PC V have "no main apical dendrite traveling up to the pia."  
+   
+Axon to the angular bundle.
+
+Excitatory because dendrites are spiny.

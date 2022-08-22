@@ -1,0 +1,22 @@
+<html>
+<head>
+<style>
+.redtext {
+        color: red;
+}
+</style>
+</head>
+<body>
+<b>Notes: </b>
+<p>
+Parallel to CA1 (-)0333 bistratified (the non-ivy) cells<p>Has accompanying electrophysiological information but no markers.<p>Possible complement to the newly proposed DG (-)0031/0331/0333 ivy/neurogliaform cells<p>N = 2-28<p>[N:D:DG:H]{low}<p>From Overstreet-Wadiche: "The angle of the slice was not fully transverse to the long axis of the hippocampus, so that the granule cell layer shifts upward (towards 12 o'clock) as one is focusing downward into the slice. The dotted line representing the location of the granule cell layer is accurate near the cell body that was located near the surface of the slice. The cell body of the interneuron is thus located in the molecular layer (as illustrated) and the majority of the axon also located in the inner molecular layer due to the angle of the slice that makes the GCL shift upward in deeper regions. ÊBut as noted in the legend, the axon also extends over the GCL and into the hilus."
+<p class="redtext">
+
+<p class="redtext">
+
+</p>
+<p class="redtext">
+
+</p>
+</body>
+</html>

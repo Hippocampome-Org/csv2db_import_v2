@@ -1,0 +1,89 @@
+<html>
+        <head>
+                <style>
+                        .redtext {
+                                color: red;
+                        }
+                        .bluetext {
+                                color: #0000FF; /* blue */
+                        }
+                        .greentext {
+                                color: #008000; /* dark green */
+                        }
+                        .purpletext {
+                                color: #800080; /* dark purple */
+                        }
+                        .orangetext {
+                                color: #FF6820; /* orange */
+                        }
+                </style>
+        </head>
+        <body>
+                <p style="font-family: courier">
+                        <b>DG (i)2203 Interneuron-Specific HIMOLD {HIlus and MOlecular Layer Dendrites} (IS HIMOLD) cells [1105]</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Related types:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        DG (i)2203 HIMOLD (v2.0 on-hold unapproved)
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes: These cells are VIP+ and are speculated by the authors to be interneuron specific, which distinguishes them from the on-hold cell, which is CB1R+.</b>
+                </p>
+                <p style="font-family: courier">
+                        VIP+. Ephys. FP. Lengths.
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        After review of IS HIPRO QuadD [#1105], I am in agreement with the evidence as provided in the packet.
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        How come this cell type {DG (i)2203 HIPMOLD [#1097]} is on hold, and is there a chance for a potential merger of these two types? Looking at the portal, expression of CB1 usually means no expression of VIP, but there are a few cases where there are positive-negative evidence of VIP expression (e.g. CA1 Basket CCK+). - JDK 11/22/2021
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I can see your confusion. Embedded is the correct packet. However, when I first created the embedded packet, I had interpreted the cell as 2203 and named it DG HIMOLD. I later must have decided to re-interpret the cell as 2223 to better match this IS neuron type. Something that needs to be answered is whether both the IS and non-IS neuron types should be interpreted as 2203 or 2223. - DWW 11/23/2021
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Thanks for providing me with the packet for the DG HIMOLD cells. Looking at the A-D patterns from both packets, I think that the dendrites have very low presence within the granule layer and these dendrites appear to be merely passing through and branching out much more extensively within the hilar layer. So I think 2203 is more appropriate than 2223 for both types.
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        If you agree, this leaves us then with making a distinction between these two types based on expression of CB1 or VIP. I think we could go either way by leaving the two types distinct or compressing to a single type. I would say I am more in favor of leaving them distinct, with the VIP+ type being named DG (i) 2203 IS HIMOLD and the CB1+ type being named DG (i) 2203 HIMOLD. What do you think? - JDK 11/23/2021
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I concur with the 2203 interpretation and with the separation of the two neuron types. - DWW 11/23/2021
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=100></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I approve. The distinction with the on-hold type is not so much agreeable on the basis of the distinct expression patterns (VIP vs CCK), as those are not mutually exclusive, but rather based on the absence of evidence that the on-hold type is IS… - GAA 01/25/2022
+                                </td>
+                        </tr>
+                </table>
+        </body>
+</html>

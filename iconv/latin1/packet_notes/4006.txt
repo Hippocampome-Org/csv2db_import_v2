@@ -1,8 +1,9 @@
-Related classes:<br>
-CA1 (-)3300p-DG 1110 perforant path I (PP I) neurons (active)
-<p>
-CA1 (-)3220 perforant path-associated (PPA) neurons (proposed for suspension)<br>
-CA1 (-)3202 perforant path-associated (PPA) neurons (proposed for suspension)
-<p>
-&emsp;The above two classes are merged into CA1 (-)3222 perforant path-associated (PPA) neurons
-
+Related classes:
+CA1 (-)3300p-DG 1110 perforant path I (PP I) neurons (active)
+
+CA1 (-)3220 perforant path-associated (PPA) neurons (new, proposed for suspension)
+CA1 (-)3202 perforant path-associated (PPA) neurons (new, proposed for suspension)
+
+    The above two classes are being considered for merger into CA1 (-)3222
+    perforant path-associated (PPA) neurons
+

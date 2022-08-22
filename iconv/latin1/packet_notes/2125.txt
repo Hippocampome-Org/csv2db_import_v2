@@ -1,0 +1,299 @@
+<html>
+        <head>
+                <style>
+                        .redtext {
+                                color: red;
+                        }
+                        .bluetext {
+                                color: #0000FF; /* blue */
+                        }
+                        .greentext {
+                                color: #008000; /* dark green */
+                        }
+                        .purpletext {
+                                color: #800080; /* dark purple */
+                        }
+                        .orangetext {
+                                color: #FF6820; /* orange */
+                        }
+                </style>
+        </head>
+        <body>
+                <p style="font-family: courier">
+                        <b>CA3 (i)02332 Basket CCK+ (BC CCK+) cells</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Related classes:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        CA3 (i)22232 Basket cells (active)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA3 (i)22232 Basket CCK+ cells (active)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA3 (i)02232 Quadrilayer Basket CCK+ (proposed active)
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes:</b>
+                </p>
+                <p style="font-family: courier">
+                        N = 1. CB1+.
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        Putting the two pictured neurons [Figs. 4A cell #2 and cell #3 from Szab&oacute; et al, 2014] in the same type requires significant stretching. I do not approve this type. — CW 02/18/2015
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Should they each be frozen separately as N=1's? Do you agree with the two interpretations of 02332 & 02330? - DWW 09/10/2015
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I am struggling with these neurons. If I stringently apply Hippocampome rules, the neuron on the left [Fig. 4A cell #2 from Szab&oacute; et al, 2014] is a 00332 and the one on the right [Fig. 4A cell #3] is a 02330. I am going to reverse my previous decision and agree to grouping these as 02332. - CW 09/16/2015
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        As before, I’m okay with 02332. - CLR 10/10/2015
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=100></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Unclear that this should be separate from existing BC / CCK - GAA 11/29/2015
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        Figure 3[A from Szab&oacute; et al, 2014] added. - 04/25/2016
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        Although SLM is not labeled, the dendrites do not invade very far into SR, which is why we are interpreting the dendrites as 02222. I am now waffling as to whether we should call these 02232 rather than 02332. If we consider an extended interpretation of SP, even though it impinges upon SL, we could say that these are perisomatic targeting and match more closely to our standard interpretation pattern. - DWW 04/25/2016
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        In taking a close look at the cells on the portal, I find myself agreeing with Giorgio. The dendrites of these cells are similar in length (and in a similar location) to F&B Fig 2, Fig 4D, Fig6, and Gulyas Fig 4B. Gulyas Fig 4A seems to be the only cell with longer dendrites. I also agree that the axons of the portal cells spill over (a good amount) into SL, and we should interpret these new cells the same way. I'm thinking of just adding these to the BC packet (with the possible exception of Szabo Fig 4A [left], which has questionable dendritic branching presence — but not length/depth — in SR/SLM). - CLR 05/04/2016
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I agree with 02232. As with DG 2232 CB1R-positive, we run into a neuron that is non fast-spiking CB1+ and CCK unknown, and I pose the question, why not create a CCK+ type? Inferential data will mark this type as CCK+ and PV-. . . . After reading CLR's comments, I think we need to discuss creating all of the basket types without dendrites in the most superficial layers, SLM and SMo. — CW 05/04/2016
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I vote for supplement. Specifically, I propose to use the first figure as a supplement of 22232 and the second as a frozen 02232/02332 - GAA 05/25/2016
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=100></td>
+                                <td style="font-family: courier" class="redtext">
+                                        The packet in question actually depicts three neurons, so to which ones are you referring? - DWW 05/25/2016
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=125></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I was referring to figures rather than neurons. The last 2 neurons (second figure) --> frozen. But I’m also happy to discuss in person with team... - GAA 05/25/2016
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=150></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I now support Fig 3A as a supplement to 22232 Basket CCK+. I interpret Fig 4A-left as an on-hold 02332 and Fig 4A-right as an on-hold 02232. - DWW 05/25/2016
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=150></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I just approved Szabo Fig 3A in the round 8 02232 BC CCK+ packet. I would also add Fig 4A right to that packet. I support freezing Fig 4A-left as 02332. - CLR 06/08/2016
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=150></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Have any of the basket neuron types without dendrites in SLM or SMo been created? We keep having this debate, and yet we have not created a guideline. I vote to make Fig. 3A a supplement of CA3 22232 basket and agree with placing the neurons in Fig. 4 on hold, but as what is debatable. Extension of the PCL is done for perisomatic-targeting types. With a putative basket neuron with an atypical dentritic pattern, is axons predominantly in the PCL sufficient to say that it is perisomatic-targeting? If it is, I interpret the Fig. 4A-left as 02332 and 4A-right as 02232; if not, I interpet both as 02333. — CW 06/19/2016
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=175></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Giorgio's vote breaks the split decision over Szabo Fig. 3A. It is 22232. Fig. 4A-right has been formally added to [the] 02232 packet. Fig. 4A-left will be placed on-hold as 02332. - DWW 06/22/2016
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>CA3 (i)02332 Mossy Fiber-Associated Basket CCK+ cells (MFA BC CCK+) [2125]</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Related types:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        CA3 (i)22232 Basket (v1.0 active)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA3 (i)22232 Basket CCK+ (v1.0 active)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA3 (i)02333 Mossy Fiber-Associated (v2.0 on-hold, 2B merged)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA3 (i)02322 L-targeting MFA (v2.0 active unapproved)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA3 (i)02332 Basket CB1+ (v1.0 on-hold, 2B merged)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA3 (i)02232 Regular-Spiking Basket (v1.0 on-hold, 2B merged)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA3 (i)02230 SPA interneuron (v1.0 on-hold)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA3 (i)02332p Mossy Fiber-Associated ORDEN (v1.0 active)
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes: This is a merger proposal between Szabo's 02333 MFA CB1+, Szabo's 02332 Basket CB1+, Szabo's 02232 RSBC, and Biro's new 02332 MFA CCK+. The axons in CA3:SO for the 02333 cell are very sparse and are now considered to be sub-threshold for the sake of this merger proposal. The axons in CA3:SL for the 02232 cell are no longer considered to be sub-threshold for the sake of this merger proposal. These proposed merger cells do not have dendrites in CA3:SLM, which distinguishes them from the two v1.0 active neuron types. These proposed merger cells have axons in CA3:SP, which distinguishes them from the 02322 cells. These proposed merger cells have an above threshold presence of dendrites in CA3:SO, which distinguishes them from the 02230 cells. These proposed merger cells are either CB1+, CCK+, or regular spiking, which will distinguish them from PV+ fast-spiking cells when they are discovered in the literature.</b>
+                </p>
+                <p style="font-family: courier" class="bluetext">
+                        Szabo (2014):
+                        <br>
+                        [Y:D:SO]{low}
+                        <br>
+                        [N:A:SO]{low}
+                        <br>
+                        CB1+
+                        <br>
+                        ephys present
+                </p>
+                <p style="font-family: courier" class="greentext">
+                        Szabo (2014):
+                        <br>
+                        [N:D:CA3:SLM]{low}
+                        <br>
+                        CB1+
+                        <br>
+                        ephys present
+                </p>
+                <p style="font-family: courier" class="purpletext">
+                        Szabo (2010):
+                        <br>
+                        [N:D:CA3:SLM]{low}
+                        <br>
+                        FP present
+                </p>
+                <p style="font-family: courier" class="orangetext">
+                        Biro (2006):
+                        <br>
+                        CCK+
+                        <br>
+                        FP present
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        I am in favor of the proposed merger and approve of the CA3 MFA-BC becoming a new neuron type for v2.0. - JDK 08/21/2021
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I approve, but a comparison with 1.0 MFA-Orden should be added to front page. Also, the morphology on page 18 *has* dendrites in SLM and should thus be moved to the corresponding cell type?! - GAA 01/26/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I believe the dendrites in SLM on page 18 belong to the depicted pyramidal cell and not to the interneuron. - DWW 01/28/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        You’re right. - GAA 01/28/2022
+                                </td>
+                        </tr>
+                </table>
+        </body>
+</html>
