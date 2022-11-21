@@ -14,7 +14,7 @@ cols = (  '1',  '2',  '3',  '4',  '5',  '6',  '7',  '8',  '9', '10',
          '81', '82', '83', '84', '85', '86', '87', '88', '89', '90',
          '91', '92', '93', '94', '95', '96', '97', '98', '99','100',
         '101','102','103','104','105','106','107','108','109','110',
-        '111','112','113')
+        '111','112','113','114','115','116','117')
 
 markers = ('CB', 'CR', 'PV', 'CB1', 'Mus2R', 'Sub P Rec', '5HT-3', 'Gaba-a-alpha', 'mGluR1a', 'vGluT3',
            'CCK', 'ENK', 'NPY', 'SOM', 'VIP', 'NG', 'alpha-actinin-2', 'CoupTF II', 'nNOS', 'RLN',
@@ -27,7 +27,7 @@ markers = ('CB', 'CR', 'PV', 'CB1', 'Mus2R', 'Sub P Rec', '5HT-3', 'Gaba-a-alpha
            'GABAa\\beta 1', 'GABAa\\beta 2', 'GABAa\\beta 3', 'GABAa\\gamma 1', 'GABAa\\gamma 2', 'mGluR5a', 'SATB2','Ctip2', 'GluA2', 'GluA1',
            'GluA3', 'GluA4', 'GAT-3', 'CXCR4', 'PPE', 'AR-beta1', 'AR-beta2', 'TH', 'Wfs1', 'Nr4a1', 'Nov',
            'Nr3c2', 'Ndst4', 'Astn2', 'Grp', 'Dcn', 'Htr2c', 'Gpc3', 'Tc1568100', 'Loc432748', 'Prss23',
-           'Prss12', 'CaMKII \\alpha')
+           'Prss12', 'CaMKII \\alpha', 'DCX', 'NeuN', 'NeuroD', 'CRH')
 
 """
 @marker_code = {
@@ -62,7 +62,7 @@ class MarkerdataStringField:
     def parse_and_save(row,count,markerdata_flag):
         c = 0
         for col in cols:
-            if (c>97 and markerdata_flag==0):
+            if (c>(len(cols)-1) and markerdata_flag==0):
                 break
             marker = markers[c]
             c = c + 1
@@ -247,7 +247,7 @@ class MarkerdataStringField:
                         try:
                             row_object = Markerdata.objects.get(expression=expression,animal=animal,protocol=protocol)
                         except Markerdata.DoesNotExist:
-                            if (c<98 and markerdata_flag==1):
+                            if (c<len(cols) and markerdata_flag==1):
                                 break
                             row_object = Markerdata(expression=expression,animal=animal,protocol=protocol)
                             if expression != '["unknown"]':
@@ -261,7 +261,7 @@ class MarkerdataStringField:
                             try:
                                 row_object = Property.objects.get(subject=subject,predicate=predicate,object=object)
                             except Property.DoesNotExist:
-                                if (c<98 and markerdata_flag==1):
+                                if (c<len(cols) and markerdata_flag==1):
                                     break
                                 row_object = Property(subject=subject,predicate=predicate,object=object)
                                 row_object.save()
@@ -269,7 +269,7 @@ class MarkerdataStringField:
                             try:
                                 row_object = Property.objects.get(subject=subject,predicate=predicate,object=object)
                             except Property.DoesNotExist:
-                                if (c<98 and markerdata_flag==1):
+                                if (c<len(cols) and markerdata_flag==1):
                                     break
                                 row_object = Property(subject=subject,predicate=predicate,object=object)
                                 row_object.save()
@@ -278,7 +278,7 @@ class MarkerdataStringField:
                             try:
                                 row_object = Property.objects.get(subject=subject,predicate=predicate,object=object)
                             except Property.DoesNotExist:
-                                if (c<98 and markerdata_flag==1):
+                                if (c<len(cols) and markerdata_flag==1):
                                     break
                                 row_object = Property(subject=subject,predicate=predicate,object=object)
                                 row_object.save()
@@ -299,7 +299,7 @@ class MarkerdataStringField:
                                         try:
                                             row_object = EvidenceEvidenceRel.objects.get(Evidence1_id=Evidence1_id,Evidence2_id=Evidence2_id)
                                         except EvidenceEvidenceRel.DoesNotExist:
-                                            if (c<98 and markerdata_flag==1):
+                                            if (c<len(cols) and markerdata_flag==1):
                                                 break
                                             row_object = EvidenceEvidenceRel(Evidence1_id=Evidence1_id,Evidence2_id=Evidence2_id,type='interpretation')
                                             row_object.save()
@@ -311,7 +311,7 @@ class MarkerdataStringField:
                                                 try:
                                                     row_object = EvidenceMarkerdataRel.objects.get(Evidence_id=Evidence_id,Markerdata_id=Markerdata_id)
                                                 except EvidenceMarkerdataRel.DoesNotExist:
-                                                    if (c<98 and markerdata_flag==1):
+                                                    if (c<len(cols) and markerdata_flag==1):
                                                         break
                                                     row_object = EvidenceMarkerdataRel(Evidence_id=Evidence_id,Markerdata_id=Markerdata_id)
                                                     row_object.save()
@@ -338,7 +338,7 @@ class MarkerdataStringField:
                                 try:
                                     row_object = EvidencePropertyTypeRel.objects.get(Evidence_id=Evidence_id,Property_id=Property_id,Type_id=Type_id,conflict_note=conflict_note,unvetted=unvetted,interpretation_notes=interpretation_notes,property_type_explanation=property_type_explanation)
                                 except EvidencePropertyTypeRel.DoesNotExist:
-                                    if (c<98 and markerdata_flag==1):
+                                    if (c<len(cols) and markerdata_flag==1):
                                         break
                                     row_object = EvidencePropertyTypeRel(Evidence_id=Evidence_id,Property_id=Property_id,Type_id=Type_id,conflict_note=conflict_note,unvetted=unvetted,interpretation_notes=interpretation_notes,property_type_explanation=property_type_explanation)
                                     row_object.save()
@@ -354,7 +354,7 @@ class MarkerdataStringField:
                                                     try:
                                                         row_object = ArticleSynonymRel.objects.get(Article_id=Article_id,Synonym_id=Synonym_id)
                                                     except ArticleSynonymRel.DoesNotExist:
-                                                        if (c<98 and markerdata_flag==1):
+                                                        if (c<len(cols) and markerdata_flag==1):
                                                             break
                                                         row_object = ArticleSynonymRel(Article_id=Article_id,Synonym_id=Synonym_id)
                                                         row_object.save()
@@ -374,7 +374,7 @@ class MarkerdataStringField:
                                 try:
                                     row_object = EvidencePropertyTypeRel.objects.get(Evidence_id=Evidence_id,Property_id=Property_id,Type_id=Type_id,conflict_note=conflict_note,unvetted=unvetted,interpretation_notes=interpretation_notes,property_type_explanation=property_type_explanation)
                                 except EvidencePropertyTypeRel.DoesNotExist:
-                                    if (c<98 and markerdata_flag==1):
+                                    if (c<len(cols) and markerdata_flag==1):
                                         break
                                     row_object = EvidencePropertyTypeRel(Evidence_id=Evidence_id,Property_id=Property_id,Type_id=Type_id,conflict_note=conflict_note,unvetted=unvetted,interpretation_notes=interpretation_notes,property_type_explanation=property_type_explanation)
                                     row_object.save()
@@ -390,7 +390,7 @@ class MarkerdataStringField:
                                                     try:
                                                         row_object = ArticleSynonymRel.objects.get(Article_id=Article_id,Synonym_id=Synonym_id)
                                                     except ArticleSynonymRel.DoesNotExist:
-                                                        if (c<98 and markerdata_flag==1):
+                                                        if (c<len(cols) and markerdata_flag==1):
                                                             break
                                                         row_object = ArticleSynonymRel(Article_id=Article_id,Synonym_id=Synonym_id)
                                                         row_object.save()
@@ -410,11 +410,17 @@ class MarkerdataStringField:
                                 Property_id = row_object.id
                                 try:
                                     row_object = EvidencePropertyTypeRel.objects.get(Evidence_id=Evidence_id,Property_id=Property_id,Type_id=Type_id,conflict_note=conflict_note,unvetted=unvetted,interpretation_notes=interpretation_notes,property_type_explanation=property_type_explanation)
+                                    print('row_object #1 ')
+                                    print(row_object)
                                 except EvidencePropertyTypeRel.DoesNotExist:
-                                    if (c<98 and markerdata_flag==1):
+                                    if (c<len(cols) and markerdata_flag==1):
                                         break
                                     row_object = EvidencePropertyTypeRel(Evidence_id=Evidence_id,Property_id=Property_id,Type_id=Type_id,conflict_note=conflict_note,unvetted=unvetted,interpretation_notes=interpretation_notes,property_type_explanation=property_type_explanation)
                                     row_object.save()
+                                    if (count < 10):
+                                        print('row_object #2 ')
+                                        print(row_object)
+                                        print('Evidence_id: ', Evidence_id, '; Property_id: ', Property_id, '; Type_id: ', Type_id, '; conflict_note: ', conflict_note)
                                     if Evidence_id != 1:
                                         # add ArticleSynonymRel record if unique
                                         try:
@@ -427,7 +433,7 @@ class MarkerdataStringField:
                                                     try:
                                                         row_object = ArticleSynonymRel.objects.get(Article_id=Article_id,Synonym_id=Synonym_id)
                                                     except ArticleSynonymRel.DoesNotExist:
-                                                        if (c<98 and markerdata_flag==1):
+                                                        if (c<len(cols) and markerdata_flag==1):
                                                             break
                                                         row_object = ArticleSynonymRel(Article_id=Article_id,Synonym_id=Synonym_id)
                                                         row_object.save()
