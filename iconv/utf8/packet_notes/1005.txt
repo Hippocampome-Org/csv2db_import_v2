@@ -1,0 +1,227 @@
+<html>
+        <head>
+                <style>
+                        .redtext {
+                                color: red;
+                        }
+                        .bluetext {
+                                color: #0000FF; /* blue */
+                        }
+                        .greentext {
+                                color: #008000; /* dark green */
+                        }
+                        .purpletext {
+                                color: #800080; /* dark purple */
+                        }
+                        .orangetext {
+                                color: #FF6820; /* orange */
+                        }
+                </style>
+        </head>
+        <body>
+                <p style="font-family: courier">
+                        <b>DG [3313] TML cells</b>
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        DWW
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        CLR, CW
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Check out Mott et al. paper (D. A. Turner's group) - GAA
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>DG TML 3302 cells</b>
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        DWW
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        CW
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        This document contains information on:
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        DG total molecular layer 3303 neurons
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        DG total molecular layer 3302 neurons
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier" class="redtext">
+                        I am interpreting 2 separate classes. Bartos curiously does not cite Mott, which is one clue that these may be different classes. In Mott, it is unclear from the wording how typical/atypical the presence of axons in the hilus is.
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        opinions? - DWW
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I agree that the n numbers in Mott aren't clear. The 11 with an axon in hilus are enough for a class, which seems to be <u>distinct</u> from the 'typical' cells shown in Figure 2. I'm OK with two classes. - CLR 02/26/2011
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I agree - 2 classes - CW 03/08/2011
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>DG MOLAX 3302 cell</b>
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        I propose merging this class with DG 3302 TML cells. - DWW
+                </p>
+                <p style="font-family: courier">
+                        Paperclipped together are the two classes DG MOLAX 3302 cells, which is a new class, and DG 3302 TML cells, which has already been fully approved.
+                </p>
+                <p style="font-family: courier">
+                        If the DG MOLAX 3302 class receives full approval, then it is proposed that we merge these two classes.
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        <u>AOK</u> I assume we're also keeping TML 3303? - GAA 
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        yes. - CLR
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        Paperclipped together are a previous cover sheet and the two classes
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        DG MOLAX 3302 cells (fully approved)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        DG TML 3302 cells (fully approved)
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        1) Do you approve of merging these two cell classes?
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        Yes. - DWW, CW, CLR
+                </p>
+                <p style="font-family: courier">
+                        2) Assuming merger, what unified class name do you prefer?
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        TML: total molecular layer?
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier" class="redtext">
+                        DWW, CW, CLR
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I'm OK with merger. MOLAX part of packet (Soriano/Frotscher) needs to get cleaned. Is the MOLAX name theirs? If not, I'm fine with TML. In general, name proposals should be accompanied by a specification as to their provenance. - GAA
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>DG (i)3302 MOLAX cells [1005]</b>
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        After reviewing the provided [DG (i)3002 MOHIPP] packet, I concur with the interpretations and approve of this neuron type for v2.0. - JDK 10/13/2021
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I'm not convinced. I would probably consider writing off these [DG (i)3002 MOHIPP] cells as Outer Molecular Layer (3222) or MOLAX (3302) neurons?! Happy to re-discuss though ... - GAA 01/19/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I think the OML interpretation has its merits, more so than the MOLAX interpretation. - DWW 01/21/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I'd say I still favor the 3002 interpretation based on the low axonal and dendritic presence within SMi, but can also see interpreting the A-D pattern as MOLAX (3302) as the axonal and dendritic presence within SMi is around the ~15% threshold and there is a fair amount of branching. The OML interpretation I favor less than the MOLAX or MOHIPP interpretation as the dendritic presence within SG is far below the 15% threshold and there is minimal branching in the provided reconstruction. - JDK 01/21/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=100></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Based on comparisons with the established v1.0 neuron types, I now posit that the blue MOHIPP cell [Fig. 4c from Lee et al., 2016] is a 3222 OML, and the brown MOHIPP cell [Fig. S2d from Lee et al., 2016] is a 3302 MOLAX. - DWW 01/22/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=125></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I concur. - GAA 01/22/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=150></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I am also in agreement. - JDK 01/22/2022
+                                </td>
+                        </tr>
+                </table>
+        </body>
+</html>

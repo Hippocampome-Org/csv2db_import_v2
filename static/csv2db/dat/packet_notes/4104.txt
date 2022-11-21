@@ -1,0 +1,133 @@
+<html>
+        <head>
+                <style>
+                        .redtext {
+                                color: red;
+                        }
+                        .bluetext {
+                                color: #0000FF; /* blue */
+                        }
+                        .greentext {
+                                color: #008000; /* dark green */
+                        }
+                        .purpletext {
+                                color: #800080; /* dark purple */
+                        }
+                        .orangetext {
+                                color: #FF6820; /* orange */
+                        }
+                </style>
+        </head>
+        <body>
+                <p style="font-family: courier">
+                        <b>CA1 (i)0232 Trilayer Basket (triBC) cells [4104]</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Related types:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        CA1 (i)0232 Trilayer Basket CCK+ (v2.0 active)
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes:</b>
+                </p>
+                <p style="font-family: courier">
+                        from Soltesz: "There may be some BCs that invade the LM more than others, but we do not have enough data to say whether this reflects two distinct PVBC classes."
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        DWW 02/19/2015
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        CLR 02/19/2015
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I am not ready to approve this neuron type. â CW 02/20/2015
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Is this disapproval due to a general stand on principle or do you have problems with the interpretations? Do you approve of them as supplements to the already active 2232 Baskets? - DWW 09/10/2015
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=100></td>
+                                <td style="font-family: courier" class="redtext">
+                                        My hesitation was because we may need to re-evaluate 2232 neuron types if we create this type, but perhaps the time has come. I approve 0232. - CW 09/16/2015
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=125></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I'm still okay with 0232. - CLR 10/10/2015
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=150></td>
+                                <td style="font-family: courier" class="redtext">
+                                        OK - GAA 11/29/2015
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier" class="redtext">
+                        Do you think the cell from Kawaguchi should be re-interpreted into the new 0232 cell type or should it stay as a CA1 (i)2232 Basket? - DWW 04/07/2016
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I vote for 0232 wide arbor basket because of shape of axons. - KM 04/07/2016
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I agree with moving it to 0232. - CW 04/07/2016
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I agree, too. - CLR 04/07/2016
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        Kawaguchi 1987 added to this packet. - 04/07/2016
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        I concur, 0232. - GAA 05/30/2016
+                </p>
+        </body>
+</html>

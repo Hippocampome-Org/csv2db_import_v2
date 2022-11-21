@@ -1,19 +1,19 @@
-This class has been reinterpreted with multiple layers CA3:SR_SL_SP_SO enclosed by the hilus, which are not delineated by the authors.  The ordering from top to bottom is unknown.
-<p>
-If CA3c is ever separated out as a separate parcel, this class will be affected.
-<p>
-Directed to H&#225;jos paper by Freund and Buzs&#225;ki, who tried to draw parallels between IS-3 neurons in CA1, CA3, and DG, and, therefore, declared dendrites in all layers and axons only in the hilus (typo in F&B Table 2 - "IS-2" should be "IS-3").  Since this interpretation is counter to the single figure from H&#225;jos, Freund and Buzs&#225;ki citations have been omitted from this cell type.
-<p>
-A citation search yielded no further information.
-<p>
-A neuron that had been previously interpreted as CA3 (-)03000 stratum radiatum has now been absorbed into this class.
-<p>
-N = 3.
-<p>
-13 out of 166 VIP+ cells (8%) split across this cell type and DG (-)0003.
-<p>
-Formed a small number of en passant or drumstick-like boutons.
-<p>
-Axons difficult to follow once in DG:H.
-<p>
+This class has been reinterpreted with multiple layers CA3:SR_SL_SP_SO enclosed by the hilus, which are not delineated by the authors.  The ordering from top to bottom is unknown.
+
+If CA3c is ever separated out as a separate parcel, this class will be affected.
+
+Directed to Hájos paper by Freund and Buzsáki, who tried to draw parallels between IS-3 neurons in CA1, CA3, and DG, and, therefore, declared dendrites in all layers and axons only in the hilus (typo in F&B Table 2 - "IS-2" should be "IS-3").  Since this interpretation is counter to the single figure from Hájos, Freund and Buzsáki citations have been omitted from this cell type.
+
+A citation search yielded no further information.
+
+A neuron that had been previously interpreted as CA3 (-)03000 stratum radiatum has now been absorbed into this class.
+
+N = 3.
+
+13 out of 166 VIP+ cells (8%) split across this cell type and DG (-)0003.
+
+Formed a small number of en passant or drumstick-like boutons.
+
+Axons difficult to follow once in DG:H.
+
 Non-principal cell specific targeting with multiple contacts on somata and dendrites.

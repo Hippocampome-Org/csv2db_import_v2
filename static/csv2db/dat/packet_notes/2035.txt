@@ -1,5 +1,235 @@
-The articles in this cell type were part of the old MFA 03332p cell type.  That cell type has been split into this cell type and the 03330p cell type.
-<p>
-Borderline:  some axonal presence in SO and SR
-<p>
-Axons have not been counted in SR for this cell, despite the personal communication from Dr Soltesz suggesting that MFA's make synapses with the dendrites of CA3 granule cells in SR, because the cells identified in the Soltesz work show the 03330p pattern.
+<html>
+        <head>
+                <style>
+                        .redtext {
+                                color: red;
+                        }
+                        .bluetext {
+                                color: #0000FF; /* blue */
+                        }
+                        .greentext {
+                                color: #008000; /* dark green */
+                        }
+                        .purpletext {
+                                color: #800080; /* dark purple */
+                        }
+                        .orangetext {
+                                color: #FF6820; /* orange */
+                        }
+                </style>
+        </head>
+        <body>
+                <p style="font-family: courier">
+                        <b>CA3 (-)02332p Mossy fiber-associated neuron</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Merger status:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        None
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes:</b>
+                </p>
+                <p style="font-family: courier">
+                        The articles in this packet were part of the old MFA 03332p packet. That packet has been split into this packet and the 03330p packet.
+                </p>
+                <p style="font-family: courier">
+                        85% synapses on dendritic shafts and 15% on somata of CA3 PCs
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        CW
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        CLR 11/28/2011
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        You don't count A:SR in Vida Fig. 1 but you do in Losonczy Fig. 3.
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Could D:SO in Losoncy have been cut? Otherwise dendrites look very much like ones in Vida Fig. 1.
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I would argue to put these packets back together in 03332p. - DWW 11/28/2011
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Hippocampome meeting GAA agrees with 2 packets. - CW 11/28/2011
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>CA3 (-)02332p Mossy fiber-associated Neuron</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Merger status:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        None
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes:</b>
+                </p>
+                <p style="font-family: courier">
+                        The articles in this packet were part of the old MFA 03332p packet. That packet has been split into this packet and the 03330p packet.
+                </p>
+                <p style="font-family: courier">
+                        Borderline: soma axonal presence in SO and SR
+                </p>
+                <p style="font-family: courier">
+                        Axons have not been counted in SR for this cell, despite the personal communication from Dr Soltesz suggesting that MFA's make synapses with the dendrites of CA3 granule cells in SR, because the cells identified in the Soltesz work show the 03330p pattern.
+                </p>
+                <p style="font-family: courier">
+                        young rats and guinea pigs of unknown age
+                </p>
+                <p style="font-family: courier">
+                        85% synapses on dendritic shafts and 15% on somata of CA3 PCs
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        CW
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        CLR 12/05/2011
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        OK - DWW 12/05/2011
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>CA3 (-)02332p-DG 0001 mossy fiber associated-2 (MFA-2) neurons </b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Merger status:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        None
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes:</b>
+                </p>
+                <p style="font-family: courier">
+                        The articles in this packet were part of the old MFA 03332p packet. That packet has been split into this packet and the 03330p packet.
+                </p>
+                <p style="font-family: courier">
+                        Borderline: soma axonal presence in SO and SR
+                </p>
+                <p style="font-family: courier">
+                        Axons have not been counted in SR for this cell, despite the personal communication from Dr Soltesz suggesting that MFA's make synapses with the dendrites of CA3 granule cells in SR, because the cells identified in the Soltesz work show the 03330p pattern.
+                </p>
+                <p style="font-family: courier">
+                        young rats and guinea pigs of unknown age
+                </p>
+                <p style="font-family: courier">
+                        85% synapses on dendritic shafts and 15% on somata of CA3 PCs
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        CW, DWW, CLR
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        <b>GAA</b>
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>CA3 (i)02332p-DG_0001 Mossy Fiber-Associated ORDEN (MFA ORDEN) neurons [2035]</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Related types:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        CA3 (i)03330p Mossy Fiber-Associated (v1.0 active)
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes:</b> The articles in this packet were part of the old MFA 03332p packet. That packet has been split into this packet and the 03330p packet.
+                </p>
+                <p style="font-family: courier">
+                        <young rats and guinea pigs of unknown age>
+                        <br>
+                        <85% synapses on dendritic shafts and 15% on somata of CA3 PCs>
+                </p>
+                <p style="font-family: courier">
+                        <b>Borderline:</b> some axonal presence in SO and SR
+                </p>
+                <p style="font-family: courier">
+                        Axons have not been counted in SR for this cell, despite the personal communication from Dr. Soltesz suggesting that MFA's make synapses with the dendrites of CA3 granule cells in SR, because the cells identified in the Soltesz work show the 03330p pattern.
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        The proposed CA3 L-MFA for v2.0 passes review for me. - JDK 08/24/2021
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I must admit I find the reasoning for 'activating' this [CA3 L-MFA] packet a little thin. On the one hand, the absence of axon from PCL is at least open to interpretation; on the other, I see axons pushing towards the DG which would make them match the 1.0 MFA-Orden pattern. Soâ¦ I would lean towards keeping frozen for now. Iâm certainly happy to reconsider if desired. - GAA 01/26/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I agree with the potential match [of the CA3 L-MFA cells] to the DG (i)02332p MFA ORDEN cells, in particular, to Figure 8B from Gulyas et al, 1993. The Gulyas cell does not explicitly reach DG, but it was folded in to the neuron type anyway. Therefore, I would lean more into assigning these two cells to be supplementary to the MFA ORDEN type, rather than simply putting them on hold. - DWW 01/28/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I am in favor of DWW's idea to make these two [CA3 L-MFA] cells supplementary to the active v1.0 MFA ORDEN type. - JDK 01/28/2022
+                                </td>
+                        </tr>
+                </table>
+        </body>
+</html>

@@ -1,0 +1,95 @@
+<html>
+        <head>
+                <style>
+                        .redtext {
+                                color: red;
+                        }
+                        .bluetext {
+                                color: #0000FF; /* blue */
+                        }
+                        .greentext {
+                                color: #008000; /* dark green */
+                        }
+                        .purpletext {
+                                color: #800080; /* dark purple */
+                        }
+                        .orangetext {
+                                color: #FF6820; /* orange */
+                        }
+                </style>
+        </head>
+        <body>
+                <p style="font-family: courier">
+                        <b>CA1 (i)2300 LMR-R neurons [4107]</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Related types:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        CA1 (i)2300 Interneuron Specific LMR-R (v1.0 active)
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes: This packet is separate from CA1 (i)2300 (0SS0) Interneuron Specific LMR-R because the specificity for interneurons is not mentioned and the data suggest the type is VIP-.</b>
+                </p>
+                <p style="font-family: courier">
+                        Ali (2011) added - 02/24/2015
+                </p>
+                <p style="font-family: courier">
+                        Ali (2010) added - 02/25/2015
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        I approve this neuron type and the addition of the Ali 2010 neuron to this packet. - CW 02/26/2015
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I would like to discuss this one. - GAA
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I do not remember what Giorgio had to say about this packet. It seems reasonably straightforward and must be kept separate from the IS packet. - DWW 09/10/2015
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I have no further comments until we know Giorgio's objections. - CW 09/23/2015
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=100></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Let's ask GAA.  CLR 10/10/15
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=125></td>
+                                <td style="font-family: courier" class="redtext">
+                                        "VIP-" where? how about CR? in light of the Science paper it makes me pause but I guess OK - GAA 11/29/2015
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        There is no mention in any of the references about CR expression.
+                </p>
+        </body>
+</html>

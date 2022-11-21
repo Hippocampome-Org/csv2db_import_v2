@@ -1,11 +1,9 @@
-Axo-axonic cells exclusively target pyramidal cells; basket cells also target interneurons.
-<p>
-- The Zemankovics CA1 (-)0012 FS PTI cells are merged into this cell type even though the authors could not distinguish between axo-axonic and basket cells
-<p>
-Target soma and proximal dendrites of CA1 pyramidal cells and other interneurons.
-<p>
+Axo-axonic cells exclusively target pyramidal cells; basket cells also target interneurons.
+
+- The Zemankovics CA1 (-)0012 FS PTI cells are merged into this cell type even though the authors could not distinguish between axo-axonic and basket cells
+
+Target soma and proximal dendrites of CA1 pyramidal cells and other interneurons.
 
-perisomatic axonal targeting interpreted as PCL
-<p>
+perisomatic axonal targeting interpreted as PCL
 
 extended interpretation of SP in apical and basal directions

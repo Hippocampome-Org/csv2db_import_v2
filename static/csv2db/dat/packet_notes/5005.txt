@@ -1,11 +1,11 @@
-Related classes: SUB (+)331-EC 000111 pyramidal neurons (active)
-<p>
-Harris (2001): Axonal reach into CA1:SP less than 200 [micro]m; regular spiking.
-<p>
-Finch (1983)(not yet cited): Single collateral reaching CA1 SO.
-<p>
-K&#246;hler (1985) (not yet cited): labeled fibers apparent in CA1 SM_SO.
-<p>
-Witter email correspondence: "Menno's recommendation is that we separate the subicular pyramids into two distinct classes, one projecting to EC and the other to CA1. The logic is weak, but here goes the argument: there's is enough evidence to define 2 classes based on the input connectivity anyway. The more superficial pyramids (within PC but towards ML) have longer & thinner dendrites that receive input from L3 EC pyramidal cells, and these cells do NOT project to EC. In contrast, the deeper subicular pyramids (within PC but towards PL) do NOT receive EC L3 perforant path projections, and they DO project to EC (L5+6). The less clear cut assumption is that the former subicular pyramids form the (less abundant) back-projection to CA1, and the latter cells do not. The reasoning is that in ALL extra-hippocampal projections subicular neurons exclusively target ONE region and do not collateralize to multiple regions. 
-<p>
+Related classes: SUB (+)331-EC 000111 pyramidal neurons (active, need Giorgio approval)
+
+Harris (2001): Axonal reach into CA1:SP less than 200 microm; regular spiking.
+
+Finch (1983)(not yet cited): Single collateral reaching CA1 SO.
+
+Köhler (1985) (not yet cited): labeled fibers apparent in CA1 SM_SO.
+
+Witter email correspondence: "Menno's recommendation is that we separate the subicular pyramids into two distinct classes, one projecting to EC and the other to CA1. The logic is weak, but here goes the argument: there's is enough evidence to define 2 classes based on the input connectivity anyway. The more superficial pyramids (within PC but towards ML) have longer & thinner dendrites that receive input from L3 EC pyramidal cells, and these cells do NOT project to EC. In contrast, the deeper subicular pyramids (within PC but towards PL) do NOT receive EC L3 perforant path projections, and they DO project to EC (L5+6). The less clear cut assumption is that the former subicular pyramids form the (less abundant) back-projection to CA1, and the latter cells do not. The reasoning is that in ALL extra-hippocampal projections subicular neurons exclusively target ONE region and do not collateralize to multiple regions. 
+
 Moreover, the two pyramidal subtypes also correspond to the bursting / regular firing phenotype. The evidence for the above is in Witter's paper in the subiculum special issue (2006?). He gave permission to quote him as "personal communication."

@@ -1,11 +1,11 @@
-N = 4.
-<p>
-A:DG:SMo and A:CA3c are less than 15%.
-<p>
-D:CA3c is less than 15%.
-<p>
-Youngest rats may be adolescents.
-<p>
-Aspiny.
-<p>
+N = 4.
+
+A:DG:SMo and A:CA3c are less than 15%.
+
+D:CA3c is less than 15%.
+
+Youngest rats may be adolescents.
+
+Aspiny.
+
 A:SG form basket-like boutons around GC somata.  A:H form basket-like bouton arrays around somata.  These cells are the inverse of DG (-)2232 basket cells.  These have clear presence in SMi and H, and minimal in SG.

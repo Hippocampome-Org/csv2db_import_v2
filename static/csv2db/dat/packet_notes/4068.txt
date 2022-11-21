@@ -1,5 +1,188 @@
-Axonal arbor is very wide and extent of projections is somewhat unclear.  The subject is not discussed in Katona (1999) and Losonczy (2002) admit that the arbor was likely "severly truncated" due to slicing.
-<p>
-The cell in Losonczy's Fig 5a does not project to CA3, though the authors speculate that 40% of oriens-bistratified cells project both there and to the subiculum.
-<p>
-Electrophysiology and chemical marker (SST+) data in Losonczy (2002).
+<html>
+        <head>
+                <style>
+                        .redtext {
+                                color: red;
+                        }
+                        .bluetext {
+                                color: #0000FF; /* blue */
+                        }
+                        .greentext {
+                                color: #008000; /* dark green */
+                        }
+                        .purpletext {
+                                color: #800080; /* dark purple */
+                        }
+                        .orangetext {
+                                color: #FF6820; /* orange */
+                        }
+                </style>
+        </head>
+        <body>
+                <p style="font-family: courier">
+                        <b>CA1 (-)1113p-CA3 10001-SUB 110 wide oriens-bistratified (wide o-bi) neurons</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Merger status:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        No current merger proposals.
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Related classes:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        CA1 (-)0113p-SUB111 TH-ORP-DP-OR contains "classic" oriens-bistratified cells (aka O-R cells), as defined by Maccaferri (2000).
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes:</b>
+                </p>
+                <p style="font-family: courier">
+                        Axonal arbor is very wide and extent of projections is somewhat unclear. The subject is not discussed in Katona (1999) and Losonczy (2002) admit that the arbor was likely "severely truncated" due to slicing.
+                </p>
+                <p style="font-family: courier">
+                        It is possible that the cells closest to subiculum only project there and those closest to CA3 only project there. However, it seems clear that some percentage (Losonczy guesses 40%) project to both subregions.
+                </p>
+                <p style="font-family: courier">
+                        Electrophysiology and chemical marker (SST+) data in Losonczy (2002).
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        CLR 12/20/2011
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        OK. - DWW 12/20/2011
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I question SM of the Sub [for Fig. 5A in Losonczy et al., 2002]. I think just PL + SP, making the pattern 011 in the Sub. Correction, I see SM now, but why not PL?
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Part of the text argues against axons in SLM.
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        The projecting axons of this cell [Fig. 5A in Losonczy et al., 2002] would hit CA2 before CA3. Does CA2 need to be added?
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I do not think the top cell [Fig. 5A in Losonczy et al., 2002] goes with the other two [Figs. 5B,D in Losonczy et al., 2002]. - CW
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>CA1 (-)1113p-SUB 111 oriens-bistratified cells (O-BiC)</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Merger status:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        No current merger proposals.
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Cross-references:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        CA1 (-)0113p-SUB 111 TH-ORP-DP-OR (active).  Packet contains Losonczy (2002) Fig 5b, as well as "classic" oriens-bistratified cells (aka O-R cells) first described by Maccaferri (2000).
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA2 (-)0003p-CA3 00003-CA1 0003-SUB 010 (suspended).  Packet contains Losonczy (2002) Fig 5d.
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes:</b>
+                </p>
+                <p style="font-family: courier">
+                        Axonal arbor is very wide and extent of projections is somewhat unclear.  The subject is not discussed in Katona (1999) and Losonczy (2002) admit that the arbor was likely "severly truncated" due to slicing.
+                </p>
+                <p style="font-family: courier">
+                        The cell in Losonczy's Fig 5a does not project to CA3, though the authors speculate that 40% of oriens-bistratified cells project both there and to the subiculum.
+                </p>
+                <p style="font-family: courier">
+                        Electrophysiology and chemical marker (SST+) data in Losonczy (2002).
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        CLR, DWW, CW 12/21/2011
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        <b>GAA</b>
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>CA1 (i)1113p-Sub_111 Oriens-QuadA Projecting (O-QuadA Proj) cells [4068]</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Related types:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        CCA1 (i)0113p-Sub_111 Trilaminar (v1.0 active)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA1 (i)0003 SO-SO (v1.0 active)
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes: Axonal arbor is very wide and extent of projections is somewhat unclear.  The subject is not discussed in Katona (1999) and Losonczy (2002) admit that the arbor was likely "severly truncated" due to slicing.</b>
+                </p>
+                <p style="font-family: courier">
+                        The cell in Losonczy's Fig 5a does not project to CA3, though the authors speculate that 40% of oriens-bistratified cells project both there and to the subiculum.
+                </p>
+                <p style="font-family: courier">
+                        Electrophysiology and chemical marker (SST+) data in Losonczy (2002).
+                </p>
+                <p style="font-family: courier">
+                        TThis neuron type was renamed to avoid the confusion of the "bistratified" label. 02/02/2022
+                </p>
+        </body>
+</html>
+
+
+
+
+
+
+

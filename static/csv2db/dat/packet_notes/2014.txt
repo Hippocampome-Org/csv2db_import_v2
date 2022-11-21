@@ -1,4 +1,519 @@
-The 03320 class has been mapped into this 03300 class, since they differ only by dendrites in SP.
-<p>
-
-Borderline dendrites in SP
+<html>
+        <head>
+                <style>
+                        .redtext {
+                                color: red;
+                        }
+                        .bluetext {
+                                color: #0000FF; /* blue */
+                        }
+                        .greentext {
+                                color: #008000; /* dark green */
+                        }
+                        .purpletext {
+                                color: #800080; /* dark purple */
+                        }
+                        .orangetext {
+                                color: #FF6820; /* orange */
+                        }
+                </style>
+        </head>
+        <body>
+                <p style="font-family: courier">
+                        <b>CA3 03300 lucidum cell (LC)</b>
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        DWW
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I think the cell on pg. 3 looks like A on p. 7, even more than C. Can we combine all 3. Otherwise, I think we should leave 6C out. 03320 - CW
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I would put pg 3 in the other packet (03320) and agree it looks like Fig 6A. However, I would not merge the two packets bec. I think there's a class with less-than-significant presence of D in SP (Spruston Fig 6C + Fig 2 + Fig 3). - CLR
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Merge? - CW
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=100></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Maybe not. - CLR
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>CA3 03320 aspiny lucidum cell (aSLC)</b>
+                </p>
+                <p>
+                        N = 1
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        DWW
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        N = 5 is stated on p. 3. On p. 4, why isn't C included? I agree w. interpretations. - CW 05/04/2011
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>CA3 03320 lucidum cell (LC)</b>
+                </p>
+                <p style="font-family: courier">
+                        N = 2
+                </p>
+                <p style="font-family: courier">
+                        Fig. 6C is categorized as a CA3 03300 aspiny lucidum cell (aSLC).
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        I'm not sure Figs 2+3 belong in this packet. They only have dendrites in SL. Other interpretations are good. - CLR 05/11/2011
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I'm okay with keeping 2+3, and I agree with interpretations. - CW 05/18/2011
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Gulyas? Soriano? - GAA
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>CA3 03300 aspiny lucidum cell (aSLC)</b>
+                </p>
+                <p style="font-family: courier">
+                        N = 1
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        DWW
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        CLR 05/11/2011
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        CW 05/18/2011
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier" class="redtext">
+                        Overall, I find it confusing to see the same material with the same interpret. in multiple packets. - CW
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        In this instance, I agree that the Spruston figures in question (2 & 3) don't add much to either packet, and may in fact confuse the issue because they're only partial-neuron pictures. I would either leave in both packets or remove from both, but see no reason to put in one and not the other.
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        In general, I'm not bothered by having the same evidence in multiple packets and favor a case-by-case decision. - CLR 06/29/2011
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>CA3 03300 aspiny lucidum cell (aSLC)</b>
+                </p>
+                <p style="font-family: courier">
+                        N = 1
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        DWW, CLR, CW
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Susp. ani. Fold into 03320 - GAA
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>CA3 03320 lucidum cell (LC)</b>
+                </p>
+                <p style="font-family: courier">
+                        N = 3
+                </p>
+                <p style="font-family: courier">
+                        The 03300 class has been folded into this 03320 class, since they differ only by dendrites in SP.
+                </p>
+                <p style="font-family: courier">
+                        This packet contains citations from:
+                </p>
+                <table>
+                        <tr>
+                                <td width=25 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        Spruston et al., 1997
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        Background references checked and included in another packet:
+                </p>
+                <table>
+                        <tr>
+                                <td width=25 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        Szabadics and Soltesz, 2009 (CA3 01320 spiny lucidum cells)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=25 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        Toth and McBain, 1998 (CA3 02330 lucidum cells)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=25 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        Toth and McBain, 1998 (CA3 00300 lucidum cells)
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        Background references checked and omitted:
+                </p>
+                <table>
+                        <tr>
+                                <td width=25 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        Aaron et al., 2003: unable to stain axons
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=25 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        Acsady et al., 1997: no axonal information
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=25 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        Acsady et al., 1998: no axonal information
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=25 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        Gulyas et al., 1992: unable to stain axons
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=25 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        Hsu and Buzsaki, 1993: ischemic cells only
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=25 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        Jinno et al., 2007: single CA3 cell that projects to CA1:SR_SP
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=25 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        Soriano and Frotscher, 1993: unable to stain axons
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=25 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        Szabadics et al., 2010: no axonal information
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=25 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        Takacs et al., 2008: unable to stain axons
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=25 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        Wittner et al., 2006: no axonal or dendritic details
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier" class="redtext">
+                        DWW
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Overall OK; interp question [Spruston et al., 1997, Fig. 6C] ? D:SP Maybe SO, but could maybe be 03300 - CLR
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        CW
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>CA3 03320 lucidum cell (LC)</b>
+                </p>
+                <p style="font-family: courier">
+                        The 03300 class has been mapped into this 03320 class, since they differ only by dendrites in SP and would otherwise end up in suspended animation.
+                </p>
+                <p style="font-family: courier">
+                        Figs. 2  & 3 from Spruston have now been removed.
+                </p>
+                <p style="font-family: courier">
+                        The contrast in some of the figures has been artficially enhanced to make them more legible.
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        DWW, CLR
+                </p>
+                <table>
+                        <tr>
+                                <td width=25 style="font-family: courier"></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Looks good. I would slightly prefer 03300 interpretation. Pls specify if mixed spiny & aspiny (subclasses?). Subclass possibilities:
+                                </td>
+                        </tr>
+                </table>
+                <table>
+                        <tr>
+                                <td width=50 style="font-family: courier"></td>
+                                <td style="font-family: courier" class="redtext">
+                                        SP - asp
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=50 style="font-family: courier"></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Pyr L vs not
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=50 style="font-family: courier"></td>
+                                <td style="font-family: courier" class="redtext">
+                                        calretinin vs not
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=50 style="font-family: courier"></td>
+                                <td style="font-family: courier" class="redtext">
+                                        electrophys ... - GAA 07/25/2011
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>CA3 03300 lucidum cell (LC)</b>
+                </p>
+                <p style="font-family: courier">
+                        N = 3, one spiny and two aspiny
+                </p>
+                <p style="font-family: courier">
+                        The 03320 class has been mapped into this 03300 class, since they differ only by dendrites in SP.
+                </p>
+                <p style="font-family: courier">
+                        <b>New rule invoked: when compressing classes, leave axons in PCL because of the issue of terget specificity but discount dendrites. Therefore, this class is now considered 03300 (instead of 03320).</b>
+                </p>
+                <p style="font-family: courier">
+                        <b>Previously approved by DWW, CLR, CW as 03320. GAA does not need to see packet again if we agree to the rule change and approve as 03300.</b>
+                </p>
+                <p style="font-family: courier">
+                        <b>Potential for future subclasses based on spiny/aspiny, markers (calretinin), electrophysiology, etc.</b>
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        <b>GAA</b> 07/25/2011
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        CLR
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        DWW 08/03/2011
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        CW 08/04/2011
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>CA3 (-)03300 lucidum cells-2 (LC-2)</b>
+                </p>
+                <p style="font-family: courier">
+                        N = 3, one spiny and two aspiny
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Merger status:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        none being considered
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes:</b>
+                </p>
+                <p style="font-family: courier">
+                        The 03320 class has been mapped into this 03300 class, since they differ only by dendrites in SP.
+                </p>
+                <p style="font-family: courier">
+                        New rule invoked: when compressing classes, leave axons in PCL because of the issue of terget specificity but discount dendrites. Therefore, this class is now considered 03300 (instead of 03320).
+                </p>
+                <p style="font-family: courier">
+                        The contrast in some of the figures has been artificially enhanced to make them more legible.
+                </p>
+                <p style="font-family: courier">
+                        Borderline dendrites in SP
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        GAA 07/25/2011
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        CLR
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        DWW 08/03/2011
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        CW 08/04/2011
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>CA3 (i)03300 Lucidum-Radiatum (L-R) cells [2014]</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Related types:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        CA3 (i)03322 radiatum cell (v2.0 on-hold)
+                                </td>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA3 (i)03311 Lucidum ORAX (v1.0 active)
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes: Neurite differences in the principal cell Layers invoked rule: when compressing types, leave axons in the PCL because of the issue of target specificity, but discount dendrites.</b>
+                </p>
+                <p style="font-family: courier">
+                        Allene et al., 2012: ephys, synaptic ephys, lengths
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        Because of the invoked rule, these two types [CA3 (i)03300 Lucidum-Radiatum and Allene et al., 2012] should be merged together as 03300. - DWW 10/19/2021
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        How much emphasis should we put on the GDP reconstruction coming from P1-P7 mice for our decision to make this an active 2.0 type? I think compression makes sense but not certain if we should continue to leave on-hold until we have more evidence from older mice/rats for this proposed cell type. - JDK 11/03/2021
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        The 03300 type is already an active v1.0 type, so I have no hesitation in absorbing the GDP neuron into the v1.0 type. - DWW 11/03/2021
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Okay noted, then I am in favor of the compression. - JDK 11/03/2021
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Update: Principal cell layer invoked rule:</b> record axons in the PCL when boutons are present or when axons are branching and ostensibly targeting the PCL and not just passing through, but discount dendrites. - 11/15/2021
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        After re-review with our updated new invoked rule, I am still in favor of compression for these cell types to CA3 (i) 03300. - JDK 11/22/2021
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I approve. - GAA 01/26/2022
+                                </td>
+                        </tr>
+                </table>
+        </body>
+</html>

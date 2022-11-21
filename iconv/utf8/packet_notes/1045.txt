@@ -1,0 +1,208 @@
+<html>
+        <head>
+                <style>
+                        .redtext {
+                                color: red;
+                        }
+                        .bluetext {
+                                color: #0000FF; /* blue */
+                        }
+                        .greentext {
+                                color: #008000; /* dark green */
+                        }
+                        .purpletext {
+                                color: #800080; /* dark purple */
+                        }
+                        .orangetext {
+                                color: #FF6820; /* orange */
+                        }
+                </style>
+        </head>
+        <body>
+                <p style="font-family: courier">
+                        <b>DG (-)0031/0331/0333 ivy/neurogliaform (ivy/NGF) cells</b>
+                </p>
+                <p style="font-family: courier">
+                        <b>Notes:</b>
+                </p>
+                <p style="font-family: courier">
+                        Parallel to CA1 (-)0333 ivy cells
+                </p>
+                <p style="font-family: courier">
+                        Has accompanying marker and eletrophysiological information.
+                </p>
+                <p style="font-family: courier">
+                        Possible complement to the newly proposed DG (-)0331/0333 non-ivy-neurogliaform cells
+                </p>
+                <p style="font-family: courier">
+                        N = 6
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        I vote 0333. I could see any of the 3 interpretations, but ivy story consistency breaks the tie for me. - CLR 12/17/2012
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I vote for adding as a 0333. - CW 12/18/2012
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        0033? - GAA 01/14/2013
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>DG (-)0033 ivy/neurogliaform (ivy/NGF) cells</b>
+                </p>
+                <p style="font-family: courier">
+                        <b>Notes:</b>
+                </p>
+                <p style="font-family: courier">
+                        Previous interpretations of this class were proposed in order to possibly complement a class of DG (-)0331/0333 non-ivy/neurogliaform cells. That correlation has been discounted, and the non-ivy/neurogliaform class has been approved as 0331.
+                </p>
+                <p style="font-family: courier">
+                        N = 6-12
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        GAA 01/14/2013
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        DWW 01/23/2013
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        CLR 01/23/2013
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>DG (-)0333 ivy/neurogliaform (ivy/NGF) cells</b>
+                </p>
+                <p style="font-family: courier">
+                        <b>Notes:</b>
+                </p>
+                <p style="font-family: courier">
+                        Ruchi has opened a line of communication with Overstreet-Wadiche to obtain the original reconstructions, which might help in the interpretations of these cells. Until new information is forthcoming, this is the best interpretation that can be made.
+                </p>
+                <p style="font-family: courier">
+                        RLN+. Ephys. Neurite lengths.
+                </p>
+                <p style="font-family: courier">
+                        N = 6-12
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        DWW, CLR, CW 03/11/2013
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        N = 1?
+                                        <br>
+                                        "Anatomical reconstruction of <u>a</u> delayed-spiking interneuron presynaptic to a NGC ..." - GAA
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I now support suspension - DWW, CLR 03/21/2013
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>DG (i)0333 Ivy cells [1045]</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Related types:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        DG (i)0332 Inner Molecular Layer (v2.0 on-hold)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"> </td>
+                                <td style="font-family: courier">
+                                        DG (i)0331 MOCAP (v1.0 active)
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes: This cell type has both axons and dendrites in the hilus, which distinguishes it from the two related neuron types.</b>
+                </p>
+                <p style="font-family: courier">
+                        <b>This is a proposed merger between Markwardt's ivy/neurogliaform cell (v2.0 on-hold) and Szabo's hilar interneuron (new). Markwardt's cell has a denser axon and is strongly suggested to be an ivy/neurogliaform cell, which may keep these cells from being merged.</b>
+                </p>
+                <p style="font-family: courier" class="greentext">
+                        Markwardt: RLN+, FP present, membrane biophysics present, neurite lengths
+                </p>
+                <p style="font-family: courier" class="bluetext">
+                        Szabo: [Y:A:CA3:SP]{low}
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        Based on the AD-patterns the Markwardt ivy/NGF and Szabo interneuron located in hilus would favor the proposed merger, but I am uncertain given the density of the axon for the Markwardt reconstruction. Has density been a factor before in not merging other proposed cell types? If so, how is this factor typically weighted? - JDK 10/12/2021
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Neurite density has not been a deciding factor all by itself. As there is no marker information or membrane biophysics for the Szabo neuron, I would lean toward combining them now, while being open to a split off once more data come in. - DWW 10/13/2021
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Okay noted. I then also will lean towards the proposed merger between these two. - JDK 10/13/2021
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Type approved, but name doubt. Do we need the NGC part of the name, or can we just call them Ivy? NGC-Ivy sounds like the superfamily, and we do have DG NGCs as well as distinct but related CA1 NGCs & CA1 IVysâ¦ - GAA 01/19/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=100></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I support reducing the formal name to just "Ivy." - DWW 01/20/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=125></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I am also in support of reducing the formal name to "Ivy". - JDK 01/27/2022
+                                </td>
+                        </tr>
+                </table>
+        </body>
+</html>

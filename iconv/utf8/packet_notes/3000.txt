@@ -1,0 +1,21 @@
+<html>
+<head>
+<style>
+.redtext {
+        color: red;
+}
+</style>
+</head>
+<body>
+<b>Status:</b> addendum to currently active CA2 (+)2333p Pyramidal cells added - 01/28/2016
+<p class="redtext">
+Looks good to me. - CLR 12/08/2015
+</p>
+<p class="redtext">
+I agree with adding a projection to LII EC from CA2 pyramidal neurons.  Although the <u>authors'</u> statement that "these data are inconsistent with all recent reports" gave me pause, a look at the titles of articles citing this one did not suggest opposition to this finding. - CW 01/27/2016
+</p>
+<p class="redtext">
+Looks good to me. - GAA 01/28/2016
+</p>
+</body>
+</html>

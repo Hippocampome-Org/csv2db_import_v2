@@ -19,7 +19,7 @@ process order,csv filename,tables populated,derived from
 18,fp_parameters.csv,"FiringPattern, FiringPatternRel",FPparameters_v1.0.xlsx
 19,material_method.csv,MaterialMethod,FP-Materials-Methods_v1.0.xlsx
 20,conn_fragment.csv,"ArticleEvidenceRel, Evidence, EvidenceFragmentRel, ConnFragment",connfragment.csv
-21,conndata.csv,Conndata,conndata.xlsx
+21,known_connections.csv,Conndata,conndata.xlsx
 22,term.csv,Term,term.csv
 23,onhold_types_pmids.csv,Onhold,Help_On-hold_Types.docx
 24,izhmodels_single.csv,Izhmodels,IzhModels_Matrix_v1.0.csv
@@ -31,9 +31,30 @@ process order,csv filename,tables populated,derived from
 30,number_of_contacts.csv,number_of_contacts,Potential Synapses 4.0.xlsx
 31,attachment_conn.csv,attachment_connectivity,attachment_conn_v1.0.xlsx
 32,fragment_nbyk.csv,"SynproFragment, SynproArticleEvidenceRel, SynproEvidenceFragmentRel",fragment_nbyk.xlsx
-33,evi_pro_type_rel_nbyk.csv,"SynproEvidencePropertyTypeRel",evi_pro_type_rel_nbyk.xlsx
+33,evi_pro_type_rel_nbyk.csv,SynproEvidencePropertyTypeRel,evi_pro_type_rel_nbyk.xlsx
 34,fragment_nbym.csv,"SynproFragment, SynproArticleEvidenceRel, SynproEvidenceFragmentRel",fragment_nbym.xlsx
-35,evi_pro_type_rel_nbym.csv,"SynproEvidencePropertyTypeRel",evi_pro_type_rel_nbym.xlsx
-36,synpro_prop_parcel_rel.csv,"SynproPropParcelRel",synpro_prop_parcel_rel.xlsx
-37,synpro_type_type_rel.csv,"SynproTypeTypeRel",synpro_type_type_rel.xlsx
-38,attachment_neurite_rar.csv,"attachment_neurite_rar",attachment_neurite_rar_v1_0_update_022720.xlsx
+35,evi_pro_type_rel_nbym.csv,SynproEvidencePropertyTypeRel,evi_pro_type_rel_nbym.xlsx
+36,synpro_prop_parcel_rel.csv,SynproPropParcelRel,synpro_prop_parcel_rel.xlsx
+37,synpro_type_type_rel.csv,SynproTypeTypeRel,synpro_type_type_rel.xlsx
+38,attachment_neurite_rar.csv,attachment_neurite_rar2,attachment_neurite_rar_v1_0_update_022720.xlsx
+39,SynproCP.csv,SynproCP,SynproCP.csv
+40,SynproCPTotal.csv,SynproCPTotal,SynproCPTotal.csv
+41,SynproNOC.csv,SynproNOC,SynproNOC.csv
+42,SynproNOCTotal.csv,SynproNOCTotal,SynproNOCTotal.csv
+43,SynproNoPS.csv,SynproNoPS.csv,SynproNoPS.csv
+44,SynproNPSTotal.csv,SynproNPSTotal.csv,SynproNPSTotal.csv
+45,SynproParcelVolumes.csv,SynproParcelVolumes.csv,SynproParcelVolumes.csv
+46,SynproSubLayers.csv,SynproSubLayers.csv,SynproSubLayers.csv
+47,SynproVolumesSelected.csv,SynproVolumesSelected.csv,SynproVolumesSelected.csv
+48,phases.csv,phases,phases_v2.0.csv
+49,phases_fragment.csv,phases_fragment,URD_phases_v2.0.xlsx
+50,attachment_phases.csv,attachment_phases,attachment_phases_v2.0.xlsx
+51,phases_evidence_type_rel.csv,phases_evidence_type_rel,phases_evidence_type_rel.xlsx
+52,phases_evidence_fragment_rel.csv,phases_evidence_fragment_rel,phases_evidence_fragment_rel.xlsx
+53,counts.csv,counts,counts.xlsx
+54,counts_fragment.csv,counts_fragment,URD_counts_v1.0.xlsx
+55,counts_evidence_type_rel.csv,counts_evidence_type_rel,counts_evidence_type_rel.xlsx
+56,counts_evidence_fragment_rel.csv,counts_evidence_fragment_rel,counts_evidence_fragment_rel.xlsx
+57,attachment_counts.csv,attachment_counts,attachment_counts_v1.0.xlsx
+58,citations.csv,citations,citations_v2.0.xlsx
+59,Hippocampome_to_NMO.csv,Hippocampome_to_NMO,NMO2HC.xlsx

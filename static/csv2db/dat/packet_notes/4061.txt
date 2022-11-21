@@ -1,8 +1,8 @@
-Rejected for merger with CA1 (-)0300 SCA-SR-CB due to strength of A:SLM.
-<p>
-Related classes:<br>
-&emsp;CA1 (-)3000p-DG 3000 neurogliaform (NGF) neurons (active)<br>
-&emsp;CA1 (-)2311 Schaffer collateral-associated-apical dendrite-innervating (SCA-ADI) neurons (active)<br>
-&emsp;CA1 (-)2300 Schaffer collateral-associated (SCA) neurons (suspended)
-<p>
+Rejected for merger with CA1 (-)0300 SCA-SR-CB due to strength of A:SLM.
+
+Related classes:
+CA1 (-)3000p-DG 3000 neurogliaform (NGF) neurons (active)
+CA1 (-)2311 Schaffer collateral-associated-apical dendrite-innervating (SCA-ADI) neurons (active)
+CA1 (-)2300 Schaffer collateral-associated (SCA) neurons (suspended)
+
 N = 2.

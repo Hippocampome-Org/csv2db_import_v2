@@ -1,5 +1,6 @@
-This class is a merger of:<br>
-- CA1 calbindin 0003<br>
-- CA1 SO-SO 0003
-<p>
-Possible future subclasses based on markers (calbindin, CCK) or electrophysiology (SO-SO are FS, calbindin unknown)
+This class is a merger of:
+- CA1 calbindin 0003
+- CA1 SO-SO 0003
+
+
+Possible future subclasses based on markers (calbindin, CCK) or electrophysiology (SO-SO are FS, calbindin unknown)

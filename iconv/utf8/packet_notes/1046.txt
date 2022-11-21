@@ -1,0 +1,287 @@
+<html>
+        <head>
+                <style>
+                        .redtext {
+                                color: red;
+                        }
+                        .bluetext {
+                                color: #0000FF; /* blue */
+                        }
+                        .greentext {
+                                color: #008000; /* dark green */
+                        }
+                        .purpletext {
+                                color: #800080; /* dark purple */
+                        }
+                        .orangetext {
+                                color: #FF6820; /* orange */
+                        }
+                </style>
+        </head>
+        <body>
+                <p style="font-family: courier">
+                        <b>DG (i) HIPP neurons</b>
+                </p>
+                <p style="font-family: courier">
+                        <b>Notes:</b>
+                </p>
+                <p style="font-family: courier">
+                        N = 3.
+                </p>
+                <p style="font-family: courier">
+                        SOM+
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        This interpretation is complicated by the graph of the axons of the three neurons. It shows axonal presence in SG, although the shown neuron does not seem to have any. Do the other two neurons have axons in SG? If so, do they also have axons in SMo and SMi? Is the reconstruction shown incomplete? Is this an n=1? - CW 02/11/2015
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I propose freezing due to the conflicting data with the density graph and therefore a possible N = 1. - DWW 02/12/2015, CLR 02/15/2015
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        The new evidence from Savanthrapadian should make this type active. - DWW 02/16/2015
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        "should make this type active" [agreed] AOK - GAA
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>DG (i) 1102 HIPP-CAP neurons</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Related cell types:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        DG (i)1002 HIPP (active)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        DG (i)1103 Recurrent HIPP-CAP (on-hold)
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes:</b>
+                </p>
+                <p style="font-family: courier">
+                        N = 3.
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        This interpretation is complicated by the graph of the axons of the three neurons. It shows axonal presence in SG, although the shown neuron does not seem to have any. Do the other two neurons have axons in SG? If so, do they also have axons in SMo and SMi? Is the reconstruction shown incomplete? Is this an n=1? - CW 02/11/2015
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I propose freezing due to the conflicting data with the density graph and therefore a possible N = 1. - DWW 02/12/2015, CLR 02/15/2015
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        The new evidence from Savanthrapadian should make this type active. - DWW 02/16/2015
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        "should make this type active" [agreed] AOK - GAA
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        The Savanthrapadian evidence has now been split off into its own packet when it became evident that the Savanthrapadian cells can connect to each other, and the only layer in which that contact can take place is the hilus, resulting in a pattern of 1103. The remaining Liu cell is to be placed On-hold since it is only N = 1, as outlined in the above discussion.
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        I'm fine with the content in the packet, but the Savanthrapadian paper says that only 5% of these cells connect to each other (pg 8201, near the top of the 2nd column). We know therefore that this type is n=6; n=109 were not connected. What do we want to do with the other 109? Would we say that they have A:H? Or might those go into the 1102 HIPP-CAP packet, which would unfreeze it? - CLR 12/08/2015
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        The 109 cannot necessarily go into the 1102 HIPP-CAP packet, because the HIPP-like cells they were recording from could be regular 1002 HIPP cells, and we cannot discern the breakdown of the 109. - DWW 12/10/2015
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Agreed. - CLR 12/10/2015
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I am okay with the DG 1102 and 1103 types. - CW 12/13/2015
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=100></td>
+                                <td style="font-family: courier" class="redtext">
+                                        ok â¦ though when looking at the figures in our 'normal' HIPP packet I feel this could also go as a supplement there - GAA 05/25/2016
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=125></td>
+                                <td style="font-family: courier" class="redtext">
+                                        But what are we doing with cells 2 and 3 in Katona Fig 3? 1102? - CLR 06/08/2016
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        Katona 1999 added. - 06/14/2016
+                </p>
+                <p style="font-family: courier">
+                        <b>DG (i)1102 HIPP-CAP neurons [1046]</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Related types:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        DG (i)1002 HIPP (v1.0 active)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        DG (i)1103 Recurrent HIPP-CAP (v2.0 proposed active)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        DG (i)1003 Recurrent HIPP (v2.0 proposed on-hold)
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes:</b>
+                </p>
+                <p style="font-family: courier">
+                        N = 3. SOM+.
+                </p>
+                <p style="font-family: courier">
+                        Hsu connectivity evidence (paired recordings) between (1) the various EC perforant path cells and this HIPP-CAP and (2) DG Mossy cells and this HIPP-CAP
+                </p>
+                <p style="font-family: courier">
+                        Katona 1999 added. - 06/14/2016
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        Approved as active. - CLR 09/27/2016
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I agree with this cell type.
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        However, for page 5, I do not have problem with tapering axon density in DG:SG, since to reach DG:SMi these neurons should have axons in DG:SG anyways. N could be 3.
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        The page 9 of PDF, I can see 1102 pattern, but these two neurons look borderline to me. Do they penetrate enough into the molecular layer? Cell 1 is a more convincing 1102 to me. Please look at the attached modified packet -> I have tried to separately color the distal axons (see above).
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        {Savanthrapadianâs paper is good instance of quantum linking to I. I have used the data, and I have mapped the synaptic data to HIPP, HIPP-CAP and recurrent HIPP-CAP cell types. For example, using the data in that paper, one might be able to infer that HIPP and HIPP-CAP cells might be mRNA:SOM+ (supplementary fuzzy inferential linking), and recurrent HIPP-CAP cells are for sure IHC:SOM+ and mRNA:SOM+ (proper linking).} - KM 10/15/2016
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I want us to re-evaluate DG 1002 HIPP, 1103 Recurrent HIPP-CAP, and 1102 HIPP-CAP taking into cosideration the best images we have for HIPP. The axons in the 1102 and 1103 packets are very sparse, especially when compared to the HIPP images from the portal (see below). Both of the HIPP neurons have axons in SMI and the hilus. I am not convinced that the proposed new types are different from HIPP. I think further debate is warranted; consequently, I do not appove these types. â CW 10/17/2016
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        After discussion with Giorgio, we have decided to keep the canonical 1002 HIPP as is. These new cells need to be evaluated relative to that interpretation. - DWW 01/31/2017
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        Hsu 2016 added. - 01/31/2017
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        I still do not see enough evidence to have three types of HIPPy neurons. I think all of the figures in the 1102 packet are too minimally reconstructed to make a call about axons. With this said, having the three types does cover a broad base, is similar to CA1, and is approved by Giorgio, so I will not protest further. - CW 02/01/2017
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I actually think the evidence is quite strong for the canonical 1002 (which I agree is a must-have) and 1102. - CLR 02/27/2017
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        From the evidence provided in the packet, I approve the 1102 designation and of the new proposed type for v2.0. - JDK 02/09/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I have now reviewed them and happy to approve all except for the only 0232 AAC which I still feel is a borderline case and perhaps we should keep frozen or merge with the regular AAC packet. - GAA 02/14/2022
+                                </td>
+                        </tr>
+                </table>
+        </body>
+</html>

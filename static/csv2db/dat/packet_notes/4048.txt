@@ -1,0 +1,187 @@
+<html>
+        <head>
+                <style>
+                        .redtext {
+                                color: red;
+                        }
+                        .bluetext {
+                                color: #0000FF; /* blue */
+                        }
+                        .greentext {
+                                color: #008000; /* dark green */
+                        }
+                        .purpletext {
+                                color: #800080; /* dark purple */
+                        }
+                        .orangetext {
+                                color: #FF6820; /* orange */
+                        }
+                </style>
+        </head>
+        <body>
+                <p style="font-family: courier">
+                        <b>CA1 (i)0303 Schaffer Collateral-Correlated (SCC) cells [4048]</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Related types:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        CA1 (i)2333 Radial Trilaminar
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA1 (i)2311 Schaffer Collateral-Associated
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA1 (i)0333 Ivy
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA1 (i)0333 Bistratified
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA1 (i)0331 RP-RPO
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA1 (i)0322 Schaffer Collateral-Receiving R-Targeting
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA1 (i)0313p Hippocampo-subicular Projecting ENK+
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA1 (i)0301 R-RO
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA1 (i)0113p Trilaminar
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes:</b>
+                </p>
+                <p style="font-family: courier">
+                        N = 5.
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        I do not approve this type. The neuron on page five could be a 0302, and the one on page 7 a 2333 or 2313. - CW 02/18/2015
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I agree with Charise and freezing these separately. I do think that the neuron on pg 5 is 0303, but I canât ignore D:SLM on pg 7. - CLR 02/18/2015
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        The McMahon cell has been reinterpreted as 2333 and is now considered to be a supplement to that cell type. - 07/21/2015
+                </p>
+                <p style="font-family: courier">
+                        Cossart 2006 was added. According to Cossart interpretation rules, there are only axonal connections in SR and SO, none in SP. - 07/21/2015
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        Is the Gulyas cell to be a 0303 or a 0302? I vote 0303. - DWW 09/10/2015
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        0303 - CW 09/16/2015
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        0303. - CLR 10/10/2015
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        How different are these from existing 333 type? - GAA 11/29/2015
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=100></td>
+                                <td style="font-family: courier" class="redtext">
+                                        According to Cossart, there is a significant difference. Cossart explicitly describes cells that make contact in SP and separates them from a set that clearly does not make contact in SP. However, both the 0333 and 0303 patterns are currently under proposal for being in the same interneuron supertype grouping. - DWW 04/20/2016
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=125></td>
+                                <td style="font-family: courier" class="redtext">
+                                        ro-ro?! Ok (sigh) add related types! (BC?) - GAA 05/25/2016
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=150></td>
+                                <td style="font-family: courier" class="redtext">
+                                        How about Schaffer Collateral-Correlated (SCC) cells? We already have 2311 Schaffer Collateral-Associated cells and 0322 Schaffer Collateral-Receiving cells - DWW 05/25/2016
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=175></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I suggest Bistratified-OR. - KM 05/25/2016
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=200></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I am in agreement with keeping these two types (CA1 BiC and SCC) separated based on Cossart et al.'s determination. - JDK 11/03/2021
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=200></td>
+                                <td style="font-family: courier" class="redtext">
+                                        After re-review, I still support these two neuron types be separated based on Cossart et al.'s determination. - JDK 11/22/2021
+                                </td>
+                        </tr>
+                </table>
+        </body>
+</html>

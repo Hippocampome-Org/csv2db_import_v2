@@ -1,0 +1,112 @@
+<html>
+        <head>
+                <style>
+                        .redtext {
+                                color: red;
+                        }
+                        .bluetext {
+                                color: #0000FF; /* blue */
+                        }
+                        .greentext {
+                                color: #008000; /* dark green */
+                        }
+                        .purpletext {
+                                color: #800080; /* dark purple */
+                        }
+                        .orangetext {
+                                color: #FF6820; /* orange */
+                        }
+                </style>
+        </head>
+        <body>
+                <p style="font-family: courier">
+                        <b>CA1 (i) 2332 QuadD-RP neurons [4095]</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Related types:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        CA1 (i)2232 Basket (v1.0 active)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA1 (i)2232 Basket CCK+ (v1.0 active)
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes:</b>
+                </p>
+                <p style="font-family: courier">
+                        N = 2.
+                </p>
+                <p style="font-family: courier">
+                        Ali (2010) added - 02/25/2015
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        D:SLM are borderline - CLR 02/25/2015
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Even with the minimal dendrites in SLM in the Ali neuron, I still approve this type. - CW 02/26/2015
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        This is very borderline, but I guess I'm OK. - GAA
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        OK - GAA
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        Cossart (2006) removed due to reinterpretation of figure. - 07/20/2015
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        I still approve of this type. - DWW 07/20/2015
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I agree with you and think this packet still stands. - CW 07/21/2015
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Yes, I agree.  Still valid. - CLR 07/21/2015
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I concur. - GAA 02/03/2016
+                                </td>
+                        </tr>
+                </table>
+        </body>
+</html>

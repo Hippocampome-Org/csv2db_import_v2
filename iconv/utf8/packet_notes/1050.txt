@@ -1,0 +1,64 @@
+<html>
+        <head>
+                <style>
+                        .redtext {
+                                color: red;
+                        }
+                        .bluetext {
+                                color: #0000FF; /* blue */
+                        }
+                        .greentext {
+                                color: #008000; /* dark green */
+                        }
+                        .purpletext {
+                                color: #800080; /* dark purple */
+                        }
+                        .orangetext {
+                                color: #FF6820; /* orange */
+                        }
+                </style>
+        </head>
+        <body>
+                <p style="font-family: courier">
+                        <b>DG (e)3000 Cajal-Retzius (C-R) neurons [1050]</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier"><b>Related types:</b></td>
+                                <td style="font-family: courier">DG (e)3000p-CA1_1000 Local-projecting Cajal-Retzius (approved v2.0 active)</td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"> </td>
+                                <td style="font-family: courier">CA1 (e)3000 Cajal-Retzius (v1.0 active)</td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"> </td>
+                                <td style="font-family: courier">CA1 (e)3000p-DG_1000 Local-projecting Cajal-Retzius (approved v2.0 active)</td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes:</b>
+                </p>
+                <p style="font-family: courier">
+                        animals are borderline too young (P6-P21)
+                </p>
+                <p style="font-family: courier">
+                        FP present. reelin+. counts. A&D lengths. reconstructions in NMO.
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        "This particular cell was in a more dorsal section of the hippocampus leading to a stronger distortion comparing 3D layer outlines and 2D projection. The cell soma is close to the IML border (please note that we did not separate in OML, MML and IML). Although (rarely) CR cells can be located in the IML (including a small fraction of the dendrite), the major fraction of the dendrite is attracted by the fissure/Pia." - AnstÃ¶tz 06/21/2018
+                </p>
+                <p style="font-family: courier">
+                        Based on the quote from AnstÃ¶tz, this type is now being interpreted as residing entirely within DG:SMo. - 06/28/2018
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        After reviewing the provided packet, I concur with the interpretations and approve of this neuron type for v2.0. - JDK 10/13/2021
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">Approved! I think this has reconstructions in NMO. Perhaps worth adding this bit of info on cover alongside markers and FP? This could easily be checked for all PMIDs using the "lit src" web link of NMO. - GAA 01/19/2022</td>
+                        </tr>
+                </table>
+        </body>
+</html>

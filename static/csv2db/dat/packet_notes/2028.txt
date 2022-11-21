@@ -1,11 +1,11 @@
-Axo-axonic cells exclusively target pyramidal cells while basket cells are known to also target other interneurons.
-<p>
-Synapse exclusively with AIS of pyramidal cells
-<p>
-Guly&#225;s et al. 1993 is in guinea pigs
-<p>
+Axo-axonic cells exclusively target pyramidal cells while basket cells are known to also target other interneurons.
+<p>
+Synapse exclusively with AIS of pyramidal cells
+<p>
+Gulyas et al. 1993 is in guinea pigs
+<p>
 perisomatic axonal targeting interpreted as PCL
-
 <p>
-
-extended interpretation of SP in apical and basal directions
+extended interpretation of SP in apical and basal directions
+<p>
+supplement to CA3 (i)22232 Axo-axonic added - 11/29/2015

@@ -1,0 +1,164 @@
+<html>
+        <head>
+                <style>
+                        .redtext {
+                                color: red;
+                        }
+                        .bluetext {
+                                color: #0000FF; /* blue */
+                        }
+                        .greentext {
+                                color: #008000; /* dark green */
+                        }
+                        .purpletext {
+                                color: #800080; /* dark purple */
+                        }
+                        .orangetext {
+                                color: #FF6820; /* orange */
+                        }
+                </style>
+        </head>
+        <body>
+                <p style="font-family: courier">
+                        <b>DG (i)3300 COM-MOPP [1024]</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Related types:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        DG (i)3000 MOPP (v1.0 active)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"> </td>
+                                <td style="font-family: courier">
+                                        DG (i)3300p-Sub_100 Wide-arbor Neurogliaform (v2.0 active)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"> </td>
+                                <td style="font-family: courier">
+                                        DG (i)3200 MLC (v2.0 active unapproved)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"> </td>
+                                <td style="font-family: courier">
+                                        DG (i)3000 IS MOPP (v2.0 on-hold unapproved)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"> </td>
+                                <td style="font-family: courier">
+                                        DG (i)3300 IS COM-MOPP (v2.0 on-hold unapproved)
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes: This is a merger proposal between the cell of Hosp (v2.0 on-hold) with the cell from Szabo (new). These proposed cells have axons and dendrites in DG:SMi, which distinguishes them from the MOPP and IS MOPP cells. These proposed cells are not projecting, which distinguishes them from Wide-arbor Neurogliaform cells. These proposed cells have axons in DG:SMi, which distinguishes them from the 3200 cells.</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 class="bluetext">
+                                        Hosp:
+                                </td>
+                                <td style="font-family: courier" class="greentext">
+                                        Szabo:
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 class="bluetext">
+                                        [N:D:DG:SG]{low}
+                                </td>
+                                <td style="font-family: courier" class="greentext">
+                                        NOS+.
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier" class="redtext">
+                        I am currently reviewing the DG COM-MOPP proposed v2.0 cell. Iâm reviewing the DG MOPP and IS MOPP cells to compare and have a few questions: How do we define the threshold for presence of A/D in either SMo or SMi? Is this primarily based in the pertinent figure description provided by the author, our trained eye, an algorithm to quantify presence based on pixel counting, within a preferred hierarchy of the features I just mentioned, or something entirely different? I think this would really help me with making a determination here, as I do notice that the active v1.0 DG MOPP cells do have at least some axonal presence within SMi. - JDK 08/24/2021
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Please read through the attached document (http://www.hippocampome.org/php/Help_Morphological_Interpretations_Full.php) first and then see if you still have any questions. - DWW 08/24/2021
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        After further review, I approve of the merger proposal of the Hosp and Szabo cells, and therefore the approval of the proposed COM-MOPP neuron type for v2.0. - JDK 08/24/2021
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I have a few questions before I can consider approval. I think that the first cell is a 3310, while the second one is clearly 3300 - I guess we never made a fuss about dendrites in the principal layer, but this should be noted as opposed to glossed over?! I donât see JDK's comments, does it mean he hasn't approved it yet? And what is the status of and relationship with the VIP+ COM-MOPP mentioned at the end of the packet? - GAA 01/19/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=100></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I do not know why JDK's comments were not included, but JDK's notes have now been added to the packet notes.
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=100></td>
+                                <td style="font-family: courier" class="redtext">
+                                        As to the first cellâs 3320 interpretation, Jeffrey and I have derived and refined the principal cell layer invoked rule, which should be applied in this instance:
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=100></td>
+                                <td style="font-family: courier">
+                                        Principal cell layer invoked rule: record axons in the PCL when boutons are present or when axons are branching and ostensibly targeting the PCL and not just passing through, but discount dendrites.
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=100></td>
+                                <td style="font-family: courier" class="redtext">
+                                        - DWW 01/21/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=125></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Thanks for the update. I guess the Q on the status of and relationship with the VIP+ COM-MOPP mentioned at the end of the packet is still pending? - GAA 01/21/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=150></td>
+                                <td style="font-family: courier" class="redtext">
+                                        There had been a proposal to merge the two cells in Fig. 5 of Hajos et al., 1996, but it was ultimately resolved to keep them separate as IS MOPP and IS COM-MOPP. However, it was also resolved that they should both be considered interneuron specific. Both of these summaries made it into the notes of the two embedded packets. - DWW 01/21/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=175></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Yes â that makes sense. Happy to approve then! - GAA 01/22/2022
+                                </td>
+                        </tr>
+                </table>
+        </body>
+</html>

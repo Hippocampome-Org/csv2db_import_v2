@@ -1,5 +1,19 @@
-Likely excitatory cells (Gloveli -> GABA negative, projecting, EP characteristics similar to principal cells; van Haeften -> spiny; Canto & Witter -> projecting, "principal," sparsely spiny).
+<html><head><style>.redtext {        color: red;}</style></head><body>Likely excitatory cells (Gloveli -> GABA negative, projecting, EP characteristics similar to principal cells; van Haeften -> spiny; Canto & Witter -> projecting, "principal," sparsely spiny).
 <p>
-The van Haeften et al. paper does not include mention of projection to Sub or DG.  Possibly lost to slicing or possibly outside the scope of their interest.
+The van Haeften et al. paper does not include mention of projection to Sub or DG.  Possibly lost to slicing or possibly outside the scope of their interest.
 <p>
-While this morphology appears in Canto's 201X MEC preprint, there is no mention of this morphology in the LEC preprint.
+While this morphology appears in Canto's 201X MEC preprint, there is no mention of this morphology in the LEC preprint.
+<p>
+<b>Status:</b> addendum to currently active MEC (e)331131p LV Pyramidal cells added - 01/11/2016
+<p><b>Notes:</b><p>
+* all evidence for addendum is indirect and inferential *
+<p>
+axons are GABA-negative.
+<p>
+asymmetric synapses on dendritic shafts of GABA-positive and GABA-negative in SMi.
+<p>
+asymmetric synapses on dendritic shafts, soma, and somatic spines of GCs.
+<p>
+synapses on proximal dendrites of GABAergic neurons in or subjacent to SG.
+<p>
+asymmetric synapses on dendritic shafts in H.<p class="redtext">Should this addendum also apply to the EC (e)220233p LIV-V Pyramidal-Horizontal cells which are a mixture of LEC and MEC subtypes? - DWW 12/08/2015</p><table><tr><td width=25> </td><td width=5000><p class="redtext">I agree with adding the addendum to the 331131 packet, which is currently just  based on MEC types (we'll have to add lots of notes, and we probably can't  merge any LEC cells into this type in the future - see my note below). Gloveli  Fig 3 has borderline A:SG presence anyway. The rest of our evidence for a DG  projection only goes as far as the AB.</p><p class="redtext">  As for the 220233 packet, which as you point out is a mixture of MEC and LEC, I  don't know. Deller says, "Injections located exclusively in the deep layers of  the lateral entorhinal cortex labeled only very few entorhinal fibers, and  these fibers usually were found underneath the suprapyramidal blade." The  obvious answer is to split the 220233 type into MEC and LEC types. I might  lean this way.</p><p class="redtext">  Overall, this type of evidence is similar to the marker inferences.  We'll need  a way to trigger it (or at least notify ourselves) when it might apply to  future types. - CLR 12/11/2015</p></td></tr></table><table><tr><td width=50> </td><td width=5000><p class="redtext">I am not sure that we can use this information. (This would be a good time    to have "inferential" morphology evidence.) But basically, we only have    somata and axonal data, so how do we link the information? In addition, I do    not have a sense that the projection is massive, which might indicate that    all the projecting neurons in the deep layers contribute to it. Taking all    of this into consideration, I lean toward freezing the data due to incomplete    morphology. Although prior to doing that, we might do a search for    additional information in papers that cite this one. - CW 12/13/2015</p></td></tr></table><table><tr><td width=75> </td><td width=5000><p class="redtext">A citation search turned up no new evidence. - DWW 12/15/2015</p></td></tr></table><table><tr><td width=100> </td><td width=5000><p class="redtext">GAA suggests that this addendum only be applied to the MEC (e)331131p        cells and that we add a big note mentioning that this is indirect        evidence. - DWW 01/11/2016</p></td></tr></table>

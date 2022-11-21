@@ -1,0 +1,114 @@
+<html>
+        <head>
+                <style>
+                        .redtext {
+                                color: red;
+                        }
+                        .bluetext {
+                                color: #0000FF; /* blue */
+                        }
+                        .greentext {
+                                color: #008000; /* dark green */
+                        }
+                        .purpletext {
+                                color: #800080; /* dark purple */
+                        }
+                        .orangetext {
+                                color: #FF6820; /* orange */
+                        }
+                </style>
+        </head>
+        <body>
+                <p style="font-family: courier">
+                        <b>DG outer molecular layer (OML) 3222 cells</b>
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        DWW
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        CLR 04/28/2011
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        CW 04/29/2011
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Excellent! Also note that HIPP cells are spiny, OML are aspiny! - GAA
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>DG (i)3222 Outer Molecular Layer (OML) cells [1006]</b>
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        After reviewing the provided [DG (i)3002 MOHIPP] packet, I concur with the interpretations and approve of this neuron type for v2.0. - JDK 10/13/2021
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I'm not convinced. I would probably consider writing off these [DG (i)3002 MOHIPP] cells as Outer Molecular Layer (3222) or MOLAX (3302) neurons?! Happy to re-discuss thoughâ¦ - GAA 01/19/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I think the OML interpretation has its merits, more so than the MOLAX interpretation. - DWW 01/21/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I'd say I still favor the 3002 interpretation based on the low axonal and dendritic presence within SMi, but can also see interpreting the A-D pattern as MOLAX (3302) as the axonal and dendritic presence within SMi is around the ~15% threshold and there is a fair amount of branching. The OML interpretation I favor less than the MOLAX or MOHIPP interpretation as the dendritic presence within SG is far below the 15% threshold and there is minimal branching in the provided reconstruction. - JDK 01/21/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=100></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Based on comparisons with the established v1.0 neuron types, I now posit that the blue MOHIPP cell [Fig. 4c from Lee et al., 2016] is a 3222 OML, and the brown MOHIPP cell [Fig. S2d from Lee et al., 2016] is a 3302 MOLAX. - DWW 01/22/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=125></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I concur. - GAA 01/22/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=150></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I am also in agreement. - JDK 01/22/2022
+                                </td>
+                        </tr>
+                </table>
+        </body>
+</html>

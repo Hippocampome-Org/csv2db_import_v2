@@ -1,0 +1,59 @@
+<html>
+        <head>
+                <style>
+                        .redtext {
+                                color: red;
+                        }
+                        .bluetext {
+                                color: #0000FF; /* blue */
+                        }
+                        .greentext {
+                                color: #008000; /* dark green */
+                        }
+                        .purpletext {
+                                color: #800080; /* dark purple */
+                        }
+                        .orangetext {
+                                color: #FF6820; /* orange */
+                        }
+                </style>
+        </head>
+        <body>
+                <p style="font-family: courier">
+                        <b>Sub (i)030 Pyramidale Multipolar interneurons (PMPI) [5015]</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Related types:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        Sub (e)300 PV+ (v1.0 on-hold)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        Sub (e)033 PV+ (v1.0 on-hold)
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes: These cells are restricted to Sub:SP, which distinguishes them from the v1.0 PV+ neuron types.</b>
+                </p>
+                <p style="font-family: courier">
+                        PV+. Ephys. FP. Lengths. Synaptic Physiology.
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        After reviewing the packet for SUB (i) 030 PMPI #5015, I am in favor of adding this neuron type as an active type for v2.0. - JDK 11/19/2021
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I approve. - GAA 02/01/2022
+                                </td>
+                        </tr>
+                </table>
+        </body>
+</html>

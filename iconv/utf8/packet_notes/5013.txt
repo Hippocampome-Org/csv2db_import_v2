@@ -1,0 +1,56 @@
+<html>
+        <head>
+                <style>
+                        .redtext {
+                                color: red;
+                        }
+                        .bluetext {
+                                color: #0000FF; /* blue */
+                        }
+                        .greentext {
+                                color: #008000; /* dark green */
+                        }
+                        .purpletext {
+                                color: #800080; /* dark purple */
+                        }
+                        .orangetext {
+                                color: #FF6820; /* orange */
+                        }
+                </style>
+        </head>
+        <body>
+                <p style="font-family: courier">
+                        <b>Sub (i)133 Recurrent Polymorphic-Moleculare (Recurr Po-M) cells [5013]</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Related types:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        Sub (i)023 Wide-arbor Polymorphic
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes:</b>
+                </p>
+                <p style="font-family: courier">
+                        FP present. Chrna2+. SOM+. Ephys present.
+                </p>
+                <p style="font-family: courier">
+                        This packet reflects the extension of the axons of 4 of 8 cells into Sub:SM. The inclusion of layer lines in the image is skimpy, and the description of the extent of the dendrites is only text based, but standards are being relaxed a bit to accommodate the lack of neuron types in Sub. - 06/05/2018
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        OK. However, the presence of axons in SP is fuzzy. I am not so happy about these packets. I was thinking. Is it possible to contact the authors to get all 8 reconstructions or anything they are ready to share. - KM 06/09/2018
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        OK. tentatively approve of both [Sub Chrna2] packets. - GAA 07/18/2018
+                                </td>
+                        </tr>
+                </table>
+        </body>
+</html>

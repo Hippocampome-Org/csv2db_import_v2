@@ -1,0 +1,74 @@
+<html>
+        <head>
+                <style>
+                        .redtext {
+                                color: red;
+                        }
+                        .bluetext {
+                                color: #0000FF; /* blue */
+                        }
+                        .greentext {
+                                color: #008000; /* dark green */
+                        }
+                        .purpletext {
+                                color: #800080; /* dark purple */
+                        }
+                        .orangetext {
+                                color: #FF6820; /* orange */
+                        }
+                </style>
+        </head>
+        <body>
+                <p style="font-family: courier">
+                        <b>CA2 (i)0302 SP-SR cells [3008]</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Related types:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        CA2 (i)0332 SP-SR (v1.0 on-hold)
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes: Neurite differences in the principal cell Layers invoked rule: when compressing types, leave axons in the PCL because of the issue of target specificity, but discount dendrites.</b>
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        Because of the invoked rule, the 0332 type should remain unchanged, but the 0322 type should be merged with the 0302 type as 0302. - DWW 10/19/2021
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I am in favor of compression for the 0322 and 0302 reconstructions to be considered as 0302, with 0332 remaining unchanged. - JDK 11/03/2021
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <p style="font-family: courier">
+                        <b>Update: Principal cell layer invoked rule:</b> record axons in the PCL when boutons are present or when axons are branching and ostensibly targeting the PCL and not just passing through, but discount dendrites. - 11/15/2021
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        After re-review with our updated new invoked rule, I am still in favor of compression for the 0322 and 0302 reconstructions to be considered as 0302, with 0332 remaining unchanged. - JDK 11/22/2021
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I approve. Panel C of page 5 also is a representative to be boxed, no? - GAA 01/26/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Figure 1C from Mercer et al., 2012, is actually highlighted on page 12 of the packet, which came from when there were two separate packets. I will combine the citations, so the packet is more compact and less confusing. - DWW 01/31/2022
+                                </td>
+                        </tr>
+                </table>
+        </body>
+</html>

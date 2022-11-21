@@ -1,0 +1,155 @@
+<html>
+        <head>
+                <style>
+                        .redtext {
+                                color: red;
+                        }
+                        .bluetext {
+                                color: #0000FF; /* blue */
+                        }
+                        .greentext {
+                                color: #008000; /* dark green */
+                        }
+                        .purpletext {
+                                color: #800080; /* dark purple */
+                        }
+                        .orangetext {
+                                color: #FF6820; /* orange */
+                        }
+                </style>
+        </head>
+        <body>
+                <p style="font-family: courier">
+                        <b>CA3 (e)22003 Athorny Pyramidal (aPC) cells [2121]</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Related types:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        CA3 (e)23223p Pyramidal (v1.0 active)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA3 (e)33331p Pyramidal (v2.0 on-hold)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA3c (e)23223p Umbrella Pyramidal (v2.0 active)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA3c (e)03223p Pyramidal (v1.0 active)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA3c (e)02100 Displaced Horizontal Pyramidal (unapproved v2.0 on-hold)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA3 (e)23003 Athorny Pyramidal (v2.0 on-hold approved)
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes: These neurons primarily differ from the other Pyramidal neurons of CA3 in that they lack thorny excrescences. Also, from the limited reconstructions, the axon appears to be restricted primarily to SO.</b>
+                </p>
+                <p style="font-family: courier">
+                        bursting and athorny
+                </p>
+                <p style="font-family: courier">
+                        FP and ephys present
+                </p>
+                <p style="font-family: courier">
+                        distal (CA3a,b) and deep
+                </p>
+                <p style="font-family: courier">
+                        VGAT-, VGLUT1+, VGLUT2+
+                </p>
+                <p style="font-family: courier">
+                        receive little or no direct mossy-fiber input
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        After reviewing the provided packet, I concur with the interpretations and approve of this neuron type for v2.0. - JDK 10/13/2021
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I would suggest changing this to a 23003. Dendritic absence from SL (and SP) is supported by the report of little if any direct MF input; besides, all available reconstructions appear to not branch within SL/SP. This is overall consistent with 'passing-by' dendrites (to SR & SO) and our <15% rule. As for the axon in SR, I'm hesitant to remove based on explicitly incomplete slice tracings, and page 12 of the packet does show an axon in SR. Iâm happy to discuss and be convinced otherwise if you [DWW] and JDK are hesitant. - GAA 01/26/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I agree that the dendritic branches appear to disappear in the CA3:SL_SP region, in all three references. I am not so convinced by the presence of axons in CA3:SR. We normally classify based on the evidence at hand, as limited as it might be, and not on what we believe might exist had neurites not been cut. - DWW 01/28/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        After reviewing this packet once more, I am in agreement that there is dendritic absence from SL and SP. As far as axonal presence, I concur with DWW's comments. Happy to discuss and elaborate further as well. - JDK 01/28/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=100></td>
+                                <td style="font-family: courier" class="redtext">
+                                        But isnât the evidence on page 12 of the packet showing axon in SR? - GAA 01/28/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=125></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Yes there is one reconstruction of the 14 provided in the packet where there certainly appears to be evidence of axonal presence in SR (on page 12 as you had mentioned). On a pertinent note, when I had reviewed CA1 O-R (Unique ID # 4168), I had noticed a reconstruction that differed in its A-D pattern from the rest in the provided packet (axons in CA1 SP so a pattern of 0112 whereas the rest did not, pattern of 0102). With a new invoked rule for compressing types that involved counting axonal presence in principal cell layers due to the issue of target specificity but discounting dendrites, we re-interpreted another reconstruction in the CA1 O-R packet as also having this 0112 pattern which in combination with the first one identified we proposed as a new neuron type.
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=125></td>
+                                <td style="font-family: courier" class="redtext">
+                                        In the same vein, perhaps we can set aside the reconstruction with axonal presence in SR as an on-hold neuron type for when we have an additional reconstruction also having an A-D pattern of 23003? - JDK 01/28/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=150></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I would be in favor of the active neuron type being 22003 for the moment, and a new on-hold neuron type being 23003. With the addition of future reconstructions, we can revisit the possibility of merging the two neuron types. - DWW 01/31/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=175></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Ok, you convinced me - GAA 01/31/2022
+                                </td>
+                        </tr>
+                </table>
+        </body>
+</html>

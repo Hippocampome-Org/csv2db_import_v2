@@ -1,0 +1,80 @@
+<html>
+        <head>
+                <style>
+                        .redtext {
+                                color: red;
+                        }
+                        .bluetext {
+                                color: #0000FF; /* blue */
+                        }
+                        .greentext {
+                                color: #008000; /* dark green */
+                        }
+                        .purpletext {
+                                color: #800080; /* dark purple */
+                        }
+                        .orangetext {
+                                color: #FF6820; /* orange */
+                        }
+                </style>
+        </head>
+        <body>
+                <p style="font-family: courier">
+                        <b>Sub (e)231 Bursting Pyramidal cells (bPC) [5014]</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Related types:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        Sub (e)331p-EC_000111 Pyramidal (v1.0 active)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        Sub (e)331p-CA1_1110 Pyramidal (v1.0 active)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        Sub (e)231p-EC_000001 Pyramidal (v2.0 on-hold unapproved)
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes: These cells do not have axons in Sub:SM, which distinguishes them from the canonical v1.0 neuron types. The authors do not trace the full extent of the axons, so we are unable to determine if they project to the EC.</b>
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        I have reviewed the evidence packet for this proposed v2.0 cell type and agree it should be included as an active cell type for v2.0. - JDK 10/12/2021
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I can probably be convinced but I'm a little on the fence. Since this cell is excitatory, we should assume it likely projecting. We admit that the axon is incomplete, so we cannot tell where it goes, but we rely on axonal absence in certain specific layers to declare it as a new type. Isn't that a logical contradiction? Do we have other examples of similar situations in HCO? I would imagine that we can find instances, for example, of CA3 pyramidal cells with incomplete axons that do not invade, say, SR nor can they be followed through CA1â¦ but is that enough to declare a new type? - GAA 02/01/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        In Simonnet and Brecht, 2019, only in panel F does it look like the axons may be reaching toward Sub:SM. In panels A and C, the axons appear to be reaching only in the opposite direction from Sub:SM. Panel Fâs cell could, therefore, be assumed to be 331, but do we classify it as 331-EC or 331-CA1? As for the other two cells, I would still evaluate them as a new 231 neuron type. - DWW 02/04/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I am okay with re-interpreting the cell from panel F as 331 and sticking with the interpretation that the cells from panel A and C are 231. As far as 331-EC or 331-CA1 for the cell in Panel F, this is tricky given the incompleteness of axon. With how the cell is situated in their (Simonnet and Brecht) schematic, I would lean towards considering it 331-EC over 331-CA1. - JDK 02/10/2022
+                                </td>
+                        </tr>
+                </table>
+        </body>
+</html>

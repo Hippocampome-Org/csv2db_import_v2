@@ -1,0 +1,37 @@
+<html>
+<head>
+<style>
+.redtext {
+        color: red;
+}
+</style>
+</head>
+<body>
+<table>
+<tr>
+<td width=100><b>Related types:</b></td>
+<td width=600>DG (i)3000 MOPP (v2.0 active)</td>
+</tr>
+<tr>
+<td width=100> </td>
+<td width=600>DG (i)1002 HIPP (v1.0 active)</td>
+</tr>
+</table>
+<p>
+<b>Notes: Compared to the traditional DG (i)1002 HIPP, these cells have a clear dendritic presence in SM. These cells also have a clear dendritic presence in H, which distinguishes them from DG (i)3000 MOPP.</b>
+<p>
+[N:A:DG:SMi]{low}
+<br>
+[N:D:DG:SMi_SG]{low}
+<br>
+<FP present>
+<p class="redtext">
+
+<p class="redtext">
+
+</p>
+<p class="redtext">
+
+</p>
+</body>
+</html>

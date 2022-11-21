@@ -1,0 +1,80 @@
+<html>
+        <head>
+                <style>
+                        .redtext {
+                                color: red;
+                        }
+                        .bluetext {
+                                color: #0000FF; /* blue */
+                        }
+                        .greentext {
+                                color: #008000; /* dark green */
+                        }
+                        .purpletext {
+                                color: #800080; /* dark purple */
+                        }
+                        .orangetext {
+                                color: #FF6820; /* orange */
+                        }
+                </style>
+        </head>
+        <body>
+                <p style="font-family: courier">
+                        <b>CA1 (i)0202p-CA3_00010 RO-receiving CA3-taregting neurons [4173]</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Related types:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        no matching patterns
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes:</b>
+                </p>
+                <p style="font-family: courier">
+                        GAD67+. PV-. some SOM+. some CR+. some CB+. FP. Ephys.
+                </p>
+                <p style="font-family: courier">
+                        (SOM/CR)-. (SOM/CB)-. (CR/CB)-.
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        OK - KM 04/14/2018
+                </p>
+                <p style="font-family: courier">
+                        Previously this packet was mistakenly submitted for vetting as an on-hold cell type. It is now under re-consideration as an active cell type. - 05/02/2018
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        The axonal morphology is not very clear to me based on current evidence. I am not sure about making this packet active in the absence of a real reconstruction using intracellular labeling. Are these neurons even <u>GABAergic</u> or <u>Glutamatergic</u>? - KM 05/24/2018
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        The abstract describes them as a novel subtype of interneuron expressing both GABA and GAD67. I am still in favor of making this novel type of neuron active. - DWW 06/05/2018
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I think there's enough evidence to make it <u>active</u>. OK - GAA 07/18/2018
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        OK - GAA
+                                </td>
+                        </tr>
+                </table>
+        </body>
+</html>

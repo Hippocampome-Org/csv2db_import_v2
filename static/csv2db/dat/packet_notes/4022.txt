@@ -1,0 +1,5 @@
+supplement to CA1 (i)2003 Interneuron Specific LMO-O added. - 11/29/2015
+<p>
+VIP+, CR+
+<p>
+This packet is the result of a merger of a new cell (Chamberland 2012) and a previously frozen cell (Chamberland 2010).

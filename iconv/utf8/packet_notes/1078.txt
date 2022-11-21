@@ -1,0 +1,89 @@
+<html>
+        <head>
+                <style>
+                        .redtext {
+                                color: red;
+                        }
+                        .bluetext {
+                                color: #0000FF; /* blue */
+                        }
+                        .greentext {
+                                color: #008000; /* dark green */
+                        }
+                        .purpletext {
+                                color: #800080; /* dark purple */
+                        }
+                        .orangetext {
+                                color: #FF6820; /* orange */
+                        }
+                </style>
+        </head>
+        <body>
+                <p style="font-family: courier">
+                        <b>DG (i)3200 Molecular Layer cells (MLC) [1078]</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Related types:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        DG (i)3000 MOPP (v1.0 active)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"> </td>
+                                <td style="font-family: courier">
+                                        DG (i)3300 VIP+ SM cell (v1.0 on-hold)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"> </td>
+                                <td style="font-family: courier">
+                                        DG (i)3000 IS MOPP (v2.0 active unapproved)
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes: This 3200 cell is proven to receive input from SMi, which is not proven for the 3000 cells. The axonal presence in SMi for this 3200 cell is well below the 15% threshold, which differentiates it from the 3300 cell.</b>
+                </p>
+                <p style="font-family: courier">
+                        <b>This is a proposed merger between Hsu's ML-like neuron (v2.0 on-hold) and Szabo's molecular layer interneuron (new).</b>
+                </p>
+                <p style="font-family: courier" class="greentext">
+                        Hsu:
+                </p>
+                <p style="font-family: courier" class="greentext">
+                        [Y:D:SMi{low}]
+                        <br>
+                        [N:A:SMi{low}]
+                </p>
+                <p style="font-family: courier" class="greentext">
+                        synaptic contacts from COM and MPP stimulation.
+                </p>
+                <p style="font-family: courier" class="bluetext">
+                        Szabo:
+                </p>
+                <p style="font-family: courier" class="bluetext">
+                        [Y:D:DG:SMi]{low}
+                        <br>
+                        [N:D:DG:SG_H]{low}
+                        <br>
+                        [N:A:DG:SMi]{low}
+                </p>
+                <p style="font-family: courier" class="bluetext">
+                        CB1+
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        I have reviewed the evidence packet for this proposed v2.0 cell type and agree with the proposed merger between Hsuâs ML-like neuron and Szaboâs molecular layer interneuron. - JDK 10/13/2021
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Approved. - GAA 01/19/2022
+                                </td>
+                        </tr>
+                </table>
+        </body>
+</html>

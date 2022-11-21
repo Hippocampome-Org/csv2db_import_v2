@@ -1,0 +1,313 @@
+CA1 SR collaterals only passing through to reach subiculum.
+<p>
+<table>
+<tr>
+<td width=98> </td>
+<td width=400>CA1 Superficial Pyramidal</td>
+<td width=400><b>CA1 Deep Pyramidal</b></td>
+</tr>
+<tr>
+<td width=98> </td>
+<td width=400> </td>
+<td width=400> </td>
+</tr>
+<tr>
+<td width=98><b>Distinctive</b></td>
+<td width=400>CB+ (big 20 biomarker)</td>
+<td width=400><b>CB- (big 20 biomarker)</b></td>
+</tr>
+<tr>
+<td width=98> </td>
+<td width=400>Zinc+</td>
+<td width=400><b>Zinc-</b></td>
+</tr>
+<tr>
+<td width=98> </td>
+<td width=400>Zbtb20+ (mutually exclusive with Sox5)</td>
+<td width=400><b>Zbtb20- (mutually exclusive with Sox5)</b></td>
+</tr>
+<tr>
+<td width=98> </td>
+<td width=400>Satb2+</td>
+<td width=400><b>Satb2-</b></td>
+</tr>
+<tr>
+<td width=98> </td>
+<td width=400>Htr1a+</td>
+<td width=400><b>Htr1a-</b></td>
+</tr>
+<tr>
+<td width=98> </td>
+<td width=400>Nov+</td>
+<td width=400><b>Nov-</b></td>
+</tr>
+<tr>
+<td width=98> </td>
+<td width=400>Nr3c2+</td>
+<td width=400><b>Nr3c2-</b></td>
+</tr>
+<tr>
+<td width=98> </td>
+<td width=400>Htr2c-</td>
+<td width=400><b>Htr2c+</b></td>
+</tr>
+<tr>
+<td width=98> </td>
+<td width=400>Gpc3-</td>
+<td width=400><b>Gpc3+</b></td>
+</tr>
+<tr>
+<td width=98> </td>
+<td width=400>Prss23-</td>
+<td width=400><b>Prss23+</b></td>
+</tr>
+<tr>
+<td width=98> </td>
+<td width=400>Sox5- (mutually exclusive with Zbtb20)</td>
+<td width=400><b>Sox5+ (mutually exclusive with Zbtb20)</b></td>
+</tr>
+<tr>
+<td width=98> </td>
+<td width=400>Col11a1-</td>
+<td width=400><b>Col11a1+</b></td>
+</tr>
+<tr>
+<td width=98> </td>
+<td width=400>Ndst4-</td>
+<td width=400><b>Ndst4+</b></td>
+</tr>
+<tr>
+<td width=98> </td>
+<td width=400>Astn2-</td>
+<td width=400><b>Astn2+</b></td>
+</tr>
+<tr>
+<td width=98> </td>
+<td width=400>Higher Vrest [-66.2 &plusmn; 0.7 mV] (big 10 ephys parameter)</td>
+<td width=400><b>Lower Vrest [-71.9 &plusmn; 1.0 mV] (big 10 ephys parameter)</b></td>
+</tr>
+<tr>
+<td width=98> </td>
+<td =400>Larger sag amplitude [8.7 &plusmn; 0.6 mV]</td>
+<td width=400><b>Smaller sag amplitude [5.6 &plusmn; 0.4 mV]</b></td>
+</tr>
+<tr>
+<td width=98>
+<td width=400>Have a lower firing rate distribution (rats) [0.13 Hz peak]</td>
+<td width=400><b>Have a higher firing rate distribution (rats) [0.36 Hz peak]</b></td>
+</tr>
+<tr>
+<td width=98>
+<td width=400>Larger Ih</td>
+<td width=400><b>Smaller Ih</b></td>
+</tr>
+<tr>
+<td width=98><b>Similarities</b></td>
+<td width=400>Project to MEC</td>
+<td width=400><b>Project to MEC</b></td>
+</tr>
+<tr>
+<td width=98> </td>
+<td width=400>Wsf1+</td>
+<td width=400><b>Wsf1+</b></td>
+</tr>
+<tr>
+<td width=98> </td>
+<td width=400>Nr4a1+</td>
+<td width=400><b>Nr4a1+</b></td>
+</tr>
+<tr>
+<td width=98> </td>
+<td width=400>Grp+</td>
+<td width=400><b>Grp+</b></td>
+</tr>
+<tr>
+<td width=98> </td>
+<td width=400>CaMKIIa+</td>
+<td width=400><b>CaMKIIa+</b></td>
+</tr>
+<tr>
+<td width=98> </td>
+<td width=400>Same Rin [117.2 &plusmn; 11.7 MOhm]</td>
+<td width=400><b>Same Rin [124.5 &plusmn; 15.8 MOhm]</b></td>
+</tr>
+<tr>
+<td width=98> </td>
+<td width=400>Same maxFR (mice) [>32.1 &plusmn; 1.7 Hz]</td>
+<td width=400><b>Same maxFR (mice) [>31.1 &plusmn; 1.4 Hz]</b></td>
+</tr>
+<tr>
+<td width=98> </td>
+<td width=400>Same strength EPSCs evoked at -70 mV</td>
+<td width=400><b>Same strength EPSCs evoked at -70 mV</b></td>
+</tr>
+<tr>
+<td width=98><b>Gradients</b></td>
+<td width=400>Receives stronger excitation from LEC</td>
+<td width=400> </td>
+</tr>
+<tr>
+<td width=98> </td>
+<td width=400> </td>
+<td width=400><b>Receives stronger excitation from MEC</b></td>
+</tr>
+<tr>
+<td width=98> </td>
+<td width=400>Receives stronger excitation from CA3</td>
+<td width=400> </td>
+</tr>
+<tr>
+<td width=98> </td>
+<td width=400> </td>
+<td width=400><b>Receives stronger excitation from CA2</b></td>
+</tr>
+<tr>
+<td width=98> </td>
+<td width=400> </td>
+<td width=400><b>Larger basal dendritic trees and somata</b></td>
+</tr>
+<tr>
+<td width=98> </td>
+<td width=400>Nov+ (more specifically expressed)</td>
+<td width=400> </td>
+</tr>
+<tr>
+<td width=98> </td>
+<td width=400>Nr3c2+ (more specifically expressed)</td>
+<td width=400> </td>
+</tr>
+<tr>
+<td width=98>
+<td width=400>Dcn+ (strongly expressed)</td>
+<td width=400> </td>
+</tr>
+<tr>
+<td width=98> </td>
+<td width=400>Tc1568100+ (strongly expressed)</td>
+<td width=400> </td>
+</tr>
+<tr>
+<td width=98> </td>
+<td width=400>Loc432748+ (strongly expressed)</td>
+<td width=400> </td>
+</tr>
+<tr>
+<td width=98> <td>
+<td width=400><b>Ndst4+ (preferentially expressed)</b></td>
+</tr>
+<tr>
+<td width=98> </td>
+<td width=400> </td>
+<td width=400><b>Astn2+ (preferentially expressed)</b></td>
+</tr>
+<tr>
+<td width=98> </td>
+<td width=400>More depolarized cells</td>
+<td width=400> </td>
+</tr>
+<tr>
+<td width=98> </td>
+<td width=400>Less "bursty"</td>
+<td width=400> </td>
+</tr>
+<tr>
+<td width=98> </td>
+<td width=400> </td>
+<td width=400><b>More place cells</b></td>
+</tr>
+<tr>
+<td width=98> </td>
+<td width=400> </td>
+<td width=400><b>More hyperpolarized cells</b></td>
+</tr>
+<tr>
+<td width=98> </td>
+<td width=400> </td>
+<td width=400><b>Larger IPSCs evoked at +10 mV</b></td>
+</tr>
+<tr>
+<td width=98> </td>
+<td width=400> </td>
+<td width=400><b>Stronger response to CA2 stimulation</b></td>
+</tr>
+<tr>
+<td width=98> </td>
+<td width=400> </td>
+<td width=400><b>Can sometimes spike due to CA2 stimulation</b></td>
+</tr>
+<tr>
+<td width=98> </td>
+<td width=400> </td>
+<td width=400><b>Hyperpolarized responses to CA3 stimulation</b></td>
+</tr>
+<tr>
+<td width=98> </td>
+<td width=400> </td>
+<td width=400><b>Shortened window between excitation and inhibition</b></td>
+</tr>
+<tr>
+<td width=98> </td>
+<td width=400> </td>
+<td width=400><b>Stronger inhibition due to CA3 activation</b></td>
+</tr>
+<tr>
+<td width=98> </td>
+<td width=400> </td>
+<td width=400><b>Stronger local perisomatic inhibition</b></td>
+</tr>
+<tr>
+<td width=98> </td>
+<td width=400> </td>
+<td width=400><b>Larger IPSCs evoked by PVBCs</b></td>
+</tr>
+<tr>
+<td width=98> </td>
+<td width=400> </td>
+<td width=400><b>Larger effective unitary IPSCs from common PVBCs</b></td>
+</tr>
+<tr>
+<td width=98> </td>
+<td width=400> </td>
+<td width=400><b>Stronger AP inhibition evoked by PVBCs</b></td>
+</tr>
+<tr>
+<td width=98> </td>
+<td width=400>More frequent connections to PVBCs</td>
+<td width=400> </td>
+</tr>
+<tr>
+<td width=98> </td>
+<td width=400>More perisomatic CB1R boutons</td>
+<td width=400> </td>
+</tr>
+<tr>
+<td width=98> </td>
+<td width=400> </td>
+<td width=400><b>More perisomatic axon terminals from PVBCs</b></td>
+</tr>
+<tr>
+<td width=98> </td>
+<td width=400> </td>
+<td width=400><b>More perisomatic PV+ GABAergic boutons</b></td>
+</tr>
+<tr>
+<td width=98> </td>
+<td width=400> </td>
+<td width=400><b>More PVBC boutons making contact onto somata</b></td>
+</tr>
+<tr>
+<td width=98> </td>
+<td width=400> </td>
+<td width=400><b>Preferentially receive more CA2 projections</b></td>
+</tr>
+<tr>
+<td width=98><b>Conflicts</b></td>
+<td width=400>No connections to CCK BCs (mice) /</td>
+<td width=400><b>No connections to CCK BCs (mice) /</b></td>
+</tr>
+<tr>
+<td width=98> </td>
+<td width=400>1 in 10 CA1 PCs are connected to CCKBCs (rats)</td>
+<td width=400><b>1 in 10 CA1 PCs are connected to CCKBCs (rats)</b></td>
+</tr>
+</table>

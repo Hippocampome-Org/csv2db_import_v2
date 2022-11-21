@@ -1,3 +1,388 @@
-Rejected merger with EC (+)223000 Stellate III due to clear presence of D:IV in this class and unclear in stellate III.
-<p>   
-Cell type composed of a merger of EC pyr III 223300p and EC simple pyr III 223200p
+<html>
+        <head>
+                <style>
+                        .redtext {
+                                color: red;
+                        }
+                        .bluetext {
+                                color: #0000FF; /* blue */
+                        }
+                        .greentext {
+                                color: #008000; /* dark green */
+                        }
+                        .purpletext {
+                                color: #800080; /* dark purple */
+                        }
+                        .orangetext {
+                                color: #FF6820; /* orange */
+                        }
+                </style>
+        </head>
+        <body>
+                <p style="font-family: courier">
+                        <b>LEC Simple Pyramidal III neurons 223200</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Merger status:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        None being considered
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes:</b>
+                </p>
+                <p style="font-family: courier">
+                        axon to angular bundle
+                </p>
+                <p style="font-family: courier">
+                        excitatory because they have spiny dendrites and projecting axon
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        CW
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        CLR 08/30/2011
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        DWW 08/31/2011
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>EC Pyramidal III neurons 223201-CA1 1000-Sub 100</b>
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        CW
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        CLR 06/28/2011
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        A:V? Enough evidence for A:CA1 and A:SUB? A:VI? - DWW 06/29/2011
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Looks good. - CLR 06/29/2011
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>EC Pyramidal III neurons 223201-CA1 1000-Sub 100</b>
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        CW
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        DWW, CLR 06/30/2011
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I'm a bit puzzled by the relation btw L3 pyramids and L3 stellate. Perhaps rather than "pyramida" vs "stellate" shape we should look at D:L4 or other discriminatory features? (in particular, axonal projections!) - GAA
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>EC Pyramidal III neurons 223311-CA1 1000-Sub 100</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Merger status:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        None being considered
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes:</b>
+                </p>
+                <p style="font-family: courier">
+                        excitatory because they have spiny dendrites and projecting axon
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        CW
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Would appear to be no A:VI evidence:
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        These seem to go together:
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Gloveli cites Steward - no ax info in EC
+                                        <br>
+                                        van der Linden - no axonal info
+                                        <br>
+                                        Tahvildari - 223310
+                                        <br>
+                                        Germroth - 003100
+                                        <br>
+                                        C&W text - 223000
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        These don't seem to match the others:
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        C&W Fig 1 - 333200
+                                        <br>
+                                        C&W Fig 2 - 233310 - DWW
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=125></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I'm not sure what to do about A:I_II. Amaral + Lavenex might not belong. - CLR
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=150></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I agree they make a bold statement that is not supported by any of our primary lit.
+                                        <br>
+                                        N = 2? - DWW 08/12/2011
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=175></td>
+                                <td style="font-family: courier" class="redtext">
+                                        <u>No</u>
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=200></td>
+                                <td style="font-family: courier" class="redtext">
+                                        No fig w. good axon
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=200></td>
+                                <td style="font-family: courier" class="redtext">
+                                        They IDed 23 pyr cell axons mentioned for max. of 5 in deeper layers: 3 with ax to angular bundle + CA1 + 2 w. collaterals - CW
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=225></td>
+                                <td style="font-family: courier" class="redtext">
+                                        CLR 08/30/2011
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=250></td>
+                                <td style="font-family: courier" class="redtext">
+                                        DWW 08/31/2011
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=275></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Gloveli mentions the "islands" again! Add note linking axons (Tahvildari) I find the Ax info weak at most!? Let's discuss ... - GAA
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>EC (e)223200p-CA1_1000-Sub_100 LIII Pyramidal cells (LIII PC) [6092]</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Merger status:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        Rejected merger with EC (+)223000 Stellate III due to clear presence of D:IV in this class and unclear in stellate III.
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes:</b> Cell type composed of a merger of EC pyr III 223300p and EC simple pyr III 223200p
+                </p>
+                <p style="font-family: courier">
+                        excitatory because they have sparsely spiny to spiny dendrites and projecting axon
+                </p>
+                <p style="font-family: courier">
+                        addendum to currently active EC (e)223200p LIII Pyramidal-Stellate
+                </p>
+                <p style="font-family: courier">
+                        <b>* all point of origin evidence is indirect and inferential *</b>
+                </p>
+                <p style="font-family: courier">
+                        The only inferable sources of these axons are superficial layer EC neurons that already project to CA1, thus excluding, for example, EC (e)231000 LI-II Multipolar-Pyramidal.
+                </p>
+                <p style="font-family: courier">
+                        injection into MEC:II_III. [Y:S:MEC:I_II_III].
+                </p>
+                <p style="font-family: courier">
+                        A's branch & varicosities in CA1:SR_SP_SO.
+                </p>
+                <p style="font-family: courier">
+                        A's form type 1 synapses on interneuron shafts and spines and on pyramidal spines.
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier">
+                                        type 1 synapse onto interneuronal dendritic shaft in CA1:SO.
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier">
+                                        type 1 synapse onto dendritic spine in CA1:SP.
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        no A's target pyramidal shafts.
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        How you can use this packet? - KM 11/29/2017
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        To clarify, based on the inferential evidence provided in the text (primarily in the last few sentences of the right paragraph on pg. 7), the already existing LIII Pyramidal neuron type would have its CA1 projection pattern updated from 1000 to 1111? - JDK 10/13/2021
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Yes, the proposal is for the CA1 projection to change from 1000 to 1111. - DWW 10/14/2021
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Then for both types (unique ID #6017 and #6092), I concur with updating the projection pattern for v2.0. - JDK 10/14/2021
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        Deller et al., 1996, added. - 12/06/2021
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        I have now reviewed both updated packets and I like what you have done with highlighting all pertinent details to the citation within Takacs et al. I approve of them in this new form. - JDK 12/08/2021
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I approve. If I understand the logic, we assume that the only reasonably inferable sources of these axons are superficial layer EC neurons that *already* project to CA1, thus excluding, for example, EC (e)231000 LI-II Multipolar-Pyramidal. If this is right, thatâs ok with me but perhaps make the logic explicit on the cover of the packet. Also, on the cover it says "injection into MEC:II_III. [Y:A:MEC:I_II_III]" but I guess it should be "injection into MEC:II_III. [Y:S:MEC:I_II_III]" since this is an anterograde tracer. - GAA 02/02/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        In updating the covers of these two packets, I have filled out the lists of synonyms at the tops of the front pages. In doing so, I have discovered that the EC (e)223200p LIII PC-SC packet contains no examples of stellate cells, so the name is not appropriate. However, if we remove "Stellate" from the name, then it would have the same name as the other packet. We could possibly append the adjective "small" to the EC (e)223111p LIII PC packet to distinguish the two packets, as at least Canto 2011 uses it in one of the references. - DWW 02/04/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Thatâs ok with me. If/when we change names from v1 to v2, weâll need to keep the old names among the synonyms (ideally indicating 'v1.0' next to it) to alleviate possible confusionâ¦ - GAA 02/04/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=100></td>
+                                <td style="font-family: courier" class="redtext">
+                                        It is okay with me as well to use "small" if we remove "Stellate" for x_EC_(e)223111p_LIII_PC_addendum_new & x_EC_(e)223200p_LIII_PC-SC_addendum_new. - JDK 02/04/2022
+                                </td>
+                        </tr>
+                </table>
+        </body>
+</html>

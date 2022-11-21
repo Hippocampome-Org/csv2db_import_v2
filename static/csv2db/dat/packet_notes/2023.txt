@@ -1,7 +1,8 @@
-This cell type is a result of a merger between CA3 03000 R and CA3 03000 calbindin.
-<p>    
-Notes on CA3 03000 calbindin:<br>
-- Gulyas 1996 text states:  "axons, at least the reconstructed sections, were [restricted to SR]," so they may be incomplete.  Their evidence is based on six serially-reconstructed sections of 80 [micro]m each.  This is sufficient, and the cell type (as in all other cases) is based on the evidence available to us.<br>
-- Other CA3 calbindin cell types exist:  CA3 02200 calbindin and CA3 00003 calbindin
-<p>
+This cell type is a result of a merger between CA3 03000 R and CA3 03000 calbindin.
+    
+Notes on CA3 03000 calbindin:
+- Gulyas 1996 text states:  "axons, at least the reconstructed sections, were [restricted to SR]," so they may be incomplete.  Their evidence is based on six serially-reconstructed sections of 80 microm each.  This is sufficient, and the cell type (as in all other cases) is based on the evidence available to us.
+- Other CA3 calbindin cell types exist:  CA3 02200 calbindin and CA3 00003 calbindin
+
+
 Electrophysiology information is available for CA3 03000 radiatum cells and chemical marker information is available for CA3 03000 calbindin cells.  However, since there is no apparent overlap, there is no basis for the creation of subtypes within our framework at this point.

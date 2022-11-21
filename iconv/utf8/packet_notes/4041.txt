@@ -1,12 +1,11 @@
-- inhibitory because GABAergic (Fuentealba et al., 2008)
-<p>
+- inhibitory because GABAergic (Fuentealba et al., 2008)
 
-- interneuron specific:<br>
-&emsp;- 57% of CA1 targets and 100% of SUB targets were interneurons (Fuentealba 2008)<br>
-&emsp;- up to half the targets are other interneurons (Somogyi 2010)
-<p>
+- interneuron specific:
+      - 57% of CA1 targets and 100% of SUB targets were interneurons
+        (Fuentealba 2008)
+      - up to half the targets are other interneurons (Somogyi 2010)
 
-- 11.3% (7/62) of hippocampo-subicular nonpyramidal projection cells were ENK-immunopositive
-<p>
+- 11.3% (7/62) of hippocampo-subicular nonpyramidal projection cells were ENK-immunopositive
 
-- Fuentealba paper refers to these cells as a "population," though only one cell could be positively identified
+- Fuentealba paper refers to these cells as a "population," though only one cell could be positively identified
+

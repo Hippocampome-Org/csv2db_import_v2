@@ -1,0 +1,296 @@
+<html>
+        <head>
+                <style>
+                        .redtext {
+                                color: red;
+                        }
+                        .bluetext {
+                                color: #0000FF; /* blue */
+                        }
+                        .greentext {
+                                color: #008000; /* dark green */
+                        }
+                        .purpletext {
+                                color: #800080; /* dark purple */
+                        }
+                        .orangetext {
+                                color: #FF6820; /* orange */
+                        }
+                </style>
+        </head>
+        <body>
+                <p style="font-family: courier">
+                        <b>CA1 (i) 0112 O-RP neurons [4187]</b>
+                </p>                
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Related types:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        CA1 (i)0103 Oriens-Bistratified (v1.0 active)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA1 (i)0102 Interneuron Specific O-R (v1.0 active)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA1 (i)0102 O-R (v2.0 active unapproved)
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes: The CA1 (i)0103 cells clearly have axons in CA1:SO, whereas the current neuron type does not. The PCL invoked rule (see below) distinguishes this type from the two 0102 neuron types.</b>
+                </p>
+                <p style="font-family: courier">
+                        Principal cell layer invoked rule: record axons in the PCL when boutons are present or when axons are branching and ostensibly targeting the PCL and not just passing through, but discount dendrites.
+                </p>
+                <p style="font-family: courier" class="bluetext">
+                        Torborg et al., 2006:
+                        <br>
+                        [N:A:CA1:SLM]{low}
+                        <br>
+                        [N:D:CA1:SP]{low}
+                </p>
+                <p style="font-family: courier" class="purpletext">
+                        Winterer et al., 2019:
+                        <br>
+                        Htr3a+. SOM+. NPY+. markers present. ephys present. FP present.
+                        <br>
+                        [Y:A:CA1:SR]{low}
+                        <br>
+                        [N:A:CA1:SP]{low}
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        After reviewing the packet, I think that the A-D pattern for this neuron type should be 0112 as opposed to 0102. This mainly comes from viewing Figure 2 of Winterer et al., 2019 (pg. 14 of the packet), where it appears to me that in some cases the axonal length within SP is at least 15% (e.g. H16, Som5, Som45). If you agree, then we would then change the name for this proposed active type from CA1 O-R to CA1 O-RP. - JDK 10/13/2021
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        One of the questions that needs to be asked is whether the axons are just passing through a particular layer or actually targeting something in that layer. Of the few types you mentioned, to me only H16 has axons that possibly target CA1:SP. Over the course of the history of Hippocampome.org we have not been very consistent in declaring only the presence, or only the absence, or both the absence and presence of neurites in the principal layers. I believe it would be cleaner to declare only the presence or absence, but not both. If you take a look at column F in the v2.0_summary_info spreadsheet, I have highlighted pairs of neuron types where we could possibly merge the pairs into a single neuron type. Perhaps with v2.0 on the horizon, it is time to formally come to a decision on this topic. - DWW 10/14/2021 
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Thank you for this insight and feedback! I will spend some time thinking on this, but for now I am in agreement with you, itâd be cleaner to just take into account only the presence or absence but not both. So with that said, given the sample size of 1 (H16), we would lean towards the A-D pattern of 0102 as opposed to 0112. This is still okay by me, and it still passes my approval for inclusion as an active type in v2.0. - JDK 10/14/2021 
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        In reviewing this packet one more time, I am struck now by the Torborg figure. Does this satisfy the invoked rule for axonal inclusion in an interpretation? If so, can it be combined with Wintererâs H16 to create a new possibly active neuron type? - DWW 11/15/2021 
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=100></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I believe this does satisfy our invoked rule, and should be combined with H16 from Winterer et al., 2019 to create a new CA1 (i) 0112 O-RP neuron type. - JDK 11/15/2021 
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>CA1 (i) 0102 O-R neurons</b>
+                </p>                
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Related types:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        CA1 (i)0102 Interneuron Specific O-R (v1.0 active)
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes: There is no indication that these cells are interneuron specific, which differentiates them from the cells in the other packet.</b>
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        p5 -> Aiii -> O-LM:CA1:1102
+                        <br>
+                        p6 -> Biii -> Axon and dendrites are not distinguishable -> CA1:2223 - KM 11/29/2017
+                </p>
+                <p style="font-family: courier">
+                        <b>CA1 (i) 0102 O-R neurons [4168]</b>
+                </p>                
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Related types:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        CA1 (i)0103 Oriens-Bistratified (v1.0 active)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA1 (i)0102 Interneuron Specific O-R (v1.0 active)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA1 (i)0112 O-RP (v2.0 on-hold unapproved)
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes: The CA1 (i)0103 cells clearly have axons in CA1:SO, whereas the current neuron type does not. There is no indication that these cells are interneuron specific, which differentiates them from the cells in the other packet. The PCL invoked rule (see below) distinguishes this type from the 0112 neuron type.</b>
+                </p>
+                <p style="font-family: courier">
+                        Principal cell layer invoked rule: record axons in the PCL when boutons are present or when axons are branching and ostensibly targeting the PCL and not just passing through, but discount dendrites.
+                </p>
+                <p style="font-family: courier" class="greentext">
+                        Chittajallu et al., 2013:
+                        <br>
+                        [Y:A:CA1:SP]{low}
+                        <br>
+                        Htr3a+. SOM+. Ephys present.
+                </p>
+                <p style="font-family: courier" class="purpletext">
+                        Winterer et al., 2019:
+                        <br>
+                        Htr3a+. SOM+. NPY+. markers present. ephys present. FP present.
+                        <br>
+                        [Y:A:CA1:SR]{low}
+                        <br>
+                        [N:A:CA1:SP]{low}
+                </p>
+                <p style="font-family: courier">
+                        <b>CA1 (i) 0112 O-RP neurons [4187]</b>
+                </p>          
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Related types:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        CA1 (i)0103 Oriens-Bistratified (v1.0 active)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA1 (i)0102 Interneuron Specific O-R (v1.0 active)
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes: The CA1 (i)0103 cells clearly have axons in CA1:SO, whereas the current neuron type does not. The PCL invoked rule (see below) distinguishes this type from the 0102 neuron type, and there is no indication of this type being interneuron specific.</b>
+                </p>
+                <p style="font-family: courier">
+                        Principal cell layer invoked rule: record axons in the PCL when boutons are present or when axons are branching and ostensibly targeting the PCL and not just passing through, but discount dendrites.
+                </p>
+                <p style="font-family: courier" class="bluetext">
+                        Torborg et al., 2006:
+                        <br>
+                        [N:A:CA1:SLM]{low}
+                        <br>
+                        [N:D:CA1:SP]{low}
+                </p>
+                <p style="font-family: courier" class="purpletext">
+                        Winterer et al., 2019:
+                        <br>
+                        Htr3a+. SOM+. NPY+. markers present. ephys present. FP present.
+                        <br>
+                        [Y:A:CA1:SR_SP]{low}
+                </p>
+                <p style="font-family: courier" class="greentext">
+                        Chittajallu et al., 2013:
+                        <br>
+                        [Y:A:CA1:SP]{low}
+                        <br>
+                        Htr3a+. SOM+. Ephys present.
+                </p>
+                <p style="font-family: courier">
+                        Assessment of merger of CA1 (i)0102 O-R into CA1 (i)0112 O-RP.
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        I agree to have at least one more packet out of this material, and I can go with either pattern [CA1 (i)0102 vs. CA1 (i)0112], but Iâm frankly not convinced that we want two distinct neuron types. I believe that in v1.0 we have systematically merged all these cases. Do we have any example of 2 types that only differ in axonal presence in PCL? Unless thereâs direct evidence that one of the two makes synapses with the soma and the other does not, Iâd probably just merge them. If you agree, I suggest 0112, but am also happy with 0102. If there are other similar cases in v2.0, please consider merging. - GAA 02/01/2022
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Tough call. The Quattrocolo neuron appears to be targeting the PCL vs. an original v1.0 neuron type. - DWW 02/03/2022 
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        So in re-reviewing each potential merger within the packet Diek has kindly provided, I had a few questions arise pertinent to favoring merging unless there is direct evidence that one neuron type makes synapses with the soma and the other does not:
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        1. How does this impact the new invoked rule defined in the provided packet, namely that we will "record axons in the PCL when boutons are present or when axons are branching and ostensibly targeting the PCL and not just passing through, but discount dendrites?" Shall we disregard it?
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        2. If we favor the route of merging unless we have direct evidence of one neuron type establishing synapses with the soma while the other does not, which AD pattern should be preferred? The AD pattern exhibited by the majority of the reconstructions or the AD pattern of a single reconstruction that shows axonal presence (e.g. the 0102 & 0112 case that led to this discussion)? Perhaps this should be a case by case basis depending on what evidence makes the most sense to us? - JDK 02/06/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I would suggest that we utilize the PCL invoked rule as our fallback position, when we do not have overriding motivation to merge two or more neuron types. As to which way to merge, I would suggest, since we have not been consistent in the past, that we evaluate on a case-by-case basis. - DWW 02/07/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=100></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I concur. - GAA 02/07/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=125></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Thank you for answering my questions and this route sounds good to me. In light of utilizing the PCL invoked rule as a fallback position, I am okay with merging in all cases in the "Axons in the PCL" packet except for the 0103 and 0113 merger where we have a text description directly stating that the X-OPR (0113 O-RPO) axons display en passant boutons in SP whereas the X-OR (0103 O-BiC) do not. - JDK 02/07/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=150></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I agree. - GAA 02/13/2022
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        It was agreed by GAA, JDK, and DWW to merge CA1 (i)0102 O-R into CA1 (i)0112 O-RP. - 02/15/2022
+                </p>
+        </body>
+</html>

@@ -1,13 +1,13 @@
-This class is a merger of MEC (+)333000p-DG 1000-SUB 111 stellate II cells, EC (+)333000 principal cells, and LEC (+)333000 complex pyramidal III neurons
-<p>  
-MEC (+)333000p-DG 1000-SUB 111 stellate II cells have explicit connections to DG and SUB, whereas EC (+)333000 principal cells and LEC (+)333000 complex pyramidal III neurons only have axons that project to the angular bundle.
-<p>
-Deep layer collaterals are attributed to Tamamaki, which is in EC (+)331111p stellate II cells.
-<p>
-The multiform cell does fit in this cell type.  The text only description of occasional extended collaterals is insufficient to warrant a class change.
-<p>
-Although Klink and Alonso's Figures 9 and 10 appear to be the same cell, both depictions are included, since 9 depicts more of the dendritic extent and 10 depicts the axon in color for clarity.
-<p>
-Canto 2011: LEC (+)333000 pyramidal III neurons have borderline A:IV.
-<p>
-Lingenh&#246;hl 1991: stellate II are spiny
+This class is a merger of MEC (+)333000p-DG 1000-SUB 111 stellate II cells, EC (+)333000 principal cells, and LEC (+)333000 complex pyramidal III neurons
+  
+MEC (+)333000p-DG 1000-SUB 111 stellate II cells have explicit connections to DG and SUB, whereas EC (+)333000 principal cells and LEC (+)333000 complex pyramidal III neurons only have axons that project to the angular bundle.
+
+Deep layer collaterals are attributed to Tamamaki, which is in EC (+)331111p stellate II cells.
+
+The multiform cell does fit in this cell type.  The text only description of occasional extended collaterals is insufficient to warrant a class change.
+
+Although Klink and Alonso's Figures 9 and 10 appear to be the same cell, both depictions are included, since 9 depicts more of the dendritic extent and 10 depicts the axon in color for clarity.
+
+Canto 2011: LEC (+)333000 pyramidal III neurons have borderline A:IV.
+
+Lingenhöhl 1991: stellate II are spiny

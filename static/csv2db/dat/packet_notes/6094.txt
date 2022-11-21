@@ -1,12 +1,11 @@
-This cell type represents a merger between LEC (+)231000 fan-oblique pyramidal II and EC (+)231000 MPN I.
-<p>
-Failed unofficial merger proposals with MEC 331111 stellate II, EC 331000 excitatory II, and EC 221100 oblique pyramidal-stellate II.
-<p>
-Spiny, principal -> excitatory.
-<p>
+This cell type represents a merger between LEC (+)231000 fan-oblique pyramidal II and EC (+)231000 MPN I.
+
+Failed unofficial merger proposals with MEC 331111 stellate II, EC 331000 excitatory II, and EC 221100 oblique pyramidal-stellate II.
+
+Spiny, principal -> excitatory.
 
-70% of multipolar I are excitatory (Wouterlood 2000).
-<p>
-A class of EC oblique pyramidal cells with A:I has been split off into a separate 331000 class based on a strong statement in the text about axons reaching the level of the pia with a diameter of up to 900 [micro]m.  However, note that Figure 5 Panels A and B do not support this statement.
-<p>
-The second fan neuron shown in Figure 5 is included in the 331000 cell type.  The text notes that axons are occasionally in deep layer I (as they are in this neuron).  However, since the 331000 cell type is pre-existing, that neuron is included there in spite of the hippocampome rule about the word "occasionally."
+70% of multipolar I are excitatory (Wouterlood 2000).
+
+A class of EC oblique pyramidal cells with A:I has been split off into a separate 331000 class based on a strong statement in the text about axons reaching the level of the pia with a diameter of up to 900 microm.  However, note that Figure 5 Panels A and B do not support this statement.
+
+The second fan neuron shown in Figure 5 is included in the 331000 cell type.  The text notes that axons are occasionally in deep layer I (as they are in this neuron).  However, since the 331000 cell type is pre-existing, that neuron is included there in spite of the hippocampome rule about the word "occasionally."

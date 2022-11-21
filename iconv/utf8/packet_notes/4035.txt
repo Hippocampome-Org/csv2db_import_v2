@@ -1,7 +1,8 @@
-Merger approved between four classes: CA1 0113 ORP, CA1 0113 DP, CA1 0113 trilaminar horizontal, CA1 0113 O-R
-<p>
-Projection to SUB - the ORP-DP-trilaminar horizontal cell type has been approved with [A:SUB:SM_SP_PL] (horiz trilaminar cells match this; ORP cells have clear axons in SUB:SM_SP and borderline axons in PL; DP cell axons could not be followed to terminals so could not be traced further than SUB:SP).  The O-R 0113 cell type has clear axons in SUB:SP_PL, and Losonczy admits that the axons may have been severely truncated.
-<p>
-Septal projection - potential for subclasses.  DP cells project into the septal area and ORP cells do not.  Unknown for trilaminar-horizontal and O-R.
-<p>
-Targets - according to Somogyi (2010), up to half of the postsynaptic targets of trilaminar (horizontal) cells are other interneurons.  Possible potential for subclasses.
+Merger approved between four classes: CA1 0113 ORP, CA1 0113 DP, CA1 0113 trilaminar horizontal, CA1 0113 O-R
+
+Projection to SUB - the ORP-DP-trilaminar horizontal cell type has been approved with [A:SUB:SM_SP_PL] (horiz trilaminar cells match this; ORP cells have clear axons in SUB:SM_SP and borderline axons in PL; DP cell axons could not be followed to terminals so could not be traced further than SUB:SP).  The O-R 0113 cell type has clear axons in SUB:SP_PL, and Losonczy admits that the axons may have been severely truncated.
+
+Septal projection - potential for subclasses.  DP cells project into the septal area and ORP cells do not.  Unknown for trilaminar-horizontal and O-R.
+
+Targets - according to Somogyi (2010), up to half of the postsynaptic targets of trilaminar (horizontal) cells are other interneurons.  Possible potential for subclasses.
+

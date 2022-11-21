@@ -1,0 +1,113 @@
+<html>
+        <head>
+                <style>
+                        .redtext {
+                                color: red;
+                        }
+                        .bluetext {
+                                color: #0000FF; /* blue */
+                        }
+                        .greentext {
+                                color: #008000; /* dark green */
+                        }
+                        .purpletext {
+                                color: #800080; /* dark purple */
+                        }
+                        .orangetext {
+                                color: #FF6820; /* orange */
+                        }
+                </style>
+        </head>
+        <body>
+                <p style="font-family: courier">
+                        <b>CA1 (i)0012 Horizontal Basket CCK+ (Horiz BC CCK+) cells [4139]</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Related types:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        CA1 (i)2232 Basket CCK+ (v1.0 active)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA1 (i)0232 Trilayer Basket CCK+ (v2.0 active)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA1 (i)0012 Basket (v1.0 active)
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes:</b> CCK+. Firing pattern.
+                </p>
+                <p style="font-family: courier">
+                        The Chittajallu figure is listed under Supplementary Evidence.
+                </p>
+                <p style="font-family: courier">
+                        The Klausberger figure is listed under On-hold Types.
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        Approved as active. - CLR 09/27/2016
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I agree with the packet content. - KM 10/15/2016
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I approve this as an active type. - CW 10/17/2016
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Out of curiosity, what can be inferred about marker profile of neurons based on data in paper 1 of this packet. Are all 5HT+ neurons have the same marker profile with respect to CR, VIP, reelin, and CCK? - KM 10/15/2016
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=100></td>
+                                <td style="font-family: courier" class="redtext">
+                                        To address KM's point about biomarker expression in the Chittajallu et al., 2013 CA10012 neuron, from the information in the packet, I cannot say anything about the marker expression of that neuron. In the notes we should state that it is presumed CCK+ because it is not fast-spiking. If it is 5HT3 positive (I will need to read more to know), inferential data suggests that it is probably PV-negative. This supports that it is CCK+, but the bottom line is that we do not have proof that it is CCK+. - CW 10/17/2016
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=125></td>
+                                <td style="font-family: courier" class="redtext">
+                                        From the evidence provided in the packet, I approve the 0012 and CCK+ designation and of the new proposed type for v2.0. - JDK 02/09/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=150></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I have now reviewed them and happy to approve all except for the only 0232 AAC which I still feel is a borderline case and perhaps we should keep frozen or merge with the regular AAC packet. - GAA 02/14/2022
+                                </td>
+                        </tr>
+                </table>
+        </body>
+</html>

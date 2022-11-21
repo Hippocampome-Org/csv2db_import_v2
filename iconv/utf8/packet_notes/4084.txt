@@ -1,0 +1,583 @@
+<html>
+        <head>
+                <style>
+                        .redtext {
+                                color: red;
+                        }
+                        .bluetext {
+                                color: #0000FF; /* blue */
+                        }
+                        .greentext {
+                                color: #008000; /* dark green */
+                        }
+                        .purpletext {
+                                color: #800080; /* dark purple */
+                        }
+                        .orangetext {
+                                color: #FF6820; /* orange */
+                        }
+                </style>
+        </head>
+        <body>
+                <p style="font-family: courier" class="redtext">
+                        [Acsady et al., 1996, Fig. 3 cell #5] 0302 - CW
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Yes. - DWW 03/28/2011
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>CA1 interneuron-specific-I 0322 cells</b>
+                </p>
+                <p style="font-family: courier">
+                        n = 1
+                </p>
+                <p style="font-family: courier">
+                        patterning does not match any other current class
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        CLR 07/13/2011
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I would suspend it as 0302. - DWW 07/13/2011
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Agree. - CW 07/14/2011
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>CA1 calbindin SR 0302 neuron</b>
+                </p>
+                <p style="font-family: courier">
+                        Note: I found no evidence for the "large calbindin" cells referred to in the Klausberger & Somogyi series (included at the end of the packet). It's possible that these cells originate from a "lumping together" of the evidence in Gulyas and Freund's Figure 2. An email to Klausberger or Somogyi may be the next step.
+                </p>
+                <p style="font-family: courier">
+                        n = 1
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        CLR 07/20/2011
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Yes. - DWW 07/21/2011
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Agreed. - CW 07/21/2011
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>CA1 (-)0302 stratum radiatum-targeting calbindin (SR CB) neurons</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Merger status:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        Unable to merge with CA1 0302 IS-1 because of target specificity
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        No current merger proposals
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes:</b>
+                </p>
+                <p style="font-family: courier">
+                        N = 1
+                </p>
+                <p style="font-family: courier">
+                        Synapse predominantly with pyramidal cells; 5% of synapses are with GABA-positive dendrites
+                </p>
+                <p style="font-family: courier">
+                        Chemical marker information: 0302 IS-1 is CB+
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        CLR 07/20/2011
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        DWW, CW, <b>GAA</b>
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Do you approve of merging these two cell classes?</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier">
+                                        CA1 IS-1 0302 (n = 1)
+                                        <br>
+                                        CA1 calbindin 0302 (n = 1)
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier" class="redtext">
+                        YEs. - CLR, DWW, CW 07/21/2011
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        OK. defrost? name? IS? Clearly 2 subclasses. We need to decide how to deal w/ these cases ... - GAA
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Do you approve of merging these two cell classes under the name, CA1 (-)0302 radiatum targeting interneurons (RTI)?</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier">
+                                        CA1 (-)0302 CB SR neurons (suspended)
+                                        <br>
+                                        CA1 (-)0302 SCA neurons (needs approval)
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier" class="redtext">
+                        YES - DWW, CLR 01/16/2013
+                </p>
+                <p style="font-family: courier">
+                        <b>CA1 (-)0322/0302 Schaffer collateral-associated (SCA) cells</b>
+                </p>
+                <p style="font-family: courier">
+                        <b>Notes:</b>
+                </p>
+                <p style="font-family: courier">
+                        N = 5
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        The Topolnik + Leao figures clearly have dendrites in SP. I suggest removing the Somogyi-Lamsa paper and adding it to 0302 CB-SR. This leaves Topolnik + Leao in this packet, which I approve as 0322 SCA. - CW 01/17/2013
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        CLR, DWW 01/23/2013
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Do you approve of merging these two cell classes under the name, CA1 (-)0302 radiatum targeting interneurons (RTI)?</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier">
+                                        CA1 (-)0302 CB SR neurons (suspended)
+                                        <br>
+                                        CA1 (-)0302 SCA neurons (needs approval)
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier" class="redtext">
+                        YES - DWW 01/16/2013
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        YES - CLR 01/17/2013
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        NO - CW 01/17/2013
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        Notes: CLR earlier approved this merger before the Somogyi 2012 article was added.
+                </p>
+                <p style="font-family: courier">
+                        <b>CA1 (-)0302 ivy cells</b>
+                </p>
+                <p style="font-family: courier">
+                        <b>Notes:</b>
+                </p>
+                <p style="font-family: courier">
+                        N = 2
+                </p>
+                <p style="font-family: courier">
+                        No information available on CB expression, although CA1 (-)0333 ivy cells are CB- and CCK-.
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        CW 01/17/2013
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        DWW, CLR 01/23/2013
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Do you approve of merging these two cell classes under the name, CA1 (-)0302 radiatum targeting interneurons (RTI)?</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier">
+                                        CA1 (-)0302 CB SR neurons (suspended)
+                                        <br>
+                                        CA1 (-)0302 ivy cells (needs approval)
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier" class="redtext">
+                        YES - DWW, CLR 01/23/2013
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        YES (I think it needd another name) - CW 01/23/2013
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Ivy or not? - GAA
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>CA1 (-)0322 Schaffer collateral-associated (SCA) cells</b>
+                </p>
+                <p style="font-family: courier">
+                        <b>Notes:</b>
+                </p>
+                <p style="font-family: courier">
+                        N = 3
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        CW 01/17/2013
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        DWW, CLR 01/23/2013
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Should the prev. suspended #4 of Gulyas & Freund come here? Calbindin? Same position all over ... - GAA
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>CA1 (i)0322 Schaffer Collateral-Receiving R-targeting (SCR R-target) cells</b>
+                </p>
+                <p style="font-family: courier">
+                        <b>Notes:</b>
+                </p>
+                <p style="font-family: courier">
+                        N = 3
+                </p>
+                <p style="font-family: courier">
+                        New highlighted pages added reporting Topolnik cells are CCK+ and speculated to be CB+. CA1 (-)2311 Schaffer collateral-associated cells are CCK+ and CB+.
+                </p>
+                <p style="font-family: courier">
+                        No marker expression reported for Le&atilde;o cells.
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        CW 01/17/2013
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        DWW, CLR 01/23/2013
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Do you approve of merging these two cell classes under the name, CA1 (-)0302 ivy cells?</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier">
+                                        CA1 (-)0302 CB SR neurons (suspended)
+                                        <br>
+                                        CA1 (-)0302 ivy cells (needs approval)
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier" class="redtext">
+                        YES - DWW, CLR, CW 03/04/2013
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        OK. We'll have to explain & represents (i.e. draft, vet, approve) the topic in the portal how the various papers relate to each other in our view & why - GAA
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        Notes: These two classes are to be merged with the caveat that, if the Somogyi-declared ivy ever become more clearly defined through markers and/or electrophysiology, then these packets may have to be re-split.
+                </p>
+                <p style="font-family: courier">
+                        <b>CA1 (i) 0322 Schaffer Collateral-Receiving R-Targeting (SCR R-target) cells</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Status:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        supplement to CA1 (i) 0322 Schaffer Collateral-Receiving R-Targeting
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes:</b>
+                </p>
+                <p style="font-family: courier">
+                        N = 3
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        I recommend merging [the Varga et al., 2014, cell] with our SC-recv R-targeting (0311). - GAA
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I disapprove of the merger proposal as these new cells clearly have dendrites in SO. I believe they should stand on their own. - DWW 09/09/2015
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I, too, do not approve the merger.  If we do create this type, I recommend that we do not call it c "classical" bistratified because I think the community considers the Buhl neuron with axons in SO as the classical pattern. - CW 09/24/2015
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        GAA meant to suggest merging these with 0322 (SC-recv r-targeting is correct, but the 0311 was a typo).  I approve the merger into 0322. CLR 10/10/2015
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=100></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I also support the merger into 0322. - DWW 10/19/2015
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=125></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I approve the merger with 0322. - CW 10/19/2015
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150></td>
+                                <td style="font-family: courier" class="redtext">
+                                        OK - GAA 11/29/2015
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>CA1 (-)0302 C-Bistratified (C-Bistrat) cells</b>
+                </p>
+                <p style="font-family: courier">
+                        <b>Notes:</b>
+                </p>
+                <p style="font-family: courier">
+                        N = 2
+                </p>
+                <p style="font-family: courier">
+                        This is a newly formed packet from supplemental cells from the CA1 (i)0322 Schaffer Collateral-Receiving R-Targeting packet.
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Status:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        merger proposal: CA1 (i)0322 into CA1 (i)0302
+                                </td>
+                        </tr>
+                </table>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Related types:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        CA1 (i)0322 Schaffer Collateral-Related R-targeting (v1.0 active)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA1 (i)0302 C-Bistratified (v1.0 in vivo added active)
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes:</b>
+                </p>
+                <p style="font-family: courier">
+                        <b>Principal cell layer invoked rule:</b> record axons in the PCL when boutons are present or when axons are branching and ostensibly targeting the PCL and not just passing through, but discount dendrites.
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        I am in agreement with compression of the 0322 SCR_R-Targeting with the 0302 C-Bistratified to be considered as 0302. - JDK 11/03/2021
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        After re-review, I am still in favor of compression of these two neuron types to be considered as 0302. - JDK 11/22/2021
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I approve. I guess we shouldnât have added the new cell type for the PLoS Bio paper? Which of the two should we keep, the legacy cell or the shorter-named one? I would probably go with the former but am happy either way if you and Jeffrey prefer otherwise. - GAA 02/02/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        For her 2 cents, CW was apparently not in favor of the C-Bistratified, or Classical Bistratified, name, as it might be confusing considering our canonical 0333 Bistratified type. Therefore, I, too, am in favor of keeping the longer name of the legacy cell. - DWW 02/02/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I am in favor of keeping the longer name of the legacy cell per your rationale. - JDK 02/02/2022
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>CA1 (i)0302 Schaffer Collateral-Receiving R-targeting (SCR R-target) cells [4084]</b>
+                </p>
+                <p style="font-family: courier">
+                        <b>Notes:</b>
+                </p>
+                <p style="font-family: courier">
+                        <b>Principal cell layer invoked rule:</b> record axons in the PCL when boutons are present or when axons are branching and ostensibly targeting the PCL and not just passing through, but discount dendrites.
+                </p>
+                <p style="font-family: courier">
+                        New highlighted pages added reporting Topolnik cells are CCK+ and speculated to be CB+. CA1 (-)2311 Schaffer collateral-associated cells are CCK+ and CB+.
+                </p>
+                <p style="font-family: courier">
+                        No marker expression reported for Le&atilde;o cells.
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        I am in agreement with compression of the 0322 SCR_R-Targeting with the 0302 C-Bistratified to be considered as 0302. - JDK 11/03/2021
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        After re-review, I am still in favor of compression of these two neuron types to be considered as 0302. - JDK 11/22/2021
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I approve. I guess we shouldnât have added the new cell type for the PLoS Bio paper? Which of the two should we keep, the legacy cell or the shorter-named one? I would probably go with the former but am happy either way if you and Jeffrey prefer otherwise. - GAA 02/02/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        For her 2 cents, CW was apparently not in favor of the C-Bistratified, or Classical Bistratified, name, as it might be confusing considering our canonical 0333 Bistratified type. Therefore, I, too, am in favor of keeping the longer name of the legacy cell. - DWW 02/02/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I am in favor of keeping the longer name of the legacy cell per your rationale. - JDK 02/02/2022
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        A new merger is proposed: folding in the previously approved Somogyi and Gulyas cells, which were never formally incorporated into the database, into the CA1 (i)0302 Schaffer Collateral-Receiving R-targeting neuron type. - 02/02/2022
+                </p>
+                <p style="font-family: courier">
+                        No information available on CB expression for 0302 Ivy cells, although CA1 (i)0333 Ivy cells are CB- and CCK-.
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        Yes, it seems that the 0302 Ivy should be folded in into one unified packet. I guess we can assume them to be calbindin-positive then? - GAA 02/02/2022
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        In reading through the two packets I had the same question regarding CB positivity as GAA. I am in favor of the merger if we assume CB positivity. - JDK 02/02/2022
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I, too, am in favor of declaring the cells to be CB positive. - DWW 02/03/2022
+                                </td>
+                        </tr>
+                </table>
+        </body>
+</html>

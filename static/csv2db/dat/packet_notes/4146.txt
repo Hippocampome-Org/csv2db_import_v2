@@ -1,0 +1,202 @@
+<html>
+        <head>
+                <style>
+                        .redtext {
+                                color: red;
+                        }
+                        .bluetext {
+                                color: #0000FF; /* blue */
+                        }
+                        .greentext {
+                                color: #008000; /* dark green */
+                        }
+                        .purpletext {
+                                color: #800080; /* dark purple */
+                        }
+                        .orangetext {
+                                color: #FF6820; /* orange */
+                        }
+                </style>
+        </head>
+        <body>
+                <p style="font-family: courier">
+                        <b>CA1 (i) 1113 Recurrent O-LMR neurons</b>
+                </p>
+                <p style="font-family: courier">
+                        <b>Notes:</b>
+                </p>
+                <p style="font-family: courier">
+                        N = 2
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        DWW 02/16/2015
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        CLR 02/17/2015
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        CW 02/18/2015
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        OK. Name: recurrent O-LMR? - GAA
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>CA1 (i)1103 Recurrent O-LMR (Recurr O-LMR) neurons</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Related types:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        CA1 (i)1113 Recurrent O-LMRP (v2.0 active)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA1 (i)1112 O-LMRP (v2.0 on-hold)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA1 (i)1102 O-LMR (v1.0 active)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA1 (i)1003 Recurrent O-LM (v1.0 active)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA1 (i)1002 O-LM (v1.0 active)
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes:</b>
+                </p>
+                <p style="font-family: courier">
+                        mGluR1&alpha;+. SOM+.
+                </p>
+                <p style="font-family: courier">
+                        A:SLM_SR_SO boutons.
+                </p>
+                <p style="font-family: courier">
+                        The Svoboda cell is currently on-hold.
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        Approved as CA1 1103. This fits with my comments on HIPP cells in the previous round of packets. - CLR 03/28/2017
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Approved by DWW and KM - 06/21/2017
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Need 1113 packet comparison
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Svoboda might be O-Bi? - GAA 10/03/2017
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>These 1103 cells have scant presence in SP, whereas the 1113 cells have multiple A's that branch and terminate in SP.</b>
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        Can we create a single packet between 1113 & 1103? - GAA 10/10/2017
+                </p>
+                <p style="font-family: courier">
+                        <b>CA1 (i)1103 Recurrent O-LMR (Recurr O-LMR) neurons [4146]</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Related types:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        CA1 (i)1112 O-LMRP (v2.0 on-hold)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA1 (i)1102 O-LMR (v1.0 active)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA1 (i)1003 Recurrent O-LM (v1.0 active)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA1 (i)1002 O-LM (v1.0 active)
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes:</b>
+                </p>
+                <p style="font-family: courier">
+                        mGluR1&alpha;+. SOM+.
+                </p>
+                <p style="font-family: courier">
+                        A:SLM_SR_SO boutons.
+                </p>
+                <p style="font-family: courier">
+                        The Svoboda cell is currently on-hold.
+                </p>
+                <p style="font-family: courier">
+                        The Quattrocolo and Chittajallu cells were previously interpreted as 1113.
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        Can we create a single packet between 1113 & 1103? - GAA 10/10/2017
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        KM blindly reviewed all 4 cells in question and interpreted all 4 as 1103. - DWW 10/11/2017
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        The former 1113 packet has now been merged with the cells in this 1103 packet.
+                </p>
+        </body>
+</html>

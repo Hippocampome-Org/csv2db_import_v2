@@ -1,6 +1,5 @@
-Axons exclusively target the axon initial segment of CA1 pyramidal cells (and, unlike basket cells, do not target other interneurons)
-<p>
-perisomatic axonal targeting interpreted as PCL
-<p>
+Axons exclusively target the axon initial segment of CA1 pyramidal cells (and, unlike basket cells, do not target other interneurons)
+
+perisomatic axonal targeting interpreted as PCL
 
 extended interpretation of SP in apical and basal directions

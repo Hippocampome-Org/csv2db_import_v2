@@ -1,0 +1,84 @@
+<html>
+        <head>
+                <style>
+                        .redtext {
+                                color: red;
+                        }
+                        .bluetext {
+                                color: #0000FF; /* blue */
+                        }
+                        .greentext {
+                                color: #008000; /* dark green */
+                        }
+                        .purpletext {
+                                color: #800080; /* dark purple */
+                        }
+                        .orangetext {
+                                color: #FF6820; /* orange */
+                        }
+                </style>
+        </head>
+        <body>
+                <p style="font-family: courier">
+                        <b>DG (i)3300p-Sub_100 Wide-arbor Neurogliaform (Wide NGF) cells [1075]</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Related types:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        DG (i)3300 COM-MOPP (v2.0 unapproved active)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        DG (i)3000p Neurogliaform (v1.0 active)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        DG (i)3000 MOPP (v1.0 active)
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes: These 3300p cells clearly have projections into Sub, which distinguishes them from the 3300 and 3000 cells. Although weak for A, there is an A and D presence in SMi for these 3300p cells, which is lacking in the 3000p cells.</b>
+                </p>
+                <p style="font-family: courier">
+                        [Y:A:DG:SMi]{low}
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        Figure S6:  I approve these calls - CLR 01/17/2017
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Approved. - KM 09/21/2017
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        This one looks good. Neurogliaform? - GAA 10/03/2017
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        OK? Though not really superstrong ...
+                                        <br>
+                                        Name: wide-arbor NGF?!
+                                        <br>
+                                        Reconfirm with DWW ... - GAA 10/13/2017
+                                </td>
+                        </tr>
+                </table>
+        </body>
+</html>

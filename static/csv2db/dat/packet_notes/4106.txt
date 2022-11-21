@@ -1,0 +1,136 @@
+<html>
+        <head>
+                <style>
+                        .redtext {
+                                color: red;
+                        }
+                        .bluetext {
+                                color: #0000FF; /* blue */
+                        }
+                        .greentext {
+                                color: #008000; /* dark green */
+                        }
+                        .purpletext {
+                                color: #800080; /* dark purple */
+                        }
+                        .orangetext {
+                                color: #FF6820; /* orange */
+                        }
+                </style>
+        </head>
+        <body>
+                <p style="font-family: courier">
+                        <b>CA1 (i)0232 axo-axonic (AA) cells [4106]</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Related types:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        CA1 (i)2232 Axo-axonic (v1.0 active)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA1 (i)0232 Basket (v2.0 active)
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=150 style="font-family: courier"></td>
+                                <td style="font-family: courier">
+                                        CA1 (i)0232 Basket CCK+ (v2.0 active)
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes:</b>
+                </p>
+                <p style="font-family: courier">
+                        N = 3
+                </p>
+                <p style="font-family: courier">
+                        rarely has spines
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        DWW 02/18/2015
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        CLR 02/18/2015
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I am reluctant to approve 0232 AA. This is another one where I really would like to contact authors (Dr. Topolnik perhaps?). The evidence for no dendrites in SLM is similar to that we have for baskets. If we create this type, do we need to revisit the evidence in 2232 baskets and CCK baskets and possibly create 0232 types for them? (BTW, I think the neurons on pages 9 and 10 are from CA3.) - CW 02/18/2015
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        OK - GAA
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        The two cells from Dugladze 2012 have been removed and placed in a CA3 packet. - 09/10/2015
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        Do you approve of these cells as supplements to the already active 2232 Axo-axonics? - DWW 09/10/2015
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Yes, I approve adding these neurons to 2232 AA. - CW 09/16/2015
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Why the inconsistency between the way we'd treat these and the 0232 BCs?
+                                </td>
+                        </tr>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        Because we don't have a quote from Soltesz? - CLR 10/10/2015
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I think that one of the Martinez neurons arguably has countable dendrites in SLM and the other looks a bit odd. As for the Tyan neuron, the absence of the SLM/SR layer line gives me pause. However, if you both agree with creating the 0232 AA type, I am okay with it. - CW 10/12/2015
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I agree with CW -- very borderline. I can go either way - let's discuss and write down our rules for these cases. - GAA 11/29/2015
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        The CA1 (i)2232 Axo-axonic packet has been reviewed and there are no further examples of the 0232 pattern. - 04/20/2016
+                </p>
+        </body>
+</html>
