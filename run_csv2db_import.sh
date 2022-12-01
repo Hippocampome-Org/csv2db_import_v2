@@ -19,6 +19,8 @@ iconv -f latin1 -t UTF-8 iconv/latin1/known_connections.csv > iconv/utf8/known_c
 iconv -f latin1 -t UTF-8 iconv/latin1/marker_fragment.csv > iconv/utf8/marker_fragment.csv
 iconv -f latin1 -t UTF-8 iconv/latin1/izhmodels_single.csv > iconv/utf8/izhmodels_single.csv
 iconv -f latin1 -t UTF-8 iconv/latin1/markerdata.csv > iconv/utf8/markerdata.csv
+#iconv -f latin1 -t UTF-8 iconv/latin1/markerdata1.csv > iconv/utf8/markerdata1.csv
+#iconv -f latin1 -t UTF-8 iconv/latin1/markerdata2.csv > iconv/utf8/markerdata2.csv
 iconv -f latin1 -t UTF-8 iconv/latin1/material_method.csv > iconv/utf8/material_method.csv
 iconv -f latin1 -t UTF-8 iconv/latin1/morph_fragment.csv > iconv/utf8/morph_fragment.csv
 iconv -f latin1 -t UTF-8 iconv/latin1/morphdata.csv > iconv/utf8/morphdata.csv
@@ -56,6 +58,14 @@ iconv -f latin1 -t UTF-8 iconv/latin1/phases_fragment.csv > iconv/utf8/phases_fr
 iconv -f latin1 -t UTF-8 iconv/latin1/attachment_phases.csv > iconv/utf8/attachment_phases.csv
 iconv -f latin1 -t UTF-8 iconv/latin1/phases_evidence_type_rel.csv > iconv/utf8/phases_evidence_type_rel.csv
 iconv -f latin1 -t UTF-8 iconv/latin1/phases_evidence_fragment_rel.csv > iconv/utf8/phases_evidence_fragment_rel.csv
+iconv -f latin1 -t UTF-8 iconv/latin1/counts.csv > iconv/utf8/counts.csv
+iconv -f latin1 -t UTF-8 iconv/latin1/counts_fragment.csv > iconv/utf8/counts_fragment.csv
+iconv -f latin1 -t UTF-8 iconv/latin1/counts_evidence_type_rel.csv > iconv/utf8/counts_evidence_type_rel.csv
+iconv -f latin1 -t UTF-8 iconv/latin1/counts_evidence_fragment_rel.csv > iconv/utf8/counts_evidence_fragment_rel.csv
+iconv -f latin1 -t UTF-8 iconv/latin1/attachment_counts.csv > iconv/utf8/attachment_counts.csv
+iconv -f latin1 -t UTF-8 iconv/latin1/citations.csv > iconv/utf8/citations.csv
+iconv -f latin1 -t UTF-8 iconv/latin1/Hippocampome_to_NMO.csv > iconv/utf8/Hippocampome_to_NMO.csv
+iconv -f latin1 -t UTF-8 iconv/latin1/ModelDB_mapping.csv > iconv/utf8/ModelDB_mapping.csv
 
 cp -vr iconv/utf8/* static/csv2db/dat/
 
