@@ -44,7 +44,8 @@ soma_location_map = {
     'stratum moleculare outer'     : 'SMo',
     'stratum oriens'               : 'SO' ,
     'stratum pyramidale'           : 'SP' ,
-    'stratum radiatum'             : 'SR'
+    'stratum radiatum'             : 'SR' ,
+    'polymorphic layer'            : 'PL'
 }
 
 class MorphdataPropertyRecords:
@@ -71,7 +72,7 @@ class MorphdataPropertyRecords:
 class MorphdataStringField:
     def parse_and_save(row,count):
         try:
-            if (row['Class Status'] == 'N' or row['Class Status'] == 'M') and row['Neurites \ Layer ID->'] != 'somata':
+            if (row['Class Status'] == 'N' or row['Class Status'] == 'M' or row['Class Status'] == 'R' or row['Class Status'] == 'P') and row['Neurites \ Layer ID->'] != 'somata':
                 Type_id = int(row['unique ID'])
                 unvetted = 0
                 try:
@@ -90,6 +91,14 @@ class MorphdataStringField:
                     perisomatic_targeting_flag = int(row['Perisomatic targeting flag'].strip())
                 except ValueError:
                     perisomatic_targeting_flag = None
+#                try:
+#                    mec_lec_flag = int(row['MEC/LEC flag'].strip())
+#                except ValueError:
+#                    mec_lec_flag = None
+#                try:
+#                    interneuron_specific_flag = int(row['IS flag'].strip())
+#                except ValueError:
+#                    interneuron_specific_flag = None
                 #supplemental pmids
                 supplemental_pmids = row['Supplemental PMIDs'].strip()
                 #supertype
@@ -133,8 +142,10 @@ class MorphdataStringField:
                                 Evidence_id = row_object.Evidence_id
                                 # check for EvidencePropertyTypeRel match and add if new
                                 try:
+#                                    row_object = EvidencePropertyTypeRel.objects.get(Evidence_id=Evidence_id,Property_id=Property_id,Type_id=Type_id,unvetted=unvetted,pc_flag=pc_flag,soma_pcl_flag=soma_pcl_flag,ax_de_pcl_flag=ax_de_pcl_flag,perisomatic_targeting_flag=perisomatic_targeting_flag,mec_lec_flag=mec_lec_flag,interneuron_specific_flag=interneuron_specific_flag,supplemental_pmids=supplemental_pmids)
                                     row_object = EvidencePropertyTypeRel.objects.get(Evidence_id=Evidence_id,Property_id=Property_id,Type_id=Type_id,unvetted=unvetted,pc_flag=pc_flag,soma_pcl_flag=soma_pcl_flag,ax_de_pcl_flag=ax_de_pcl_flag,perisomatic_targeting_flag=perisomatic_targeting_flag,supplemental_pmids=supplemental_pmids)
                                 except EvidencePropertyTypeRel.DoesNotExist:
+#                                    row_object = EvidencePropertyTypeRel(Evidence_id=Evidence_id,Property_id=Property_id,Type_id=Type_id,unvetted=unvetted,pc_flag=pc_flag,soma_pcl_flag=soma_pcl_flag,ax_de_pcl_flag=ax_de_pcl_flag,perisomatic_targeting_flag=perisomatic_targeting_flag,mec_lec_flag=mec_lec_flag,interneuron_specific_flag=interneuron_specific_flag,supplemental_pmids=supplemental_pmids)
                                     row_object = EvidencePropertyTypeRel(Evidence_id=Evidence_id,Property_id=Property_id,Type_id=Type_id,unvetted=unvetted,pc_flag=pc_flag,soma_pcl_flag=soma_pcl_flag,ax_de_pcl_flag=ax_de_pcl_flag,perisomatic_targeting_flag=perisomatic_targeting_flag,supplemental_pmids=supplemental_pmids)
                                     row_object.save()
                                     # add ArticleSynonymRel record if unique
@@ -191,8 +202,10 @@ class MorphdataStringField:
                                     Evidence_id = row_object.Evidence_id
                                     # check for EvidencePropertyTypeRel match and add if new
                                     try:
+#                                        row_object = EvidencePropertyTypeRel.objects.get(Evidence_id=Evidence_id,Property_id=Property_id,Type_id=Type_id,unvetted=unvetted,pc_flag=pc_flag,soma_pcl_flag=soma_pcl_flag,ax_de_pcl_flag=ax_de_pcl_flag,perisomatic_targeting_flag=perisomatic_targeting_flag,mec_lec_flag=mec_lec_flag,interneuron_specific_flag=interneuron_specific_flag,supplemental_pmids=supplemental_pmids)
                                         row_object = EvidencePropertyTypeRel.objects.get(Evidence_id=Evidence_id,Property_id=Property_id,Type_id=Type_id,unvetted=unvetted,pc_flag=pc_flag,soma_pcl_flag=soma_pcl_flag,ax_de_pcl_flag=ax_de_pcl_flag,perisomatic_targeting_flag=perisomatic_targeting_flag,supplemental_pmids=supplemental_pmids)
                                     except EvidencePropertyTypeRel.DoesNotExist:
+#                                        row_object = EvidencePropertyTypeRel(Evidence_id=Evidence_id,Property_id=Property_id,Type_id=Type_id,unvetted=unvetted,pc_flag=pc_flag,soma_pcl_flag=soma_pcl_flag,ax_de_pcl_flag=ax_de_pcl_flag,perisomatic_targeting_flag=perisomatic_targeting_flag,mec_lec_flag=mec_lec_flag,interneuron_specific_flag=interneuron_specific_flag,supplemental_pmids=supplemental_pmids)
                                         row_object = EvidencePropertyTypeRel(Evidence_id=Evidence_id,Property_id=Property_id,Type_id=Type_id,unvetted=unvetted,pc_flag=pc_flag,soma_pcl_flag=soma_pcl_flag,ax_de_pcl_flag=ax_de_pcl_flag,perisomatic_targeting_flag=perisomatic_targeting_flag,supplemental_pmids=supplemental_pmids)
                                         row_object.save()
                                         # add ArticleSynonymRel record if unique
@@ -254,8 +267,10 @@ class MorphdataStringField:
                                         Evidence_id = row_object.Evidence_id
                                         # check for EvidencePropertyTypeRel match and add if new
                                         try:
+#                                            row_object = EvidencePropertyTypeRel.objects.get(Evidence_id=Evidence_id,Property_id=Property_id,Type_id=Type_id,unvetted=unvetted,pc_flag=pc_flag,soma_pcl_flag=soma_pcl_flag,ax_de_pcl_flag=ax_de_pcl_flag,perisomatic_targeting_flag=perisomatic_targeting_flag,mec_lec_flag=mec_lec_flag,interneuron_specific_flag=interneuron_specific_flag,supplemental_pmids=supplemental_pmids)
                                             row_object = EvidencePropertyTypeRel.objects.get(Evidence_id=Evidence_id,Property_id=Property_id,Type_id=Type_id,unvetted=unvetted,pc_flag=pc_flag,soma_pcl_flag=soma_pcl_flag,ax_de_pcl_flag=ax_de_pcl_flag,perisomatic_targeting_flag=perisomatic_targeting_flag,supplemental_pmids=supplemental_pmids)
                                         except EvidencePropertyTypeRel.DoesNotExist:
+#                                            row_object = EvidencePropertyTypeRel(Evidence_id=Evidence_id,Property_id=Property_id,Type_id=Type_id,unvetted=unvetted,pc_flag=pc_flag,soma_pcl_flag=soma_pcl_flag,ax_de_pcl_flag=ax_de_pcl_flag,perisomatic_targeting_flag=perisomatic_targeting_flag,mec_lec_flag=mec_lec_flag,interneuron_specific_flag=interneuron_specific_flag,supplemental_pmids=supplemental_pmids)
                                             row_object = EvidencePropertyTypeRel(Evidence_id=Evidence_id,Property_id=Property_id,Type_id=Type_id,unvetted=unvetted,pc_flag=pc_flag,soma_pcl_flag=soma_pcl_flag,ax_de_pcl_flag=ax_de_pcl_flag,perisomatic_targeting_flag=perisomatic_targeting_flag,supplemental_pmids=supplemental_pmids)
                                             row_object.save()
                                             # add ArticleSynonymRel record if unique
