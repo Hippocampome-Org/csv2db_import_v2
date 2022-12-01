@@ -16,7 +16,7 @@ from ..models import SynproCP, SynproCPTotal, SynproNOC, SynproNOCTotal, SynproN
 from ..models import SynproParcelVolumes, SynproSubLayers, SynproVolumesSelected
 from ..models import phases, phases_fragment, attachment_phases, PhasesEvidenceTypeRel, PhasesEvidenceFragmentRel
 from ..models import counts, counts_fragment, CountsEvidenceTypeRel, CountsEvidenceFragmentRel, Epdata
-from ..models import attachment_counts, citations, Hippocampome_to_NMO
+from ..models import attachment_counts, citations, Hippocampome_to_NMO, ModelDB_mapping
 from .epdata_string_field import EpdataPropertyRecords, EpdataStringField
 from .fragment_string_field import FragmentStringField
 from .markerdata_string_field import MarkerdataStringField
@@ -264,6 +264,8 @@ class Map:
                 Map.citations(self)
             elif order == '59':
                 Map.Hippocampome_to_NMO(self)
+            elif order == '60':
+                Map.ModelDB_mapping(self)
             else:
                 pass
             try:
@@ -1870,6 +1872,20 @@ class Map:
                     NMO_protocol=row['protocol'],
                     NMO_domain=row['domain'],
                     NMO_physical_integrity=row['physical_Integrity']
+                )
+                user_object.save()
+        except Exception as e:
+            print(e)
+
+    def ModelDB_mapping(self):
+        try:
+            for row in self.rows:
+                user_object = ModelDB_mapping(
+                    Neuron_Type=row['Neuron_Type'],
+                    Unique_ID=row['Unique_ID'],
+                    Supertype_ID=row['Supertype_ID'],
+                    ModelDB_Accession=row['ModelDB_Accession'],
+                    PMID=row['PMID']
                 )
                 user_object.save()
         except Exception as e:
