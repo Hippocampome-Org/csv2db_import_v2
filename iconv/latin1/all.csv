@@ -18,17 +18,17 @@ process order,csv filename,tables populated,derived from
 17,fp_definitions.csv,FiringPattern,FP_definitions.xlsx
 18,fp_parameters.csv,"FiringPattern, FiringPatternRel",FPparameters_v1.0.xlsx
 19,material_method.csv,MaterialMethod,FP-Materials-Methods_v1.0.xlsx
-20,conn_fragment.csv,"ArticleEvidenceRel, Evidence, EvidenceFragmentRel, ConnFragment",connfragment.csv
+20,conn_fragment.csv,"ArticleEvidenceRel, Evidence, EvidenceFragmentRel, ConnFragment, ConndataFragmentRel",connfragment.csv
 21,known_connections.csv,Conndata,conndata.xlsx
 22,term.csv,Term,term.csv
-23,onhold_types_pmids.csv,Onhold,Help_On-hold_Types.docx
+23,onhold_types_pmids.csv,Onhold,Help_On-hold_Types.xlsx
 24,izhmodels_single.csv,Izhmodels,IzhModels_Matrix_v1.0.csv
 25,user.csv,User,user.csv
 26,attachment_neurite.csv,attachment_neurite,attachment_neurite_v1.0.xlsx
 27,neurite_quantified.csv,neurite_quantified,neurites_quantified_v1.0.xlsx
 28,neurite.csv,neurite,URD_neurite_v1.0.xlsx
-29,potential_synapses.csv,potential_synapses,Potential Synapses 4.0.xlsx
-30,number_of_contacts.csv,number_of_contacts,Potential Synapses 4.0.xlsx
+29,potential_synapses.csv,potential_synapses,Potential_Synapses_4.0.xlsx
+30,number_of_contacts.csv,number_of_contacts,Potential_Synapses_4.0.xlsx
 31,attachment_conn.csv,attachment_connectivity,attachment_conn_v1.0.xlsx
 32,fragment_nbyk.csv,"SynproFragment, SynproArticleEvidenceRel, SynproEvidenceFragmentRel",fragment_nbyk.xlsx
 33,evi_pro_type_rel_nbyk.csv,SynproEvidencePropertyTypeRel,evi_pro_type_rel_nbyk.xlsx
@@ -36,7 +36,7 @@ process order,csv filename,tables populated,derived from
 35,evi_pro_type_rel_nbym.csv,SynproEvidencePropertyTypeRel,evi_pro_type_rel_nbym.xlsx
 36,synpro_prop_parcel_rel.csv,SynproPropParcelRel,synpro_prop_parcel_rel.xlsx
 37,synpro_type_type_rel.csv,SynproTypeTypeRel,synpro_type_type_rel.xlsx
-38,attachment_neurite_rar.csv,attachment_neurite_rar2,attachment_neurite_rar_v1_0_update_022720.xlsx
+38,attachment_neurite_rar.csv,attachment_neurite_rar2,attachment_neurite_rar_v1.0.xlsx
 39,SynproCP.csv,SynproCP,SynproCP.csv
 40,SynproCPTotal.csv,SynproCPTotal,SynproCPTotal.csv
 41,SynproNOC.csv,SynproNOC,SynproNOC.csv
@@ -58,3 +58,4 @@ process order,csv filename,tables populated,derived from
 57,attachment_counts.csv,attachment_counts,attachment_counts_v1.0.xlsx
 58,citations.csv,citations,citations_v2.0.xlsx
 59,Hippocampome_to_NMO.csv,Hippocampome_to_NMO,NMO2HC.xlsx
+60,ModelDB_mapping.csv,ModelDB_mapping,ModelDB_mapping.xlsx
