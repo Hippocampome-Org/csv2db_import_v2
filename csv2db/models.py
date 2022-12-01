@@ -1286,3 +1286,14 @@ class Hippocampome_to_NMO(models.Model):
     class Meta:
         db_table = 'Hippocampome_to_NMO'
 
+class ModelDB_mapping(models.Model):
+    id                                    = models.AutoField(primary_key=True)
+    dt                                    = models.DateTimeField(auto_now_add=True)
+    Neuron_Type                           = models.CharField(max_length=64, null=True)
+    Unique_ID                             = models.CharField(max_length=4, null=True)
+    Supertype_ID                          = models.CharField(max_length=7, null=True)
+    ModelDB_Accession                     = models.CharField(max_length=10, null=True)
+    PMID                                  = models.CharField(max_length=10, null=True)
+    class Meta:
+        db_table = 'ModelDB_mapping'
+
