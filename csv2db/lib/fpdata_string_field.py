@@ -537,7 +537,7 @@ class FiringPatternStringField:
                                 type_id = int(type_id.replace('-',''))
                         except Exception:
                             # write new pmid_isbn to article_not_found
-                            row_object = ingest_errors(field='Uniqu ID',value=type_id,filename='materials_methods.csv',file_row_num=row_num,comment='invalid Unique Id value')
+                            row_object = ingest_errors(field='Uniq ID',value=type_id,filename='materials_methods.csv',file_row_num=row_num,comment='invalid Unique Id value')
                             row_object.save()
                             type_id = None
                     else: 
