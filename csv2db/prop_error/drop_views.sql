@@ -1,0 +1,13 @@
+DROP VIEW IF EXISTS SynproConnProb;
+DROP VIEW IF EXISTS SynproErrPropConstants;
+DROP VIEW IF EXISTS SynproLengthsHullVols;
+DROP VIEW IF EXISTS SynproNPS;
+DROP VIEW IF EXISTS SynproNumberOfContacts;
+DROP VIEW IF EXISTS SynproNumberOfParcels;
+DROP VIEW IF EXISTS SynproPairsLHV;
+DROP VIEW IF EXISTS SynproPairsOrder;
+DROP VIEW IF EXISTS SynproSelectedVolumes;
+DROP VIEW IF EXISTS SynproTotalCP;
+DROP VIEW IF EXISTS SynproTotalNOC;
+DROP VIEW IF EXISTS SynproTotalNPS;
+DROP VIEW IF EXISTS SynproVolumeOfOverlap;

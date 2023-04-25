@@ -1,3 +1,5 @@
+#!/bin/bash
+
 ###############################
 #
 # Build propagate errors values
@@ -17,7 +19,11 @@ command2=$(eval $command)
 command3="echo $command2 | cut -c15-10000"
 DB=$(eval $command3)
 ADDR=localhost # db address
-CSV_DIR=csv # csv files location
+CSV_DIR=csv # import csv files location
+EXP_DIR="/var/tmp/SynproExports/" # export csv files directory
+
+echo "Dropping old views" &&
+mysql -h $ADDR -u $USER -p$PASS $DB < drop_views.sql
 
 echo "Creating constants table"
 mysql -h $ADDR -u $USER -p$PASS $DB < constants.sql &&
@@ -58,4 +64,48 @@ mysql -h $ADDR -u $USER -p$PASS $DB < total_nps.sql &&
 echo "Running total_noc.sql" &&
 mysql -h $ADDR -u $USER -p$PASS $DB < total_noc.sql &&
 echo "Running total_cp.sql" &&
-mysql -h $ADDR -u $USER -p$PASS $DB < total_cp.sql
+mysql -h $ADDR -u $USER -p$PASS $DB < total_cp.sql &&
+
+echo "Exporting tables (can take several minutes)" &&
+echo "Tables will be exported to csv files in $EXP_DIR" &&
+command="mkdir $EXP_DIR" &&
+eval $command
+echo "Setting permissions of export directory to everyone. Sudo password may be needed." &&
+command="sudo chmod -R 777 $EXP_DIR" &&
+eval $command &&
+echo "Removing old csv files" &&
+command="rm $EXP_DIR/SynproNoPS.csv; rm $EXP_DIR/SynproNOC.csv; \
+rm $EXP_DIR/SynproCP.csv; rm $EXP_DIR/SynproNPSTotal.csv; \
+rm $EXP_DIR/SynproNOCTotal.csv; rm $EXP_DIR/SynproCPTotal.csv;" &&
+eval $command
+echo "Setting permissions of export directory to mysql. Sudo password may be needed." &&
+command="sudo chown -R mysql:mysql $EXP_DIR" &&
+eval $command &&
+echo "Exporting SynproNoPS" &&
+echo "SET STATEMENT max_statement_time=0 FOR SELECT * FROM \
+$DB.SynproNPS INTO OUTFILE '$EXP_DIR/SynproNoPS.csv';" > export_table.sql &&
+mysql -h $ADDR -u $USER -p$PASS $DB < export_table.sql &&
+echo "Exporting SynproNOC" &&
+echo "SET STATEMENT max_statement_time=0 FOR SELECT * FROM \
+$DB.SynproNumberOfContacts INTO OUTFILE '$EXP_DIR/SynproNOC.csv';" > export_table.sql &&
+mysql -h $ADDR -u $USER -p$PASS $DB < export_table.sql &&
+echo "Exporting SynproCP" &&
+echo "SET STATEMENT max_statement_time=0 FOR SELECT * FROM \
+$DB.SynproConnProb INTO OUTFILE '$EXP_DIR/SynproCP.csv';" > export_table.sql &&
+mysql -h $ADDR -u $USER -p$PASS $DB < export_table.sql &&
+echo "Exporting SynproNPSTotal" &&
+echo "SET STATEMENT max_statement_time=0 FOR SELECT * FROM \
+$DB.SynproTotalNPS INTO OUTFILE '$EXP_DIR/SynproNPSTotal.csv';" > export_table.sql &&
+mysql -h $ADDR -u $USER -p$PASS $DB < export_table.sql &&
+echo "Exporting SynproNOCTotal" &&
+echo "SET STATEMENT max_statement_time=0 FOR SELECT * FROM \
+$DB.SynproTotalNOC INTO OUTFILE '$EXP_DIR/SynproNOCTotal.csv';" > export_table.sql &&
+mysql -h $ADDR -u $USER -p$PASS $DB < export_table.sql &&
+echo "Exporting SynproCPTotal" &&
+echo "SET STATEMENT max_statement_time=0 FOR SELECT * FROM \
+$DB.SynproTotalCP INTO OUTFILE '$EXP_DIR/SynproCPTotal.csv';" > export_table.sql &&
+mysql -h $ADDR -u $USER -p$PASS $DB < export_table.sql &&
+echo "Setting permissions of export directory to everyone. Sudo password may be needed." &&
+command="sudo chmod -R 777 $EXP_DIR" &&
+eval $command &&
+echo "All operations completed."
