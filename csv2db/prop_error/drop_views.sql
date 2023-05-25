@@ -1,4 +1,5 @@
 DROP VIEW IF EXISTS SynproSubLayers;
+DROP TABLE IF EXISTS SynproSubLayers;
 DROP VIEW IF EXISTS SynproConnProb;
 DROP VIEW IF EXISTS SynproErrPropConstants;
 DROP VIEW IF EXISTS SynproLengthsHullVols;
