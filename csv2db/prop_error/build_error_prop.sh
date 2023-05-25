@@ -25,15 +25,11 @@ EXP_DIR="/var/tmp/SynproExports/" # export csv files directory
 echo "Dropping old views" &&
 mysql -h $ADDR -u $USER -p$PASS $DB < drop_views.sql
 
-echo "Creating constants table"
+echo "Creating constants table" &&
 mysql -h $ADDR -u $USER -p$PASS $DB < constants.sql &&
 
-#echo "Creating subregions and layers table" &&
-#mysql -h $ADDR -u $USER -p$PASS $DB < create_synpro_sub_layers.sql &&
-
-#echo "Adding data to subregions and layers table" &&
-#mysqlimport --ignore-lines=1 --fields-terminated-by=, --verbose --local -u $USER -p$PASS $DB $CSV_DIR/SynproSubLayers.csv > /dev/null 2>&1 &&
-
+echo "Running synpro_sub_layers.sql" &&
+mysql -h $ADDR -u $USER -p$PASS $DB < synpro_sub_layers.sql &&
 echo "Running lengths_hull_vols.sql" &&
 mysql -h $ADDR -u $USER -p$PASS $DB < lengths_hull_vols.sql &&
 echo "Running order_of_pairs.sql" &&
