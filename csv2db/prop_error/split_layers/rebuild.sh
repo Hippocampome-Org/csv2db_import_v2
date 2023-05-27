@@ -1,0 +1,1 @@
+g++ -o split_layers ./split_layers.cpp

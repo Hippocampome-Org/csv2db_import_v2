@@ -21,45 +21,61 @@ DB=$(eval $command3)
 ADDR=localhost # db address
 CSV_DIR=csv # import csv files location
 EXP_DIR="/var/tmp/SynproExports/" # export csv files directory
+NOC_CSV="$EXP_DIR/number_of_contacts.csv" # exported number_of_contacts table
+NOCR_CSV="$EXP_DIR/number_of_contacts_reformat.csv" # reformatted number_of_contacts table
 
 echo "Dropping old views" &&
 mysql -h $ADDR -u $USER -p$PASS $DB < drop_views.sql
-
-echo "Creating constants table" &&
+echo "Creating SynproErrPropConstants view" &&
 mysql -h $ADDR -u $USER -p$PASS $DB < constants.sql &&
-
-echo "Running synpro_sub_layers.sql" &&
-mysql -h $ADDR -u $USER -p$PASS $DB < synpro_sub_layers.sql &&
-echo "Running lengths_hull_vols.sql" &&
+echo "Creating SynproLengthsHullVols view" &&
 mysql -h $ADDR -u $USER -p$PASS $DB < lengths_hull_vols.sql &&
-echo "Running order_of_pairs.sql" &&
+
+# reformat number_of_contacts data
+echo "Creating number_of_contacts csv file" &&
+command="rm $EXP_DIR/number_of_contacts.csv" &&
+eval $command &&
+echo "SET STATEMENT max_statement_time=0 FOR SELECT * FROM \
+$DB.number_of_contacts INTO OUTFILE '$EXP_DIR/number_of_contacts.csv' \
+FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '' \
+LINES TERMINATED BY '\n';" > export_table.sql &&
+mysql -h $ADDR -u $USER -p$PASS $DB < export_table.sql &&
+echo "Setting permissions of export directory to everyone. Sudo password may be needed." &&
+command="sudo chmod -R 777 $EXP_DIR" &&
+eval $command &&
+echo "Reformatting number_of_contacts csv file" &&
+./split_layers/split_layers $NOC_CSV $NOCR_CSV &&
+echo "Creating NOC reformatted data table" &&
+mysql -h $ADDR -u $USER -p$PASS $DB < create_NOCR.sql &&
+echo "Importing reformatted NOC data" &&
+echo "LOAD DATA LOCAL INFILE '$NOCR_CSV' INTO TABLE SynproNOCR \
+ COLUMNS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '' \
+ LINES TERMINATED BY '\n';" > import_table.sql &&
+mysql -h $ADDR -u $USER -p$PASS $DB < import_table.sql &&
+
+echo "Creating SynproPairsOrder view" &&
 mysql -h $ADDR -u $USER -p$PASS $DB < order_of_pairs.sql &&
-echo "Running pairs_lengths_hull_vols.sql" &&
+echo "Creating SynproPairsLHV view" &&
 mysql -h $ADDR -u $USER -p$PASS $DB < pairs_lengths_hull_vols.sql &&
-echo "Running number_of_parcels.sql" &&
+echo "Creating SynproNumberOfParcels view" &&
 mysql -h $ADDR -u $USER -p$PASS $DB < number_of_parcels.sql &&
-
-#echo "Creating parcel volumes table" &&
-#mysql -h $ADDR -u $USER -p$PASS $DB < create_synpro_parcel_volumes.sql &&
-
-#echo "Adding data to parcel volumes table" &&
-#mysqlimport --ignore-lines=1 --fields-terminated-by=, --verbose --local -u $USER -p$PASS $DB $CSV_DIR/SynproParcelVolumes.csv > /dev/null 2>&1 &&
-
-echo "Running selected_volumes.sql" &&
-mysql -h $ADDR -u $USER -p$PASS $DB < selected_volumes.sql &&
-echo "Running volume_of_overlap.sql" &&
+echo "Creating SynproParcelVolumes table" &&
+mysql -h $ADDR -u $USER -p$PASS $DB < create_synpro_parcel_volumes.sql &&
+echo "Adding data to parcel volumes table" &&
+mysqlimport --ignore-lines=1 --fields-terminated-by=, --verbose --local -u $USER -p$PASS $DB $CSV_DIR/SynproParcelVolumes.csv > /dev/null 2>&1 &&
+echo "Creating SynproVolumeOfOverlap view" &&
 mysql -h $ADDR -u $USER -p$PASS $DB < volume_of_overlap.sql &&
-echo "Running nps.sql" &&
+echo "Creating SynproNPS view" &&
 mysql -h $ADDR -u $USER -p$PASS $DB < nps.sql &&
-echo "Running number_of_contacts.sql" &&
+echo "Creating SynproNumberOfContacts view" &&
 mysql -h $ADDR -u $USER -p$PASS $DB < number_of_contacts.sql &&
-echo "Running connection_probability.sql" &&
+echo "Creating SynproConnProb view" &&
 mysql -h $ADDR -u $USER -p$PASS $DB < connection_probability.sql &&
-echo "Running total_nps.sql" &&
+echo "Creating SynproTotalNPS view" &&
 mysql -h $ADDR -u $USER -p$PASS $DB < total_nps.sql &&
-echo "Running total_noc.sql" &&
+echo "Creating SynproTotalNOC view" &&
 mysql -h $ADDR -u $USER -p$PASS $DB < total_noc.sql &&
-echo "Running total_cp.sql" &&
+echo "Creating SynproTotalCP view" &&
 mysql -h $ADDR -u $USER -p$PASS $DB < total_cp.sql &&
 
 echo "Exporting tables (can take several minutes)" &&
