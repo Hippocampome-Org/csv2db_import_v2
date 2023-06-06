@@ -45,6 +45,8 @@ To install and run "csv2db", the following versions (or later) of base code shou
 - mysqldump -u hdb -p hippocampome > hippocampome.sql
 
 ### Database access
+example_user.csv should be renamed and placed in iconv/latin1/user.csv to generate passwords needed for site access. Only an example password is included in this version of the code, not the ones used on the site. One should set that manually to the passwords wanted. iconv/latin1/user.csv and similar files are in the .gitignore file to avoid accidental uploads of passwords.
+
 example_settings.py should be renamed and moved to krasnow/settings.py once database variables are set at around line 77 in the file. krasnow/settings.py is in the in the .gitignore file to avoid accidental uploads of passwords. Also, the SECRET_KEY variable should be set to the right value in the file.
 
 ### Running all scripts
