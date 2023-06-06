@@ -1,11 +1,82 @@
-Merger of CA1 (+)2221 pyramidal-like principal (PLP) cells and CA1 (+)2201 radiatum giant cells (RGC).
-
-CA1 PLP 2221 cell type contains unverified connections to SUB and EC.
-
-There is no CLEAR evidence for dendrites in SP in either cell type.
-
-The PLP cell type text mentions "soma located approximately 50 microm from the SP."  Based on the scale bar, basal dendrites are located near the SR/SP border and just within fuzzy boundaries for the principal layer.
-
-The RGC cell type has Gulyas (1998) Fig 2, which shows the soma of cells 1-3 also located about 50-100 microm from the SR/SP border, and it looks like the dendrites have similar extent to PLP cells.  Cell #5 does not have dendrites near SP, so it likely will NOT fit into a 2221 interpretation.
-
-In the PLP cell type, Poolos et al declare PLPs to be a subset of RGCs based on bifurcation patterns of the apical dendrites and soma shape.  However, there appears to be no current basis for hippocampome subclasses.
+<html>
+        <head>
+                <style>
+                        .redtext {
+                                color: red;
+                        }
+                        .bluetext {
+                                color: #0000FF; /* blue */
+                        }
+                        .greentext {
+                                color: #008000; /* dark green */
+                        }
+                        .purpletext {
+                                color: #800080; /* dark purple */
+                        }
+                        .orangetext {
+                                color: #FF6820; /* orange */
+                        }
+                </style>
+        </head>
+        <body>
+                <p style="font-family: courier">
+                        <b>CA1 (e)2201 Radiatum Giant Cells (CA1 RGC) [4054]</b>
+                </p>
+                <p style="font-family: courier">
+                        <b>Merger status: </b>
+                </p>
+                <p style="font-family: courier">
+                        Merger of CA1 (+)2221 pyramidal-like principal (PLP) cells and CA1 (+)2201 radiatum giant cells (RGC).
+                </p>
+                <p style="font-family: courier">
+                        <b>Notes: </b>
+                </p>
+                <p style="font-family: courier">
+                        CA1 PLP 2221 cell type contains unverified connections to SUB and EC.
+                </p>
+                <p style="font-family: courier">
+                        There is no CLEAR evidence for dendrites in SP in either cell type.
+                </p>
+                <p style="font-family: courier">
+                        The PLP cell type text mentions "soma located approximately 50 microm from the SP."  Based on the scale bar, basal dendrites are located near the SR/SP border and just within fuzzy boundaries for the principal layer.
+                </p>
+                <p style="font-family: courier">
+                        The RGC cell type has Gulyas (1998) Fig 2, which shows the soma of cells 1-3 also located about 50-100 microm from the SR/SP border, and it looks like the dendrites have similar extent to PLP cells.  Cell #5 does not have dendrites near SP, so it likely will NOT fit into a 2221 interpretation.
+                </p>
+                <p style="font-family: courier">
+                        In the PLP cell type, Poolos et al declare PLPs to be a subset of RGCs based on bifurcation patterns of the apical dendrites and soma shape.  However, there appears to be no current basis for hippocampome subclasses.
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        CLR
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        DWW
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        CW
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        <b>GAA</b>
+                </p>
+                <p style="font-family: courier">
+                        <b>Supplement Notes: </b>
+                </p>
+                <p style="font-family: courier">
+                        Rin, tau, Vm, APthresh, APampl, Apwidth, FP.
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        DWW 05/23/2022
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        I concur with the 2201 AD pattern. - JDK 05/23/2022
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        approved. - GAA 05/24/2023
+                                </td>
+                        </tr>
+                </table>
+        </body>
+</html>

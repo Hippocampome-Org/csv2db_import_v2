@@ -223,5 +223,35 @@
                                 </td>
                         </tr>
                 </table>
+                <p style="font-family: courier">
+                        <b>Supplement notes:</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Related types:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        DG (i)3303 Total Molecular Layer (v1.0 active)
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        Firing pattern.
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        DWW 05/23/2023
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        I concur with the 3302 AD pattern. - JDK 05/23/2023
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        approved. - GAA 05/24/2023
+                                </td>
+                        </tr>
+                </table>
         </body>
 </html>

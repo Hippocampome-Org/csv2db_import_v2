@@ -1,3 +1,121 @@
-Target O-LM cells (Acsady 1996)
-<p>
-supplement to CA1 (i)2223 IS O-targeting QuadD added - 11/29/2015
+<html>
+        <head>
+                <style>
+                        .redtext {
+                                color: red;
+                        }
+                        .bluetext {
+                                color: #0000FF; /* blue */
+                        }
+                        .greentext {
+                                color: #008000; /* dark green */
+                        }
+                        .purpletext {
+                                color: #800080; /* dark purple */
+                        }
+                        .orangetext {
+                                color: #FF6820; /* orange */
+                        }
+                </style>
+        </head>
+        <body>
+                <p style="font-family: courier">
+                        <b>CA1 (i)2203 IS3 neurons</b>
+                </p>
+                <p style="font-family: courier">
+                        <b>Notes:</b>
+                </p>
+                <p style="font-family: courier">
+                        N = 3
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        I think this should be merged with IS O-target QuadD (2223) - GAA
+                </p>
+                <p style="font-family: courier">
+                        <b>CA1 (i) 2223 IS O-targeting QuadD (IS O-target QuadD) neurons</b>
+                </p>
+                <p style="font-family: courier">
+                        <b>Supplement Notes:</b>
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        In the interests of parsimony, I also support the aggressive merger of these cells as supplements to the 2223 cell type. - DWW 07/21/2015
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I support all of these aggressive mergers and sign off on the packets. - CLR 09/08/2015
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I am okay with the merger. - CW 09/08/2015
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        AOK - GAA 11/29/2015
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>CA1 (-)2223 quadrilaminar interneuron specific-3 (quad IS-3) neurons</b>
+                </p>
+                <p style="font-family: courier">
+                        <b>Notes:</b>
+                </p>
+                <p style="font-family: courier">
+                        Target O-LM cells (Acsady 1996)
+                </p>
+                <p style="font-family: courier">
+                        Packet contains papers with chemical marker data
+                </p>
+                <p style="font-family: courier">
+                        supplement to CA1 (i)2223 IS O-targeting QuadD added - 11/29/2015
+                </p>
+               <p style="font-family: courier">
+                        <b>CA1 (i)2223 IS O-targeting QuadD (IS O-target QuadD) neurons [4020]</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Related types:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        CA1 (i)2003 Interneuron Specific LMO-O (v1.0 active)
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes: This neuron type has dendrites in all four layers, which distinguishes it from the IS LMO-O type.</b>
+                </p>
+                <p style="font-family: courier">
+                        [Y:D:SP]{low}
+                </p>
+                <p style="font-family: courier">
+                        FP present
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        DWW 05/23/2023
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        I concur with the 2223 AD pattern. - JDK 05/23/2023
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        approved. - GAA 05/24/2023
+                                </td>
+                        </tr>
+                </table>        
+        </body>
+</html>

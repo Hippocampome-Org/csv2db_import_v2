@@ -20,22 +20,7 @@
         </head>
         <body>
                 <p style="font-family: courier">
-                        <b>CA3 (i)22232 Basket CCK+ (BC CCK+) cells [2044]</b>
-                </p>
-                <p style="font-family: courier">
-                        <b>Notes:</b>
-                </p>
-                <p style="font-family: courier">
-                        Axo-axonic cells exclusively target pyramidal cells while basket cells are known to also target other interneurons.
-                </p>
-                <p style="font-family: courier">
-                        perisomatic axonal targeting interpreted as PCL.
-                </p>
-                <p style="font-family: courier">
-                        Aextended interpretation of SP in apical and basal directions.
-                </p>
-                <p style="font-family: courier">
-                        <b>Supplement notes: This neuron type is not known to be CCK+, has been identified by the authors as a basket not an axo-axonic cell, and is non-projecting, which distinguishes it from the other neuron types.</b>
+                        <b>CA1 (i)0312 RO-RP neurons [4193]</b>
                 </p>
                 <table>
                         <tr>
@@ -43,7 +28,7 @@
                                         <b>Related types:</b>
                                 </td>
                                 <td style="font-family: courier">
-                                        CA3 (i)22232 Basket CCK+ (v1.0 active)
+                                        CA1 (i)0333 Bistratified (v1.0 active)
                                 </td>
                         </tr>
                 </table>
@@ -52,7 +37,7 @@
                                 <td width=150 style="font-family: courier">
                                 </td>
                                 <td style="font-family: courier">
-                                        CA3 (i)22232 Axo-axonic (v1.0 active)
+                                        CA1 (i)0333 Ivy (v1.0 active)
                                 </td>
                         </tr>
                 </table>
@@ -61,7 +46,7 @@
                                 <td width=150 style="font-family: courier">
                                 </td>
                                 <td style="font-family: courier">
-                                        CA3 (i)22232p-CA2_0010-CA1_0010 basket (v1.0 on-hold)
+                                        CA1 (i)0331 RP-RPO (v2.0 active)
                                 </td>
                         </tr>
                 </table>
@@ -70,35 +55,35 @@
                                 <td width=150 style="font-family: courier">
                                 </td>
                                 <td style="font-family: courier">
-                                        CA3 (i)22232p-CA2_0010 basket (v2.0 on-hold)
+                                        CA1 (i)0302 SCR R-targeting (v1.0 active)
                                 </td>
                         </tr>
                 </table>
                 <p style="font-family: courier">
-                        FP.
+                        <b>Notes: The new cell from Bilash is being combined with a previously on-hold cell from Pouille. This neuron type clearly does not have A:SO, which distinguishes it from the other types.</b>
+                </p>
+                <p style="font-family: courier">
+                        N = 2
                 </p>
                 <p style="font-family: courier" class="redtext">
-                        DWW 05/23/2023
-                </p>
-                <p style="font-family: courier" class="redtext">
-                        I concur with the 22232 AD pattern. - JDK 05/23/2023
+                        I am leaning toward yes because of the PCL rule, since there appears to be sufficient axons branching in SP. However, because the PCL rule states that we do not count the dendrites in SP, this should be 0312 not 0332. - DWW 05/12/2023
                 </p>
                 <table>
                         <tr>
                                 <td width=25></td>
                                 <td style="font-family: courier" class="redtext">
-                                        approved. - GAA 05/24/2023
+                                        I'm in agreement with you and lean towards yes. Given the PCL rule, we can discount the fact that the Pouille cell seemed to have the dendrites just passing through SP, whereas the Bilash cell has its dendrites clearly branching within SP. So 0312 I am in agreement with for both cells. - JDK 05/12/2023
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        approved - GAA 05/22/2023
                                 </td>
                         </tr>
                 </table>
         </body>
 </html>
-
-
-
-
-
-
-
-
-

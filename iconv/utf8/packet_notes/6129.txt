@@ -1,0 +1,59 @@
+<html>
+        <head>
+                <style>
+                        .redtext {
+                                color: red;
+                        }
+                        .bluetext {
+                                color: #0000FF; /* blue */
+                        }
+                        .greentext {
+                                color: #008000; /* dark green */
+                        }
+                        .purpletext {
+                                color: #800080; /* dark purple */
+                        }
+                        .orangetext {
+                                color: #FF6820; /* orange */
+                        }
+                </style>
+        </head>
+        <body>
+                <p style="font-family: courier">
+                        <b>MEC (i)300000 LI Neurogliaform cells (MEC LI NGF) [6129]</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Related types:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        CEC (i)230000 LII Basket-Neurogliaform (v1.0 active)
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes: This neuron type is restricted entirely to MEC LI, which distinguishes it from the other hybrid type.</b>
+                </p>
+                <p style="font-family: courier">
+                        N = 2.
+                </p>
+                <p style="font-family: courier">
+                        Ephys. FP. Markers. Synaptic parameters. Counts.
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        Slam dunk yes. - DWW 05/12/2023
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        I concur it is a slam dunk yes, especially with the accompanying information provided for the counts, ephys, markers, and synaptic parameters. - JDK 05/12/2023
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        approved - GAA 05/22/2023
+                                </td>
+                        </tr>
+                </table>
+        </body>
+</html>

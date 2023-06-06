@@ -7,7 +7,7 @@ import zipfile
 import time
 import os
 from django.core.management import call_command
-from krasnow import settings
+from . import settings
 import subprocess
 from django.http import HttpResponse
 from django.http import JsonResponse

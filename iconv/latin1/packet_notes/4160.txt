@@ -1,0 +1,95 @@
+<html>
+        <head>
+                <style>
+                        .redtext {
+                                color: red;
+                        }
+                        .bluetext {
+                                color: #0000FF; /* blue */
+                        }
+                        .greentext {
+                                color: #008000; /* dark green */
+                        }
+                        .purpletext {
+                                color: #800080; /* dark purple */
+                        }
+                        .orangetext {
+                                color: #FF6820; /* orange */
+                        }
+                </style>
+        </head>
+        <body>
+                <p style="font-family: courier">
+                        <b>CA1 (i)2230 Vertical Basket cells (vBC) [4160]</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Related types:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        CA1 (i)2232 Basket (v1.0 active)
+                                </td>
+                        </tr>
+                </table>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                </td>
+                                <td style="font-family: courier">
+                                        CA1 (i)2232 Basket CCK+ (v1.0 active)
+                                </td>
+                        </tr>
+                </table>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                </td>
+                                <td style="font-family: courier">
+                                        CA1 (i)0210 R-P Basket (v2.0 active)
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes: The new cell from Que is being combined with the previously on-hold cell from Winterer. The two standard Basket cells have dendrites invading CA1:SO, which the current cells clearly do not.</b>
+                </p>
+                <p style="font-family: courier">
+                        N = 2
+                </p>
+                <p style="font-family: courier" class="bluetext">
+                        Winterer cell:
+                </p>
+                <p style="font-family: courier" class="bluetext">
+                        NMO metadata states that the dendrites are complete.
+                </p>
+                <p style="font-family: courier" class="bluetext">
+                        [Y:D:SLM{low}]. Firing pattern. CCK-. PV+.
+                </p>
+                <p style="font-family: courier" class="greentext">
+                        Que cell:
+                </p>
+                <p style="font-family: courier" class="greentext">
+                        PV+. Ephys.
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        I am now leaning toward no, since the dendrites of the Que cell protrude ever so slightly into SO, making this a common 2232 Basket. The Winterer cell has its dendrites fully reconstructed, but we do not know that about the Que cell. - DWW 05/12/2023
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        I still lean towards yes, since it does appear to me that both the Winterer and Que BC dendrites do not meet the criteria of 15% invasion within SO. - JDK 05/12/2023
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        approved, but not sure about the name, because "truncated" is typically used to indicate an artifactually incomplete neurite due to slicing. Maybe 'vertical' as in Que - which nicely counters the 'horizontal' type with D in oriens only? Also, please add Hippocampome_CA1_(i)0210_R-P_BC as related cell. - GAA 05/22/2023
+                                </td>
+                        </tr>
+                </table>
+        </body>
+</html>

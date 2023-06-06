@@ -20,22 +20,7 @@
         </head>
         <body>
                 <p style="font-family: courier">
-                        <b>CA3 (i)22232 Basket CCK+ (BC CCK+) cells [2044]</b>
-                </p>
-                <p style="font-family: courier">
-                        <b>Notes:</b>
-                </p>
-                <p style="font-family: courier">
-                        Axo-axonic cells exclusively target pyramidal cells while basket cells are known to also target other interneurons.
-                </p>
-                <p style="font-family: courier">
-                        perisomatic axonal targeting interpreted as PCL.
-                </p>
-                <p style="font-family: courier">
-                        Aextended interpretation of SP in apical and basal directions.
-                </p>
-                <p style="font-family: courier">
-                        <b>Supplement notes: This neuron type is not known to be CCK+, has been identified by the authors as a basket not an axo-axonic cell, and is non-projecting, which distinguishes it from the other neuron types.</b>
+                        <b>CA3 (i)03333 Bistratified cells (BiC) [2045]</b>
                 </p>
                 <table>
                         <tr>
@@ -43,7 +28,7 @@
                                         <b>Related types:</b>
                                 </td>
                                 <td style="font-family: courier">
-                                        CA3 (i)22232 Basket CCK+ (v1.0 active)
+                                        CA3 (i)03333 Ivy (v1.0 active)
                                 </td>
                         </tr>
                 </table>
@@ -52,7 +37,7 @@
                                 <td width=150 style="font-family: courier">
                                 </td>
                                 <td style="font-family: courier">
-                                        CA3 (i)22232 Axo-axonic (v1.0 active)
+                                        CA3 (i)03333p-DG_0113 mossy fiber-associated (CB1+) (v1.0 on-hold)
                                 </td>
                         </tr>
                 </table>
@@ -61,7 +46,7 @@
                                 <td width=150 style="font-family: courier">
                                 </td>
                                 <td style="font-family: courier">
-                                        CA3 (i)22232p-CA2_0010-CA1_0010 basket (v1.0 on-hold)
+                                        CA3 (i)03333p-DG_0003 Interneuron Specific Quad (v1.0 active)
                                 </td>
                         </tr>
                 </table>
@@ -70,18 +55,25 @@
                                 <td width=150 style="font-family: courier">
                                 </td>
                                 <td style="font-family: courier">
-                                        CA3 (i)22232p-CA2_0010 basket (v2.0 on-hold)
+                                        CA3 (i)03333p-CA1_0110-Sub_010 double projection (v1.0 on-hold)
                                 </td>
                         </tr>
                 </table>
                 <p style="font-family: courier">
-                        FP.
+                        <b>Supplement notes: This neuron type is non-projecting, is not declared to be interneuron specific, and is not dense in its neurites, which distinguishes it from the other neuron types.</b>
+                </p>
+                <p style="font-family: courier">
+                        [Y:D:CA3:SP]{low}
+                        <br>
+                        [Y:A:CA3:SP]{low}
+                        <br>
+                        FP
                 </p>
                 <p style="font-family: courier" class="redtext">
                         DWW 05/23/2023
                 </p>
                 <p style="font-family: courier" class="redtext">
-                        I concur with the 22232 AD pattern. - JDK 05/23/2023
+                        I concur with the 03333 AD pattern. - JDK 05/23/2023
                 </p>
                 <table>
                         <tr>
@@ -93,12 +85,3 @@
                 </table>
         </body>
 </html>
-
-
-
-
-
-
-
-
-

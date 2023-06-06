@@ -60,13 +60,13 @@
                         <tr>
                                 <td width=50></td>
                                 <td style="font-family: courier" class="redtext">
-                                        Thank you for the van Strien parcel figure to help clarify boundaries between layers. What makes matters more difficult is that there isnât a text description that we can rely on that states layer specific axonal presence within SUB, just that the axons had reached SUB. With that said, Iâm open to just assuming that the axon resides entirely within SP. - JDK 11/18/2021
+                                        Thank you for the van Strien parcel figure to help clarify boundaries between layers. What makes matters more difficult is that there isn't a text description that we can rely on that states layer specific axonal presence within SUB, just that the axons had reached SUB. With that said, I'm open to just assuming that the axon resides entirely within SP. - JDK 11/18/2021
                                 </td>
                         </tr>
                         <tr>
                                 <td width=50></td>
                                 <td style="font-family: courier" class="redtext">
-                                        Reviewing my response, I donât think I made it clear my preference. Thinking about this more, I am in agreement with the assumption that the axon resides entirely within SP based off the evidence we have. Therefore, I approve of the evidence as provided in this packet and support the inclusion of this neuron type for v2.0. - JDK 11/23/2021
+                                        Reviewing my response, I don't think I made it clear my preference. Thinking about this more, I am in agreement with the assumption that the axon resides entirely within SP based off the evidence we have. Therefore, I approve of the evidence as provided in this packet and support the inclusion of this neuron type for v2.0. - JDK 11/23/2021
                                 </td>
                         </tr>
                 </table>

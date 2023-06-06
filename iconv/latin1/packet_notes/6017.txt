@@ -441,5 +441,35 @@
                                 </td>
                         </tr>
                 </table>
+                <p style="font-family: courier">
+                        <b>Supplement notes: This neuron type and the related type share the same axonal projection pattern, but the distribution of neurites within EC differs.</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Related types:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        EC (e)223200p LIII Pyramidal (v1.0 active)
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        Vm, APampl, Rin, tau, APthresh, FP.
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        DWW 05/23/2023
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        We do not have layers 4 through 6 to go off for this reconstruction, but its AD pattern is spot on with the other reconstructions we have for this type. So I will assume that the AD pattern would match in layers 4 through 6, and will concur with the 223111 AD pattern. - JDK 05/23/2023
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        approved. - GAA 05/24/2023
+                                </td>
+                        </tr>
+                </table>
         </body>
 </html>

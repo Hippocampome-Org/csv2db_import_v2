@@ -22,20 +22,12 @@
                 <p style="font-family: courier">
                         <b>CA1 0103 oriens-radiatum (O-R) neurons</b>
                 </p>
-                <table>
-                        <tr>
-                                <td width=25></td>
-                                <td style="font-family: courier">
-                                        Unspecified projection to the subiculum.  
-                                </td>
-                        </tr>
-                        <tr>
-                                <td width=25></td>
-                                <td style="font-family: courier">
-                                        AKA oriens-bistratified.  
-                                </td>
-                        </tr>
-                </table>
+                <p style="font-family: courier">
+                        Unspecified projection to the subiculum.  
+                </p>
+                <p style="font-family: courier">
+                        AKA oriens-bistratified.  
+                </p>
                 <p style="font-family: courier" class="redtext">
                         Does Zemonkovics belong to the oriens-bistratified class, which is strictly located within CA1, or should it be folded into ORP or DP, since it has unspecified projections to the subiculum? - DWW
                 </p>
@@ -353,5 +345,53 @@
                 <p style="font-family: courier">
                         It was agreed by GAA, JDK, and DWW to void the potential merger. - 02/15/2022
                 </p>
+                <p style="font-family: courier">
+                        <b>Supplement notes:</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Related types:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        CA1 (i)0103p O-RO Projecting (v2.0 on-hold)
+                                </td>
+                        </tr>
+                </table>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                </td>
+                                <td style="font-family: courier">
+                                        CA1 (i)0113 X-OPR (v2.0 on-hold)
+                                </td>
+                        </tr>
+                </table>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                </td>
+                                <td style="font-family: courier">
+                                        CA1 (i)0113p Trilaminar (v1.0 active)
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        Firing patterns, Assorted markers
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        DWW 05/23/2023
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        I concur with the 0103 AD pattern. - JDK 05/23/2023
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        approved. - GAA 05/24/2023  
+                                </td>
+                        </tr>
+                </table>
         </body>
 </html>

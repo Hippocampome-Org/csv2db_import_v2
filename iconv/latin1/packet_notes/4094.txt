@@ -1,3 +1,114 @@
-N > 1.
-
-glutamatergic
+<html>
+        <head>
+                <style>
+                        .redtext {
+                                color: red;
+                        }
+                        .bluetext {
+                                color: #0000FF; /* blue */
+                        }
+                        .greentext {
+                                color: #008000; /* dark green */
+                        }
+                        .purpletext {
+                                color: #800080; /* dark purple */
+                        }
+                        .orangetext {
+                                color: #FF6820; /* orange */
+                        }
+                </style>
+        </head>
+        <body>
+                <p style="font-family: courier">
+                        <b>CA1 (e)3000 Cajal-Retzius (C-R) neurons [4094]</b>
+                </p>
+                <table>
+                        <tr>
+                                <td width=150 style="font-family: courier">
+                                        <b>Related types:</b>
+                                </td>
+                                <td style="font-family: courier">
+                                        DG/CA3/CA2/Sub Cajal-Retzius neurons (v2.0 on-hold)
+                                </td>
+                                <td style="font-family: courier">
+                                        CA1 (e)3000p Local-Projecting Cajal-Retzius (v2.0 active)
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Notes:</b>
+                </p>
+                <p style="font-family: courier">
+                        N > 1.
+                </p>
+                <p style="font-family: courier">
+                        glutamatergic
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        I think the solid reconstructions in Fig. 2 on p. 10 of the packet rescue this neuronal type where the other C-R types fall short. - DWW 02/10/2015
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        - I think we should add a note about these animals being quite young (P0-P14 in Anstoltz; Quattrocolo's are older, but no axons)
+                                        <br>
+                                        - Some neurites may cross into other subregions - CLR 02/11/2015
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        CW 02/11/2015
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        CLR 02/15/2015
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=75></td>
+                                <td style="font-family: courier" class="redtext">
+                                        - note: EC projection?
+                                        <br>
+                                        - NG-CR synapses for Keivan
+                                        <br>
+                                        - "but no axons" -> Why not? both Q&M '13 & '14 papers have axons!
+                                        <br>
+                                        - OK - GAA 03/12/2015
+                                </td>
+                        </tr>
+                </table>
+                <p style="font-family: courier">
+                        <b>Supplement notes:</b>
+                </p>
+                <p style="font-family: courier">
+                        FP
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        DWW 05/23/2023
+                </p>
+                <p style="font-family: courier" class="redtext">
+                        I concur with the 3000 AD pattern. - JDK 05/23/2023
+                </p>
+                <table>
+                        <tr>
+                                <td width=25></td>
+                                <td style="font-family: courier" class="redtext">
+                                        approved. - GAA 05/24/2023
+                                </td>
+                        </tr>
+                </table>
+        </body>
+</html>

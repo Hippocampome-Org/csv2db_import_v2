@@ -1,4 +1,5 @@
-from django.conf.urls import url
+#from django.conf.urls import url
+from django.urls import re_path
 from csv2db import views
 
 urlpatterns = [
@@ -16,5 +17,6 @@ urlpatterns = [
     # url(r'^import_term/$', views.import_term, name='import_term'),
     # url(r'^import_type/$', views.import_type, name='import_type'),
     # url(r'^import_type_dev/$', views.import_type_dev, name='import_type_dev'),
-    url(r'^load/$', views.load, name='load'),
+#    url(r'^load/$', views.load, name='load'),
+    re_path(r'^load/$', views.load, name='load'),
 ]

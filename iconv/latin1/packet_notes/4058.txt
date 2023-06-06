@@ -20,22 +20,7 @@
         </head>
         <body>
                 <p style="font-family: courier">
-                        <b>CA3 (i)22232 Basket CCK+ (BC CCK+) cells [2044]</b>
-                </p>
-                <p style="font-family: courier">
-                        <b>Notes:</b>
-                </p>
-                <p style="font-family: courier">
-                        Axo-axonic cells exclusively target pyramidal cells while basket cells are known to also target other interneurons.
-                </p>
-                <p style="font-family: courier">
-                        perisomatic axonal targeting interpreted as PCL.
-                </p>
-                <p style="font-family: courier">
-                        Aextended interpretation of SP in apical and basal directions.
-                </p>
-                <p style="font-family: courier">
-                        <b>Supplement notes: This neuron type is not known to be CCK+, has been identified by the authors as a basket not an axo-axonic cell, and is non-projecting, which distinguishes it from the other neuron types.</b>
+                        <b>CA1 (i)0302 Interneuron Specific RO-R neurons [4058]</b>
                 </p>
                 <table>
                         <tr>
@@ -43,7 +28,7 @@
                                         <b>Related types:</b>
                                 </td>
                                 <td style="font-family: courier">
-                                        CA3 (i)22232 Basket CCK+ (v1.0 active)
+                                        CA1 (i)0303 IS Schaffer Collateral-Correlated (v2.0 on-hold)
                                 </td>
                         </tr>
                 </table>
@@ -52,7 +37,7 @@
                                 <td width=150 style="font-family: courier">
                                 </td>
                                 <td style="font-family: courier">
-                                        CA3 (i)22232 Axo-axonic (v1.0 active)
+                                        CA1 (i)0102 IS O-R (v1.0 active)
                                 </td>
                         </tr>
                 </table>
@@ -61,44 +46,38 @@
                                 <td width=150 style="font-family: courier">
                                 </td>
                                 <td style="font-family: courier">
-                                        CA3 (i)22232p-CA2_0010-CA1_0010 basket (v1.0 on-hold)
-                                </td>
-                        </tr>
-                </table>
-                <table>
-                        <tr>
-                                <td width=150 style="font-family: courier">
-                                </td>
-                                <td style="font-family: courier">
-                                        CA3 (i)22232p-CA2_0010 basket (v2.0 on-hold)
+                                        CA1 (i)0302 Schaffer Collateral-Receiving R-targeting (v1.0 active)
                                 </td>
                         </tr>
                 </table>
                 <p style="font-family: courier">
-                        FP.
+                        <b>Notes: A new cell from Szabo is being combined with an on-hold cell from Acsády. This proposed active type clearly lacks A:SO and clearly has A:SR, which distinguishes them from the other two neuron types.</b>
+                </p>
+                <p style="font-family: courier">
+                        N = 2
+                </p>
+                <p style="font-family: courier">
+                        VIP+. M2R+.
                 </p>
                 <p style="font-family: courier" class="redtext">
-                        DWW 05/23/2023
-                </p>
-                <p style="font-family: courier" class="redtext">
-                        I concur with the 22232 AD pattern. - JDK 05/23/2023
+                        Definitive yes. - DWW 05/12/2023
                 </p>
                 <table>
                         <tr>
                                 <td width=25></td>
                                 <td style="font-family: courier" class="redtext">
-                                        approved. - GAA 05/24/2023
+                                        I lean towards yes, and I think combining these two cells are fine especially with the branching pattern in SO being identical for these two reconstructions. - JDK 05/12/2023
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <table>
+                        <tr>
+                                <td width=50></td>
+                                <td style="font-family: courier" class="redtext">
+                                        approved, but correct note on cover page: "clearly lacks D:SO and" --> "clearly lacks A:SO and". Also add CA1 Schaffer Collateral-Receiving R-Targeting among related cells (same morpho pattern, no IS-targeting). I found suspicious that CA1 Schaffer Collateral-Receiving R-Targeting is marked as VIP positive though so I opened the evidence and it looks like 2 'contradictory' and 1 positive (Acsady). I felt the Acsady one likely should be moved to the x_CA1_(i)0302_IS_RO-R_active_new packet! So I downloaded the CA1 Schaffer Collateral-Receiving R-Targeting packet but could not find the Acsady evidence (!). In summary: I approved of the new packet but I propose changing CA1 Schaffer Collateral-Receiving R-Targeting to VIP-negative ! - GAA 05/22/2023
                                 </td>
                         </tr>
                 </table>
         </body>
 </html>
-
-
-
-
-
-
-
-
-
