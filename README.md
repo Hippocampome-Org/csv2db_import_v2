@@ -49,5 +49,7 @@ example_user.csv should be renamed and placed in iconv/latin1/user.csv to genera
 
 example_settings.py should be renamed and moved to krasnow/settings.py once database variables are set at around line 77 in the file. krasnow/settings.py is in the in the .gitignore file to avoid accidental uploads of passwords. Also, the SECRET_KEY variable should be set to the right value in the file.
 
+the settings.py file in the base directory should also have the same settings added to it as krasnow/settings.py described above.
+
 ### Running all scripts
 The file run_csv2db_import.sh runs all scripts needed for creating the database. example_database_save.sh should be renamed to database_save.sh and your local database access information put into the file to have it read that for creating the file. database_save.sh is in the .gitignore file to avoid unintentional uploads of passwords.

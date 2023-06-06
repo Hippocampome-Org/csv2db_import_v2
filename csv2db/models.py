@@ -69,7 +69,7 @@ class Article(models.Model):
     pmcid          = models.CharField(max_length=16, null=True)
     nihmsid        = models.CharField(max_length=16, null=True)
     doi            = models.CharField(max_length=640, null=True)
-    open_access    = models.BooleanField(null=True)
+    open_access    = models.NullBooleanField(null=True)
     dt             = models.DateTimeField(auto_now_add=True)
     title          = models.CharField(max_length=512, null=True)
     publication    = models.CharField(max_length=128, null=True)
@@ -176,7 +176,7 @@ class Epdata(models.Model):
     unit      = models.CharField(max_length=8, null=True)
     location  = models.CharField(max_length=128, null=True)
     rep_value = models.CharField(max_length=128, null=True)
-    gt_value  = models.BooleanField(null=True)
+    gt_value  = models.NullBooleanField(null=True)
     class Meta:
         db_table = 'Epdata'
 
@@ -228,12 +228,12 @@ class EvidencePropertyTypeRel(models.Model):
     Article_id                = models.IntegerField(db_index=True, unique=False, null=True)
     priority                  = models.IntegerField(null=True)
     conflict_note             = models.CharField(max_length=64, null=True)
-    unvetted                  = models.BooleanField(null=True)
+    unvetted                  = models.NullBooleanField(null=True)
     linking_quote             = models.TextField(null=True)
     interpretation_notes      = models.TextField(null=True)
     property_type_explanation = models.TextField(null=True)
-    pc_flag                   = models.BooleanField(null=True)
-    soma_pcl_flag             = models.BooleanField(null=True)
+    pc_flag                   = models.NullBooleanField(null=True)
+    soma_pcl_flag             = models.NullBooleanField(null=True)
     ax_de_pcl_flag            = models.IntegerField(unique=False,null=True)
     perisomatic_targeting_flag= models.IntegerField(unique=False,null=True)
     supplemental_pmids        = models.CharField(max_length=1024, null=True)
@@ -410,7 +410,7 @@ class FragmentTypeRel(models.Model):
     dt          = models.DateTimeField(auto_now_add=True)
     Fragment_id = models.IntegerField(db_index=True, unique=False, null=True)
     Type_id     = models.IntegerField(db_index=True, unique=False, null=True)
-    priority    = models.BooleanField(null=True)
+    priority    = models.NullBooleanField(null=True)
     class Meta:
         db_table = 'FragmentTypeRel'
 
@@ -852,12 +852,12 @@ class SynproEvidencePropertyTypeRel(models.Model):
     Article_id                = models.IntegerField(db_index=True, unique=False, null=True)
     priority                  = models.IntegerField(null=True)
     conflict_note             = models.CharField(max_length=64, null=True)
-    unvetted                  = models.BooleanField(null=True)
+    unvetted                  = models.NullBooleanField(null=True)
     linking_quote             = models.TextField(null=True)
     interpretation_notes      = models.TextField(null=True)
     property_type_explanation = models.TextField(null=True)
-    pc_flag                   = models.BooleanField(null=True)
-    soma_pcl_flag             = models.BooleanField(null=True)
+    pc_flag                   = models.NullBooleanField(null=True)
+    soma_pcl_flag             = models.NullBooleanField(null=True)
     ax_de_pcl_flag            = models.IntegerField(unique=False,null=True)
     perisomatic_targeting_flag= models.IntegerField(unique=False,null=True)
     supplemental_pmids        = models.CharField(max_length=256, null=True)
