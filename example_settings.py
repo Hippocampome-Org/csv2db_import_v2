@@ -19,6 +19,15 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = # set the key here
 
+#Set the session cookie to be secure
+SESSION_COOKIE_SECURE=True,
+
+#Set the session cookie for our app to a unique name
+SESSION_COOKIE_NAME='YourAppName-WebSession',
+
+#Set CSRF tokens to be valid for the duration of the session. This assumes you’re using WTF-CSRF protection
+WTF_CSRF_TIME_LIMIT=None,
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
