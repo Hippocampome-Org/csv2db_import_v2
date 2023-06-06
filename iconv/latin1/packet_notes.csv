@@ -31,7 +31,7 @@ unique ID,Subregion,Axonal-dendritic pattern,p,Projection patterning,Hippocampom
 1013,DG,1002,,,HIPP,
 1045,DG,333,,,Ivy,1045.txt
 1094,DG,3,,,HAI,1094.txt
-2000,CA3,23223,p,CA2_0101-CA1_0101,PC-ab,
+2000,CA3,23223,p,CA2_0101-CA1_0101,PC-ab,2000.txt
 2115,CA3,23223,p,DG_0001-CA2_0100-CA1_0100,uPC-c,2115.txt
 2004,CA3,3223,p,DG_0101-CA2_0101-CA1_0101,PC-c,
 2001,CA3,22100,,,granule,2001.txt
@@ -40,13 +40,13 @@ unique ID,Subregion,Axonal-dendritic pattern,p,Projection patterning,Hippocampom
 2005,CA3,33200,,,LM-R,2005.txt
 2060,CA3,32000,,,PPA,2060.txt
 2043,CA3,22232,,,BC,2043.txt
-2044,CA3,22232,,,BC CCK,
+2044,CA3,22232,,,BC CCK,2044.txt
 2028,CA3,22232,,,AA,2028.txt
 2008,CA3,12000,,,R-LM,2008.txt
 2009,CA3,11003,,,O-LM,
 2050,CA3,10003,,,Recurrent O-LM,2050.txt
 2042,CA3,3333,p,DG_0003,IS-3,2042.txt
-2045,CA3,3333,,,BiC,
+2045,CA3,3333,,,BiC,2045.txt
 2046,CA3,3333,,,ivy,
 2036,CA3,3330,p,DG 0001,MFA-1,2036.txt
 2013,CA3,3311,,,LC-1,2013.txt
@@ -90,7 +90,8 @@ unique ID,Subregion,Axonal-dendritic pattern,p,Projection patterning,Hippocampom
 4078,CA1,2232,,,BC,4078.txt
 4079,CA1,2232,,,BC CCK,4079.txt
 4036,CA1,2232,,,AA,4036.txt
-4020,CA1,2223,,,quad IS-3,4020.txt
+4160,CA1,2230,,,Vertical BC,4160.txt
+4020,CA1,2223,,,IS O-target QuadD,4020.txt
 4096,CA1,2201,,,LMR-O,4096.txt
 4021,CA1,2100,,,IS-2,
 4022,CA1,2003,,,IS-3,
@@ -105,8 +106,10 @@ unique ID,Subregion,Axonal-dendritic pattern,p,Projection patterning,Hippocampom
 4081,CA1,333,,,ivy,
 4101,CA1,331,,,RP-RPO,4101.txt
 4041,CA1,313,p,SUB_001,ENK,4041.txt
+4193,CA1,312,,,RO-RP,4193.txt
 4048,CA1,303,,,SCC,4048.txt
 4084,CA1,302,,,SCR R-Targeting,4084.txt
+4058,CA1,302,,,IS RO-R,4058.txt
 4100,CA1,301,,,R-RO,4100.txt
 4028,CA1,300,,,SCA-SR-CB,4028.txt
 4104,CA1,232,,,triBC,4104.txt
@@ -115,6 +118,7 @@ unique ID,Subregion,Axonal-dendritic pattern,p,Projection patterning,Hippocampom
 4145,CA1,210,,,R-P BC,4145.txt
 4173,CA1,202,p,CA3_00010,RO-recv CA3-target,4173.txt
 4035,CA1,113,p,SUB_111,TH-ORP-DP-OR,4035.txt
+4135,CA1,113,,,O-RPO,4135.txt
 4083,CA1,103,,,CA1 Oriens-Bistratified,4083.txt
 4031,CA1,102,,,SO IS-1,4031.txt
 4039,CA1,12,,,BC-FSPTI,4039.txt
@@ -153,6 +157,7 @@ unique ID,Subregion,Axonal-dendritic pattern,p,Projection patterning,Hippocampom
 6052,EC,23,,,PC-MPN ,6052.txt
 6038,EC,333000,,,type 4 III,6038.txt
 6113,EC,332000,,,LII-III SPI,6113.txt
+6129,EC,300000,,,neurogliaform,6129.txt
 6040,EC,233000,,,MPI 1 III,6040.txt
 6053,EC,230000,,,MPI-BC II,6053.txt
 6118,EC,120000,,,LI-II PI,6118.txt
