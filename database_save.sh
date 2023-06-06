@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 today=`date '+%Y%m%d%H%M%S'`;
 mkdir mysqldump
