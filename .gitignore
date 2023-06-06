@@ -1,2 +1,5 @@
 .DS_Store
 mysqldump/
+settings.py
+krasnow/settings.py
+database_save.sh
