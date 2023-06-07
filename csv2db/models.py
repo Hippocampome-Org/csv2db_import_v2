@@ -1297,3 +1297,17 @@ class ModelDB_mapping(models.Model):
     class Meta:
         db_table = 'ModelDB_mapping'
 
+class SynproIBD(models.Model):
+    id          = models.AutoField(primary_key=True)
+    source_id          = models.BigIntegerField(null=True)
+    source_name          = models.TextField(max_length=1000, null=True)
+    source_e_or_i          = models.TextField(max_length=1000, null=True)
+    target_id          = models.BigIntegerField(null=True)
+    target_name          = models.TextField(max_length=1000, null=True)
+    target_e_or_i          = models.TextField(max_length=1000, null=True)
+    type          = models.TextField(max_length=1000, null=True)
+    subregion          = models.TextField(max_length=1000, null=True)
+    layer          = models.TextField(max_length=1000, null=True)
+    ibd          = FloatFloatField(null=True)
+    class Meta:
+        db_table = 'SynproIBD'

@@ -1891,3 +1891,22 @@ class Map:
                 user_object.save()
         except Exception as e:
             print(e)
+
+    def SynproIBD(self):
+        try:
+            for row in self.rows:
+                user_object = SynproIBD(
+                    source_id=row['source_id'],
+                    source_name=row['source_name'],
+                    source_e_or_i=row['source_e_or_i'],
+                    target_id=row['target_id'],   
+                    target_name=row['target_name'],
+                    target_e_or_i=row['target_e_or_i']
+                    type=row['type'],
+                    subregion=row['subregion'],   
+                    layer=row['layer'],
+                    ibd=row['ibd']
+                )
+                user_object.save()
+        except Exception as e:
+            print(e)
