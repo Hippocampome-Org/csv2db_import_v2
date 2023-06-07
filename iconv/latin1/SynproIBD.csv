@@ -1,0 +1,135 @@
+Source_ID,Source_Name,Source_E/I,Target_ID,Target_Name,Target_E/I,Type,subregion,layer,IBD
+1000,DG Granule (+)2201p,E,2000,CA3 Pyramidal (+)23223p,E,p,CA3,SL,284
+1000,DG Granule (+)2201p,E,2000,CA3 Pyramidal (+)23223p,E,p,CA3,SP,284
+1000,DG Granule (+)2201p,E,2004,CA3c Pyramidal (+)03223p,E,p,CA3,SL,162
+1000,DG Granule (+)2201p,E,2004,CA3c Pyramidal (+)03223p,E,p,CA3,SP,162
+1000,DG Granule (+)2201p,E,2019,CA3 Spiny Lucidum Dentate-Projecting (-)01320p,I,p,CA3,SL,67.41
+1000,DG Granule (+)2201p,E,2035,CA3 Mossy Fiber-Associated ORDEN (-)02332p,I,p,CA3,SL,67.41
+1000,DG Granule (+)2201p,E,2035,CA3 Mossy Fiber-Associated ORDEN (-)02332p,I,p,CA3,SP,67.41
+1000,DG Granule (+)2201p,E,2043,CA3 Basket (-)22232,I,p,CA3,SL,67.41
+1000,DG Granule (+)2201p,E,2043,CA3 Basket (-)22232,I,p,CA3,SP,67.41
+1000,DG Granule (+)2201p,E,2044,CA3 Basket CCK+ (-)22232,I,p,CA3,SL,67.41
+1000,DG Granule (+)2201p,E,2044,CA3 Basket CCK+ (-)22232,I,p,CA3,SP,67.41
+1000,DG Granule (+)2201p,E,2046,CA3 Ivy (-)03333,I,p,CA3,SL,67.41
+1000,DG Granule (+)2201p,E,2046,CA3 Ivy (-)03333,I,p,CA3,SP,67.41
+1000,DG Granule (+)2201p,E,2036,CA3 Mossy Fiber-Associated (-)03330p-DG_0001,I,p,CA3,SR,67.41
+1000,DG Granule (+)2201p,E,2036,CA3 Mossy Fiber-Associated (-)03330p-DG_0001,I,p,CA3,SP,67.41
+1000,DG Granule (+)2201p,E,2005,CA3 LMR-Targeting (-)33200,I,p,CA3,SL,67.41
+1000,DG Granule (+)2201p,E,2013,CA3 Lucidum ORAX (-)03311,I,p,CA3,SL,67.41
+1000,DG Granule (+)2201p,E,2014,CA3 Lucidum-Radiatum (-)03300,I,p,CA3,SL,67.41
+1000,DG Granule (+)2201p,E,2028,CA3 Axo-Axonic (-)22232,I,p,CA3,SL,67.41
+1000,DG Granule (+)2201p,E,2028,CA3 Axo-Axonic (-)22232,I,p,CA3,SP,67.41
+1000,DG Granule (+)2201p,E,2045,CA3 Bistratified (-)03333,I,p,CA3,SL,67.41
+1000,DG Granule (+)2201p,E,2045,CA3 Bistratified (-)03333,I,p,CA3,SP,67.41
+1000,DG Granule (+)2201p,E,2049,CA3 QuadD-LM (-)12222,I,p,CA3,SL,67.41
+1000,DG Granule (+)2201p,E,2049,CA3 QuadD-LM (-)12222,I,p,CA3,SP,67.41
+2000,CA3 Pyramidal (+)23223p,E,4036,CA1 Axo-Axonic (-)2232,I,p,CA1,SR,4.47
+2000,CA3 Pyramidal (+)23223p,E,4036,CA1 Axo-Axonic (-)2232,I,p,CA1,SO,4.47
+2000,CA3 Pyramidal (+)23223p,E,4036,CA1 Axo-Axonic (-)2232,I,p,CA1,SR,5.8
+2000,CA3 Pyramidal (+)23223p,E,4036,CA1 Axo-Axonic (-)2232,I,p,CA1,SO,5.8
+2000,CA3 Pyramidal (+)23223p,E,4078,CA1 Basket (-)2232,I,p,CA1,SR,4.47
+2000,CA3 Pyramidal (+)23223p,E,4078,CA1 Basket (-)2232,I,p,CA1,SO,4.47
+2000,CA3 Pyramidal (+)23223p,E,4078,CA1 Basket (-)2232,I,p,CA1,SR,5.8
+2000,CA3 Pyramidal (+)23223p,E,4078,CA1 Basket (-)2232,I,p,CA1,SO,5.8
+2000,CA3 Pyramidal (+)23223p,E,4079,CA1 Basket CCK+ (-)2232,I,p,CA1,SR,4.47
+2000,CA3 Pyramidal (+)23223p,E,4079,CA1 Basket CCK+ (-)2232,I,p,CA1,SO,4.47
+2000,CA3 Pyramidal (+)23223p,E,4079,CA1 Basket CCK+ (-)2232,I,p,CA1,SR,5.8
+2000,CA3 Pyramidal (+)23223p,E,4079,CA1 Basket CCK+ (-)2232,I,p,CA1,SO,5.8
+2000,CA3 Pyramidal (+)23223p,E,4080,CA1 Bistratified (-)0333,I,p,CA1,SR,4.47
+2000,CA3 Pyramidal (+)23223p,E,4080,CA1 Bistratified (-)0333,I,p,CA1,SO,4.47
+2000,CA3 Pyramidal (+)23223p,E,4080,CA1 Bistratified (-)0333,I,p,CA1,SR,5.8
+2000,CA3 Pyramidal (+)23223p,E,4080,CA1 Bistratified (-)0333,I,p,CA1,SO,5.8
+2000,CA3 Pyramidal (+)23223p,E,4081,CA1 Ivy (-)0333,I,p,CA1,SR,4.47
+2000,CA3 Pyramidal (+)23223p,E,4081,CA1 Ivy (-)0333,I,p,CA1,SO,5.8
+2000,CA3 Pyramidal (+)23223p,E,4069,CA1 O-LM (-)1002,I,p,CA1,SO,5.8
+2000,CA3 Pyramidal (+)23223p,E,4006,CA1 Perforant Path-Assoc (-)3200p,I,p,CA1,SR,4.47
+2000,CA3 Pyramidal (+)23223p,E,4015,CA1 Schaffer Collateral-Assoc (-)2311,I,p,CA1,SR,4.47
+2000,CA3 Pyramidal (+)23223p,E,4000,CA1 Pyramidal (+)2223p,E,p,CA1,SR,4.47
+2000,CA3 Pyramidal (+)23223p,E,4000,CA1 Pyramidal (+)2223p,E,p,CA1,SO,5.8
+2000,CA3 Pyramidal (+)23223p,E,4054,CA1 Radiatum Giant (+)2201,I,p,CA1,SR,4.47
+2000,CA3 Pyramidal (+)23223p,E,4038,CA1 Horizontal Axo-Axonic (-)0012,I,p,CA1,SO,5.8
+2000,CA3 Pyramidal (+)23223p,E,4039,CA1 Horizontal Basket (-)0012,I,p,CA1,SO,5.8
+2000,CA3 Pyramidal (+)23223p,E,4022,CA1 Interneuron Specific LMO-O (-)2003,I,p,CA1,SO,5.8
+2000,CA3 Pyramidal (+)23223p,E,4056,CA1 Interneuron Specific LMR-R (-)2300,I,p,CA1,SR,4.47
+2000,CA3 Pyramidal (+)23223p,E,4031,CA1 Interneuron Specific O-R (-)0102,I,p,CA1,SO,5.8
+2000,CA3 Pyramidal (+)23223p,E,4020,CA1 Interneuron Specific O-Targeting QuadD (-)2223,I,p,CA1,SR,4.47
+2000,CA3 Pyramidal (+)23223p,E,4020,CA1 Interneuron Specific O-Targeting QuadD (-)2223,I,p,CA1,SO,5.8
+2000,CA3 Pyramidal (+)23223p,E,4091,CA1 Interneuron Specific R-O (-)0221,I,p,CA1,SR,4.47
+2000,CA3 Pyramidal (+)23223p,E,4093,CA1 Interneuron Specific RO-O (-)0203,I,p,CA1,SR,4.47
+2000,CA3 Pyramidal (+)23223p,E,4093,CA1 Interneuron Specific RO-O (-)0203,I,p,CA1,SO,5.8
+2000,CA3 Pyramidal (+)23223p,E,4005,CA1 LMR (-)3300,I,p,CA1,SR,4.47
+2000,CA3 Pyramidal (+)23223p,E,4004,CA1 LMR Projecting (-)3300p,I,p,CA1,SR,4.47
+2000,CA3 Pyramidal (+)23223p,E,4089,CA1 Recurrent O-LM (-)1003,I,p,CA1,SO,5.8
+2000,CA3 Pyramidal (+)23223p,E,4087,CA1 O-LMR (-)1102,I,p,CA1,SO,5.8
+2000,CA3 Pyramidal (+)23223p,E,4083,CA1 Oriens-Bistratified (-)0103,I,p,CA1,SO,5.8
+2000,CA3 Pyramidal (+)23223p,E,4055,CA1 Oriens/Alveus (-)2233,I,p,CA1,SR,4.47
+2000,CA3 Pyramidal (+)23223p,E,4055,CA1 Oriens/Alveus (-)2233,I,p,CA1,SO,5.8
+2000,CA3 Pyramidal (+)23223p,E,4066,CA1 OR-LM (-)1202,I,p,CA1,SR,4.47
+2000,CA3 Pyramidal (+)23223p,E,4066,CA1 OR-LM (-)1202,I,p,CA1,SO,5.8
+2000,CA3 Pyramidal (+)23223p,E,4076,CA1 Perforant Path-Associated QuadD (-)3222,I,p,CA1,SR,4.47
+2000,CA3 Pyramidal (+)23223p,E,4076,CA1 Perforant Path-Associated QuadD (-)3222,I,p,CA1,SO,5.8
+2000,CA3 Pyramidal (+)23223p,E,4003,CA1 Quadrilaminar (-)3333,I,p,CA1,SR,4.47
+2000,CA3 Pyramidal (+)23223p,E,4003,CA1 Quadrilaminar (-)3333,I,p,CA1,SO,5.8
+2000,CA3 Pyramidal (+)23223p,E,4028,CA1 Radiatum (-)0300,I,p,CA1,SR,4.47
+2000,CA3 Pyramidal (+)23223p,E,4061,CA1 R-Receiving Apical-Targeting (-)1300,I,p,CA1,SR,4.47
+2000,CA3 Pyramidal (+)23223p,E,4084,CA1 Schaffer Collateral-Receiving R-Targeting (-)0322,I,p,CA1,SR,4.47
+2000,CA3 Pyramidal (+)23223p,E,4084,CA1 Schaffer Collateral-Receiving R-Targeting (-)0322,I,p,CA1,SO,5.8
+2000,CA3 Pyramidal (+)23223p,E,4033,CA1 SO-SO (-)0003,I,p,CA1,SO,5.8
+2000,CA3 Pyramidal (+)23223p,E,4041,CA1 Hippocampo-Subicular Projecting ENK+ (-)0313p,I,p,CA1,SR,4.47
+2000,CA3 Pyramidal (+)23223p,E,4041,CA1 Hippocampo-Subicular Projecting ENK+ (-)0313p,I,p,CA1,SO,5.8
+2000,CA3 Pyramidal (+)23223p,E,4035,CA1 Trilaminar (-)0113p,I,p,CA1,SO,5.8
+2000,CA3 Pyramidal (+)23223p,E,4013,CA1 Radial Trilaminar (-)2333,I,p,CA1,SR,4.47
+2000,CA3 Pyramidal (+)23223p,E,4013,CA1 Radial Trilaminar (-)2333,I,p,CA1,SO,5.8
+2000,CA3 Pyramidal (+)23223p,E,4068,CA1 Oriens-Bistratified Projecting (-)1113p,I,p,CA1,SO,5.8
+2000,CA3 Pyramidal (+)23223p,E,4023,CA1 Back-Projection (-)1133p,I,p,CA1,SO,5.8
+2004,CA3c Pyramidal (+)03223p,E,4036,CA1 Axo-Axonic (-)2232,I,p,CA1,SR,4.47
+2004,CA3c Pyramidal (+)03223p,E,4036,CA1 Axo-Axonic (-)2232,I,p,CA1,SO,5.8
+2004,CA3c Pyramidal (+)03223p,E,4078,CA1 Basket (-)2232,I,p,CA1,SR,4.47
+2004,CA3c Pyramidal (+)03223p,E,4078,CA1 Basket (-)2232,I,p,CA1,SO,5.8
+2004,CA3c Pyramidal (+)03223p,E,4079,CA1 Basket CCK+ (-)2232,I,p,CA1,SR,4.47
+2004,CA3c Pyramidal (+)03223p,E,4079,CA1 Basket CCK+ (-)2232,I,p,CA1,SO,5.8
+2004,CA3c Pyramidal (+)03223p,E,4080,CA1 Bistratified (-)0333,I,p,CA1,SR,4.47
+2004,CA3c Pyramidal (+)03223p,E,4080,CA1 Bistratified (-)0333,I,p,CA1,SO,5.8
+2004,CA3c Pyramidal (+)03223p,E,4081,CA1 Ivy (-)0333,I,p,CA1,SR,4.47
+2004,CA3c Pyramidal (+)03223p,E,4081,CA1 Ivy (-)0333,I,p,CA1,SO,5.8
+2004,CA3c Pyramidal (+)03223p,E,4069,CA1 O-LM (-)1002,I,p,CA1,SO,5.8
+2004,CA3c Pyramidal (+)03223p,E,4006,CA1 Perforant Path-Assoc (-)3200p,I,p,CA1,SR,4.47
+2004,CA3c Pyramidal (+)03223p,E,4015,CA1 Schaffer Collateral-Assoc (-)2311,I,p,CA1,SR,4.47
+2004,CA3c Pyramidal (+)03223p,E,4000,CA1 Pyramidal (+)2223p,E,p,CA1,SR,4.47
+2004,CA3c Pyramidal (+)03223p,E,4000,CA1 Pyramidal (+)2223p,E,p,CA1,SO,5.8
+2004,CA3c Pyramidal (+)03223p,E,4054,CA1 Radiatum Giant (+)2201,I,p,CA1,SR,4.47
+2004,CA3c Pyramidal (+)03223p,E,4038,CA1 Horizontal Axo-Axonic (-)0012,I,p,CA1,SO,5.8
+2004,CA3c Pyramidal (+)03223p,E,4039,CA1 Horizontal Basket (-)0012,I,p,CA1,SO,5.8
+2004,CA3c Pyramidal (+)03223p,E,4022,CA1 Interneuron Specific LMO-O (-)2003,I,p,CA1,SO,5.8
+2004,CA3c Pyramidal (+)03223p,E,4056,CA1 Interneuron Specific LMR-R (-)2300,I,p,CA1,SR,4.47
+2004,CA3c Pyramidal (+)03223p,E,4031,CA1 Interneuron Specific O-R (-)0102,I,p,CA1,SO,5.8
+2004,CA3c Pyramidal (+)03223p,E,4020,CA1 Interneuron Specific O-Targeting QuadD (-)2223,I,p,CA1,SR,4.47
+2004,CA3c Pyramidal (+)03223p,E,4020,CA1 Interneuron Specific O-Targeting QuadD (-)2223,I,p,CA1,SO,5.8
+2004,CA3c Pyramidal (+)03223p,E,4091,CA1 Interneuron Specific R-O (-)0221,I,p,CA1,SR,4.47
+2004,CA3c Pyramidal (+)03223p,E,4093,CA1 Interneuron Specific RO-O (-)0203,I,p,CA1,SR,4.47
+2004,CA3c Pyramidal (+)03223p,E,4093,CA1 Interneuron Specific RO-O (-)0203,I,p,CA1,SO,5.8
+2004,CA3c Pyramidal (+)03223p,E,4005,CA1 LMR (-)3300,I,p,CA1,SR,4.47
+2004,CA3c Pyramidal (+)03223p,E,4004,CA1 LMR Projecting (-)3300p,I,p,CA1,SR,4.47
+2004,CA3c Pyramidal (+)03223p,E,4089,CA1 Recurrent O-LM (-)1003,I,p,CA1,SO,5.8
+2004,CA3c Pyramidal (+)03223p,E,4087,CA1 O-LMR (-)1102,I,p,CA1,SO,5.8
+2004,CA3c Pyramidal (+)03223p,E,4083,CA1 Oriens-Bistratified (-)0103,I,p,CA1,SO,5.8
+2004,CA3c Pyramidal (+)03223p,E,4055,CA1 Oriens/Alveus (-)2233,I,p,CA1,SR,4.47
+2004,CA3c Pyramidal (+)03223p,E,4055,CA1 Oriens/Alveus (-)2233,I,p,CA1,SO,5.8
+2004,CA3c Pyramidal (+)03223p,E,4066,CA1 OR-LM (-)1202,I,p,CA1,SR,4.47
+2004,CA3c Pyramidal (+)03223p,E,4066,CA1 OR-LM (-)1202,I,p,CA1,SO,5.8
+2004,CA3c Pyramidal (+)03223p,E,4076,CA1 Perforant Path-Associated QuadD (-)3222,I,p,CA1,SR,4.47
+2004,CA3c Pyramidal (+)03223p,E,4076,CA1 Perforant Path-Associated QuadD (-)3222,I,p,CA1,SO,5.8
+2004,CA3c Pyramidal (+)03223p,E,4003,CA1 Quadrilaminar (-)3333,I,p,CA1,SR,4.47
+2004,CA3c Pyramidal (+)03223p,E,4003,CA1 Quadrilaminar (-)3333,I,p,CA1,SO,5.8
+2004,CA3c Pyramidal (+)03223p,E,4028,CA1 Radiatum (-)0300,I,p,CA1,SR,4.47
+2004,CA3c Pyramidal (+)03223p,E,4061,CA1 R-Receiving Apical-Targeting (-)1300,I,p,CA1,SR,4.47
+2004,CA3c Pyramidal (+)03223p,E,4084,CA1 Schaffer Collateral-Receiving R-Targeting (-)0322,I,p,CA1,SR,4.47
+2004,CA3c Pyramidal (+)03223p,E,4084,CA1 Schaffer Collateral-Receiving R-Targeting (-)0322,I,p,CA1,SO,5.8
+2004,CA3c Pyramidal (+)03223p,E,4033,CA1 SO-SO (-)0003,I,p,CA1,SO,5.8
+2004,CA3c Pyramidal (+)03223p,E,4041,CA1 Hippocampo-Subicular Projecting ENK+ (-)0313p,I,p,CA1,SR,4.47
+2004,CA3c Pyramidal (+)03223p,E,4041,CA1 Hippocampo-Subicular Projecting ENK+ (-)0313p,I,p,CA1,SO,5.8
+2004,CA3c Pyramidal (+)03223p,E,4035,CA1 Trilaminar (-)0113p,I,p,CA1,SO,5.8
+2004,CA3c Pyramidal (+)03223p,E,4013,CA1 Radial Trilaminar (-)2333,I,p,CA1,SR,4.47
+2004,CA3c Pyramidal (+)03223p,E,4013,CA1 Radial Trilaminar (-)2333,I,p,CA1,SO,5.8
+2004,CA3c Pyramidal (+)03223p,E,4068,CA1 Oriens-Bistratified Projecting (-)1113p,I,p,CA1,SO,5.8
+2004,CA3c Pyramidal (+)03223p,E,4023,CA1 Back-Projection (-)1133p,I,p,CA1,SO,5.8
