@@ -1903,7 +1903,7 @@ class Map:
                     source_e_or_i=row['source_e_or_i'],
                     target_id=row['target_id'],   
                     target_name=row['target_name'],
-                    target_e_or_i=row['target_e_or_i']
+                    target_e_or_i=row['target_e_or_i'],
                     type_entry=row['type_entry'],
                     subregion=row['subregion'],   
                     layer=row['layer'],
