@@ -1305,7 +1305,7 @@ class SynproIBD(models.Model):
     target_id          = models.BigIntegerField(null=True)
     target_name          = models.TextField(max_length=1000, null=True)
     target_e_or_i          = models.TextField(max_length=1000, null=True)
-    type          = models.TextField(max_length=1000, null=True)
+    type_entry          = models.TextField(max_length=1000, null=True)
     subregion          = models.TextField(max_length=1000, null=True)
     layer          = models.TextField(max_length=1000, null=True)
     ibd          = FloatFloatField(null=True)

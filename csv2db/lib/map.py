@@ -1904,7 +1904,7 @@ class Map:
                     target_id=row['target_id'],   
                     target_name=row['target_name'],
                     target_e_or_i=row['target_e_or_i']
-                    type=row['type'],
+                    type_entry=row['type_entry'],
                     subregion=row['subregion'],   
                     layer=row['layer'],
                     ibd=row['ibd']
