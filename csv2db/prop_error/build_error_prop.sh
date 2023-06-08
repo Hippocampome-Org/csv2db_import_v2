@@ -96,31 +96,37 @@ echo "SET STATEMENT max_statement_time=0 FOR SELECT * FROM \
 $DB.SynproNPS INTO OUTFILE '$EXP_DIR/SynproNoPS.csv' FIELDS TERMINATED BY ',' \
 OPTIONALLY ENCLOSED BY '' LINES TERMINATED BY '\n';" > export_table.sql &&
 mysql -h $ADDR -u $USER -p$PASS $DB < export_table.sql &&
+sed -i '1s/^/source_id,target_id,subregion,parcel,NPS_mean,NPS_std\n/' $EXP_DIR/SynproNoPS.csv && # add column names
 echo "Exporting SynproNOC" &&
 echo "SET STATEMENT max_statement_time=0 FOR SELECT * FROM \
 $DB.SynproNumberOfContacts INTO OUTFILE '$EXP_DIR/SynproNOC.csv' FIELDS TERMINATED BY ',' \
 OPTIONALLY ENCLOSED BY '' LINES TERMINATED BY '\n';" > export_table.sql &&
 mysql -h $ADDR -u $USER -p$PASS $DB < export_table.sql &&
+sed -i '1s/^/source_id,target_id,subregion,parcel,NC_mean,NC_std\n/' $EXP_DIR/SynproNOC.csv && # add column names
 echo "Exporting SynproCP" &&
 echo "SET STATEMENT max_statement_time=0 FOR SELECT * FROM \
 $DB.SynproConnProb INTO OUTFILE '$EXP_DIR/SynproCP.csv' FIELDS TERMINATED BY ',' \
 OPTIONALLY ENCLOSED BY '' LINES TERMINATED BY '\n';" > export_table.sql &&
 mysql -h $ADDR -u $USER -p$PASS $DB < export_table.sql &&
+sed -i '1s/^/source_id,target_id,subregion,parcel,CP_mean,CP_std\n/' $EXP_DIR/SynproCP.csv && # add column names
 echo "Exporting SynproNPSTotal" &&
 echo "SET STATEMENT max_statement_time=0 FOR SELECT * FROM \
 $DB.SynproTotalNPS INTO OUTFILE '$EXP_DIR/SynproNPSTotal.csv' FIELDS TERMINATED BY ',' \
 OPTIONALLY ENCLOSED BY '' LINES TERMINATED BY '\n';" > export_table.sql &&
 mysql -h $ADDR -u $USER -p$PASS $DB < export_table.sql &&
+sed -i '1s/^/source_id,target_id,NPS_mean_total,NPS_stdev_total,parcel_count\n/' $EXP_DIR/SynproNPSTotal.csv && # add column names
 echo "Exporting SynproNOCTotal" &&
 echo "SET STATEMENT max_statement_time=0 FOR SELECT * FROM \
 $DB.SynproTotalNOC INTO OUTFILE '$EXP_DIR/SynproNOCTotal.csv' FIELDS TERMINATED BY ',' \
 OPTIONALLY ENCLOSED BY '' LINES TERMINATED BY '\n';" > export_table.sql &&
 mysql -h $ADDR -u $USER -p$PASS $DB < export_table.sql &&
+sed -i '1s/^/source_id,target_id,NC_mean_total,NC_stdev_total,parcel_count\n/' $EXP_DIR/SynproNOCTotal.csv && # add column names
 echo "Exporting SynproCPTotal" &&
 echo "SET STATEMENT max_statement_time=0 FOR SELECT * FROM \
 $DB.SynproTotalCP INTO OUTFILE '$EXP_DIR/SynproCPTotal.csv' FIELDS TERMINATED BY ',' \
 OPTIONALLY ENCLOSED BY '' LINES TERMINATED BY '\n';" > export_table.sql &&
 mysql -h $ADDR -u $USER -p$PASS $DB < export_table.sql &&
+sed -i '1s/^/source_id,target_id,CP_mean_total,CP_stdev_total,parcel_count\n/' $EXP_DIR/SynproCPTotal.csv && # add column names
 echo "Setting permissions of export directory to everyone. Sudo password may be needed." &&
 command="sudo chmod -R 777 $EXP_DIR" &&
 eval $command &&
