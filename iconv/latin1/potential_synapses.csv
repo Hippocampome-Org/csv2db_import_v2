@@ -2560,7 +2560,7 @@ Source_ID,Source_Name,Source_E/I,Target_ID,Target_Name,Target_E/I,Type,Layers,Ne
 3006,CA2 Basket (-)2232,I,3003,CA2 Bistratified (-)0313p,I,Perisomatic,CA2:SP,,,,,,,,,,
 3006,CA2 Basket (-)2232,I,3006,CA2 Basket (-)2232,I,Perisomatic,CA2:SP,,,,,,,,,,
 3006,CA2 Basket (-)2232,I,3007,CA2 Wide-Arbor Basket (-)2232p,I,Perisomatic,CA2:SP,,,,,,,,,,
-3006,CA2 Basket (-)2232,I,3008,CA2 SP-SR (-)0322,I,Perisomatic,CA2:SP;,,,,,,,,,,
+3006,CA2 Basket (-)2232,I,3008,CA2 SP-SR (-)0322,I,Perisomatic,CA2:SP,,,,,,,,,,
 3007,CA2 Wide-Arbor Basket (-)2232p,I,2000,CA3 Pyramidal (+)23223p,E,Perisomatic,CA3:SP; CA2:SP; CA1:SP,,,,,,,,,,
 3007,CA2 Wide-Arbor Basket (-)2232p,I,2004,CA3c Pyramidal (+)03223p,E,Perisomatic,CA3:SP; CA2:SP; CA1:SP,,,,,,,,,,
 3007,CA2 Wide-Arbor Basket (-)2232p,I,2028,CA3 Axo-Axonic (-)22232,I,Perisomatic,CA3:SP; CA2:SP; CA1:SP,,,,,,,,,,
