@@ -26,8 +26,6 @@ NOCR_CSV="$EXP_DIR/number_of_contacts_reformat.csv" # reformatted number_of_cont
 
 echo "Dropping old views" &&
 mysql -h $ADDR -u $USER -p$PASS $DB < drop_views.sql
-echo "Creating SynproErrPropConstants view" &&
-mysql -h $ADDR -u $USER -p$PASS $DB < constants.sql &&
 echo "Creating SynproLengthsHullVols view" &&
 mysql -h $ADDR -u $USER -p$PASS $DB < lengths_hull_vols.sql &&
 

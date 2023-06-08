@@ -15,7 +15,6 @@ FROM
     SynproPairsLHV AS lhv,
     SynproNumberOfParcels AS np,
     SynproVolumeOfOverlap AS vo,
-    #SynproErrPropConstants AS pec
     SynproIBD AS ibd
 WHERE
     lhv.source_id = np.source_id

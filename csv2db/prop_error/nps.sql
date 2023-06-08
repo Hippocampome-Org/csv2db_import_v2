@@ -11,7 +11,6 @@ SELECT
     (POW((dendritic_length_std/dendritic_length_mean),2)))) as NPS_std
 FROM
     SynproPairsLHV as lhv, 
-    #SynproErrPropConstants AS pec
     SynproIBD AS ibd,
     SynproParcelVolumes as pv
 WHERE
