@@ -50,7 +50,9 @@ echo "LOAD DATA LOCAL INFILE '$NOCR_CSV' INTO TABLE SynproNOCR \
  COLUMNS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '' \
  LINES TERMINATED BY '\n';" > import_table.sql &&
 mysql -h $ADDR -u $USER -p$PASS $DB < import_table.sql &&
-cp $NOCR_CSV ../../iconv/latin1/SynproNOCR.csv # update NOCR csv file in latin1 dir
+sed -i 's/^.//' $NOCR_CSV && # remove leading comma from each line
+sed -i '1s/^/Source_ID,Source_Name,Source_E\/I,Target_ID,Target_Name,Target_E\/I,Type,Layers,Neurite,Neurite ID,Potential synapses,Number of contacts,Probability,Connection\?,ES,ES PMID,RefIDs,Notes\n/' $NOCR_CSV && # add column names
+cp $NOCR_CSV ../../iconv/latin1/SynproNOCR.csv && # update NOCR csv file in latin1 dir
 
 echo "Creating SynproPairsOrder view" &&
 mysql -h $ADDR -u $USER -p$PASS $DB < order_of_pairs.sql &&
