@@ -21,8 +21,15 @@ DB=$(eval $command3)
 ADDR=localhost # db address
 CSV_DIR=csv # import csv files location
 EXP_DIR="/var/tmp/SynproExports/" # export csv files directory
-NOC_CSV="$EXP_DIR/number_of_contacts.csv" # exported number_of_contacts table
-NOCR_CSV="$EXP_DIR/number_of_contacts_reformat.csv" # reformatted number_of_contacts table
+DOT_CSV=".csv";
+REFORMAT="_reformat";
+TWO="2";
+NOC_CSV="$EXP_DIR/number_of_contacts" # exported number_of_contacts table
+NOCR_CSV="$NOC_CSV$REFORMAT" # reformatted number_of_contacts table
+NOCR_CSV2="$NOCR_CSV$TWO"
+NOCR_CSV2="$NOCR_CSV2$DOT_CSV"
+NOCR_CSV="$NOCR_CSV$DOT_CSV"
+NOC_CSV="$NOC_CSV$DOT_CSV"
 
 echo "Dropping old views" &&
 mysql -h $ADDR -u $USER -p$PASS $DB < drop_views.sql
@@ -51,8 +58,9 @@ echo "LOAD DATA LOCAL INFILE '$NOCR_CSV' INTO TABLE SynproNOCR \
  LINES TERMINATED BY '\n';" > import_table.sql &&
 mysql -h $ADDR -u $USER -p$PASS $DB < import_table.sql &&
 sed -i 's/^.//' $NOCR_CSV && # remove leading comma from each line
-sed -i '1s/^/Source_ID,Source_Name,Source_E\/I,Target_ID,Target_Name,Target_E\/I,Type,Layers,Neurite,Neurite ID,Potential synapses,Number of contacts,Probability,Connection\?,ES,ES PMID,RefIDs,Notes\n/' $NOCR_CSV && # add column names
-cp $NOCR_CSV ../../iconv/latin1/SynproNOCR.csv && # update NOCR csv file in latin1 dir
+cut -d "," -f 1,4,8 $NOCR_CSV > $NOCR_CSV2 # select columns of interest
+sed -i '1s/^/Source_ID,Target_ID,Layers\n/' $NOCR_CSV2 && # add column names
+cp $NOCR_CSV2 ../../iconv/latin1/SynproNOCR.csv && # update NOCR csv file in latin1 dir
 
 echo "Creating SynproPairsOrder view" &&
 mysql -h $ADDR -u $USER -p$PASS $DB < order_of_pairs.sql &&

@@ -1920,23 +1920,8 @@ class Map:
             for row in self.rows:
                 user_object = SynproNOCR(
                     source_ID=row['Source_ID'],
-                    source_Name=row['Source_Name'],
-                    source_E_or_I=row['Source_E/I'],
                     target_ID=row['Target_ID'],
-                    target_Name=row['Target_Name'],
-                    target_E_or_I=row['Target_E/I'],
-                    type=row['Type'],
-                    layers=row['Layers'],
-                    neurite=row['Neurite'],
-                    neurite_id=row['Neurite ID'],
-                    potential_synapses=row['Potential synapses'],
-                    number_of_contacts=row['Number of contacts'],
-                    probability=row['Probability'],
-                    connection=row['Connection?'],
-                    ES=row['ES'],
-                    ES_PMID =row['ES PMID'],
-                    refIDs                                     =row['RefIDs'],
-                    notes                                      =row['Notes']
+                    layers=row['Layers']
                 )
                 user_object.save()
         except Exception as e:

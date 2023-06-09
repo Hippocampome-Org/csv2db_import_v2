@@ -1315,22 +1315,7 @@ class SynproIBD(models.Model):
 class SynproNOCR(models.Model):
     id                                             = models.AutoField(primary_key=True)
     source_ID                                     = models.CharField(max_length=400, null=True)
-    source_Name                                   = models.CharField(max_length=400, null=True)
-    source_E_or_I                                    = models.CharField(max_length=400, null=True)
     target_ID                                     = models.CharField(max_length=400, null=True)
-    target_Name                                   = models.CharField(max_length=400, null=True)
-    target_E_or_I                                    = models.CharField(max_length=400, null=True)
-    type                                          = models.CharField(max_length=400, null=True)
     layers                                        = models.CharField(max_length=400, null=True)
-    neurite                                       = models.CharField(max_length=400, null=True)
-    neurite_id                                    = models.CharField(max_length=400, null=True)
-    potential_synapses                            = models.CharField(max_length=400, null=True)
-    number_of_contacts                            = models.CharField(max_length=400, null=True)
-    probability                            = models.CharField(max_length=400, null=True)
-    connection                                   = models.CharField(max_length=400, null=True)
-    ES                                            = models.CharField(max_length=400, null=True)
-    ES_PMID                                       = models.CharField(max_length=400, null=True)
-    refIDs                                        = models.CharField(max_length=400, null=True)
-    notes                                         = models.CharField(max_length=400, null=True)
     class Meta:
         db_table = 'SynproNOCR'
