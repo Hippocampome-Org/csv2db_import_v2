@@ -67,6 +67,7 @@ iconv -f latin1 -t UTF-8 iconv/latin1/citations.csv > iconv/utf8/citations.csv
 iconv -f latin1 -t UTF-8 iconv/latin1/Hippocampome_to_NMO.csv > iconv/utf8/Hippocampome_to_NMO.csv
 iconv -f latin1 -t UTF-8 iconv/latin1/ModelDB_mapping.csv > iconv/utf8/ModelDB_mapping.csv
 iconv -f latin1 -t UTF-8 iconv/latin1/SynproIBD.csv > iconv/utf8/SynproIBD.csv
+iconv -f latin1 -t UTF-8 iconv/latin1/SynproNOCR.csv > iconv/utf8/SynproNOCR.csv
 
 cp -vr iconv/utf8/* static/csv2db/dat/
 

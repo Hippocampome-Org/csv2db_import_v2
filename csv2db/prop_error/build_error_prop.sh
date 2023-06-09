@@ -50,6 +50,7 @@ echo "LOAD DATA LOCAL INFILE '$NOCR_CSV' INTO TABLE SynproNOCR \
  COLUMNS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '' \
  LINES TERMINATED BY '\n';" > import_table.sql &&
 mysql -h $ADDR -u $USER -p$PASS $DB < import_table.sql &&
+cp $NOCR_CSV ../../iconv/latin1/SynproNOCR.csv # update NOCR csv file in latin1 dir
 
 echo "Creating SynproPairsOrder view" &&
 mysql -h $ADDR -u $USER -p$PASS $DB < order_of_pairs.sql &&

@@ -60,3 +60,4 @@ process order,csv filename,tables populated,derived from
 59,Hippocampome_to_NMO.csv,Hippocampome_to_NMO,NMO2HC.xlsx
 60,ModelDB_mapping.csv,ModelDB_mapping,ModelDB_mapping.xlsx
 61,SynproIBD.csv,SynproIBD,SynproIBD.xlsx
+62,SynproNOCR.csv,SynproNOCR,SynproNOCR.csv
