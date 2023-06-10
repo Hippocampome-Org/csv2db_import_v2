@@ -23,11 +23,8 @@ CSV_DIR=csv # import csv files location
 EXP_DIR="/var/tmp/SynproExports/" # export csv files directory
 DOT_CSV=".csv";
 REFORMAT="_reformat";
-TWO="2";
 NOC_CSV="$EXP_DIR/number_of_contacts" # exported number_of_contacts table
 NOCR_CSV="$NOC_CSV$REFORMAT" # reformatted number_of_contacts table
-NOCR_CSV2="$NOCR_CSV$TWO"
-NOCR_CSV2="$NOCR_CSV2$DOT_CSV"
 NOCR_CSV="$NOCR_CSV$DOT_CSV"
 NOC_CSV="$NOC_CSV$DOT_CSV"
 
@@ -39,7 +36,7 @@ mysql -h $ADDR -u $USER -p$PASS $DB < lengths_hull_vols.sql &&
 # reformat number_of_contacts data
 echo "Creating number_of_contacts csv file" &&
 command="rm $EXP_DIR/number_of_contacts.csv" &&
-eval $command &&
+eval $command
 echo "SET STATEMENT max_statement_time=0 FOR SELECT * FROM \
 $DB.number_of_contacts INTO OUTFILE '$EXP_DIR/number_of_contacts.csv' \
 FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '' \
@@ -57,10 +54,6 @@ echo "LOAD DATA LOCAL INFILE '$NOCR_CSV' INTO TABLE SynproNOCR \
  COLUMNS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '' \
  LINES TERMINATED BY '\n';" > import_table.sql &&
 mysql -h $ADDR -u $USER -p$PASS $DB < import_table.sql &&
-sed -i 's/^.//' $NOCR_CSV && # remove leading comma from each line
-cut -d "," -f 1,4,8 $NOCR_CSV > $NOCR_CSV2 # select columns of interest
-sed -i '1s/^/Source_ID,Target_ID,Layers\n/' $NOCR_CSV2 && # add column names
-cp $NOCR_CSV2 ../../iconv/latin1/SynproNOCR.csv && # update NOCR csv file in latin1 dir
 
 echo "Creating SynproPairsOrder view" &&
 mysql -h $ADDR -u $USER -p$PASS $DB < order_of_pairs.sql &&

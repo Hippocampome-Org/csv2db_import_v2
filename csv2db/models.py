@@ -1311,11 +1311,3 @@ class SynproIBD(models.Model):
     ibd          = FloatFloatField(null=True)
     class Meta:
         db_table = 'SynproIBD'
-
-class SynproNOCR(models.Model):
-    id                                             = models.AutoField(primary_key=True)
-    source_ID                                     = models.CharField(max_length=400, null=True)
-    target_ID                                     = models.CharField(max_length=400, null=True)
-    layers                                        = models.CharField(max_length=400, null=True)
-    class Meta:
-        db_table = 'SynproNOCR'
