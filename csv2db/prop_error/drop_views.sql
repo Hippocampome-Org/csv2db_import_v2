@@ -8,6 +8,7 @@ DROP VIEW IF EXISTS SynproNumberOfContacts;
 DROP VIEW IF EXISTS SynproNumberOfParcels;
 DROP VIEW IF EXISTS SynproPairsLHV;
 DROP VIEW IF EXISTS SynproPairsOrder;
+DROP TABLE IF EXISTS SynproPairsOrder;
 DROP VIEW IF EXISTS SynproSelectedVolumes;
 DROP VIEW IF EXISTS SynproTotalCP;
 DROP VIEW IF EXISTS SynproTotalNOC;

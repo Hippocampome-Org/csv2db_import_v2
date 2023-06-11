@@ -1311,3 +1311,12 @@ class SynproIBD(models.Model):
     ibd          = FloatFloatField(null=True)
     class Meta:
         db_table = 'SynproIBD'
+
+class SynproPairsOrder(models.Model):
+    id          = models.AutoField(primary_key=True)
+    source_id          = models.BigIntegerField(null=True)
+    target_id          = models.BigIntegerField(null=True)
+    subregion          = models.TextField(max_length=1000, null=True)
+    parcel          = models.TextField(max_length=1000, null=True)
+    class Meta:
+        db_table = 'SynproPairsOrder'

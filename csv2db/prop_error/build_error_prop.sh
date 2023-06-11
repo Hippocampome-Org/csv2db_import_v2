@@ -88,13 +88,21 @@ echo "Setting permissions of export directory to everyone. Sudo password may be 
 command="sudo chmod -R 777 $EXP_DIR" &&
 eval $command &&
 echo "Removing old csv files" &&
-command="rm $EXP_DIR/SynproNoPS.csv; rm $EXP_DIR/SynproNOC.csv; \
+command="rm $EXP_DIR/SynproPairsOrder.csv; \
+rm $EXP_DIR/SynproNoPS.csv; rm $EXP_DIR/SynproNOC.csv; \
 rm $EXP_DIR/SynproCP.csv; rm $EXP_DIR/SynproNPSTotal.csv; \
 rm $EXP_DIR/SynproNOCTotal.csv; rm $EXP_DIR/SynproCPTotal.csv;" &&
 eval $command
 echo "Setting permissions of export directory to mysql. Sudo password may be needed." &&
 command="sudo chown -R mysql:mysql $EXP_DIR" &&
 eval $command &&
+echo "Exporting SynproPairsOrder" &&
+echo "SET STATEMENT max_statement_time=0 FOR SELECT * FROM \
+$DB.SynproPairsOrder INTO OUTFILE '$EXP_DIR/SynproPairsOrder.csv' FIELDS TERMINATED BY ',' \
+OPTIONALLY ENCLOSED BY '' LINES TERMINATED BY '\n';" > export_table.sql &&
+mysql -h $ADDR -u $USER -p$PASS $DB < export_table.sql &&
+sed -i '1s/^/source_id,target_id,subregion,parcel\n/' $EXP_DIR/SynproPairsOrder.csv && # add column names
+cp $EXP_DIR/SynproPairsOrder.csv ../../iconv/latin1/ &&
 echo "Exporting SynproNoPS" &&
 echo "SET STATEMENT max_statement_time=0 FOR SELECT * FROM \
 $DB.SynproNPS INTO OUTFILE '$EXP_DIR/SynproNoPS.csv' FIELDS TERMINATED BY ',' \

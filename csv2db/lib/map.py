@@ -13,7 +13,7 @@ from ..models import neurite_quantified, attachment_neurite, attachment_connecti
 from ..models import SynproEvidencePropertyTypeRel, article_not_found, izhmodels_single, user
 from ..models import SynproPropParcelRel, SynproTypeTypeRel, attachment_neurite_rar
 from ..models import SynproCP, SynproCPTotal, SynproNOC, SynproNOCTotal, SynproNoPS, SynproNPSTotal
-from ..models import SynproParcelVolumes, SynproSubLayers, SynproVolumesSelected, SynproIBD
+from ..models import SynproParcelVolumes, SynproSubLayers, SynproVolumesSelected, SynproIBD, SynproPairsOrder
 from ..models import phases, phases_fragment, attachment_phases, PhasesEvidenceTypeRel, PhasesEvidenceFragmentRel
 from ..models import counts, counts_fragment, CountsEvidenceTypeRel, CountsEvidenceFragmentRel, Epdata
 from ..models import attachment_counts, citations, Hippocampome_to_NMO, ModelDB_mapping
@@ -268,6 +268,8 @@ class Map:
                 Map.ModelDB_mapping(self)
             elif order == '61':
                 Map.SynproIBD(self)
+            elif order == '62':
+                Map.SynproPairsOrder(self)
             else:
                 pass
             try:
@@ -1908,6 +1910,19 @@ class Map:
                     subregion=row['subregion'],   
                     layer=row['layer'],
                     ibd=row['ibd']
+                )
+                user_object.save()
+        except Exception as e:
+            print(e)
+
+    def SynproPairsOrder(self):
+        try:
+            for row in self.rows:
+                user_object = SynproPairsOrder(
+                    source_id=row['source_id'],
+                    target_id=row['target_id'],   
+                    subregion=row['subregion'],   
+                    parcel=row['parcel']
                 )
                 user_object.save()
         except Exception as e:
