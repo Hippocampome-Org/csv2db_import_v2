@@ -96,13 +96,32 @@ eval $command
 echo "Setting permissions of export directory to mysql. Sudo password may be needed." &&
 command="sudo chown -R mysql:mysql $EXP_DIR" &&
 eval $command &&
+##### SynproPairsOrder #####
 echo "Exporting SynproPairsOrder" &&
+# export view data into csv
 echo "SET STATEMENT max_statement_time=0 FOR SELECT * FROM \
 $DB.SynproPairsOrder INTO OUTFILE '$EXP_DIR/SynproPairsOrder.csv' FIELDS TERMINATED BY ',' \
 OPTIONALLY ENCLOSED BY '' LINES TERMINATED BY '\n';" > export_table.sql &&
 mysql -h $ADDR -u $USER -p$PASS $DB < export_table.sql &&
 sed -i '1s/^/source_id,target_id,subregion,parcel\n/' $EXP_DIR/SynproPairsOrder.csv && # add column names
 cp $EXP_DIR/SynproPairsOrder.csv ../../iconv/latin1/ &&
+echo "Importing SynproPairsOrder" &&
+# import csv into permanent table
+echo "DROP VIEW IF EXISTS SynproPairsOrder;" > import_table.sql &&
+mysql -h $ADDR -u $USER -p$PASS $DB < import_table.sql &&
+echo "CREATE TABLE \`SynproPairsOrder\` (\`id\` int(11) NOT NULL AUTO_INCREMENT, \
+  \`source_id\` bigint(20) DEFAULT NULL, \`target_id\` bigint(20) DEFAULT NULL, \
+  \`subregion\` longtext DEFAULT NULL, \`parcel\` longtext DEFAULT NULL, PRIMARY KEY (\`id\`) \
+) ENGINE=InnoDB AUTO_INCREMENT=4945 DEFAULT CHARSET=utf8;" > import_table.sql &&
+mysql -h $ADDR -u $USER -p$PASS $DB < import_table.sql &&
+sed -i 's/^/,/' $EXP_DIR/SynproPairsOrder.csv
+#sed -i '1s/.*/id,source_id,target_id,subregion,parcel/' $EXP_DIR/SynproPairsOrder.csv
+sed -i '1d' $EXP_DIR/SynproPairsOrder.csv
+echo "LOAD DATA LOCAL INFILE '$EXP_DIR/SynproPairsOrder.csv' INTO TABLE SynproPairsOrder \
+ COLUMNS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '' \
+ LINES TERMINATED BY '\n';" > import_table.sql &&
+mysql -h $ADDR -u $USER -p$PASS $DB < import_table.sql &&
+############################
 echo "Exporting SynproNoPS" &&
 echo "SET STATEMENT max_statement_time=0 FOR SELECT * FROM \
 $DB.SynproNPS INTO OUTFILE '$EXP_DIR/SynproNoPS.csv' FIELDS TERMINATED BY ',' \
