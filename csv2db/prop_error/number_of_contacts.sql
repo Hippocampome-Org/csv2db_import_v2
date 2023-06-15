@@ -27,4 +27,8 @@ WHERE
         AND lhv.target_id = ibd.target_id
         AND lhv.subregion = ibd.subregion
         AND lhv.parcel = ibd.layer
+        AND axonal_length_mean IS NOT NULL
+        AND dendritic_length_mean IS NOT NULL
+        AND overlap_volume_mean IS NOT NULL
+        AND ibd IS NOT NULL
 GROUP BY lhv.source_id, lhv.target_id, lhv.subregion, lhv.parcel;
