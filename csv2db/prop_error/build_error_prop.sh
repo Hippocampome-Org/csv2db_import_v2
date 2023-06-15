@@ -130,6 +130,7 @@ $DB.SynproNPS INTO OUTFILE '$EXP_DIR/SynproNoPS.csv' FIELDS TERMINATED BY ',' \
 OPTIONALLY ENCLOSED BY '' LINES TERMINATED BY '\n';" > export_table.sql &&
 mysql -h $ADDR -u $USER -p$PASS $DB < export_table.sql &&
 sed -i '1s/^/source_id,target_id,subregion,parcel,NPS_mean,NPS_std\n/' $EXP_DIR/SynproNoPS.csv && # add column names
+sed -i 's/\\//g' $EXP_DIR/SynproNoPS.csv && # fix issue with backslash appearing in some entries
 echo "Exporting SynproNOC" &&
 echo "SET STATEMENT max_statement_time=0 FOR SELECT * FROM \
 $DB.SynproNumberOfContacts INTO OUTFILE '$EXP_DIR/SynproNOC.csv' FIELDS TERMINATED BY ',' \
