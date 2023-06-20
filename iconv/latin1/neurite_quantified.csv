@@ -1,4 +1,4 @@
-Unique_ID,Subregion,E/I,"Axonal-dendritic pattern (ax=1, de=2)",p,Projection patterning,Hippocampome neuronal class,Neurite,Neurite_ID,Total_length,Filtered_Total_length,%_of_neurite_tree,Morphology pattern ,Max_path_length,Min_path length,Avg_path_length,Convex Hull,Reference_ID,Location in reference,Reference,Morphological notes
+Unique_ID,Subregion,E/I,"Axonal-dendritic pattern (ax=1, de=2)",p,Projection patterning,Hippocampome neuronal class,Neurite,Neurite_ID,Total_length,Filtered_Total_length,%_of_neurite_tree,Morphology pattern,Max_path_length,Min_path length,Avg_path_length,Convex Hull,Reference_ID,Location in reference,Reference,Morphological notes
 5001,Sub,E,331,p,EC_000111,SUB EC-Proj Pyramidal,Sub:All:D,65,4324.594973,4324.594973,,,,,,,800000,"p499, Fig7A1",Harris-Stewart-2001-490-JCopmNeurol-Fig7A1,
 5001,Sub,E,331,p,EC_000111,SUB EC-Proj Pyramidal,Sub:All:A,64,1940.597155,1940.597155,,,,,,,800000,"p499, Fig7A1",,
 5001,Sub,E,331,p,EC_000111,SUB EC-Proj Pyramidal,Sub:SM:D,68,3306.201048,3306.201048,77.79879312,YES,599.1356383,0,299.5678191,46867926.66,800000,"p499, Fig7A1",,
