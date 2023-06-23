@@ -24,20 +24,12 @@ source_id,source_name,source_e_or_i,target_id,target_name,target_e_or_i,type_ent
 1000,DG Granule (+)2201p,E,2049,CA3 QuadD-LM (-)12222,I,p,CA3,SL,67.41
 1000,DG Granule (+)2201p,E,2049,CA3 QuadD-LM (-)12222,I,p,CA3,SP,67.41
 2000,CA3 Pyramidal (+)23223p,E,4036,CA1 Axo-Axonic (-)2232,I,p,CA1,SR,4.47
-2000,CA3 Pyramidal (+)23223p,E,4036,CA1 Axo-Axonic (-)2232,I,p,CA1,SO,4.47
-2000,CA3 Pyramidal (+)23223p,E,4036,CA1 Axo-Axonic (-)2232,I,p,CA1,SR,5.8
 2000,CA3 Pyramidal (+)23223p,E,4036,CA1 Axo-Axonic (-)2232,I,p,CA1,SO,5.8
 2000,CA3 Pyramidal (+)23223p,E,4078,CA1 Basket (-)2232,I,p,CA1,SR,4.47
-2000,CA3 Pyramidal (+)23223p,E,4078,CA1 Basket (-)2232,I,p,CA1,SO,4.47
-2000,CA3 Pyramidal (+)23223p,E,4078,CA1 Basket (-)2232,I,p,CA1,SR,5.8
 2000,CA3 Pyramidal (+)23223p,E,4078,CA1 Basket (-)2232,I,p,CA1,SO,5.8
 2000,CA3 Pyramidal (+)23223p,E,4079,CA1 Basket CCK+ (-)2232,I,p,CA1,SR,4.47
-2000,CA3 Pyramidal (+)23223p,E,4079,CA1 Basket CCK+ (-)2232,I,p,CA1,SO,4.47
-2000,CA3 Pyramidal (+)23223p,E,4079,CA1 Basket CCK+ (-)2232,I,p,CA1,SR,5.8
 2000,CA3 Pyramidal (+)23223p,E,4079,CA1 Basket CCK+ (-)2232,I,p,CA1,SO,5.8
 2000,CA3 Pyramidal (+)23223p,E,4080,CA1 Bistratified (-)0333,I,p,CA1,SR,4.47
-2000,CA3 Pyramidal (+)23223p,E,4080,CA1 Bistratified (-)0333,I,p,CA1,SO,4.47
-2000,CA3 Pyramidal (+)23223p,E,4080,CA1 Bistratified (-)0333,I,p,CA1,SR,5.8
 2000,CA3 Pyramidal (+)23223p,E,4080,CA1 Bistratified (-)0333,I,p,CA1,SO,5.8
 2000,CA3 Pyramidal (+)23223p,E,4081,CA1 Ivy (-)0333,I,p,CA1,SR,4.47
 2000,CA3 Pyramidal (+)23223p,E,4081,CA1 Ivy (-)0333,I,p,CA1,SO,5.8
