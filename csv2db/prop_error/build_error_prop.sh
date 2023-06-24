@@ -164,4 +164,11 @@ sed -i '1s/^/source_id,target_id,CP_mean_total,CP_stdev_total,parcel_count\n/' $
 echo "Setting permissions of export directory to everyone. Sudo password may be needed." &&
 command="sudo chmod -R 777 $EXP_DIR" &&
 eval $command &&
+echo "Copying csv result files to /iconv/latin1 directory. The user should copy all updated files in /iconv/latin1 to source control (Github) for backing them up." 
+cp $EXP_DIR/SynproNoPS.csv ../../iconv/latin1/ &&
+cp $EXP_DIR/SynproNOC.csv ../../iconv/latin1/ &&
+cp $EXP_DIR/SynproCP.csv ../../iconv/latin1/ &&
+cp $EXP_DIR/SynproNPSTotal.csv ../../iconv/latin1/ &&
+cp $EXP_DIR/SynproNOCTotal.csv ../../iconv/latin1/ &&
+cp $EXP_DIR/SynproCPTotal.csv ../../iconv/latin1/ &&
 echo "All operations completed."
