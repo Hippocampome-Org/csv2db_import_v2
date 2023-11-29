@@ -32,12 +32,13 @@ import csv
 import os
 import glob
 import mysql.connector
+import logging
 from datetime import datetime
 
 
 dir_name = "./GA_data";
 dir_path = os.path.dirname(os.path.realpath(__file__));
-## print(dir_path);
+logging.debug("Directory path: "+dir_path);
 
 cnx = mysql.connector.connect(user='root', database='hippocampome_v2')
 cursor = cnx.cursor()
@@ -144,18 +145,20 @@ def read_csv_file(dir_name, file_name):
 #Program Starts From here
 ############
 
-extension = 'csv'
-os.chdir(dir_name)
-csv_files = glob.glob('*.{}'.format(extension))
 
-## print(csv_files)
-## print(os.listdir(dir_name)) #Gets all irrepective of extensions
+def main():
+	try:
+		extension = 'csv'
+		os.chdir(dir_name)
+		csv_files = glob.glob('*.{}'.format(extension))
+		##Loop thru the csv files
+		for csv_file in csv_files:
+			logging.debug("Started processing file: "+csv_file+" at: "+datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+			read_csv_file('GA_data', csv_file)
+			logging.debug("Completed processing file: "+csv_file+" at: "+datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+	except Exception as e:
+		logging.debug("Error happened")
+		logging.debug(e)
 
-##Loop thru the csv files
-for csv_file in csv_files:
-	print (csv_file)
-	## read_csv_file(dir_path, 'GA_data', csv_file)
-	read_csv_file('GA_data', csv_file)
-	#call the function to read the file and load
-
-
+if __name__ == '__main__':
+    main()
