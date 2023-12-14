@@ -95,6 +95,7 @@ def parse_data_insert(inRecordingMode, csvreader, file_name, starts_with, ends_w
 		if line == []:
 			continue
 		else:
+			print(line)
 			if not inRecordingMode:
 				if line[0].startswith(starts_with):
 					inRecordingMode = True
@@ -103,7 +104,6 @@ def parse_data_insert(inRecordingMode, csvreader, file_name, starts_with, ends_w
 			elif inRecordingMode:
 				cnx = mysql.connector.connect(user='root', database='hippocampome_v2')
 				cursor = cnx.cursor()
-
 				if len(line[0]) <= 1:
 					#inRecordingMode = False
 					#print(line)
@@ -153,9 +153,11 @@ def main():
 		csv_files = glob.glob('*.{}'.format(extension))
 		##Loop thru the csv files
 		for csv_file in csv_files:
+			print("Started processing file: "+csv_file+" at: "+datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
 			logging.debug("Started processing file: "+csv_file+" at: "+datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
 			read_csv_file('GA_data', csv_file)
 			logging.debug("Completed processing file: "+csv_file+" at: "+datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+			print("Completed processing file: "+csv_file+" at: "+datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
 	except Exception as e:
 		logging.debug("Error happened")
 		logging.debug(e)
