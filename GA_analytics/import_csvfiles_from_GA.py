@@ -111,7 +111,7 @@ property = "properties/367925539"
 dimensions=[Dimension(name="landingPagePlusQueryString")]
 metrics=[{"name":"sessions"}, {"name":"newUsers"}, {"name":"bounceRate"}, {"name":"averageSessionDuration"}]
 start_date = '2023-07-01'
-end_date = 'today'
+end_date = 'today' # 2023-07-02
 header_rows='Landing Page,Sessions,% New Sessions,New Users,Bounce Rate,Pages / Session,Avg. Session Duration,Goal Conversion Rate,Goal Completions,Goal Value'
 df = get_ga4_report_df(property, dimensions, metrics, start_date, end_date, "landing_page", header_rows)
 write_csv('analytics_data_landing_pagesKNV.csv', header_rows, df)
