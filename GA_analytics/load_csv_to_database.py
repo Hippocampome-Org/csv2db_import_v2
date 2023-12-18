@@ -96,6 +96,8 @@ def parse_data_insert(inRecordingMode, csvreader, file_name, starts_with, ends_w
 			continue
 		else:
 			print(line)
+			print(inRecordingMode)
+			print(ends_with)
 			if not inRecordingMode:
 				if line[0].startswith(starts_with):
 					inRecordingMode = True
@@ -111,17 +113,26 @@ def parse_data_insert(inRecordingMode, csvreader, file_name, starts_with, ends_w
 				elif len(ends_with) > 1 and line[0].startswith(("/")):
 					sql = db_data_insert_sql[file_name]
 					val = tuple(line)
-					cursor.execute(sql, val)
-					cnx.commit()
-					cursor.close()
-					cnx.close()
+					print(sql)
+					print(val)
+					##cursor.execute(sql, val)
+					##cnx.commit()
+					##cursor.close()
+					##cnx.close()
 				elif len(ends_with) > 1 and line[0].startswith(ends_with):
 					## When we reach "line before views"
+					print("in elif len KNV")
 					continue
 				else:
+					print("IN FINAL ELSE")
 					sql = db_data_insert_viewssql[file_name]
+					print(sql)
+					print(line[0])
 					line[0] = datetime.strptime(line[0], "%m/%d/%y")
+					print(line[0])
 					val = tuple(line)
+					print(sql)
+					print(val)
 					cursor.execute(sql, val)
 					cnx.commit()
 					cursor.close()
@@ -138,8 +149,8 @@ def read_csv_file(dir_name, file_name):
 		##print("Calling Views Mode")
 		##inRecordingMode = False
 		## To insert Views
-		#parse_data_insert(inRecordingMode, csvreader, file_name, csv_dates_data[file_name], None)
-		#print("After Views Mode")
+		##parse_data_insert(inRecordingMode, csvreader, file_name, csv_dates_data[file_name], None)
+		##print("After Views Mode")
 
 ############
 #Program Starts From here
