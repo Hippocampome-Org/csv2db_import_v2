@@ -11,7 +11,8 @@ Created on Nov 21 2023 to read csv files and write to database
 				  --  Day Index,Exits
 #### analytics_data_landing_pages --  Landing Page,Sessions,% New Sessions,New Users,Bounce Rate,Pages / Session,Avg. Session Duration,Goal Conversion Rate,Goal Completions,Goal Value
 				  --  Day Index,Sessions
-
+#### analytics_data_events_pages  --  Event name,Event count,Total users,Event count per user,Total revenue
+				  --  Day Index,Sessions
 
 ################Insert Statements
 
@@ -45,16 +46,16 @@ cursor = cnx.cursor()
 
 ## Global Variables
 ###*************************************************************************************************************************************************
-
+"""
 csv_data = { 'analytics_data_exit_pages.csv':'Page',
              'analytics_data_pages.csv':'Page', 
              'analytics_data_content.csv':'Page path level 1',
              'analytics_data_landing_pages.csv':'Landing Page'}
 
-db_data_insert_sql = { 'analytics_data_exit_pages.csv':"INSERT INTO hippocampome_v2.ga_analytics_exit_pages (page, exits, page_views, percentage_exit) VALUES (%s, %s, %s, %s)",
-             'analytics_data_pages.csv':"INSERT INTO hippocampome_v2.ga_analytics_pages (page, page_views, unique_page_views, avg_time_on_page, entrances, bounce_rate, percentage_exit, page_value) VALUES (%s, %s, %s, %s, %s, %s, %s, %s) ",
-             'analytics_data_content.csv':"INSERT INTO hippocampome_v2.ga_analytics_data_content (page_path_level, page_views, unique_page_views, avg_time_on_page, bounce_rate, percentage_exit) VALUES (%s, %s, %s, %s, %s, %s) ",
-             'analytics_data_landing_pages.csv':"INSERT INTO hippocampome_v2.ga_analytics_landing_pages (landing_page, sessions, percentage_new_sessions, new_users, bounce_rate, pages_sessions, avg_sessions, goal_conversion, goal_completion, goal_value) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s) "}
+db_data_insert_sql = { 'analytics_data_exit_pages.csv':"INSERT INTO hippocampome_v2.ga_analytics_exit_pages (page, exits, page_views, percentage_exit, day_index) VALUES (%s, %s, %s, %s, %s)",
+             'analytics_data_pages.csv':"INSERT INTO hippocampome_v2.ga_analytics_pages (page, page_views, unique_page_views, avg_time_on_page, entrances, bounce_rate, percentage_exit, page_value, day_index) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s) ",
+             'analytics_data_content.csv':"INSERT INTO hippocampome_v2.ga_analytics_data_content (page_path_level, page_views, unique_page_views, avg_time_on_page, bounce_rate, percentage_exit, day_index) VALUES (%s, %s, %s, %s, %s, %s, %s) ",
+             'analytics_data_landing_pages.csv':"INSERT INTO hippocampome_v2.ga_analytics_landing_pages (landing_page, sessions, percentage_new_sessions, new_users, bounce_rate, pages_sessions, avg_sessions, goal_conversion, goal_completion, goal_value, day_index) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s) "}
 
 db_data_insert_sql_cols = {'analytics_data_exit_pages.csv':['page', 'exits', 'page_views', 'percentage_exit'],
              'analytics_data_pages.csv':['page', 'page_views', 'unique_page_views', 'avg_time_on_page', 'entrances', 'bounce_rate', 'percentage_exit', 'page_value'],
@@ -78,6 +79,46 @@ db_data_insert_viewssql_cols = { 'analytics_data_exit_pages.csv':['day_index', '
              'analytics_data_content.csv':['day_index', 'views'],
              'analytics_data_landing_pages.csv':['day_index', 'views']}
 
+"""
+
+csv_data = { 'analytics_data_exit_pages':'Page',
+             'analytics_data_pages':'Page',
+             'analytics_data_content':'Page path level 1',
+             'analytics_data_landing_pages':'Landing Page', 
+	     'analytics_data_events':'Event name'}
+
+db_data_insert_sql = { 'analytics_data_exit_pages':"INSERT INTO hippocampome_v2.ga_analytics_exit_pages (page, exits, page_views, percentage_exit, day_index) VALUES (%s, %s, %s, %s, %s)",
+             'analytics_data_pages':"INSERT INTO hippocampome_v2.ga_analytics_pages (page, page_views, unique_page_views, avg_time_on_page, entrances, bounce_rate, percentage_exit, page_value, day_index) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s) ",
+             'analytics_data_content':"INSERT INTO hippocampome_v2.ga_analytics_data_content (page_path_level, page_views, unique_page_views, avg_time_on_page, bounce_rate, percentage_exit, day_index) VALUES (%s, %s, %s, %s, %s, %s, %s) ",
+             'analytics_data_landing_pages':"INSERT INTO hippocampome_v2.ga_analytics_landing_pages (landing_page, sessions, percentage_new_sessions, new_users, bounce_rate, pages_sessions, avg_sessions, goal_conversion, goal_completion, goal_value, day_index) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s) ",
+             'analytics_data_events':"INSERT INTO hippocampome_v2.ga_analytics_data_events (event_name, event_count, total_users, event_count_per_user, total_revenue, day_index) VALUES (%s, %s, %s, %s, %s, %s) "}
+
+db_data_insert_sql_cols = {'analytics_data_exit_pages':['page', 'exits', 'page_views', 'percentage_exit'],
+             'analytics_data_pages':['page', 'page_views', 'unique_page_views', 'avg_time_on_page', 'entrances', 'bounce_rate', 'percentage_exit', 'page_value'],
+             'analytics_data_content':['page_path_level', 'page_views', 'unique_page_views', 'avg_time_on_page', 'bounce_rate', 'percentage_exit'],
+             'analytics_data_landing_pages':['landing_page', 'sessions', 'percentage_new_sessions', 'new_users', 'bounce_rate', 'pages_sessions', 'avg_sessions', 'goal_conversion', 'goal_completion', 'goal_value'],
+             'analytics_data_events':['event_name', 'event_count', 'total_users', 'event_count_per_user', 'total_revenue', 'day_index']}
+
+######## For the Views
+
+csv_dates_data = { 'analytics_data_exit_pages':'Day Index',
+             'analytics_data_pages':'Day Index',
+             'analytics_data_content':'Day Index',
+             'analytics_data_landing_pages':'Day Index',
+             'analytics_data_events':'Day Index'}
+
+db_data_insert_viewssql_cols = { 'analytics_data_exit_pages':['day_index', 'views'],
+             'analytics_data_pages':['day_index', 'views'],
+             'analytics_data_content':['day_index', 'views'],
+             'analytics_data_landing_pages':['day_index', 'views'],
+             'analytics_data_events':['day_index', 'views']}
+
+db_data_insert_viewssql = { 'analytics_data_exit_pages':"INSERT INTO hippocampome_v2.ga_analytics_exit_pages_views (day_index, views) VALUES (%s, %s)",
+             'analytics_data_pages':"INSERT INTO hippocampome_v2.ga_analytics_pages_views (day_index, views) VALUES (%s, %s)",
+             'analytics_data_content':"INSERT INTO hippocampome_v2.ga_analytics_data_content_views (day_index, views) VALUES (%s, %s)",
+             'analytics_data_landing_pages':"INSERT INTO hippocampome_v2.ga_analytics_landing_pages_views (day_index, views) VALUES (%s, %s)",
+             'analytics_data_events':"INSERT INTO hippocampome_v2.ga_analytics_events_views (day_index, views) VALUES (%s, %s)"}
+
 ## Till Here
 
 def nonblank_lines(f):
@@ -86,7 +127,7 @@ def nonblank_lines(f):
         if line:
             yield line
 
-def parse_data_insert(inRecordingMode, csvreader, file_name, starts_with, ends_with):
+def parse_data_insert(inRecordingMode, csvreader, file_name, starts_with, ends_with, file_date):
 	if ends_with is None:
 		ends_with = ""
 		inRecordingMode = True
@@ -95,9 +136,9 @@ def parse_data_insert(inRecordingMode, csvreader, file_name, starts_with, ends_w
 		if line == []:
 			continue
 		else:
-			print(line)
-			print(inRecordingMode)
-			print(ends_with)
+			#print(line)
+			#print(inRecordingMode)
+			#print(ends_with)
 			if not inRecordingMode:
 				if line[0].startswith(starts_with):
 					inRecordingMode = True
@@ -112,13 +153,19 @@ def parse_data_insert(inRecordingMode, csvreader, file_name, starts_with, ends_w
 					continue
 				elif len(ends_with) > 1 and line[0].startswith(("/")):
 					sql = db_data_insert_sql[file_name]
-					val = tuple(line)
-					print(sql)
-					print(val)
-					##cursor.execute(sql, val)
-					##cnx.commit()
-					##cursor.close()
-					##cnx.close()
+					#print(sql)
+					if(file_date):
+						file_date = datetime.strptime(file_date, "%m/%d/%y")
+					#print(tuple(line))
+					#print(file_date)
+					#print(tuple(file_date,))	
+					val = tuple(line) + (file_date,) #to add date too
+					#print(sql)
+					#print(val)
+					cursor.execute(sql, val)
+					cnx.commit()
+					cursor.close()
+					cnx.close()
 				elif len(ends_with) > 1 and line[0].startswith(ends_with):
 					## When we reach "line before views"
 					print("in elif len KNV")
@@ -144,7 +191,21 @@ def read_csv_file(dir_name, file_name):
 		csvreader = csv.reader(file)
 		inRecordingMode = False
 		## To insert Data
-		parse_data_insert(inRecordingMode, csvreader, file_name, csv_data[file_name], csv_dates_data[file_name])
+		
+		file_date = None # Default None for the downloaded files
+		
+		str_beforecsv  = file_name.split(".")[0] #split and get the string before.csv
+		if '-' in str_beforecsv:
+			[ filename1, file_date ] = str_beforecsv.split("-")
+		else:
+			print("In else")
+			file_name1 = str_beforecsv
+
+		file_name = file_name1
+		
+
+		parse_data_insert(inRecordingMode, csvreader, file_name, csv_data[file_name], csv_dates_data[file_name], file_date)
+		#parse_data_insert(inRecordingMode, csvreader, file_name, csv_data[file_name], csv_dates_data[file_name])
 		### No need of next few calls
 		##print("Calling Views Mode")
 		##inRecordingMode = False

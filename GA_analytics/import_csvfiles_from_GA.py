@@ -99,6 +99,10 @@ def ga4_response_to_df(response, data_name, header_rows, day_index):
 			row_data = insert_after(row_data, "bounceRate", "% Exit", "00.00%")	
 			row_data = insert_after(row_data, "% Exit", "Page Value", "$0.00")	
 			views += int(row_data.get("sessions"))
+		elif data_name == "events":
+			row_data = insert_after(row_data, "eventCountPerUser", "Total revenue", "$0.00")
+			views += int(row_data.get("sessions"))
+
 		all_data.append(row_data)
 	#datetime.datetime.strptime("21/12/2008", "%d/%m/%Y").strftime("%Y-%m-%d")
 	day_index = datetime.strptime(day_index, "%Y-%m-%d").strftime("%d/%m/%y")
@@ -177,7 +181,11 @@ for single_date in daterange(start_date, end_date):
 	header_rows='Landing Page,Sessions,% New Sessions,New Users,Bounce Rate,Pages / Session,Avg. Session Duration,Goal Conversion Rate,Goal Completions,Goal Value,Views'
 	#df = get_ga4_report_df(property, dimensions, metrics, start_date, end_date, "landing_page", header_rows)
 	df = get_ga4_report_df(property, dimensions, metrics, date_input, date_input, "landing_page", header_rows)
-	write_csv(dir_name, 'analytics_data_landing_pages.csv', header_rows, df)
+
+	# To add date to filename
+	file_name = 'analytics_data_landing_pages'+'-'+date_input+'.csv'
+	write_csv(dir_name, file_name, header_rows, df)
+	#write_csv(dir_name, 'analytics_data_landing_pages.csv', header_rows, df)
 	
 	
 	##########For date pages Data
@@ -188,7 +196,21 @@ for single_date in daterange(start_date, end_date):
 	header_rows='Page,Pageviews,Unique Pageviews, Avg. Time on Page, Entrances, Bounce Rate, % Exit, Page Value'
 	#df = get_ga4_report_df(property, dimensions, metrics, start_date, end_date, "pages", header_rows)
 	df = get_ga4_report_df(property, dimensions, metrics, date_input, date_input, "pages", header_rows)
-	write_csv(dir_name, 'analytics_data_pages.csv', header_rows, df)
-	exit()
+	#write_csv(dir_name, 'analytics_data_pages.csv', header_rows, df)
+	# To add date to filename
+	file_name = 'analytics_data_pages'+'-'+date_input+'.csv'
+	write_csv(dir_name, file_name, header_rows, df)
 
+	##########For date Events Data
+	#Event name,Event count,Total users,Event count per user,Total revenue
+        
+	dimensions=[Dimension(name="eventName")]
+	metrics=[{"name":"eventCount"}, {"name":"sessions"}, {"name":"eventCountPerUser"}]
+	header_rows='Event name, Event Count, Total users, Event count per user' #, Total revenue'
+	df = get_ga4_report_df(property, dimensions, metrics, date_input, date_input, "events", header_rows)
+	#write_csv(dir_name, 'analytics_data_events.csv', header_rows, df)
+	# To add date to filename
+	file_name = 'analytics_data_events'+'-'+date_input+'.csv'
+	write_csv(dir_name, file_name, header_rows, df)
+	exit()
 
