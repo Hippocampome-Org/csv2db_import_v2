@@ -35,6 +35,7 @@ import glob
 import mysql.connector
 import logging
 from datetime import datetime
+from pandas import to_datetime
 
 
 dir_name = "./GA_data";
@@ -133,7 +134,10 @@ def parse_data_insert(inRecordingMode, csvreader, file_name, starts_with, ends_w
 		inRecordingMode = True
 		
 	for line in csvreader:
+		print(line)
+		print("KBV")
 		if line == []:
+			print(line)
 			continue
 		else:
 			#print(line)
@@ -149,17 +153,20 @@ def parse_data_insert(inRecordingMode, csvreader, file_name, starts_with, ends_w
 				cursor = cnx.cursor()
 				if len(line[0]) <= 1:
 					#inRecordingMode = False
-					#print(line)
+					print("in Elif in recordingMode")
+					print(line)
 					continue
 				elif len(ends_with) > 1 and line[0].startswith(("/")):
 					sql = db_data_insert_sql[file_name]
-					#print(sql)
 					if(file_date):
-						file_date = datetime.strptime(file_date, "%m/%d/%y")
+						d = datetime.strptime(file_date, '%Y-%m-%d')
+						file_date = d.strftime("%m/%d/%y")
+
 					#print(tuple(line))
 					#print(file_date)
 					#print(tuple(file_date,))	
 					val = tuple(line) + (file_date,) #to add date too
+					#print(":ine KASTURI-----")
 					#print(sql)
 					#print(val)
 					cursor.execute(sql, val)
@@ -193,16 +200,25 @@ def read_csv_file(dir_name, file_name):
 		## To insert Data
 		
 		file_date = None # Default None for the downloaded files
-		
+		print(file_date)	
 		str_beforecsv  = file_name.split(".")[0] #split and get the string before.csv
+		print(str_beforecsv)
 		if '-' in str_beforecsv:
-			[ filename1, file_date ] = str_beforecsv.split("-")
+			print("inf if")
+			print(str_beforecsv.split("-"))
+			print(str_beforecsv.split("-", 1))
+			[ file_name1, file_date ] = str_beforecsv.split("-", 1)
 		else:
 			print("In else")
 			file_name1 = str_beforecsv
 
 		file_name = file_name1
-		
+		print("----")
+		print(file_name)
+		print(file_date)	
+		print(csv_data[file_name])
+		print("**************")
+		print(csv_dates_data[file_name])
 
 		parse_data_insert(inRecordingMode, csvreader, file_name, csv_data[file_name], csv_dates_data[file_name], file_date)
 		#parse_data_insert(inRecordingMode, csvreader, file_name, csv_data[file_name], csv_dates_data[file_name])

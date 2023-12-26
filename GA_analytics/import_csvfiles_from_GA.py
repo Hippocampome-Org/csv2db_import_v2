@@ -106,7 +106,10 @@ def ga4_response_to_df(response, data_name, header_rows, day_index):
 		all_data.append(row_data)
 	#datetime.datetime.strptime("21/12/2008", "%d/%m/%Y").strftime("%Y-%m-%d")
 	day_index = datetime.strptime(day_index, "%Y-%m-%d").strftime("%d/%m/%y")
-	views_data.append({"Day Index":day_index, "Pageviews": views})
+	if data_name == "pages":
+		views_data.append({"Day Index":day_index, "Pageviews": views})
+	else:
+		views_data.append({"Day Index":day_index, "Sessions": views})
 
 	df_1 = pd.DataFrame(all_data)
 	df_2 = pd.DataFrame(views_data)
