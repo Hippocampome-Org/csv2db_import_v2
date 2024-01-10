@@ -42,7 +42,7 @@ dir_name = "./GA_data";
 dir_path = os.path.dirname(os.path.realpath(__file__));
 logging.debug("Directory path: "+dir_path);
 
-cnx = mysql.connector.connect(user='root', database='hippocampome_v2')
+cnx = mysql.connector.connect(user='root', database='hippocampome_v2', password='DBeaver@123')
 cursor = cnx.cursor()
 
 ## Global Variables
@@ -118,7 +118,7 @@ db_data_insert_viewssql = { 'analytics_data_exit_pages':"INSERT INTO hippocampom
              'analytics_data_pages':"INSERT INTO hippocampome_v2.ga_analytics_pages_views (day_index, views) VALUES (%s, %s)",
              'analytics_data_content':"INSERT INTO hippocampome_v2.ga_analytics_data_content_views (day_index, views) VALUES (%s, %s)",
              'analytics_data_landing_pages':"INSERT INTO hippocampome_v2.ga_analytics_landing_pages_views (day_index, views) VALUES (%s, %s)",
-             'analytics_data_events':"INSERT INTO hippocampome_v2.ga_analytics_events_views (day_index, views) VALUES (%s, %s)"}
+             'analytics_data_events':"INSERT INTO hippocampome_v2.ga_analytics_data_events_views (day_index, views) VALUES (%s, %s)"}
 
 ## Till Here
 
@@ -128,45 +128,46 @@ def nonblank_lines(f):
         if line:
             yield line
 
+def is_date_matching(date_str):
+    try:
+        return bool(datetime.strptime(date_str, '%Y-%m-%d'))
+    except ValueError:
+        return False
+
 def parse_data_insert(inRecordingMode, csvreader, file_name, starts_with, ends_with, file_date):
 	if ends_with is None:
 		ends_with = ""
 		inRecordingMode = True
 		
 	for line in csvreader:
-		print(line)
-		print("KBV")
 		if line == []:
-			print(line)
 			continue
 		else:
-			#print(line)
-			#print(inRecordingMode)
-			#print(ends_with)
 			if not inRecordingMode:
 				if line[0].startswith(starts_with):
 					inRecordingMode = True
 				elif line[0].startswith(ends_with):
 					inRecordingMode = False
 			elif inRecordingMode:
-				cnx = mysql.connector.connect(user='root', database='hippocampome_v2')
+				cnx = mysql.connector.connect(user='root', database='hippocampome_v2', password='DBeaver@123')
 				cursor = cnx.cursor()
-				if len(line[0]) <= 1:
+				if line[0] == []:
+					continue
+				elif len(line[0]) <= 1:
 					#inRecordingMode = False
-					print("in Elif in recordingMode")
-					print(line)
 					continue
 				elif len(ends_with) > 1 and line[0].startswith(("/")):
+					if(ends_with=='EVENTS'):
+						line[0] = line[0][1:]
+					if line[0].startswith('Day Index'):
+						continue
 					sql = db_data_insert_sql[file_name]
-					if(file_date):
+					if(file_date) and not is_date_matching(file_date):
 						d = datetime.strptime(file_date, '%Y-%m-%d')
 						file_date = d.strftime("%m/%d/%y")
 
-					#print(tuple(line))
-					#print(file_date)
-					#print(tuple(file_date,))	
+					#print(tuple(line))print(file_date)print(tuple(file_date,))	
 					val = tuple(line) + (file_date,) #to add date too
-					#print(":ine KASTURI-----")
 					#print(sql)
 					#print(val)
 					cursor.execute(sql, val)
@@ -175,18 +176,17 @@ def parse_data_insert(inRecordingMode, csvreader, file_name, starts_with, ends_w
 					cnx.close()
 				elif len(ends_with) > 1 and line[0].startswith(ends_with):
 					## When we reach "line before views"
-					print("in elif len KNV")
 					continue
 				else:
-					print("IN FINAL ELSE")
+					##print("IN FINAL ELSE")
+					##print(line[0])
+					if line[0].startswith('Day Index'):
+						continue
 					sql = db_data_insert_viewssql[file_name]
-					print(sql)
-					print(line[0])
 					line[0] = datetime.strptime(line[0], "%m/%d/%y")
-					print(line[0])
 					val = tuple(line)
-					print(sql)
-					print(val)
+					#print(sql)
+					#print(val)
 					cursor.execute(sql, val)
 					cnx.commit()
 					cursor.close()
@@ -200,33 +200,24 @@ def read_csv_file(dir_name, file_name):
 		## To insert Data
 		
 		file_date = None # Default None for the downloaded files
-		print(file_date)	
 		str_beforecsv  = file_name.split(".")[0] #split and get the string before.csv
-		print(str_beforecsv)
 		if '-' in str_beforecsv:
-			print("inf if")
-			print(str_beforecsv.split("-"))
-			print(str_beforecsv.split("-", 1))
 			[ file_name1, file_date ] = str_beforecsv.split("-", 1)
 		else:
-			print("In else")
 			file_name1 = str_beforecsv
 
 		file_name = file_name1
-		print("----")
-		print(file_name)
-		print(file_date)	
-		print(csv_data[file_name])
-		print("**************")
-		print(csv_dates_data[file_name])
-
-		parse_data_insert(inRecordingMode, csvreader, file_name, csv_data[file_name], csv_dates_data[file_name], file_date)
+		if(file_name == 'analytics_data_events'):
+			parse_data_insert(inRecordingMode, csvreader, file_name, csv_data[file_name], 'EVENTS', file_date)
+		else:
+			parse_data_insert(inRecordingMode, csvreader, file_name, csv_data[file_name], csv_dates_data[file_name], file_date)
+		
 		#parse_data_insert(inRecordingMode, csvreader, file_name, csv_data[file_name], csv_dates_data[file_name])
 		### No need of next few calls
 		##print("Calling Views Mode")
 		##inRecordingMode = False
 		## To insert Views
-		##parse_data_insert(inRecordingMode, csvreader, file_name, csv_dates_data[file_name], None)
+		##parse_data_insert(inRecordingMode, csvreader, file_name, csv_dates_data[file_name], None, file_date)
 		##print("After Views Mode")
 
 ############
@@ -242,13 +233,13 @@ def main():
 		##Loop thru the csv files
 		for csv_file in csv_files:
 			print("Started processing file: "+csv_file+" at: "+datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
-			logging.debug("Started processing file: "+csv_file+" at: "+datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+			#logging.debug("Started processing file: "+csv_file+" at: "+datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
 			read_csv_file('GA_data', csv_file)
-			logging.debug("Completed processing file: "+csv_file+" at: "+datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+			#logging.debug("Completed processing file: "+csv_file+" at: "+datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
 			print("Completed processing file: "+csv_file+" at: "+datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
 	except Exception as e:
 		logging.debug("Error happened")
 		logging.debug(e)
 
 if __name__ == '__main__':
-    main()
+	main()
