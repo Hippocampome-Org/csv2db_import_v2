@@ -36,6 +36,10 @@ from datetime import datetime
 import shutil
 import logging
 
+import glob                             
+import mysql.connector          
+from pandas import to_datetime  
+
 
 dir_name = "./GA_data";
 dir_path = os.path.dirname(os.path.realpath(__file__));
@@ -137,20 +141,28 @@ def get_ga4_report_df(property_id, dimensions_ga4, metrics_ga4, start_date, end_
 	response = client.run_report(request)
 	return ga4_response_to_df(response, data_name, header_rows, start_date)
 
-def get_new_file_name(file_name):
+def get_new_file_name(file_name, get_file_date=None):
 	print(file_name)
+	print("****");
 	str_beforecsv  = file_name.split(".")[0] #split and get the string before.csv
 	print(str_beforecsv)
 	ext = file_name.split(".")[1]
+	file_date = None
 	if '-' in str_beforecsv:
 		[ file_name1, file_date ] = str_beforecsv.split("-", 1)
 	else:
 		file_name1 = str_beforecsv
+	print("before joining")
 	file_name = ''.join((file_name1,'.',ext))
-	return file_name
-
-#def create_directory(date_input):
-#mkdir -p $(date_value '+%Y/%m/%d')
+	print("Get_file_date:")
+	print(get_file_date)
+	if get_file_date is None:
+		return file_name
+	else:
+		print("IN ELSE")
+		print(file_date)
+		print("---")
+		return file_date	
 
 def write_csv(dir_name, file_name, header_row, df_list, date_input):
 	try:
@@ -193,6 +205,46 @@ def daterange(start_date, end_date):
     for n in range(int((end_date - start_date).days)):
         yield start_date + timedelta(n)
 
+def create_directory(name):
+	os.makedirs(name, mode=0o777, exist_ok=False)
+
+def get_csv_files(dir_name):
+	extension = 'csv'
+	os.chdir(dir_name)
+	csv_files = glob.glob('*.{}'.format(extension))
+	##Loop thru the csv files
+	for csv_file in csv_files:
+		print(csv_file)
+		old_path = os.path.join(dir_path, dir_name)
+		file_date = None
+		file_date = get_new_file_name(csv_file, 'file_date')
+		if file_date is None:
+			##Move to GA_data/archive_new/historical
+			dir_name = dir_name+'/archive_new/historical/'
+			new_path = os.path.join(dir_path, dir_name)#, '/archive_new/historical/') 
+		else:
+			##Move to GA_data/archive_new/year/month	
+			date_object = datetime.datetime.strptime(file_date, '%Y-%m-%d').date()
+			year_val = date_object.year
+			month_val = date_object.month
+			new_path = os.path.join(dir_path, dir_name, '/archive_new/#{year_val}/#{month_val}')
+		
+		print("old_path: "+old_path)
+		print("new_path: "+new_path)
+		##Check last line of file and get the date and test if it exists using load_csv_to_database function
+		from load_csv_to_database import if_file_is_loaded_into_db
+		if_file_is_loaded_into_db(old_path, csv_file)
+		exit()
+		move_files(old_path, new_path, csv_file)
+
+def move_files(source, destination, csv_file):
+	create_directory(destination)
+	src_path = os.path.join(source, f)
+	dst_path = os.path.join(destination, f)
+	shutil.move(src_path, dst_path)
+
+def file_exists():
+	return "hello"
 
 ############ 
 #Program Starts From here 
@@ -200,6 +252,12 @@ def daterange(start_date, end_date):
 
 def main():
 	try:
+		## if .csv file exists move to arvhice/historical/
+		print("before get_csv:")
+		get_csv_files(dir_name)	
+		print("after get_csv:")
+		## if date file is there then see if the folder exists if not create it
+			
 		property = "properties/367925539"
 		start_date = date(2023, 7, 1)
 		end_date = date.today() #'today' # 2023-07-02

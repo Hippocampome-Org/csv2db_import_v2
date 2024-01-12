@@ -120,8 +120,46 @@ db_data_insert_viewssql = { 'analytics_data_exit_pages':"INSERT INTO hippocampom
              'analytics_data_landing_pages':"INSERT INTO hippocampome_v2.ga_analytics_landing_pages_views (day_index, views) VALUES (%s, %s)",
              'analytics_data_events':"INSERT INTO hippocampome_v2.ga_analytics_data_events_views (day_index, views) VALUES (%s, %s)"}
 
+db_data_select_viewssql = { 'analytics_data_exit_pages':"SELECT * FROM hippocampome_v2.ga_analytics_exit_pages_views ORDER BY ID DESC LIMIT 1",
+             'analytics_data_pages':"SELECT * FROM hippocampome_v2.ga_analytics_pages_views ORDER BY ID DESC",
+             'analytics_data_content':"SELECT * FROM hippocampome_v2.ga_analytics_data_content_views ORDER BY ID DESC LIMIT 1",
+             'analytics_data_landing_pages':"SELECT * FROM hippocampome_v2.ga_analytics_landing_pages_views ORDER BY ID DESC LIMIT 1",
+             'analytics_data_events':"SELECT * FROM hippocampome_v2.ga_analytics_data_events_views ORDER BY ID DESC LIMIT 1"}
+
+
 ## Till Here
 
+def get_cnx_cursor():
+	cnx = mysql.connector.connect(user='root', database='hippocampome_v2', password='DBeaver@123')
+	cursor = cnx.cursor()
+	return cnx, cursor
+	
+def if_file_is_loaded_into_db(file_path, file_name):
+	##get the file name without extension
+	## get the last line of the file and last line of the views file for that file
+	print("YAy KAsturi you are here !!!!!")
+	print("File name is:"+file_name)
+
+	with open(os.path.join(file_path, file_name), 'r') as f: 
+		##Call function
+		file_name, file_date = get_new_file_name(file_name)
+		if file_date is None:
+			last_line = f.readlines()[-2]
+		else:
+			last_line = f.readlines()[-1]
+	##Make sure last line exists in the db or not
+	##get the file or sql from the execute sql and if the date in the database is greater than or equal to the file_date then return true and move the file  
+	cnx, cursor = get_cnx_cursor()
+	sql = db_data_select_viewssql[file_name]
+	print(sql)
+	cursor.execute(sql)
+	results = cursor.fetchall()
+	for x in results:
+		print(x)
+	
+	cursor.close()
+	cnx.close()
+	
 def nonblank_lines(f):
     for l in f:
         line = l.rstrip()
@@ -192,6 +230,20 @@ def parse_data_insert(inRecordingMode, csvreader, file_name, starts_with, ends_w
 					cursor.close()
 					cnx.close()
 
+def get_new_file_name(file_name, get_file_date=None):
+	str_beforecsv  = file_name.split(".")[0] #split and get the string before.csv
+	ext = file_name.split(".")[1]
+	file_date = None
+	if '-' in str_beforecsv:
+		[ file_name1, file_date ] = str_beforecsv.split("-", 1)
+	else:
+		file_name1 = str_beforecsv
+        #file_name = ''.join((file_name1,'.',ext))
+	if get_file_date is None:
+		return file_name1, file_date
+	else:
+		return file_date
+
 def read_csv_file(dir_name, file_name):
 
 	with open(os.path.join(dir_path, dir_name, file_name), 'r') as file: 
@@ -200,13 +252,19 @@ def read_csv_file(dir_name, file_name):
 		## To insert Data
 		
 		file_date = None # Default None for the downloaded files
-		str_beforecsv  = file_name.split(".")[0] #split and get the string before.csv
-		if '-' in str_beforecsv:
-			[ file_name1, file_date ] = str_beforecsv.split("-", 1)
-		else:
-			file_name1 = str_beforecsv
+		##Comment from here
+		##str_beforecsv  = file_name.split(".")[0] #split and get the string before.csv
+		##if '-' in str_beforecsv:
+		##	[ file_name1, file_date ] = str_beforecsv.split("-", 1)
+		##else:
+		##	file_name1 = str_beforecsv
 
-		file_name = file_name1
+		##file_name = file_name1
+		### Till Here
+
+		##Call function
+		file_name, file_date = get_new_file_name(csv_file)
+
 		if(file_name == 'analytics_data_events'):
 			parse_data_insert(inRecordingMode, csvreader, file_name, csv_data[file_name], 'EVENTS', file_date)
 		else:
