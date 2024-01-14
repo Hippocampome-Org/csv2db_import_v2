@@ -40,6 +40,7 @@ from pandas import to_datetime
 
 dir_name = "./GA_data";
 dir_path = os.path.dirname(os.path.realpath(__file__));
+print(dir_path)
 logging.debug("Directory path: "+dir_path);
 
 cnx = mysql.connector.connect(user='root', database='hippocampome_v2', password='DBeaver@123')
@@ -137,28 +138,49 @@ def get_cnx_cursor():
 def if_file_is_loaded_into_db(file_path, file_name):
 	##get the file name without extension
 	## get the last line of the file and last line of the views file for that file
-	print("YAy KAsturi you are here !!!!!")
-	print("File name is:"+file_name)
 
 	with open(os.path.join(file_path, file_name), 'r') as f: 
 		##Call function
 		file_name, file_date = get_new_file_name(file_name)
 		if file_date is None:
-			last_line = f.readlines()[-2]
+			last_line_date = f.readlines()[-2]
 		else:
-			last_line = f.readlines()[-1]
+			last_line_date = f.readlines()[-1]
+	print(last_line_date)
 	##Make sure last line exists in the db or not
 	##get the file or sql from the execute sql and if the date in the database is greater than or equal to the file_date then return true and move the file  
 	cnx, cursor = get_cnx_cursor()
 	sql = db_data_select_viewssql[file_name]
-	print(sql)
 	cursor.execute(sql)
 	results = cursor.fetchall()
+	inserted_date = None
 	for x in results:
-		print(x)
+		inserted_date = x[1]
 	
 	cursor.close()
 	cnx.close()
+
+	#print(type(inserted_date))
+	##print(inserted_date)
+	#print(type(last_line_date))
+	##print(last_line_date)
+	##print(last_line_date.split(',')[0])
+	
+	if(inserted_date):
+		print("Inside is inserted_date")
+		date_str = last_line_date.split(',')[0]
+		print(date_str)
+		datetime_object = datetime.strptime(date_str, '%m/%d/%y').date()
+
+		print(type(datetime_object))
+		print(type(inserted_date))
+		#print(datetime_object)
+		print((inserted_date >= datetime_object))
+		return(inserted_date >= datetime_object)
+		if(inserted_date >= datetime_object):
+			return true
+		else:
+			return false
 	
 def nonblank_lines(f):
     for l in f:
@@ -194,7 +216,7 @@ def parse_data_insert(inRecordingMode, csvreader, file_name, starts_with, ends_w
 				elif len(line[0]) <= 1:
 					#inRecordingMode = False
 					continue
-				elif len(ends_with) > 1 and line[0].startswith(("/")):
+				elif len(ends_with) > 1 and (line[0].startswith(("/")) or line[0].startswith(("(not set)"))):
 					if(ends_with=='EVENTS'):
 						line[0] = line[0][1:]
 					if line[0].startswith('Day Index'):
@@ -205,7 +227,7 @@ def parse_data_insert(inRecordingMode, csvreader, file_name, starts_with, ends_w
 						file_date = d.strftime("%m/%d/%y")
 
 					#print(tuple(line))print(file_date)print(tuple(file_date,))	
-					val = tuple(line) + (file_date,) #to add date too
+					val = tuple(line) + (file_date, ) #to add date too
 					#print(sql)
 					#print(val)
 					cursor.execute(sql, val)
@@ -245,49 +267,33 @@ def get_new_file_name(file_name, get_file_date=None):
 		return file_date
 
 def read_csv_file(dir_name, file_name):
-
+	print("in read_csv_file")
 	with open(os.path.join(dir_path, dir_name, file_name), 'r') as file: 
 		csvreader = csv.reader(file)
 		inRecordingMode = False
 		## To insert Data
 		
 		file_date = None # Default None for the downloaded files
-		##Comment from here
-		##str_beforecsv  = file_name.split(".")[0] #split and get the string before.csv
-		##if '-' in str_beforecsv:
-		##	[ file_name1, file_date ] = str_beforecsv.split("-", 1)
-		##else:
-		##	file_name1 = str_beforecsv
-
-		##file_name = file_name1
-		### Till Here
 
 		##Call function
-		file_name, file_date = get_new_file_name(csv_file)
-
+		file_name, file_date = get_new_file_name(file_name)
 		if(file_name == 'analytics_data_events'):
 			parse_data_insert(inRecordingMode, csvreader, file_name, csv_data[file_name], 'EVENTS', file_date)
 		else:
 			parse_data_insert(inRecordingMode, csvreader, file_name, csv_data[file_name], csv_dates_data[file_name], file_date)
-		
-		#parse_data_insert(inRecordingMode, csvreader, file_name, csv_data[file_name], csv_dates_data[file_name])
-		### No need of next few calls
-		##print("Calling Views Mode")
-		##inRecordingMode = False
-		## To insert Views
-		##parse_data_insert(inRecordingMode, csvreader, file_name, csv_dates_data[file_name], None, file_date)
-		##print("After Views Mode")
+	print("After read_csv_file")
 
 ############
 #Program Starts From here
 ############
 
 
-def main():
+def process_files(csv_files = None):
 	try:
-		extension = 'csv'
-		os.chdir(dir_name)
-		csv_files = glob.glob('*.{}'.format(extension))
+		if csv_files is None:
+			extension = 'csv'
+			os.chdir(dir_name)
+			csv_files = glob.glob('*.{}'.format(extension))
 		##Loop thru the csv files
 		for csv_file in csv_files:
 			print("Started processing file: "+csv_file+" at: "+datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
@@ -298,6 +304,8 @@ def main():
 	except Exception as e:
 		logging.debug("Error happened")
 		logging.debug(e)
+def main():
+	process_files()
 
 if __name__ == '__main__':
 	main()

@@ -28,6 +28,7 @@ Updated on Dec 1 2023 to import data from GA and write to csv files
 
 import re
 import os, csv
+import errno
 from google.analytics.data_v1beta import BetaAnalyticsDataClient
 from google.analytics.data_v1beta.types import Dimension, Metric, DateRange, RunReportRequest, OrderBy
 import pandas as pd
@@ -166,38 +167,16 @@ def get_new_file_name(file_name, get_file_date=None):
 
 def write_csv(dir_name, file_name, header_row, df_list, date_input):
 	try:
+		print("IN Write csv function")
 		file = os.path.join(dir_path, dir_name, file_name)
-		check_file = os.path.isfile(file)
-		print("file exists:"+file+"--")
-		print(check_file)
-		destination = 'archived_data_new'
-		destinationPath = os.path.join(dir_path,dir_name,destination)
-
-		if os.path.isfile(file):
-			if not os.path.exists(destinationPath):
-				os.mkdir(destinationPath)
-				print("directory created"+destinationPath)
-
-			dest_file = os.path.join(destinationPath, file_name)
-
-			if os.path.isfile(dest_file):
-				file_write_dest = open(dest_file, "a")
-				file_write_dest.write("\n")
-
-				with open(file_name, "r") as scan:
-					file_write_dest.write(scan.read())
-
-				#file_write_dest.write(file.read()) #append content from source to destination
-				os.unlink(file) ##remove the source file after appending its content
-			#else:
-				#shutil.copy(file, destinationPath)
-				#os.unlink(file) ##remove the source file after appending its content
-
-		f = open(file, 'a')
-		for df in df_list:
-			df.to_csv(f, index=False, header=True)
-			f.write("\n")
-		f.close()
+		print(file)
+		if file_exists(file):
+			get_csv_files(dir_name, [file_name])
+		else:
+			f = open(file, 'a')
+			for df in df_list:
+				df.to_csv(f, index=False, header=True)
+			f.close()
 	except Exception as e:
 		print("Error is: ",e)
 
@@ -205,46 +184,73 @@ def daterange(start_date, end_date):
     for n in range(int((end_date - start_date).days)):
         yield start_date + timedelta(n)
 
-def create_directory(name):
-	os.makedirs(name, mode=0o777, exist_ok=False)
+def create_directory(path):
+	try:
+		os.makedirs(path)
+	except OSError as exception:
+		if exception.errno != errno.EEXIST:
+			raise
 
-def get_csv_files(dir_name):
+def process_csv_file(dir_name, csv_file):
+	print("In Process_csv_file:")
+	old_path = os.path.join(dir_path, dir_name)
+	file_date = None
+	file_date = get_new_file_name(csv_file, 'file_date')
+	if file_date is None:
+		##Move to GA_data/archive_new/historical
+		new_dir_name = dir_name+'/archive_new/historical/'
+		new_path = os.path.join(dir_path, new_dir_name)#, '/archive_new/historical/') 
+	else:
+		print("FILE DATE IN ELSE:"+file_date)
+		##Move to GA_data/archive_new/year/month	
+		date_object = datetime.strptime(file_date, '%Y-%m-%d').date()
+		year_val = date_object.year
+		month_val = date_object.month
+		new_dir_name = dir_name+'/archive_new/'+str(year_val)+'/'+str(month_val)
+		new_path = os.path.join(dir_path, new_dir_name)#, '/archive_new/{year_val}/{month_val}')
+		
+	print("old_path: "+old_path)
+	print("new_path: "+new_path)
+	##Check last line of file and get the date and test if it exists using load_csv_to_database function
+	from load_csv_to_database import if_file_is_loaded_into_db
+	if(if_file_is_loaded_into_db(old_path, csv_file)):
+		print("ITS TRUE -- File is processed")
+		move_files(old_path, new_path, csv_file)
+	else:
+		if file_exists(os.path.join(new_path, csv_file)):
+			print("File exists in desitnation and its processd")
+		else:
+			print("ITS FALSE -- File is not Processed") #Process data if file exists or proceed to download
+			from load_csv_to_database import process_files
+			process_files([csv_file])
+			print("after main function")
+		move_files(old_path, new_path, csv_file)
+
+def get_csv_files(dir_name, csv_files = None):
+	print("In get_csv_files:")
 	extension = 'csv'
 	os.chdir(dir_name)
-	csv_files = glob.glob('*.{}'.format(extension))
+	if csv_files is None:
+		csv_files = glob.glob('*.{}'.format(extension))
+	print(csv_files)
 	##Loop thru the csv files
 	for csv_file in csv_files:
 		print(csv_file)
-		old_path = os.path.join(dir_path, dir_name)
-		file_date = None
-		file_date = get_new_file_name(csv_file, 'file_date')
-		if file_date is None:
-			##Move to GA_data/archive_new/historical
-			dir_name = dir_name+'/archive_new/historical/'
-			new_path = os.path.join(dir_path, dir_name)#, '/archive_new/historical/') 
-		else:
-			##Move to GA_data/archive_new/year/month	
-			date_object = datetime.datetime.strptime(file_date, '%Y-%m-%d').date()
-			year_val = date_object.year
-			month_val = date_object.month
-			new_path = os.path.join(dir_path, dir_name, '/archive_new/#{year_val}/#{month_val}')
-		
-		print("old_path: "+old_path)
-		print("new_path: "+new_path)
-		##Check last line of file and get the date and test if it exists using load_csv_to_database function
-		from load_csv_to_database import if_file_is_loaded_into_db
-		if_file_is_loaded_into_db(old_path, csv_file)
-		exit()
-		move_files(old_path, new_path, csv_file)
+		process_csv_file(dir_name, csv_file)
 
 def move_files(source, destination, csv_file):
+	print("in move files")
 	create_directory(destination)
-	src_path = os.path.join(source, f)
-	dst_path = os.path.join(destination, f)
+	print("after create directory")
+	src_path = os.path.join(source, csv_file)
+	print(src_path)
+	dst_path = os.path.join(destination, csv_file)
+	print(dst_path)
 	shutil.move(src_path, dst_path)
+	print("after moving")
 
-def file_exists():
-	return "hello"
+def file_exists(file_path):
+	return os.path.isfile(file_path)
 
 ############ 
 #Program Starts From here 
@@ -276,15 +282,13 @@ def main():
 			print(dir_name)
 			write_csv(dir_name, file_name, header_rows, df, date_input)
 			#write_csv(dir_name, 'analytics_data_landing_pages.csv', header_rows, df)
-	
+			'''
 			##########For date pages Data
 			#Page,Pageviews,Unique Pageviews,Avg. Time on Page,Entrances,Bounce Rate,% Exit,Page Value
 			dimensions=[Dimension(name="landingPagePlusQueryString")]
 			metrics=[{"name":"screenPageViews"}, {"name":"screenPageViewsPerUser"}, {"name":"userEngagementDuration"}, {"name":"sessions"}, {"name":"bounceRate"}]
 			header_rows='Page,Pageviews,Unique Pageviews, Avg. Time on Page, Entrances, Bounce Rate, % Exit, Page Value'
-			#df = get_ga4_report_df(property, dimensions, metrics, start_date, end_date, "pages", header_rows)
 			df = get_ga4_report_df(property, dimensions, metrics, date_input, date_input, "pages", header_rows)
-			#write_csv(dir_name, 'analytics_data_pages.csv', header_rows, df)
 			# To add date to filename
 			file_name = 'analytics_data_pages'+'-'+date_input+'.csv'
 			write_csv(dir_name, file_name, header_rows, df, date_input)
@@ -295,12 +299,10 @@ def main():
 			metrics=[{"name":"eventCount"}, {"name":"sessions"}, {"name":"eventCountPerUser"}]
 			header_rows='Event name, Event Count, Total users, Event count per user' #, Total revenue'
 			df = get_ga4_report_df(property, dimensions, metrics, date_input, date_input, "events", header_rows)
-			#write_csv(dir_name, 'analytics_data_events.csv', header_rows, df)
 			# To add date to filename
 			file_name = 'analytics_data_events'+'-'+date_input+'.csv'
 			write_csv(dir_name, file_name, header_rows, df, date_input)
-			exit()
-
+			'''
 	except Exception as e:
               logging.debug("Error happened")
               logging.debug(e)
