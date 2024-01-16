@@ -21,8 +21,10 @@ import logging
 from datetime import datetime
 from pandas import to_datetime
 
+from dotenv import load_dotenv
+load_dotenv()
 
-dir_name = "./GA_data";
+dir_name = os.getenv('DIR_NAME')
 dir_path = os.path.dirname(os.path.realpath(__file__));
 print(dir_path)
 logging.debug("Directory path: "+dir_path);
@@ -337,8 +339,10 @@ def main():
 		print(dir_name)
 		get_csv_files(dir_name)	
 		print("after get_csv:")
+
 		## if date file is there then see if the folder exists if not create it
-		property = "properties/367925539"
+		property = os.getenv('PROPERTY')
+		print(property)
 		start_date = date(2023, 7, 1)
 		end_date = date.today() #'today' # 2023-07-02
 		for single_date in daterange(start_date, end_date):

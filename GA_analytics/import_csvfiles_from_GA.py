@@ -41,8 +41,10 @@ import glob
 import mysql.connector          
 from pandas import to_datetime  
 
+from dotenv import load_dotenv
+load_dotenv()
 
-dir_name = "./GA_data";
+dir_name = os.getenv('DIR_NAME')
 dir_path = os.path.dirname(os.path.realpath(__file__));
 print("Directory path: "+dir_path);
 
@@ -134,7 +136,7 @@ def get_ga4_report_df(property_id, dimensions_ga4, metrics_ga4, start_date, end_
 	os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = '/Applications/XAMPP/hippocampome-1687549016291-058d852a885b-trackinggmail.json'
 	client = BetaAnalyticsDataClient()
 	request = RunReportRequest(
-			property = "properties/367925539",
+			property = os.getenv('PROPERTY')
 			dimensions=dimensions_ga4,
 			metrics=metrics_ga4,
 			date_ranges=[DateRange(start_date=start_date,end_date=end_date)],
@@ -272,8 +274,8 @@ def main():
 		get_csv_files(dir_name)	
 		print("after get_csv:")
 		## if date file is there then see if the folder exists if not create it
-			
-		property = "properties/367925539"
+
+		property = os.getenv('PROPERTY')
 		start_date = date(2023, 7, 1)
 		end_date = date.today() #'today' # 2023-07-02
 		for single_date in daterange(start_date, end_date):

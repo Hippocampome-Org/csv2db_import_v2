@@ -37,8 +37,10 @@ import logging
 from datetime import datetime
 from pandas import to_datetime
 
+from dotenv import load_dotenv
+load_dotenv()
 
-dir_name = "./GA_data";
+dir_name = os.getenv('DIR_NAME')
 dir_path = os.path.dirname(os.path.realpath(__file__));
 print(dir_path)
 logging.debug("Directory path: "+dir_path);
