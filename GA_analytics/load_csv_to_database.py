@@ -121,12 +121,17 @@ db_data_insert_viewssql = { 'analytics_data_exit_pages':"INSERT INTO hippocampom
              'analytics_data_landing_pages':"INSERT INTO hippocampome_v2.ga_analytics_landing_pages_views (day_index, views) VALUES (%s, %s)",
              'analytics_data_events':"INSERT INTO hippocampome_v2.ga_analytics_data_events_views (day_index, views) VALUES (%s, %s)"}
 
-db_data_select_viewssql = { 'analytics_data_exit_pages':"SELECT * FROM hippocampome_v2.ga_analytics_exit_pages_views ORDER BY ID DESC LIMIT 1",
-             'analytics_data_pages':"SELECT * FROM hippocampome_v2.ga_analytics_pages_views ORDER BY ID DESC",
-             'analytics_data_content':"SELECT * FROM hippocampome_v2.ga_analytics_data_content_views ORDER BY ID DESC LIMIT 1",
-             'analytics_data_landing_pages':"SELECT * FROM hippocampome_v2.ga_analytics_landing_pages_views ORDER BY ID DESC LIMIT 1",
-             'analytics_data_events':"SELECT * FROM hippocampome_v2.ga_analytics_data_events_views ORDER BY ID DESC LIMIT 1"}
+db_data_select_viewssql = { 'analytics_data_exit_pages':"SELECT * FROM hippocampome_v2.ga_analytics_exit_pages_views ORDER BY day_index DESC LIMIT 1",
+             'analytics_data_pages':"SELECT * FROM hippocampome_v2.ga_analytics_pages_views ORDER BY day_index DESC limit 1",
+             'analytics_data_content':"SELECT * FROM hippocampome_v2.ga_analytics_data_content_views ORDER BY day_index DESC LIMIT 1",
+             'analytics_data_landing_pages':"SELECT * FROM hippocampome_v2.ga_analytics_landing_pages_views ORDER BY day_index DESC LIMIT 1",
+             'analytics_data_events':"SELECT * FROM hippocampome_v2.ga_analytics_data_events_views ORDER BY day_index DESC LIMIT 1"}
 
+db_data_select_viewssql_date = { 'analytics_data_exit_pages':"SELECT * FROM hippocampome_v2.ga_analytics_exit_pages_views WHERE day_idex =",
+             'analytics_data_pages':"SELECT * FROM hippocampome_v2.ga_analytics_pages_views WHERE day_index = ",
+             'analytics_data_content':"SELECT * FROM hippocampome_v2.ga_analytics_data_content_views WHERE day_index = ",
+             'analytics_data_landing_pages':"SELECT * FROM hippocampome_v2.ga_analytics_landing_pages_views WHERE day_index = ",
+             'analytics_data_events':"SELECT * FROM hippocampome_v2.ga_analytics_data_events_views WHERE day_index = "}
 
 ## Till Here
 
@@ -136,6 +141,7 @@ def get_cnx_cursor():
 	return cnx, cursor
 	
 def if_file_is_loaded_into_db(file_path, file_name):
+	print("in if_dile_is_loaded")
 	##get the file name without extension
 	## get the last line of the file and last line of the views file for that file
 
@@ -144,13 +150,15 @@ def if_file_is_loaded_into_db(file_path, file_name):
 		file_name, file_date = get_new_file_name(file_name)
 		if file_date is None:
 			last_line_date = f.readlines()[-2]
+			sql = db_data_select_viewssql[file_name]
 		else:
 			last_line_date = f.readlines()[-1]
+			sql = db_data_select_viewssql_date[file_name] + "'" + file_date +"'"
 	print(last_line_date)
+	print(sql)
 	##Make sure last line exists in the db or not
 	##get the file or sql from the execute sql and if the date in the database is greater than or equal to the file_date then return true and move the file  
 	cnx, cursor = get_cnx_cursor()
-	sql = db_data_select_viewssql[file_name]
 	cursor.execute(sql)
 	results = cursor.fetchall()
 	inserted_date = None
@@ -160,12 +168,6 @@ def if_file_is_loaded_into_db(file_path, file_name):
 	cursor.close()
 	cnx.close()
 
-	#print(type(inserted_date))
-	##print(inserted_date)
-	#print(type(last_line_date))
-	##print(last_line_date)
-	##print(last_line_date.split(',')[0])
-	
 	if(inserted_date):
 		print("Inside is inserted_date")
 		date_str = last_line_date.split(',')[0]
@@ -228,8 +230,8 @@ def parse_data_insert(inRecordingMode, csvreader, file_name, starts_with, ends_w
 
 					#print(tuple(line))print(file_date)print(tuple(file_date,))	
 					val = tuple(line) + (file_date, ) #to add date too
-					#print(sql)
-					#print(val)
+					print(sql)
+					print(val)
 					cursor.execute(sql, val)
 					cnx.commit()
 					cursor.close()
@@ -238,15 +240,15 @@ def parse_data_insert(inRecordingMode, csvreader, file_name, starts_with, ends_w
 					## When we reach "line before views"
 					continue
 				else:
-					##print("IN FINAL ELSE")
-					##print(line[0])
+					print("IN FINAL ELSE")
+					print(line[0])
 					if line[0].startswith('Day Index'):
 						continue
 					sql = db_data_insert_viewssql[file_name]
 					line[0] = datetime.strptime(line[0], "%m/%d/%y")
 					val = tuple(line)
-					#print(sql)
-					#print(val)
+					print(sql)
+					print(val)
 					cursor.execute(sql, val)
 					cnx.commit()
 					cursor.close()
@@ -266,22 +268,30 @@ def get_new_file_name(file_name, get_file_date=None):
 	else:
 		return file_date
 
-def read_csv_file(dir_name, file_name):
-	print("in read_csv_file")
-	with open(os.path.join(dir_path, dir_name, file_name), 'r') as file: 
+def read_csv_file(dir_name, csv_file):
+	print("in read_csv_file"+csv_file)
+	with open(os.path.join(dir_path, dir_name, csv_file), 'r') as file: 
 		csvreader = csv.reader(file)
 		inRecordingMode = False
 		## To insert Data
 		
-		file_date = None # Default None for the downloaded files
-
+		print("----***")
+		old_path = os.path.join(dir_path, dir_name)
 		##Call function
-		file_name, file_date = get_new_file_name(file_name)
-		if(file_name == 'analytics_data_events'):
-			parse_data_insert(inRecordingMode, csvreader, file_name, csv_data[file_name], 'EVENTS', file_date)
+		if(if_file_is_loaded_into_db(old_path, csv_file)):
+			print("ITS TRUE -- File is processed")
+			return True
 		else:
-			parse_data_insert(inRecordingMode, csvreader, file_name, csv_data[file_name], csv_dates_data[file_name], file_date)
-	print("After read_csv_file")
+			print("inside")
+			file_name, file_date = get_new_file_name(csv_file)
+			print(file_name)
+			if(file_name == 'analytics_data_events'):
+				parse_data_insert(inRecordingMode, csvreader, file_name, csv_data[file_name], 'EVENTS', file_date)
+				return True
+			else:
+				parse_data_insert(inRecordingMode, csvreader, file_name, csv_data[file_name], csv_dates_data[file_name], file_date)
+				return True
+		return None
 
 ############
 #Program Starts From here
@@ -298,9 +308,17 @@ def process_files(csv_files = None):
 		for csv_file in csv_files:
 			print("Started processing file: "+csv_file+" at: "+datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
 			#logging.debug("Started processing file: "+csv_file+" at: "+datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
-			read_csv_file('GA_data', csv_file)
-			#logging.debug("Completed processing file: "+csv_file+" at: "+datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
-			print("Completed processing file: "+csv_file+" at: "+datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+			if(read_csv_file('GA_data', csv_file)):
+				#logging.debug("Completed processing file: "+csv_file+" at: "+datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+				print("Completed processing file: "+csv_file+" at: "+datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+				## Move Processed File
+				file_name, file_date = get_new_file_name(csv_file)
+				from import_csvfiles_from_GA import get_new_path
+				new_path = get_new_path(file_date)
+				from import_csvfiles_from_GA import move_files
+				move_files(old_path, new_path, csv_file)
+				print("After Moving in process_files")
+		
 	except Exception as e:
 		logging.debug("Error happened")
 		logging.debug(e)

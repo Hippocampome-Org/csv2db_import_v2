@@ -1,31 +1,3 @@
-"""
-#************************************************************************************************************************************************
-Updated on Dec 1 2023 to import data from GA and write to csv files
-#************************************************************************************************************************************************
-# File names and headers
-#### analytics_data_pages         --  Page,Pageviews,Unique Pageviews,Avg. Time on Page,Entrances,Bounce Rate,% Exit,Page Value
-                                  --  Day Index,Pageviews
-#### analytics_data_content       --  Page path level 1,Pageviews,Unique Pageviews,Avg. Time on Page,Bounce Rate,% Exit
-                                  --  Day Index,Pageviews
-#### analytics_data_exit_pages    --  Page,Exits,Pageviews,% Exit
-                                  --  Day Index,Exits
-#### analytics_data_landing_pages --  Landing Page,Sessions,% New Sessions,New Users,Bounce Rate,Pages / Session,Avg. Session Duration,Goal Conversion Rate,Goal Completions,Goal Value
-                                  --  Day Index,Sessions
-
-
-################Insert Statements
-
-## -- data_content -- INSERT INTO hippocampome_v2.ga_analytics_data_content (page_path_level, page_views, unique_page_views, avg_time_on_page, bounce_rate, percentage_exit) VALUES('', 0, 0, 0, '', '');
-## -- data_content_views -- INSERT INTO hippocampome_v2.ga_analytics_data_content_views (day_index, views) VALUES('', 0);
-## -- exit_pages -- INSERT INTO hippocampome_v2.ga_analytics_exit_pages (page, exits, page_views, percentage_exit) VALUES('', 0, 0, '');
-## -- exit_pages_views -- INSERT INTO hippocampome_v2.ga_analytics_exit_pages_views (day_index, views) VALUES('', 0);
-## -- landing_pages -- INSERT INTO hippocampome_v2.ga_analytics_landing_pages (landing_page, sessions, percentage_new_sessions, new_users, bounce_rate, pages_sessions, avg_sessions, goal_conversion, goal_completion, goal_value) VALUES('', 0, '', 0, '', 0, 0, '', 0, 0);
-## -- landing_pages_views -- INSERT INTO hippocampome_v2.ga_analytics_landing_pages_views (day_index, views) VALUES('', 0);
-## --  pages -- INSERT INTO hippocampome_v2.ga_analytics_pages (page, page_views, unique_page_views, avg_time_on_page, entrances, bounce_rate, percentage_exit, page_value) VALUES('', 0, 0, 0, 0, '', '', 0);
-## -- pages_views -- INSERT INTO hippocampome_v2.ga_analytics_pages_views (day_index, views) VALUES('', 0);
-
-"""
-
 import re
 import os, csv
 import errno
@@ -39,12 +11,90 @@ import logging
 
 import glob                             
 import mysql.connector          
-from pandas import to_datetime  
+from pandas import to_datetime 
+
+import csv
+import os                         
+import glob
+import mysql.connector
+import logging
+from datetime import datetime
+from pandas import to_datetime
+
+
+dir_name = "./GA_data";
+dir_path = os.path.dirname(os.path.realpath(__file__));
+print(dir_path)
+logging.debug("Directory path: "+dir_path);
+
+cnx = mysql.connector.connect(user='root', database='hippocampome_v2', password='DBeaver@123')
+cursor = cnx.cursor()
 
 
 dir_name = "./GA_data";
 dir_path = os.path.dirname(os.path.realpath(__file__));
 print("Directory path: "+dir_path);
+
+csv_data = { 'analytics_data_exit_pages':'Page',
+             'analytics_data_pages':'Page',
+             'analytics_data_content':'Page path level 1',
+             'analytics_data_landing_pages':'Landing Page',
+             'analytics_data_events':'Event name'}
+
+db_data_insert_sql = { 'analytics_data_exit_pages':"INSERT INTO hippocampome_v2.ga_analytics_exit_pages (page, exits, page_views, percentage_exit, day_index) VALUES (%s, %s, %s, %s, %s)",
+             'analytics_data_pages':"INSERT INTO hippocampome_v2.ga_analytics_pages (page, page_views, unique_page_views, avg_time_on_page, entrances, bounce_rate, percentage_exit, page_value, day_index) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s) ",
+             'analytics_data_content':"INSERT INTO hippocampome_v2.ga_analytics_data_content (page_path_level, page_views, unique_page_views, avg_time_on_page, bounce_rate, percentage_exit, day_index) VALUES (%s, %s, %s, %s, %s, %s, %s) ",
+             'analytics_data_landing_pages':"INSERT INTO hippocampome_v2.ga_analytics_landing_pages (landing_page, sessions, percentage_new_sessions, new_users, bounce_rate, pages_sessions, avg_sessions, goal_conversion, goal_completion, goal_value, day_index) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s) ",
+             'analytics_data_events':"INSERT INTO hippocampome_v2.ga_analytics_data_events (event_name, event_count, total_users, event_count_per_user, total_revenue, day_index) VALUES (%s, %s, %s, %s, %s, %s) "}
+
+db_data_insert_sql_cols = {'analytics_data_exit_pages':['page', 'exits', 'page_views', 'percentage_exit'],
+             'analytics_data_pages':['page', 'page_views', 'unique_page_views', 'avg_time_on_page', 'entrances', 'bounce_rate', 'percentage_exit', 'page_value'],
+             'analytics_data_content':['page_path_level', 'page_views', 'unique_page_views', 'avg_time_on_page', 'bounce_rate', 'percentage_exit'],
+             'analytics_data_landing_pages':['landing_page', 'sessions', 'percentage_new_sessions', 'new_users', 'bounce_rate', 'pages_sessions', 'avg_sessions', 'goal_conversion', 'goal_completion', 'goal_value'],
+             'analytics_data_events':['event_name', 'event_count', 'total_users', 'event_count_per_user', 'total_revenue', 'day_index']}
+
+######## For the Views
+
+csv_dates_data = { 'analytics_data_exit_pages':'Day Index',
+             'analytics_data_pages':'Day Index',
+             'analytics_data_content':'Day Index',
+             'analytics_data_landing_pages':'Day Index',
+             'analytics_data_events':'Day Index'}
+
+db_data_insert_viewssql_cols = { 'analytics_data_exit_pages':['day_index', 'views'],
+             'analytics_data_pages':['day_index', 'views'],
+             'analytics_data_content':['day_index', 'views'],
+             'analytics_data_landing_pages':['day_index', 'views'],
+             'analytics_data_events':['day_index', 'views']}
+
+db_data_insert_viewssql = { 'analytics_data_exit_pages':"INSERT INTO hippocampome_v2.ga_analytics_exit_pages_views (day_index, views) VALUES (%s, %s)",
+             'analytics_data_pages':"INSERT INTO hippocampome_v2.ga_analytics_pages_views (day_index, views) VALUES (%s, %s)",
+             'analytics_data_content':"INSERT INTO hippocampome_v2.ga_analytics_data_content_views (day_index, views) VALUES (%s, %s)",
+             'analytics_data_landing_pages':"INSERT INTO hippocampome_v2.ga_analytics_landing_pages_views (day_index, views) VALUES (%s, %s)",
+             'analytics_data_events':"INSERT INTO hippocampome_v2.ga_analytics_data_events_views (day_index, views) VALUES (%s, %s)"}
+
+db_data_select_viewssql = { 'analytics_data_exit_pages':"SELECT * FROM hippocampome_v2.ga_analytics_exit_pages_views ORDER BY day_index DESC LIMIT 1",
+             'analytics_data_pages':"SELECT * FROM hippocampome_v2.ga_analytics_pages_views ORDER BY day_index DESC limit 1",
+             'analytics_data_content':"SELECT * FROM hippocampome_v2.ga_analytics_data_content_views ORDER BY day_index DESC LIMIT 1",
+             'analytics_data_landing_pages':"SELECT * FROM hippocampome_v2.ga_analytics_landing_pages_views ORDER BY day_index DESC LIMIT 1",
+             'analytics_data_events':"SELECT * FROM hippocampome_v2.ga_analytics_data_events_views ORDER BY day_index DESC LIMIT 1"}
+
+db_data_select_viewssql_date = { 'analytics_data_exit_pages':"SELECT * FROM hippocampome_v2.ga_analytics_exit_pages_views WHERE day_idex =",
+             'analytics_data_pages':"SELECT * FROM hippocampome_v2.ga_analytics_pages_views WHERE day_index = ",
+             'analytics_data_content':"SELECT * FROM hippocampome_v2.ga_analytics_data_content_views WHERE day_index = ",
+             'analytics_data_landing_pages':"SELECT * FROM hippocampome_v2.ga_analytics_landing_pages_views WHERE day_index = ",
+             'analytics_data_events':"SELECT * FROM hippocampome_v2.ga_analytics_data_events_views WHERE day_index = "}
+        
+## Till Here
+
+
+'''
+#Check GA_data if any csv files are there 
+#Check if they exist in the database
+#If they dont exist in the database then process and move them to historical or year
+#Loop from July 1 2023 to today and process data
+
+'''
 
 def remov_spaces(str):
 	removal_list = [' ', '\t', '\n']
@@ -237,7 +287,7 @@ def process_csv_file(dir_name, csv_file):
 def get_csv_files(dir_name, csv_files = None):
 	print("In get_csv_files:")
 	extension = 'csv'
-	os.chdir(dir_name)
+	os.chdir(os.path.join(dir_path, dir_name))
 	if csv_files is None:
 		csv_files = glob.glob('*.{}'.format(extension))
 	print(csv_files)
@@ -261,6 +311,21 @@ def move_files(source, destination, csv_file):
 def file_exists(file_path):
 	return os.path.isfile(file_path)
 
+def get_cnx_cursor():                   
+        cnx = mysql.connector.connect(user='root', database='hippocampome_v2', password='DBeaver@123')
+        cursor = cnx.cursor()   
+        return cnx, cursor
+
+def get_views_day_count(sql):
+	cnx, cursor = get_cnx_cursor()
+	cursor.execute(sql)
+	results = cursor.fetchall()
+	count=results[0][0]
+	cursor.close()
+	cnx.close()
+	return count
+	
+
 ############ 
 #Program Starts From here 
 ############
@@ -269,52 +334,70 @@ def main():
 	try:
 		## if .csv file exists move to arvhice/historical/
 		print("before get_csv:")
+		print(dir_name)
 		get_csv_files(dir_name)	
 		print("after get_csv:")
 		## if date file is there then see if the folder exists if not create it
-			
 		property = "properties/367925539"
 		start_date = date(2023, 7, 1)
 		end_date = date.today() #'today' # 2023-07-02
 		for single_date in daterange(start_date, end_date):
 			date_input = single_date.strftime("%Y-%m-%d")
-							
+			print(date_input) 
+			new_file_path = get_new_path(date_input)
+			print(new_file_path) ##Common for all files
+
 			##########For landing page Data
 			dimensions=[Dimension(name="landingPagePlusQueryString")]
 			metrics=[{"name":"sessions"}, {"name":"newUsers"}, {"name":"bounceRate"}, {"name":"averageSessionDuration"}, {"name":"engagedSessions"}]
 			header_rows='Landing Page,Sessions,% New Sessions,New Users,Bounce Rate,Pages / Session,Avg. Session Duration,Goal Conversion Rate,Goal Completions,Goal Value,Views'
 			# To add date to filename
 			file_name = 'analytics_data_landing_pages'+'-'+date_input+'.csv'
-			print(file_name)
-			print(dir_name)
-			## Check if file exists in GA_data or in archive_new_data
-			## in the database
-			sql = "select count(*) from hippocampome_v2.ga_analytics_landing_pages_views gapv WHERE gapv.day_index="+date_input
-	
-			df = get_ga4_report_df(property, dimensions, metrics, date_input, date_input, "landing_page", header_rows)
-			write_csv(dir_name, file_name, header_rows, df, date_input)
-			#write_csv(dir_name, 'analytics_data_landing_pages.csv', header_rows, df)
-			'''
+			sql = "select count(*) from hippocampome_v2.ga_analytics_landing_pages_views gapv WHERE gapv.day_index='"+date_input+"'"
+			count = get_views_day_count(sql)
+
+			file_exists = os.path.isfile(os.path.join(new_file_path, file_name))
+			print(file_exists)
+			if count < 1 and not file_exists:
+				df = get_ga4_report_df(property, dimensions, metrics, date_input, date_input, "landing_page", header_rows)
+				write_csv(dir_name, file_name, header_rows, df, date_input)
+			else:
+				print(os.path.join(new_file_path, file_name))
+				print(" exists and processed to database")
+
 			##########For date pages Data
 			#Page,Pageviews,Unique Pageviews,Avg. Time on Page,Entrances,Bounce Rate,% Exit,Page Value
 			dimensions=[Dimension(name="landingPagePlusQueryString")]
 			metrics=[{"name":"screenPageViews"}, {"name":"screenPageViewsPerUser"}, {"name":"userEngagementDuration"}, {"name":"sessions"}, {"name":"bounceRate"}]
 			header_rows='Page,Pageviews,Unique Pageviews, Avg. Time on Page, Entrances, Bounce Rate, % Exit, Page Value'
-			df = get_ga4_report_df(property, dimensions, metrics, date_input, date_input, "pages", header_rows)
 			# To add date to filename
 			file_name = 'analytics_data_pages'+'-'+date_input+'.csv'
-			write_csv(dir_name, file_name, header_rows, df, date_input)
+			sql = "select count(*) from hippocampome_v2.ga_analytics_pages_views gapv WHERE gapv.day_index='"+date_input+"'"
+			count = get_views_day_count(sql)
+			file_exists = os.path.isfile(os.path.join(new_file_path, file_name))
+			if count < 1 and not file_exists:
+				df = get_ga4_report_df(property, dimensions, metrics, date_input, date_input, "pages", header_rows)
+				write_csv(dir_name, file_name, header_rows, df, date_input)
+			else:
+				print(os.path.join(new_file_path, file_name))
+				print(" exists and processed to database")
 
 			##########For date Events Data
 			#Event name,Event count,Total users,Event count per user,Total revenue
 			dimensions=[Dimension(name="eventName")]
 			metrics=[{"name":"eventCount"}, {"name":"sessions"}, {"name":"eventCountPerUser"}]
 			header_rows='Event name, Event Count, Total users, Event count per user' #, Total revenue'
-			df = get_ga4_report_df(property, dimensions, metrics, date_input, date_input, "events", header_rows)
 			# To add date to filename
 			file_name = 'analytics_data_events'+'-'+date_input+'.csv'
-			write_csv(dir_name, file_name, header_rows, df, date_input)
-			'''
+			sql = "select count(*) from hippocampome_v2.ga_analytics_data_events_views gapv WHERE gapv.day_index='"+date_input+"'"
+			count = get_views_day_count(sql)
+			file_exists = os.path.isfile(os.path.join(new_file_path, file_name))
+			if count < 1 and not file_exists:
+				df = get_ga4_report_df(property, dimensions, metrics, date_input, date_input, "events", header_rows)
+				write_csv(dir_name, file_name, header_rows, df, date_input)
+			else:
+				print(os.path.join(new_file_path, file_name))
+				print(" exists and processed to database")
 	except Exception as e:
               logging.debug("Error happened")
               logging.debug(e)
