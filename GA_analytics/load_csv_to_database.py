@@ -36,14 +36,14 @@ import mysql.connector
 import logging
 from datetime import datetime
 from pandas import to_datetime
+import time
 
 from dotenv import load_dotenv
 load_dotenv()
 
 dir_name = os.getenv('DIR_NAME')
+property = os.getenv('PROPERTY')
 dir_path = os.path.dirname(os.path.realpath(__file__));
-print(dir_path)
-logging.debug("Directory path: "+dir_path);
 
 cnx = mysql.connector.connect(user='root', database='hippocampome_v2', password='DBeaver@123')
 cursor = cnx.cursor()
@@ -143,7 +143,6 @@ def get_cnx_cursor():
 	return cnx, cursor
 	
 def if_file_is_loaded_into_db(file_path, file_name):
-	print("in if_dile_is_loaded")
 	##get the file name without extension
 	## get the last line of the file and last line of the views file for that file
 
@@ -156,12 +155,11 @@ def if_file_is_loaded_into_db(file_path, file_name):
 		else:
 			last_line_date = f.readlines()[-1]
 			sql = db_data_select_viewssql_date[file_name] + "'" + file_date +"'"
-	print(last_line_date)
-	print(sql)
 	##Make sure last line exists in the db or not
 	##get the file or sql from the execute sql and if the date in the database is greater than or equal to the file_date then return true and move the file  
 	cnx, cursor = get_cnx_cursor()
 	cursor.execute(sql)
+	time.sleep(0.025)
 	results = cursor.fetchall()
 	inserted_date = None
 	for x in results:
@@ -171,20 +169,10 @@ def if_file_is_loaded_into_db(file_path, file_name):
 	cnx.close()
 
 	if(inserted_date):
-		print("Inside is inserted_date")
 		date_str = last_line_date.split(',')[0]
-		print(date_str)
 		datetime_object = datetime.strptime(date_str, '%m/%d/%y').date()
 
-		print(type(datetime_object))
-		print(type(inserted_date))
-		#print(datetime_object)
-		print((inserted_date >= datetime_object))
 		return(inserted_date >= datetime_object)
-		if(inserted_date >= datetime_object):
-			return true
-		else:
-			return false
 	
 def nonblank_lines(f):
     for l in f:
@@ -232,9 +220,10 @@ def parse_data_insert(inRecordingMode, csvreader, file_name, starts_with, ends_w
 
 					#print(tuple(line))print(file_date)print(tuple(file_date,))	
 					val = tuple(line) + (file_date, ) #to add date too
-					print(sql)
-					print(val)
+					##print(sql)
+					##print(val)
 					cursor.execute(sql, val)
+					time.sleep(0.025)	
 					cnx.commit()
 					cursor.close()
 					cnx.close()
@@ -242,16 +231,15 @@ def parse_data_insert(inRecordingMode, csvreader, file_name, starts_with, ends_w
 					## When we reach "line before views"
 					continue
 				else:
-					print("IN FINAL ELSE")
-					print(line[0])
 					if line[0].startswith('Day Index'):
 						continue
 					sql = db_data_insert_viewssql[file_name]
 					line[0] = datetime.strptime(line[0], "%m/%d/%y")
 					val = tuple(line)
-					print(sql)
-					print(val)
+					##print(sql)
+					##print(val)
 					cursor.execute(sql, val)
+					time.sleep(0.025)
 					cnx.commit()
 					cursor.close()
 					cnx.close()
@@ -271,22 +259,18 @@ def get_new_file_name(file_name, get_file_date=None):
 		return file_date
 
 def read_csv_file(dir_name, csv_file):
-	print("in read_csv_file"+csv_file)
 	with open(os.path.join(dir_path, dir_name, csv_file), 'r') as file: 
 		csvreader = csv.reader(file)
 		inRecordingMode = False
 		## To insert Data
 		
-		print("----***")
 		old_path = os.path.join(dir_path, dir_name)
 		##Call function
 		if(if_file_is_loaded_into_db(old_path, csv_file)):
 			print("ITS TRUE -- File is processed")
 			return True
 		else:
-			print("inside")
 			file_name, file_date = get_new_file_name(csv_file)
-			print(file_name)
 			if(file_name == 'analytics_data_events'):
 				parse_data_insert(inRecordingMode, csvreader, file_name, csv_data[file_name], 'EVENTS', file_date)
 				return True

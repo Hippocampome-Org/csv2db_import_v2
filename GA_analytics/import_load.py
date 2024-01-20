@@ -1,5 +1,32 @@
+"""
+#************************************************************************************************************************************************
+Updated on Dec 1 2023 to import data from GA and write to csv files
+#************************************************************************************************************************************************
+# File names and headers
+#### analytics_data_pages         --  Page,Pageviews,Unique Pageviews,Avg. Time on Page,Entrances,Bounce Rate,% Exit,Page Value
+                                  --  Day Index,Pageviews
+#### analytics_data_content       --  Page path level 1,Pageviews,Unique Pageviews,Avg. Time on Page,Bounce Rate,% Exit
+                                  --  Day Index,Pageviews
+#### analytics_data_exit_pages    --  Page,Exits,Pageviews,% Exit
+                                  --  Day Index,Exits
+#### analytics_data_landing_pages --  Landing Page,Sessions,% New Sessions,New Users,Bounce Rate,Pages / Session,Avg. Session Duration,Goal Conversion Rate,Goal Completions,Goal Value
+                                  --  Day Index,Sessions
+
+
+################Insert Statements
+
+## -- data_content -- INSERT INTO hippocampome_v2.ga_analytics_data_content (page_path_level, page_views, unique_page_views, avg_time_on_page, bounce_rate, percentage_exit) VALUES('', 0, 0, 0, '', '');
+## -- data_content_views -- INSERT INTO hippocampome_v2.ga_analytics_data_content_views (day_index, views) VALUES('', 0);
+## -- exit_pages -- INSERT INTO hippocampome_v2.ga_analytics_exit_pages (page, exits, page_views, percentage_exit) VALUES('', 0, 0, '');
+## -- exit_pages_views -- INSERT INTO hippocampome_v2.ga_analytics_exit_pages_views (day_index, views) VALUES('', 0);
+## -- landing_pages -- INSERT INTO hippocampome_v2.ga_analytics_landing_pages (landing_page, sessions, percentage_new_sessions, new_users, bounce_rate, pages_sessions, avg_sessions, goal_conversion, goal_completion, goal_value) VALUES('', 0, '', 0, '', 0, 0, '', 0, 0);
+## -- landing_pages_views -- INSERT INTO hippocampome_v2.ga_analytics_landing_pages_views (day_index, views) VALUES('', 0);
+## --  pages -- INSERT INTO hippocampome_v2.ga_analytics_pages (page, page_views, unique_page_views, avg_time_on_page, entrances, bounce_rate, percentage_exit, page_value) VALUES('', 0, 0, 0, 0, '', '', 0);
+## -- pages_views -- INSERT INTO hippocampome_v2.ga_analytics_pages_views (day_index, views) VALUES('', 0);
+
+"""
+
 import re
-import os, csv
 import errno
 from google.analytics.data_v1beta import BetaAnalyticsDataClient
 from google.analytics.data_v1beta.types import Dimension, Metric, DateRange, RunReportRequest, OrderBy
@@ -13,29 +40,19 @@ import glob
 import mysql.connector          
 from pandas import to_datetime 
 
-import csv
-import os                         
-import glob
-import mysql.connector
 import logging
-from datetime import datetime
-from pandas import to_datetime
 
 from dotenv import load_dotenv
-load_dotenv()
+import os, csv
+
+dir_path = os.path.dirname(os.path.realpath(__file__));
+load_dotenv(os.path.join(dir_path, 'dotenv.env'))
 
 dir_name = os.getenv('DIR_NAME')
-dir_path = os.path.dirname(os.path.realpath(__file__));
-print(dir_path)
-logging.debug("Directory path: "+dir_path);
+property = os.getenv('PROPERTY')
 
 cnx = mysql.connector.connect(user='root', database='hippocampome_v2', password='DBeaver@123')
 cursor = cnx.cursor()
-
-
-dir_name = "./GA_data";
-dir_path = os.path.dirname(os.path.realpath(__file__));
-print("Directory path: "+dir_path);
 
 csv_data = { 'analytics_data_exit_pages':'Page',
              'analytics_data_pages':'Page',
@@ -186,7 +203,7 @@ def get_ga4_report_df(property_id, dimensions_ga4, metrics_ga4, start_date, end_
 	os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = '/Applications/XAMPP/hippocampome-1687549016291-058d852a885b-trackinggmail.json'
 	client = BetaAnalyticsDataClient()
 	request = RunReportRequest(
-			property = "properties/367925539",
+			property=property_id, 
 			dimensions=dimensions_ga4,
 			metrics=metrics_ga4,
 			date_ranges=[DateRange(start_date=start_date,end_date=end_date)],
@@ -195,33 +212,22 @@ def get_ga4_report_df(property_id, dimensions_ga4, metrics_ga4, start_date, end_
 	return ga4_response_to_df(response, data_name, header_rows, start_date)
 
 def get_new_file_name(file_name, get_file_date=None):
-	print(file_name)
-	print("****");
 	str_beforecsv  = file_name.split(".")[0] #split and get the string before.csv
-	print(str_beforecsv)
 	ext = file_name.split(".")[1]
 	file_date = None
 	if '-' in str_beforecsv:
 		[ file_name1, file_date ] = str_beforecsv.split("-", 1)
 	else:
 		file_name1 = str_beforecsv
-	print("before joining")
 	file_name = ''.join((file_name1,'.',ext))
-	print("Get_file_date:")
-	print(get_file_date)
 	if get_file_date is None:
 		return file_name
 	else:
-		print("IN ELSE")
-		print(file_date)
-		print("---")
 		return file_date	
 
 def write_csv(dir_name, file_name, header_row, df_list, date_input):
 	try:
-		print("IN Write csv function")
 		file = os.path.join(dir_path, dir_name, file_name)
-		print(file)
 		if file_exists(file):
 			print("IN IF FILE EXISTS")
 		else:
@@ -257,7 +263,6 @@ def get_new_path(date_val):
 	return new_path		
 	
 def process_csv_file(dir_name, csv_file):
-	print("In Process_csv_file:")
 	old_path = os.path.join(dir_path, dir_name)
 	file_date = None
 	file_date = get_new_file_name(csv_file, 'file_date')
@@ -265,49 +270,35 @@ def process_csv_file(dir_name, csv_file):
 		##Move to GA_data/archive_new/historical
 		new_path = get_new_path(None)
 	else:
-		print("FILE DATE IN ELSE:"+file_date)
 		##Move to GA_data/archive_new/year/month	
 		new_path = get_new_path(file_date)
 		
-	print("old_path: "+old_path)
-	print("new_path: "+new_path)
 	##Check last line of file and get the date and test if it exists using load_csv_to_database function
 	from load_csv_to_database import if_file_is_loaded_into_db
 	if(if_file_is_loaded_into_db(old_path, csv_file)):
-		print("ITS TRUE -- File is processed")
 		move_files(old_path, new_path, csv_file)
 	else:
 		if file_exists(os.path.join(new_path, csv_file)):
-			print("File exists in desitnation and its processd")
+			print("File "+csv_file+" exists in destination "+new_path+" and its processed")
 		else:
-			print("ITS FALSE -- File is not Processed") #Process data if file exists or proceed to download
 			from load_csv_to_database import process_files
 			process_files([csv_file])
-			print("after main function")
 		move_files(old_path, new_path, csv_file)
 
 def get_csv_files(dir_name, csv_files = None):
-	print("In get_csv_files:")
 	extension = 'csv'
 	os.chdir(os.path.join(dir_path, dir_name))
 	if csv_files is None:
 		csv_files = glob.glob('*.{}'.format(extension))
-	print(csv_files)
 	##Loop thru the csv files
 	for csv_file in csv_files:
-		print(csv_file)
 		process_csv_file(dir_name, csv_file)
 
 def move_files(source, destination, csv_file):
-	print("in move files")
 	create_directory(destination)
-	print("after create directory")
 	src_path = os.path.join(source, csv_file)
-	print(src_path)
 	dst_path = os.path.join(destination, csv_file)
-	print(dst_path)
 	shutil.move(src_path, dst_path)
-	print("after moving")
 	return True
 
 def file_exists(file_path):
@@ -326,7 +317,25 @@ def get_views_day_count(sql):
 	cursor.close()
 	cnx.close()
 	return count
-	
+
+def get_date_last_processed():
+	start_date = None
+	cnx, cursor = get_cnx_cursor()
+	table_names = ['ga_analytics_landing_pages_views', 'ga_analytics_landing_pages', 'ga_analytics_data_events', 'ga_analytics_data_events_views', 'ga_analytics_pages', 'ga_analytics_pages_views']
+	dates = []
+	for table_name in table_names:
+		sql = "SELECT day_index from hippocampome_v2."+table_name+" gapv ORDER BY gapv.day_index DESC LIMIT 1"
+		cursor.execute(sql)
+		results = cursor.fetchall()
+		if len(results) > 0:
+			dates.append(results[0][0]) 
+		else:
+			dates.append(None) 
+	res = list(filter(lambda item: item is not None, dates))
+	start_date = min(res)
+	cursor.close()
+	cnx.close()
+	return start_date
 
 ############ 
 #Program Starts From here 
@@ -335,21 +344,20 @@ def get_views_day_count(sql):
 def main():
 	try:
 		## if .csv file exists move to arvhice/historical/
-		print("before get_csv:")
-		print(dir_name)
 		get_csv_files(dir_name)	
-		print("after get_csv:")
 
 		## if date file is there then see if the folder exists if not create it
-		property = os.getenv('PROPERTY')
-		print(property)
-		start_date = date(2023, 7, 1)
+		### Got to database and get the last date in all tha tables --
+		start_date = get_date_last_processed()
+		## if date is none ie like in server no data is processed or less than July 1 2023 which will be June 30 2023 then take July 1 2023 
+		if(start_date is None or start_date == date(2023, 6, 30)):
+			start_date = date(2023, 7, 1) #start from that date
+		### Till Here
+
 		end_date = date.today() #'today' # 2023-07-02
 		for single_date in daterange(start_date, end_date):
 			date_input = single_date.strftime("%Y-%m-%d")
-			print(date_input) 
 			new_file_path = get_new_path(date_input)
-			print(new_file_path) ##Common for all files
 
 			##########For landing page Data
 			dimensions=[Dimension(name="landingPagePlusQueryString")]
@@ -361,7 +369,7 @@ def main():
 			count = get_views_day_count(sql)
 
 			file_exists = os.path.isfile(os.path.join(new_file_path, file_name))
-			print(file_exists)
+			print("If file :"+file_name+" in path: "+new_file_path+" exists? "+file_exists)
 			if count < 1 and not file_exists:
 				df = get_ga4_report_df(property, dimensions, metrics, date_input, date_input, "landing_page", header_rows)
 				write_csv(dir_name, file_name, header_rows, df, date_input)
