@@ -353,63 +353,65 @@ def main():
 		if(start_date is None or start_date == date(2023, 6, 30)):
 			start_date = date(2023, 7, 1) #start from that date
 		### Till Here
-
 		end_date = date.today() #'today' # 2023-07-02
-		for single_date in daterange(start_date, end_date):
-			date_input = single_date.strftime("%Y-%m-%d")
-			new_file_path = get_new_path(date_input)
+		if(start_date >= end_date):
+			print("Start Date"+start_date+" is greater than end date:"+end_date+" There is nothing to process")
+		else: 
+			for single_date in daterange(start_date, end_date):
+				date_input = single_date.strftime("%Y-%m-%d")
+				new_file_path = get_new_path(date_input)
 
-			##########For landing page Data
-			dimensions=[Dimension(name="landingPagePlusQueryString")]
-			metrics=[{"name":"sessions"}, {"name":"newUsers"}, {"name":"bounceRate"}, {"name":"averageSessionDuration"}, {"name":"engagedSessions"}]
-			header_rows='Landing Page,Sessions,% New Sessions,New Users,Bounce Rate,Pages / Session,Avg. Session Duration,Goal Conversion Rate,Goal Completions,Goal Value,Views'
-			# To add date to filename
-			file_name = 'analytics_data_landing_pages'+'-'+date_input+'.csv'
-			sql = "select count(*) from hippocampome_v2.ga_analytics_landing_pages_views gapv WHERE gapv.day_index='"+date_input+"'"
-			count = get_views_day_count(sql)
+				##########For landing page Data
+				dimensions=[Dimension(name="landingPagePlusQueryString")]
+				metrics=[{"name":"sessions"}, {"name":"newUsers"}, {"name":"bounceRate"}, {"name":"averageSessionDuration"}, {"name":"engagedSessions"}]
+				header_rows='Landing Page,Sessions,% New Sessions,New Users,Bounce Rate,Pages / Session,Avg. Session Duration,Goal Conversion Rate,Goal Completions,Goal Value,Views'
+				# To add date to filename
+				file_name = 'analytics_data_landing_pages'+'-'+date_input+'.csv'
+				sql = "select count(*) from hippocampome_v2.ga_analytics_landing_pages_views gapv WHERE gapv.day_index='"+date_input+"'"
+				count = get_views_day_count(sql)
 
-			file_exists = os.path.isfile(os.path.join(new_file_path, file_name))
-			print("If file :"+file_name+" in path: "+new_file_path+" exists? "+file_exists)
-			if count < 1 and not file_exists:
-				df = get_ga4_report_df(property, dimensions, metrics, date_input, date_input, "landing_page", header_rows)
-				write_csv(dir_name, file_name, header_rows, df, date_input)
-			else:
-				print(os.path.join(new_file_path, file_name))
-				print(" exists and processed to database")
+				file_exists = os.path.isfile(os.path.join(new_file_path, file_name))
+				print("If file :"+file_name+" in path: "+new_file_path+" exists? "+file_exists)
+				if count < 1 and not file_exists:
+					df = get_ga4_report_df(property, dimensions, metrics, date_input, date_input, "landing_page", header_rows)
+					write_csv(dir_name, file_name, header_rows, df, date_input)
+				else:
+					print(os.path.join(new_file_path, file_name))
+					print(" exists and processed to database")
 
-			##########For date pages Data
-			#Page,Pageviews,Unique Pageviews,Avg. Time on Page,Entrances,Bounce Rate,% Exit,Page Value
-			dimensions=[Dimension(name="landingPagePlusQueryString")]
-			metrics=[{"name":"screenPageViews"}, {"name":"screenPageViewsPerUser"}, {"name":"userEngagementDuration"}, {"name":"sessions"}, {"name":"bounceRate"}]
-			header_rows='Page,Pageviews,Unique Pageviews, Avg. Time on Page, Entrances, Bounce Rate, % Exit, Page Value'
-			# To add date to filename
-			file_name = 'analytics_data_pages'+'-'+date_input+'.csv'
-			sql = "select count(*) from hippocampome_v2.ga_analytics_pages_views gapv WHERE gapv.day_index='"+date_input+"'"
-			count = get_views_day_count(sql)
-			file_exists = os.path.isfile(os.path.join(new_file_path, file_name))
-			if count < 1 and not file_exists:
-				df = get_ga4_report_df(property, dimensions, metrics, date_input, date_input, "pages", header_rows)
-				write_csv(dir_name, file_name, header_rows, df, date_input)
-			else:
-				print(os.path.join(new_file_path, file_name))
-				print(" exists and processed to database")
+				##########For date pages Data
+				#Page,Pageviews,Unique Pageviews,Avg. Time on Page,Entrances,Bounce Rate,% Exit,Page Value
+				dimensions=[Dimension(name="landingPagePlusQueryString")]
+				metrics=[{"name":"screenPageViews"}, {"name":"screenPageViewsPerUser"}, {"name":"userEngagementDuration"}, {"name":"sessions"}, {"name":"bounceRate"}]
+				header_rows='Page,Pageviews,Unique Pageviews, Avg. Time on Page, Entrances, Bounce Rate, % Exit, Page Value'
+				# To add date to filename
+				file_name = 'analytics_data_pages'+'-'+date_input+'.csv'
+				sql = "select count(*) from hippocampome_v2.ga_analytics_pages_views gapv WHERE gapv.day_index='"+date_input+"'"
+				count = get_views_day_count(sql)
+				file_exists = os.path.isfile(os.path.join(new_file_path, file_name))
+				if count < 1 and not file_exists:
+					df = get_ga4_report_df(property, dimensions, metrics, date_input, date_input, "pages", header_rows)
+					write_csv(dir_name, file_name, header_rows, df, date_input)
+				else:
+					print(os.path.join(new_file_path, file_name))
+					print(" exists and processed to database")
 
-			##########For date Events Data
-			#Event name,Event count,Total users,Event count per user,Total revenue
-			dimensions=[Dimension(name="eventName")]
-			metrics=[{"name":"eventCount"}, {"name":"sessions"}, {"name":"eventCountPerUser"}]
-			header_rows='Event name, Event Count, Total users, Event count per user' #, Total revenue'
-			# To add date to filename
-			file_name = 'analytics_data_events'+'-'+date_input+'.csv'
-			sql = "select count(*) from hippocampome_v2.ga_analytics_data_events_views gapv WHERE gapv.day_index='"+date_input+"'"
-			count = get_views_day_count(sql)
-			file_exists = os.path.isfile(os.path.join(new_file_path, file_name))
-			if count < 1 and not file_exists:
-				df = get_ga4_report_df(property, dimensions, metrics, date_input, date_input, "events", header_rows)
-				write_csv(dir_name, file_name, header_rows, df, date_input)
-			else:
-				print(os.path.join(new_file_path, file_name))
-				print(" exists and processed to database")
+				##########For date Events Data
+				#Event name,Event count,Total users,Event count per user,Total revenue
+				dimensions=[Dimension(name="eventName")]
+				metrics=[{"name":"eventCount"}, {"name":"sessions"}, {"name":"eventCountPerUser"}]
+				header_rows='Event name, Event Count, Total users, Event count per user' #, Total revenue'
+				# To add date to filename
+				file_name = 'analytics_data_events'+'-'+date_input+'.csv'
+				sql = "select count(*) from hippocampome_v2.ga_analytics_data_events_views gapv WHERE gapv.day_index='"+date_input+"'"
+				count = get_views_day_count(sql)
+				file_exists = os.path.isfile(os.path.join(new_file_path, file_name))
+				if count < 1 and not file_exists:
+					df = get_ga4_report_df(property, dimensions, metrics, date_input, date_input, "events", header_rows)
+					write_csv(dir_name, file_name, header_rows, df, date_input)
+				else:
+					print(os.path.join(new_file_path, file_name))
+					print(" exists and processed to database")
 	except Exception as e:
               logging.debug("Error happened")
               logging.debug(e)
