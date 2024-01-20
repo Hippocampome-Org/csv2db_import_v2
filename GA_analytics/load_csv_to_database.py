@@ -50,40 +50,7 @@ cursor = cnx.cursor()
 
 ## Global Variables
 ###*************************************************************************************************************************************************
-"""
-csv_data = { 'analytics_data_exit_pages.csv':'Page',
-             'analytics_data_pages.csv':'Page', 
-             'analytics_data_content.csv':'Page path level 1',
-             'analytics_data_landing_pages.csv':'Landing Page'}
 
-db_data_insert_sql = { 'analytics_data_exit_pages.csv':"INSERT INTO hippocampome_v2.ga_analytics_exit_pages (page, exits, page_views, percentage_exit, day_index) VALUES (%s, %s, %s, %s, %s)",
-             'analytics_data_pages.csv':"INSERT INTO hippocampome_v2.ga_analytics_pages (page, page_views, unique_page_views, avg_time_on_page, entrances, bounce_rate, percentage_exit, page_value, day_index) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s) ",
-             'analytics_data_content.csv':"INSERT INTO hippocampome_v2.ga_analytics_data_content (page_path_level, page_views, unique_page_views, avg_time_on_page, bounce_rate, percentage_exit, day_index) VALUES (%s, %s, %s, %s, %s, %s, %s) ",
-             'analytics_data_landing_pages.csv':"INSERT INTO hippocampome_v2.ga_analytics_landing_pages (landing_page, sessions, percentage_new_sessions, new_users, bounce_rate, pages_sessions, avg_sessions, goal_conversion, goal_completion, goal_value, day_index) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s) "}
-
-db_data_insert_sql_cols = {'analytics_data_exit_pages.csv':['page', 'exits', 'page_views', 'percentage_exit'],
-             'analytics_data_pages.csv':['page', 'page_views', 'unique_page_views', 'avg_time_on_page', 'entrances', 'bounce_rate', 'percentage_exit', 'page_value'],
-             'analytics_data_content.csv':['page_path_level', 'page_views', 'unique_page_views', 'avg_time_on_page', 'bounce_rate', 'percentage_exit'],
-             'analytics_data_landing_pages.csv':['landing_page', 'sessions', 'percentage_new_sessions', 'new_users', 'bounce_rate', 'pages_sessions', 'avg_sessions', 'goal_conversion', 'goal_completion', 'goal_value']}
-
-######## For the Views
-
-csv_dates_data = { 'analytics_data_exit_pages.csv':'Day Index',
-             'analytics_data_pages.csv':'Day Index',
-             'analytics_data_content.csv':'Day Index',
-             'analytics_data_landing_pages.csv':'Day Index'}
-
-db_data_insert_viewssql = { 'analytics_data_exit_pages.csv':"INSERT INTO hippocampome_v2.ga_analytics_exit_pages_views (day_index, views) VALUES (%s, %s)",
-             'analytics_data_pages.csv':"INSERT INTO hippocampome_v2.ga_analytics_pages_views (day_index, views) VALUES (%s, %s)",
-             'analytics_data_content.csv':"INSERT INTO hippocampome_v2.ga_analytics_data_content_views (day_index, views) VALUES (%s, %s)",
-             'analytics_data_landing_pages.csv':"INSERT INTO hippocampome_v2.ga_analytics_landing_pages_views (day_index, views) VALUES (%s, %s)"}
-
-db_data_insert_viewssql_cols = { 'analytics_data_exit_pages.csv':['day_index', 'views'],
-             'analytics_data_pages.csv':['day_index', 'views'],
-             'analytics_data_content.csv':['day_index', 'views'],
-             'analytics_data_landing_pages.csv':['day_index', 'views']}
-
-"""
 
 csv_data = { 'analytics_data_exit_pages':'Page',
              'analytics_data_pages':'Page',
