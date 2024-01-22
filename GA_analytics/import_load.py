@@ -354,8 +354,9 @@ def main():
 			start_date = date(2023, 7, 1) #start from that date
 		### Till Here
 		end_date = date.today() #'today' # 2023-07-02
+		start_date = start_date + timedelta(days=1)
 		if(start_date >= end_date):
-			print("Start Date"+start_date+" is greater than end date:"+end_date+" There is nothing to process")
+			print(f"Start Date: {start_date} is greater than End Date: {end_date}. There is nothing to process")
 		else: 
 			for single_date in daterange(start_date, end_date):
 				date_input = single_date.strftime("%Y-%m-%d")
@@ -369,16 +370,14 @@ def main():
 				file_name = 'analytics_data_landing_pages'+'-'+date_input+'.csv'
 				sql = "select count(*) from hippocampome_v2.ga_analytics_landing_pages_views gapv WHERE gapv.day_index='"+date_input+"'"
 				count = get_views_day_count(sql)
-
 				file_exists = os.path.isfile(os.path.join(new_file_path, file_name))
-				print("If file :"+file_name+" in path: "+new_file_path+" exists? "+file_exists)
+				print(f"If file : {file_name} in path: {new_file_path} exists: {file_exists}")
 				if count < 1 and not file_exists:
 					df = get_ga4_report_df(property, dimensions, metrics, date_input, date_input, "landing_page", header_rows)
 					write_csv(dir_name, file_name, header_rows, df, date_input)
 				else:
 					print(os.path.join(new_file_path, file_name))
 					print(" exists and processed to database")
-
 				##########For date pages Data
 				#Page,Pageviews,Unique Pageviews,Avg. Time on Page,Entrances,Bounce Rate,% Exit,Page Value
 				dimensions=[Dimension(name="landingPagePlusQueryString")]
@@ -389,6 +388,7 @@ def main():
 				sql = "select count(*) from hippocampome_v2.ga_analytics_pages_views gapv WHERE gapv.day_index='"+date_input+"'"
 				count = get_views_day_count(sql)
 				file_exists = os.path.isfile(os.path.join(new_file_path, file_name))
+				print(f"If file : {file_name} in path: {new_file_path} exists: {file_exists}")
 				if count < 1 and not file_exists:
 					df = get_ga4_report_df(property, dimensions, metrics, date_input, date_input, "pages", header_rows)
 					write_csv(dir_name, file_name, header_rows, df, date_input)
@@ -406,6 +406,7 @@ def main():
 				sql = "select count(*) from hippocampome_v2.ga_analytics_data_events_views gapv WHERE gapv.day_index='"+date_input+"'"
 				count = get_views_day_count(sql)
 				file_exists = os.path.isfile(os.path.join(new_file_path, file_name))
+				print(f"If file : {file_name} in path: {new_file_path} exists: {file_exists}")
 				if count < 1 and not file_exists:
 					df = get_ga4_report_df(property, dimensions, metrics, date_input, date_input, "events", header_rows)
 					write_csv(dir_name, file_name, header_rows, df, date_input)
