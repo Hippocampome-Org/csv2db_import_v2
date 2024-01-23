@@ -1,31 +1,3 @@
-"""
-#************************************************************************************************************************************************
-Updated on Dec 1 2023 to import data from GA and write to csv files
-#************************************************************************************************************************************************
-# File names and headers
-#### analytics_data_pages         --  Page,Pageviews,Unique Pageviews,Avg. Time on Page,Entrances,Bounce Rate,% Exit,Page Value
-                                  --  Day Index,Pageviews
-#### analytics_data_content       --  Page path level 1,Pageviews,Unique Pageviews,Avg. Time on Page,Bounce Rate,% Exit
-                                  --  Day Index,Pageviews
-#### analytics_data_exit_pages    --  Page,Exits,Pageviews,% Exit
-                                  --  Day Index,Exits
-#### analytics_data_landing_pages --  Landing Page,Sessions,% New Sessions,New Users,Bounce Rate,Pages / Session,Avg. Session Duration,Goal Conversion Rate,Goal Completions,Goal Value
-                                  --  Day Index,Sessions
-
-
-################Insert Statements
-
-## -- data_content -- INSERT INTO hippocampome_v2.ga_analytics_data_content (page_path_level, page_views, unique_page_views, avg_time_on_page, bounce_rate, percentage_exit) VALUES('', 0, 0, 0, '', '');
-## -- data_content_views -- INSERT INTO hippocampome_v2.ga_analytics_data_content_views (day_index, views) VALUES('', 0);
-## -- exit_pages -- INSERT INTO hippocampome_v2.ga_analytics_exit_pages (page, exits, page_views, percentage_exit) VALUES('', 0, 0, '');
-## -- exit_pages_views -- INSERT INTO hippocampome_v2.ga_analytics_exit_pages_views (day_index, views) VALUES('', 0);
-## -- landing_pages -- INSERT INTO hippocampome_v2.ga_analytics_landing_pages (landing_page, sessions, percentage_new_sessions, new_users, bounce_rate, pages_sessions, avg_sessions, goal_conversion, goal_completion, goal_value) VALUES('', 0, '', 0, '', 0, 0, '', 0, 0);
-## -- landing_pages_views -- INSERT INTO hippocampome_v2.ga_analytics_landing_pages_views (day_index, views) VALUES('', 0);
-## --  pages -- INSERT INTO hippocampome_v2.ga_analytics_pages (page, page_views, unique_page_views, avg_time_on_page, entrances, bounce_rate, percentage_exit, page_value) VALUES('', 0, 0, 0, 0, '', '', 0);
-## -- pages_views -- INSERT INTO hippocampome_v2.ga_analytics_pages_views (day_index, views) VALUES('', 0);
-
-"""
-
 import re
 import errno
 from google.analytics.data_v1beta import BetaAnalyticsDataClient
@@ -50,62 +22,11 @@ load_dotenv(os.path.join(dir_path, 'dotenv.env'))
 
 dir_name = os.getenv('DIR_NAME')
 property = os.getenv('PROPERTY')
+db_user = os.getenv('DB_USER')
+db_database = os.getenv('DB_DATABASE')
+db_password = os.getenv('DB_PASSWORD')
 
-cnx = mysql.connector.connect(user='root', database='hippocampome_v2', password='DBeaver@123')
-cursor = cnx.cursor()
-
-csv_data = { 'analytics_data_exit_pages':'Page',
-             'analytics_data_pages':'Page',
-             'analytics_data_content':'Page path level 1',
-             'analytics_data_landing_pages':'Landing Page',
-             'analytics_data_events':'Event name'}
-
-db_data_insert_sql = { 'analytics_data_exit_pages':"INSERT INTO hippocampome_v2.ga_analytics_exit_pages (page, exits, page_views, percentage_exit, day_index) VALUES (%s, %s, %s, %s, %s)",
-             'analytics_data_pages':"INSERT INTO hippocampome_v2.ga_analytics_pages (page, page_views, unique_page_views, avg_time_on_page, entrances, bounce_rate, percentage_exit, page_value, day_index) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s) ",
-             'analytics_data_content':"INSERT INTO hippocampome_v2.ga_analytics_data_content (page_path_level, page_views, unique_page_views, avg_time_on_page, bounce_rate, percentage_exit, day_index) VALUES (%s, %s, %s, %s, %s, %s, %s) ",
-             'analytics_data_landing_pages':"INSERT INTO hippocampome_v2.ga_analytics_landing_pages (landing_page, sessions, percentage_new_sessions, new_users, bounce_rate, pages_sessions, avg_sessions, goal_conversion, goal_completion, goal_value, day_index) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s) ",
-             'analytics_data_events':"INSERT INTO hippocampome_v2.ga_analytics_data_events (event_name, event_count, total_users, event_count_per_user, total_revenue, day_index) VALUES (%s, %s, %s, %s, %s, %s) "}
-
-db_data_insert_sql_cols = {'analytics_data_exit_pages':['page', 'exits', 'page_views', 'percentage_exit'],
-             'analytics_data_pages':['page', 'page_views', 'unique_page_views', 'avg_time_on_page', 'entrances', 'bounce_rate', 'percentage_exit', 'page_value'],
-             'analytics_data_content':['page_path_level', 'page_views', 'unique_page_views', 'avg_time_on_page', 'bounce_rate', 'percentage_exit'],
-             'analytics_data_landing_pages':['landing_page', 'sessions', 'percentage_new_sessions', 'new_users', 'bounce_rate', 'pages_sessions', 'avg_sessions', 'goal_conversion', 'goal_completion', 'goal_value'],
-             'analytics_data_events':['event_name', 'event_count', 'total_users', 'event_count_per_user', 'total_revenue', 'day_index']}
-
-######## For the Views
-
-csv_dates_data = { 'analytics_data_exit_pages':'Day Index',
-             'analytics_data_pages':'Day Index',
-             'analytics_data_content':'Day Index',
-             'analytics_data_landing_pages':'Day Index',
-             'analytics_data_events':'Day Index'}
-
-db_data_insert_viewssql_cols = { 'analytics_data_exit_pages':['day_index', 'views'],
-             'analytics_data_pages':['day_index', 'views'],
-             'analytics_data_content':['day_index', 'views'],
-             'analytics_data_landing_pages':['day_index', 'views'],
-             'analytics_data_events':['day_index', 'views']}
-
-db_data_insert_viewssql = { 'analytics_data_exit_pages':"INSERT INTO hippocampome_v2.ga_analytics_exit_pages_views (day_index, views) VALUES (%s, %s)",
-             'analytics_data_pages':"INSERT INTO hippocampome_v2.ga_analytics_pages_views (day_index, views) VALUES (%s, %s)",
-             'analytics_data_content':"INSERT INTO hippocampome_v2.ga_analytics_data_content_views (day_index, views) VALUES (%s, %s)",
-             'analytics_data_landing_pages':"INSERT INTO hippocampome_v2.ga_analytics_landing_pages_views (day_index, views) VALUES (%s, %s)",
-             'analytics_data_events':"INSERT INTO hippocampome_v2.ga_analytics_data_events_views (day_index, views) VALUES (%s, %s)"}
-
-db_data_select_viewssql = { 'analytics_data_exit_pages':"SELECT * FROM hippocampome_v2.ga_analytics_exit_pages_views ORDER BY day_index DESC LIMIT 1",
-             'analytics_data_pages':"SELECT * FROM hippocampome_v2.ga_analytics_pages_views ORDER BY day_index DESC limit 1",
-             'analytics_data_content':"SELECT * FROM hippocampome_v2.ga_analytics_data_content_views ORDER BY day_index DESC LIMIT 1",
-             'analytics_data_landing_pages':"SELECT * FROM hippocampome_v2.ga_analytics_landing_pages_views ORDER BY day_index DESC LIMIT 1",
-             'analytics_data_events':"SELECT * FROM hippocampome_v2.ga_analytics_data_events_views ORDER BY day_index DESC LIMIT 1"}
-
-db_data_select_viewssql_date = { 'analytics_data_exit_pages':"SELECT * FROM hippocampome_v2.ga_analytics_exit_pages_views WHERE day_idex =",
-             'analytics_data_pages':"SELECT * FROM hippocampome_v2.ga_analytics_pages_views WHERE day_index = ",
-             'analytics_data_content':"SELECT * FROM hippocampome_v2.ga_analytics_data_content_views WHERE day_index = ",
-             'analytics_data_landing_pages':"SELECT * FROM hippocampome_v2.ga_analytics_landing_pages_views WHERE day_index = ",
-             'analytics_data_events':"SELECT * FROM hippocampome_v2.ga_analytics_data_events_views WHERE day_index = "}
-        
 ## Till Here
-
 
 '''
 #Check GA_data if any csv files are there 

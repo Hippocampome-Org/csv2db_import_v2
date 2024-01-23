@@ -45,9 +45,6 @@ dir_name = os.getenv('DIR_NAME')
 property = os.getenv('PROPERTY')
 dir_path = os.path.dirname(os.path.realpath(__file__));
 
-cnx = mysql.connector.connect(user='root', database='hippocampome_v2', password='DBeaver@123')
-cursor = cnx.cursor()
-
 ## Global Variables
 ###*************************************************************************************************************************************************
 
@@ -104,11 +101,6 @@ db_data_select_viewssql_date = { 'analytics_data_exit_pages':"SELECT * FROM hipp
 
 ## Till Here
 
-def get_cnx_cursor():
-	cnx = mysql.connector.connect(user='root', database='hippocampome_v2', password='DBeaver@123')
-	cursor = cnx.cursor()
-	return cnx, cursor
-	
 def if_file_is_loaded_into_db(file_path, file_name):
 	##get the file name without extension
 	## get the last line of the file and last line of the views file for that file
@@ -124,6 +116,7 @@ def if_file_is_loaded_into_db(file_path, file_name):
 			sql = db_data_select_viewssql_date[file_name] + "'" + file_date +"'"
 	##Make sure last line exists in the db or not
 	##get the file or sql from the execute sql and if the date in the database is greater than or equal to the file_date then return true and move the file  
+	from import_load import get_cnx_cursor
 	cnx, cursor = get_cnx_cursor()
 	cursor.execute(sql)
 	time.sleep(0.025)
@@ -266,9 +259,9 @@ def process_files(csv_files = None):
 				print("Completed processing file: "+csv_file+" at: "+datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
 				## Move Processed File
 				file_name, file_date = get_new_file_name(csv_file)
-				from import_csvfiles_from_GA import get_new_path
+				from import_load import get_new_path
 				new_path = get_new_path(file_date)
-				from import_csvfiles_from_GA import move_files
+				from import_load import move_files
 				move_files(old_path, new_path, csv_file)
 				print("After Moving in process_files")
 		
