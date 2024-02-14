@@ -226,7 +226,7 @@ def file_exists(file_path):
 	return os.path.isfile(file_path)
 
 def get_cnx_cursor():                   
-        cnx = mysql.connector.connect(user='root', database='hippocampome_v2', password='DBeaver@123')
+        cnx = mysql.connector.connect(user=db_user, database=db_database, password=db_password)
         cursor = cnx.cursor()   
         return cnx, cursor
 

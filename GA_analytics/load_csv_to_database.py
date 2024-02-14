@@ -161,8 +161,8 @@ def parse_data_insert(inRecordingMode, csvreader, file_name, starts_with, ends_w
 				elif line[0].startswith(ends_with):
 					inRecordingMode = False
 			elif inRecordingMode:
-				cnx = mysql.connector.connect(user='root', database='hippocampome_v2', password='DBeaver@123')
-				cursor = cnx.cursor()
+				from import_load import get_cnx_cursor
+				cnx, cursor = get_cnx_cursor()
 				if line[0] == []:
 					continue
 				elif len(line[0]) <= 1:
