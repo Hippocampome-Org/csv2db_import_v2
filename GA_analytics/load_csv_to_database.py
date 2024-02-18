@@ -13,30 +13,17 @@ Created on Nov 21 2023 to read csv files and write to database
 				  --  Day Index,Sessions
 #### analytics_data_events_pages  --  Event name,Event count,Total users,Event count per user,Total revenue
 				  --  Day Index,Sessions
-
-################Insert Statements
-
-## -- data_content -- INSERT INTO hippocampome_v2.ga_analytics_data_content (page_path_level, page_views, unique_page_views, avg_time_on_page, bounce_rate, percentage_exit) VALUES('', 0, 0, 0, '', '');
-## -- data_content_views -- INSERT INTO hippocampome_v2.ga_analytics_data_content_views (day_index, views) VALUES('', 0);
-## -- exit_pages -- INSERT INTO hippocampome_v2.ga_analytics_exit_pages (page, exits, page_views, percentage_exit) VALUES('', 0, 0, '');
-## -- exit_pages_views -- INSERT INTO hippocampome_v2.ga_analytics_exit_pages_views (day_index, views) VALUES('', 0);
-## -- landing_pages -- INSERT INTO hippocampome_v2.ga_analytics_landing_pages (landing_page, sessions, percentage_new_sessions, new_users, bounce_rate, pages_sessions, avg_sessions, goal_conversion, goal_completion, goal_value) VALUES('', 0, '', 0, '', 0, 0, '', 0, 0);
-## -- landing_pages_views -- INSERT INTO hippocampome_v2.ga_analytics_landing_pages_views (day_index, views) VALUES('', 0);
-## --  pages -- INSERT INTO hippocampome_v2.ga_analytics_pages (page, page_views, unique_page_views, avg_time_on_page, entrances, bounce_rate, percentage_exit, page_value) VALUES('', 0, 0, 0, 0, '', '', 0);
-## -- pages_views -- INSERT INTO hippocampome_v2.ga_analytics_pages_views (day_index, views) VALUES('', 0);
-
-
 #************************************************************************************************************************************************
 """
 
 import csv
 import os
 import glob
-import mysql.connector
 import logging
 from datetime import datetime
 from pandas import to_datetime
 import time
+import import_load
 
 from dotenv import load_dotenv
 load_dotenv()
@@ -49,23 +36,15 @@ dir_path = os.path.dirname(os.path.realpath(__file__));
 ###*************************************************************************************************************************************************
 
 
+datatable_columns = {}
+from import_load import get_datatable_columns, get_cnx_cursor
+datatable_columns = get_datatable_columns(datatable_columns)
+
 csv_data = { 'analytics_data_exit_pages':'Page',
              'analytics_data_pages':'Page',
              'analytics_data_content':'Page path level 1',
              'analytics_data_landing_pages':'Landing Page', 
 	     'analytics_data_events':'Event name'}
-
-db_data_insert_sql = { 'analytics_data_exit_pages':"INSERT INTO hippocampome_v2.ga_analytics_exit_pages (page, exits, page_views, percentage_exit, day_index) VALUES (%s, %s, %s, %s, %s)",
-             'analytics_data_pages':"INSERT INTO hippocampome_v2.ga_analytics_pages (page, page_views, unique_page_views, avg_time_on_page, entrances, bounce_rate, percentage_exit, page_value, day_index) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s) ",
-             'analytics_data_content':"INSERT INTO hippocampome_v2.ga_analytics_data_content (page_path_level, page_views, unique_page_views, avg_time_on_page, bounce_rate, percentage_exit, day_index) VALUES (%s, %s, %s, %s, %s, %s, %s) ",
-             'analytics_data_landing_pages':"INSERT INTO hippocampome_v2.ga_analytics_landing_pages (landing_page, sessions, percentage_new_sessions, new_users, bounce_rate, pages_sessions, avg_sessions, goal_conversion, goal_completion, goal_value, day_index) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s) ",
-             'analytics_data_events':"INSERT INTO hippocampome_v2.ga_analytics_data_events (event_name, event_count, total_users, event_count_per_user, total_revenue, day_index) VALUES (%s, %s, %s, %s, %s, %s) "}
-
-db_data_insert_sql_cols = {'analytics_data_exit_pages':['page', 'exits', 'page_views', 'percentage_exit'],
-             'analytics_data_pages':['page', 'page_views', 'unique_page_views', 'avg_time_on_page', 'entrances', 'bounce_rate', 'percentage_exit', 'page_value'],
-             'analytics_data_content':['page_path_level', 'page_views', 'unique_page_views', 'avg_time_on_page', 'bounce_rate', 'percentage_exit'],
-             'analytics_data_landing_pages':['landing_page', 'sessions', 'percentage_new_sessions', 'new_users', 'bounce_rate', 'pages_sessions', 'avg_sessions', 'goal_conversion', 'goal_completion', 'goal_value'],
-             'analytics_data_events':['event_name', 'event_count', 'total_users', 'event_count_per_user', 'total_revenue', 'day_index']}
 
 ######## For the Views
 
@@ -75,31 +54,16 @@ csv_dates_data = { 'analytics_data_exit_pages':'Day Index',
              'analytics_data_landing_pages':'Day Index',
              'analytics_data_events':'Day Index'}
 
-db_data_insert_viewssql_cols = { 'analytics_data_exit_pages':['day_index', 'views'],
-             'analytics_data_pages':['day_index', 'views'],
-             'analytics_data_content':['day_index', 'views'],
-             'analytics_data_landing_pages':['day_index', 'views'],
-             'analytics_data_events':['day_index', 'views']}
-
-db_data_insert_viewssql = { 'analytics_data_exit_pages':"INSERT INTO hippocampome_v2.ga_analytics_exit_pages_views (day_index, views) VALUES (%s, %s)",
-             'analytics_data_pages':"INSERT INTO hippocampome_v2.ga_analytics_pages_views (day_index, views) VALUES (%s, %s)",
-             'analytics_data_content':"INSERT INTO hippocampome_v2.ga_analytics_data_content_views (day_index, views) VALUES (%s, %s)",
-             'analytics_data_landing_pages':"INSERT INTO hippocampome_v2.ga_analytics_landing_pages_views (day_index, views) VALUES (%s, %s)",
-             'analytics_data_events':"INSERT INTO hippocampome_v2.ga_analytics_data_events_views (day_index, views) VALUES (%s, %s)"}
-
-db_data_select_viewssql = { 'analytics_data_exit_pages':"SELECT * FROM hippocampome_v2.ga_analytics_exit_pages_views ORDER BY day_index DESC LIMIT 1",
-             'analytics_data_pages':"SELECT * FROM hippocampome_v2.ga_analytics_pages_views ORDER BY day_index DESC limit 1",
-             'analytics_data_content':"SELECT * FROM hippocampome_v2.ga_analytics_data_content_views ORDER BY day_index DESC LIMIT 1",
-             'analytics_data_landing_pages':"SELECT * FROM hippocampome_v2.ga_analytics_landing_pages_views ORDER BY day_index DESC LIMIT 1",
-             'analytics_data_events':"SELECT * FROM hippocampome_v2.ga_analytics_data_events_views ORDER BY day_index DESC LIMIT 1"}
-
-db_data_select_viewssql_date = { 'analytics_data_exit_pages':"SELECT * FROM hippocampome_v2.ga_analytics_exit_pages_views WHERE day_idex =",
-             'analytics_data_pages':"SELECT * FROM hippocampome_v2.ga_analytics_pages_views WHERE day_index = ",
-             'analytics_data_content':"SELECT * FROM hippocampome_v2.ga_analytics_data_content_views WHERE day_index = ",
-             'analytics_data_landing_pages':"SELECT * FROM hippocampome_v2.ga_analytics_landing_pages_views WHERE day_index = ",
-             'analytics_data_events':"SELECT * FROM hippocampome_v2.ga_analytics_data_events_views WHERE day_index = "}
-
 ## Till Here
+
+def dynamic_select_stmt(table_name, datatable_columns, file_date=None):
+	# Construct the INSERT INTO statement
+	sql = f"SELECT * FROM {table_name} ORDER BY day_index DESC limit 1"
+	if file_date is not None:
+		sql = f"SELECT * FROM {table_name} WHERE day_index = '{file_date}'"
+	return sql
+
+
 
 def if_file_is_loaded_into_db(file_path, file_name):
 	##get the file name without extension
@@ -107,13 +71,15 @@ def if_file_is_loaded_into_db(file_path, file_name):
 
 	with open(os.path.join(file_path, file_name), 'r') as f: 
 		##Call function
-		file_name, file_date = get_new_file_name(file_name)
+		file_name, file_date = get_modified_filename(file_name)
 		if file_date is None:
 			last_line_date = f.readlines()[-2]
-			sql = db_data_select_viewssql[file_name]
+			from import_load import file_table_map
+			sql = dynamic_select_stmt(file_table_map[file_name][0], datatable_columns)
 		else:
 			last_line_date = f.readlines()[-1]
-			sql = db_data_select_viewssql_date[file_name] + "'" + file_date +"'"
+			from import_load import file_table_map
+			sql = dynamic_select_stmt(file_table_map[file_name][1], datatable_columns, file_date)
 	##Make sure last line exists in the db or not
 	##get the file or sql from the execute sql and if the date in the database is greater than or equal to the file_date then return true and move the file  
 	from import_load import get_cnx_cursor
@@ -133,18 +99,49 @@ def if_file_is_loaded_into_db(file_path, file_name):
 		datetime_object = datetime.strptime(date_str, '%m/%d/%y').date()
 
 		return(inserted_date >= datetime_object)
-	
-def nonblank_lines(f):
-    for l in f:
-        line = l.rstrip()
-        if line:
-            yield line
 
 def is_date_matching(date_str):
     try:
         return bool(datetime.strptime(date_str, '%Y-%m-%d'))
     except ValueError:
         return False
+
+def dynamic_insert(table_name, datatable_columns, row_data, file_date):
+	int_columns = ['page_views', 'unique_page_views', 'entrances', 'views', 'sessions', 'new_users', 'goal_completion', 'exits', 'event_count', 'total_users']
+
+	# Construct column names and placeholders strings
+	row_columns = datatable_columns[table_name]
+	columns = ",".join(row_columns)
+	# Loop through each row
+	try:
+		for index, row_column in enumerate(row_columns):
+
+			# Loop through each column that needs to be an integer
+			if(row_column in int_columns):
+				# Convert the column value to an integer
+				row_data[index] = row_data[index].replace(',', '')
+				row_data[index] = int(row_data[index])
+			else:
+				if(index == len(row_data)):
+					if file_date is not None:
+						row_data.append(file_date)
+					else:
+						modified_s = ','.join(columns.rsplit(',', 1)[:-1])
+						columns = modified_s
+				elif(index < len(row_data)):
+					row_data[index] = row_data[index]
+
+	except Exception as e:
+		# Catch all other exceptions
+		print(f"An unexpected error occurred: {e} INDEX:{index}")
+
+	placeholders = ', '.join(['%s'] * len(row_data))
+
+	# Construct the INSERT INTO statement
+	sql = f"INSERT INTO {table_name} ({columns}) VALUES ({placeholders})"
+	val = tuple(row_data)
+	return sql, val
+
 
 def parse_data_insert(inRecordingMode, csvreader, file_name, starts_with, ends_with, file_date):
 	if ends_with is None:
@@ -173,29 +170,35 @@ def parse_data_insert(inRecordingMode, csvreader, file_name, starts_with, ends_w
 						line[0] = line[0][1:]
 					if line[0].startswith('Day Index'):
 						continue
-					sql = db_data_insert_sql[file_name]
 					if(file_date) and not is_date_matching(file_date):
 						d = datetime.strptime(file_date, '%Y-%m-%d')
 						file_date = d.strftime("%m/%d/%y")
 
-					#print(tuple(line))print(file_date)print(tuple(file_date,))	
-					val = tuple(line) + (file_date, ) #to add date too
+					from import_load import file_table_map 
+					sql, val = dynamic_insert(file_table_map[file_name][0], datatable_columns, line, file_date)
 					##print(sql)
 					##print(val)
-					cursor.execute(sql, val)
-					time.sleep(0.025)	
-					cnx.commit()
-					cursor.close()
-					cnx.close()
+					try:
+						cursor.execute(sql, val)
+						time.sleep(0.025)
+						cnx.commit()
+						cursor.close()
+						cnx.close()
+					except Exception as e:
+						logging.debug("Error happened")
+						logging.debug(e)
+						print(e)
+						exit();
 				elif len(ends_with) > 1 and line[0].startswith(ends_with):
 					## When we reach "line before views"
 					continue
 				else:
 					if line[0].startswith('Day Index'):
 						continue
-					sql = db_data_insert_viewssql[file_name]
 					line[0] = datetime.strptime(line[0], "%m/%d/%y")
-					val = tuple(line)
+					from import_load import file_table_map
+					sql, val = dynamic_insert(file_table_map[file_name][1], datatable_columns, line, file_date)
+
 					##print(sql)
 					##print(val)
 					cursor.execute(sql, val)
@@ -204,7 +207,7 @@ def parse_data_insert(inRecordingMode, csvreader, file_name, starts_with, ends_w
 					cursor.close()
 					cnx.close()
 
-def get_new_file_name(file_name, get_file_date=None):
+def get_modified_filename(file_name, get_file_date=None):
 	str_beforecsv  = file_name.split(".")[0] #split and get the string before.csv
 	ext = file_name.split(".")[1]
 	file_date = None
@@ -227,10 +230,9 @@ def read_csv_file(dir_name, csv_file):
 		old_path = os.path.join(dir_path, dir_name)
 		##Call function
 		if(if_file_is_loaded_into_db(old_path, csv_file)):
-			print("ITS TRUE -- File is processed")
 			return True
 		else:
-			file_name, file_date = get_new_file_name(csv_file)
+			file_name, file_date = get_modified_filename(csv_file)
 			if(file_name == 'analytics_data_events'):
 				parse_data_insert(inRecordingMode, csvreader, file_name, csv_data[file_name], 'EVENTS', file_date)
 				return True
@@ -244,7 +246,7 @@ def read_csv_file(dir_name, csv_file):
 ############
 
 
-def process_files(csv_files = None):
+def load_process_files(csv_files = None):
 	try:
 		if csv_files is None:
 			extension = 'csv'
@@ -253,23 +255,19 @@ def process_files(csv_files = None):
 		##Loop thru the csv files
 		for csv_file in csv_files:
 			print("Started processing file: "+csv_file+" at: "+datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
-			#logging.debug("Started processing file: "+csv_file+" at: "+datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
 			if(read_csv_file('GA_data', csv_file)):
-				#logging.debug("Completed processing file: "+csv_file+" at: "+datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
 				print("Completed processing file: "+csv_file+" at: "+datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
 				## Move Processed File
-				file_name, file_date = get_new_file_name(csv_file)
+				file_name, file_date = get_modified_filename(csv_file)
 				from import_load import get_new_path
 				new_path = get_new_path(file_date)
 				from import_load import move_files
 				move_files(old_path, new_path, csv_file)
-				print("After Moving in process_files")
-		
 	except Exception as e:
 		logging.debug("Error happened")
 		logging.debug(e)
 def main():
-	process_files()
+	load_process_files()
 
 if __name__ == '__main__':
 	main()

@@ -9,7 +9,7 @@ import shutil
 import logging
 
 import glob                             
-import mysql.connector          
+import pymysql
 from pandas import to_datetime 
 
 import logging
@@ -26,6 +26,11 @@ db_user = os.getenv('DB_USER')
 db_database = os.getenv('DB_DATABASE')
 db_password = os.getenv('DB_PASSWORD')
 
+file_table_map = {'analytics_data_exit_pages':['ga_analytics_exit_pages', 'ga_analytics_exit_pages_views'],
+             'analytics_data_pages':['ga_analytics_pages','ga_analytics_pages_views'],
+             'analytics_data_content':['ga_analytics_data_content','ga_analytics_data_content_views'],
+             'analytics_data_landing_pages':['ga_analytics_landing_pages','ga_analytics_landing_pages_views'],
+             'analytics_data_events':['ga_analytics_data_events','ga_analytics_data_events_views'] }
 ## Till Here
 
 '''
@@ -33,17 +38,9 @@ db_password = os.getenv('DB_PASSWORD')
 #Check if they exist in the database
 #If they dont exist in the database then process and move them to historical or year
 #Loop from July 1 2023 to today and process data
-
 '''
 
-def remov_spaces(str):
-	removal_list = [' ', '\t', '\n']
-	for s in removal_list:
-		str = str.replace(s, '')
-	return str
-
 def get_insert_str(str_val):
-	#return ', value: "' + str_val +'%'
 	return str_val +'%'
 
 def get_percentage_newsessions(sessions, new_users):
@@ -74,10 +71,10 @@ def ga4_response_to_df(response, data_name, header_rows, day_index):
 		row_data = {}
 		for i in range(0, dim_len):
 			row_data.update({headers[i]: row.dimension_values[i].value})
-			#row_data.update({response.dimension_headers[i].name: row.dimension_values[i].value})
 		for i in range(0, metric_len):
 			row_data.update({response.metric_headers[i].name: row.metric_values[i].value})
 		if data_name == "landing_page":
+			## the reason headers in GA4 file will not match with the UA headers is because the metrics we use will be considered as headers
 			percentage_newsessions = get_percentage_newsessions(row_data.get("sessions"), row_data.get("newUsers"))
 			row_data = insert_after(row_data, "sessions", "% New Sessions", percentage_newsessions)	
 			row_data = insert_after(row_data, "bounceRate", "Pages / Session", "0.00")	
@@ -85,14 +82,15 @@ def ga4_response_to_df(response, data_name, header_rows, day_index):
 			row_data = insert_after(row_data, "Goal Conversion Rate", "Goal Completions", "0")
 			row_data = insert_after(row_data, "Goal Completions", "Goal Value", "$0.00")	
 			if row_data["Landing Page"] != "/php/":
-				views += int(row_data.get("engagedSessions"))
+				views += int(row_data.get("sessions")) #Used to be engagedSessions
 			row_data = delete_key(row_data, "engagedSessions")
 		elif data_name == "pages":
-			#to convert 58927 => '16:22:07'
+			### header_rows='Page,Pageviews,Unique Pageviews, Avg. Time on Page, Entrances, Bounce Rate, % Exit, Page Value'
+			## the reason headers in GA4 file will not match with the UA headers is because the metrics we use will be considered as headers
+
 			time_data = int(row_data.get("userEngagementDuration"))
 			user_engagement = "{}".format(str(timedelta(seconds=time_data)))
 			row_data['userEngagementDuration'] = "{}".format(str(timedelta(seconds=time_data)))
-			#row_data = insert_after(row_data, "screenPageViewsPerUser", "Avg. Time on Page", user_engagement)	
 			row_data = insert_after(row_data, "bounceRate", "% Exit", "00.00%")	
 			row_data = insert_after(row_data, "% Exit", "Page Value", "$0.00")	
 			if row_data["Page"] != "/php/":
@@ -106,7 +104,6 @@ def ga4_response_to_df(response, data_name, header_rows, day_index):
 			row_data["Event name"] = ''.join(("/",row_data["Event name"]))
 
 		all_data.append(row_data)
-	#datetime.datetime.strptime("21/12/2008", "%d/%m/%Y").strftime("%Y-%m-%d")
 	day_index = datetime.strptime(day_index, "%Y-%m-%d").strftime("X%m/X%d/%y").replace('X0','X').replace('X','')
 
 	if data_name == "pages":
@@ -129,8 +126,13 @@ def get_ga4_report_df(property_id, dimensions_ga4, metrics_ga4, start_date, end_
 			metrics=metrics_ga4,
 			date_ranges=[DateRange(start_date=start_date,end_date=end_date)],
 		 	)
-	response = client.run_report(request)
-	return ga4_response_to_df(response, data_name, header_rows, start_date)
+	try:
+		response = client.run_report(request)
+		return ga4_response_to_df(response, data_name, header_rows, start_date)
+	except Exception as e:
+		# This block will catch any other exceptions that weren't caught by the previous except blocks
+		print(f"Caught an exception: {e}")
+		exit();
 
 def get_new_file_name(file_name, get_file_date=None):
 	str_beforecsv  = file_name.split(".")[0] #split and get the string before.csv
@@ -152,7 +154,7 @@ def write_csv(dir_name, file_name, header_row, df_list, date_input):
 		if file_exists(file):
 			print("IN IF FILE EXISTS")
 		else:
-			print("IN ELSE FILE WRITE")
+			#print("IN ELSE FILE WRITE")
 			f = open(file, 'a')
 			for df in df_list:
 				df.to_csv(f, index=False, header=True)
@@ -202,8 +204,8 @@ def process_csv_file(dir_name, csv_file):
 		if file_exists(os.path.join(new_path, csv_file)):
 			print("File "+csv_file+" exists in destination "+new_path+" and its processed")
 		else:
-			from load_csv_to_database import process_files
-			process_files([csv_file])
+			from load_csv_to_database import load_process_files
+			load_process_files([csv_file])
 		move_files(old_path, new_path, csv_file)
 
 def get_csv_files(dir_name, csv_files = None):
@@ -226,7 +228,7 @@ def file_exists(file_path):
 	return os.path.isfile(file_path)
 
 def get_cnx_cursor():                   
-        cnx = mysql.connector.connect(user=db_user, database=db_database, password=db_password)
+        cnx = pymysql.connect(user=db_user, database=db_database, password=db_password)
         cursor = cnx.cursor()   
         return cnx, cursor
 
@@ -258,6 +260,20 @@ def get_date_last_processed():
 	cnx.close()
 	return start_date
 
+
+def get_datatable_columns(datatable_columns):
+	cnx, cursor = get_cnx_cursor()
+	ignore_columns = ['id', 'created_at', 'updated_at']
+	table_names=['ga_analytics_pages','ga_analytics_pages_views','ga_analytics_landing_pages','ga_analytics_data_content','ga_analytics_landing_pages_views','ga_analytics_exit_pages','ga_analytics_exit_pages_views','ga_analytics_data_content_views','ga_analytics_data_events','ga_analytics_data_events_views'];
+	for table_name in table_names:
+		sql ="SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'hippocampome_v2' AND TABLE_NAME = '%s'" %table_name;
+		cursor.execute(sql)
+		column_names = [row[0] for row in cursor.fetchall() if row[0] not in ignore_columns]
+		datatable_columns[table_name] = column_names;
+	return datatable_columns
+	cursor.close()
+	cnx.close()
+
 ############ 
 #Program Starts From here 
 ############
@@ -265,17 +281,22 @@ def get_date_last_processed():
 def main():
 	try:
 		## if .csv file exists move to arvhice/historical/
-		get_csv_files(dir_name)	
+		get_csv_files(dir_name)
 
 		## if date file is there then see if the folder exists if not create it
 		### Got to database and get the last date in all tha tables --
 		start_date = get_date_last_processed()
+
 		## if date is none ie like in server no data is processed or less than July 1 2023 which will be June 30 2023 then take July 1 2023 
 		if(start_date is None or start_date == date(2023, 6, 30)):
 			start_date = date(2023, 7, 1) #start from that date
 		### Till Here
 		end_date = date.today() #'today' # 2023-07-02
-		start_date = start_date + timedelta(days=1)
+		if(start_date == date(2023, 7, 1)):
+			# Do something specific for June 30, 2023
+			pass  # Replace 'pass' with your actual code
+		else:
+			start_date = start_date + timedelta(days=1)
 		if(start_date >= end_date):
 			print(f"Start Date: {start_date} is greater than End Date: {end_date}. There is nothing to process")
 		else: 
@@ -302,7 +323,7 @@ def main():
 				##########For date pages Data
 				#Page,Pageviews,Unique Pageviews,Avg. Time on Page,Entrances,Bounce Rate,% Exit,Page Value
 				dimensions=[Dimension(name="landingPagePlusQueryString")]
-				metrics=[{"name":"screenPageViews"}, {"name":"screenPageViewsPerUser"}, {"name":"userEngagementDuration"}, {"name":"sessions"}, {"name":"bounceRate"}]
+				metrics=[{"name":"screenPageViews"}, {"name":"activeUsers"}, {"name":"userEngagementDuration"}, {"name":"sessions"}, {"name":"bounceRate"}]
 				header_rows='Page,Pageviews,Unique Pageviews, Avg. Time on Page, Entrances, Bounce Rate, % Exit, Page Value'
 				# To add date to filename
 				file_name = 'analytics_data_pages'+'-'+date_input+'.csv'
@@ -316,7 +337,6 @@ def main():
 				else:
 					print(os.path.join(new_file_path, file_name))
 					print(" exists and processed to database")
-
 				##########For date Events Data
 				#Event name,Event count,Total users,Event count per user,Total revenue
 				dimensions=[Dimension(name="eventName")]
