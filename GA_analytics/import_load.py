@@ -25,6 +25,7 @@ property = os.getenv('PROPERTY')
 db_user = os.getenv('DB_USER')
 db_database = os.getenv('DB_DATABASE')
 db_password = os.getenv('DB_PASSWORD')
+GOOGLE_APPLICATION_CREDENTIALS = os.getenv('GOOGLE_APPLICATION_CREDENTIALS')
 
 file_table_map = {'analytics_data_exit_pages':['ga_analytics_exit_pages', 'ga_analytics_exit_pages_views'],
              'analytics_data_pages':['ga_analytics_pages','ga_analytics_pages_views'],
@@ -118,7 +119,7 @@ def ga4_response_to_df(response, data_name, header_rows, day_index):
 	return lst_dfs
 
 def get_ga4_report_df(property_id, dimensions_ga4, metrics_ga4, start_date, end_date, data_name, header_rows):
-	os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = '/Applications/XAMPP/hippocampome-1687549016291-058d852a885b-trackinggmail.json'
+	os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = GOOGLE_APPLICATION_CREDENTIALS
 	client = BetaAnalyticsDataClient()
 	request = RunReportRequest(
 			property=property_id, 
