@@ -37,8 +37,9 @@ dir_path = os.path.dirname(os.path.realpath(__file__));
 
 
 datatable_columns = {}
+inttype_db_columns = {}
 from import_load import get_datatable_columns, get_cnx_cursor
-datatable_columns = get_datatable_columns(datatable_columns)
+datatable_columns, inttype_db_columns = get_datatable_columns(datatable_columns, inttype_db_columns)
 
 csv_data = { 'analytics_data_exit_pages':'Page',
              'analytics_data_pages':'Page',
@@ -58,9 +59,9 @@ csv_dates_data = { 'analytics_data_exit_pages':'Day Index',
 
 def dynamic_select_stmt(table_name, datatable_columns, file_date=None):
 	# Construct the INSERT INTO statement
-	sql = f"SELECT * FROM {table_name} ORDER BY day_index DESC limit 1"
+	sql = f"SELECT day_index FROM {table_name} ORDER BY day_index DESC limit 1"
 	if file_date is not None:
-		sql = f"SELECT * FROM {table_name} WHERE day_index = '{file_date}'"
+		sql = f"SELECT day_index FROM {table_name} WHERE day_index = '{file_date}'"
 	return sql
 
 
@@ -89,16 +90,16 @@ def if_file_is_loaded_into_db(file_path, file_name):
 	results = cursor.fetchall()
 	inserted_date = None
 	for x in results:
-		inserted_date = x[1]
+		print(x)
+		inserted_date = x[0] #x[1]
 	
 	cursor.close()
 	cnx.close()
-
-	if(inserted_date):
+	if inserted_date is not None:
 		date_str = last_line_date.split(',')[0]
 		datetime_object = datetime.strptime(date_str, '%m/%d/%y').date()
-
 		return(inserted_date >= datetime_object)
+	return inserted_date
 
 def is_date_matching(date_str):
     try:
@@ -106,8 +107,9 @@ def is_date_matching(date_str):
     except ValueError:
         return False
 
-def dynamic_insert(table_name, datatable_columns, row_data, file_date):
+def dynamic_insert(table_name, datatable_columns, inttype_db_columns, row_data, file_date):
 	int_columns = ['page_views', 'unique_page_views', 'entrances', 'views', 'sessions', 'new_users', 'goal_completion', 'exits', 'event_count', 'total_users']
+	int_columns = inttype_db_columns[table_name]
 
 	# Construct column names and placeholders strings
 	row_columns = datatable_columns[table_name]
@@ -164,7 +166,24 @@ def parse_data_insert(inRecordingMode, csvreader, file_name, starts_with, ends_w
 					continue
 				elif len(line[0]) <= 1:
 					#inRecordingMode = False
-					continue
+					if(line[0] == '/'):
+						from import_load import file_table_map
+						sql, val = dynamic_insert(file_table_map[file_name][0], datatable_columns, inttype_db_columns, line, file_date)
+						try:
+							print(sql)
+							print(val)
+							cursor.execute(sql, val)
+							time.sleep(0.025)
+							cnx.commit()
+							cursor.close()
+							cnx.close()
+						except Exception as e:
+							logging.debug("Error happened")
+							logging.debug(e)
+							print(e)
+							exit()
+					else:
+						continue
 				elif len(ends_with) > 1 and (line[0].startswith(("/")) or line[0].startswith(("(not set)"))):
 					if(ends_with=='EVENTS'):
 						line[0] = line[0][1:]
@@ -175,10 +194,10 @@ def parse_data_insert(inRecordingMode, csvreader, file_name, starts_with, ends_w
 						file_date = d.strftime("%m/%d/%y")
 
 					from import_load import file_table_map 
-					sql, val = dynamic_insert(file_table_map[file_name][0], datatable_columns, line, file_date)
-					##print(sql)
-					##print(val)
+					sql, val = dynamic_insert(file_table_map[file_name][0], datatable_columns, inttype_db_columns, line, file_date)
 					try:
+						##print(sql)
+						##print(val)
 						cursor.execute(sql, val)
 						time.sleep(0.025)
 						cnx.commit()
@@ -197,7 +216,7 @@ def parse_data_insert(inRecordingMode, csvreader, file_name, starts_with, ends_w
 						continue
 					line[0] = datetime.strptime(line[0], "%m/%d/%y")
 					from import_load import file_table_map
-					sql, val = dynamic_insert(file_table_map[file_name][1], datatable_columns, line, file_date)
+					sql, val = dynamic_insert(file_table_map[file_name][1], datatable_columns, inttype_db_columns, line, file_date)
 
 					##print(sql)
 					##print(val)

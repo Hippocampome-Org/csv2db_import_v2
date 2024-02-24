@@ -9,7 +9,9 @@ import shutil
 import logging
 
 import glob                             
-import pymysql
+import mysql.connector
+from mysql.connector import FieldType
+
 from pandas import to_datetime 
 
 import logging
@@ -196,7 +198,6 @@ def process_csv_file(dir_name, csv_file):
 	else:
 		##Move to GA_data/archive_new/year/month	
 		new_path = get_new_path(file_date)
-		
 	##Check last line of file and get the date and test if it exists using load_csv_to_database function
 	from load_csv_to_database import if_file_is_loaded_into_db
 	if(if_file_is_loaded_into_db(old_path, csv_file)):
@@ -229,7 +230,7 @@ def file_exists(file_path):
 	return os.path.isfile(file_path)
 
 def get_cnx_cursor():                   
-        cnx = pymysql.connect(user=db_user, database=db_database, password=db_password)
+        cnx = mysql.connector.connect(user=db_user, database=db_database, password=db_password)
         cursor = cnx.cursor()   
         return cnx, cursor
 
@@ -262,18 +263,25 @@ def get_date_last_processed():
 	return start_date
 
 
-def get_datatable_columns(datatable_columns):
+def get_datatable_columns(datatable_columns, inttype_db_columns):
 	cnx, cursor = get_cnx_cursor()
 	ignore_columns = ['id', 'created_at', 'updated_at']
 	table_names=['ga_analytics_pages','ga_analytics_pages_views','ga_analytics_landing_pages','ga_analytics_data_content','ga_analytics_landing_pages_views','ga_analytics_exit_pages','ga_analytics_exit_pages_views','ga_analytics_data_content_views','ga_analytics_data_events','ga_analytics_data_events_views'];
 	for table_name in table_names:
-		sql ="SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'hippocampome_v2' AND TABLE_NAME = '%s'" %table_name;
+		sql ="SELECT COLUMN_NAME, DATA_TYPE FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'hippocampome_v2' AND TABLE_NAME = '%s'" %table_name;
 		cursor.execute(sql)
-		column_names = [row[0] for row in cursor.fetchall() if row[0] not in ignore_columns]
-		datatable_columns[table_name] = column_names;
-	return datatable_columns
+		rows = cursor.fetchall()
+
+		# Filter and categorize column names based on type and ignore list
+		column_names = [row[0] for row in rows if row[0] not in ignore_columns]
+		int_column_names = [row[0] for row in rows if row[1] == 'bigint']
+
+		# Assign the filtered column names to their respective tables
+		datatable_columns[table_name] = column_names
+		inttype_db_columns[table_name] = int_column_names
 	cursor.close()
 	cnx.close()
+	return datatable_columns, inttype_db_columns
 
 ############ 
 #Program Starts From here 
