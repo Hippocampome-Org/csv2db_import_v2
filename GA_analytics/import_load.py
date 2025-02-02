@@ -466,6 +466,79 @@ def get_datatable_columns(datatable_columns, inttype_db_columns):
     cnx.close()
     return datatable_columns, inttype_db_columns
 
+def drop_or_create_aggregate_table():
+    """
+    Drops the 'GA_combined_analytics' table if it exists, and then creates it with the specified structure.
+    """
+    drop_query = "DROP TABLE IF EXISTS GA_combined_analytics;"
+    create_query = """
+        CREATE TABLE GA_combined_analytics AS 
+        SELECT
+            CASE
+                WHEN gap.page IS NOT NULL AND gap.page NOT LIKE '%not set%' THEN gap.page
+                WHEN galp.landing_page IS NOT NULL AND galp.landing_page NOT LIKE '%not set%' THEN galp.landing_page
+                ELSE NULL
+            END AS page,
+            COALESCE(gap.day_index, galp.day_index) AS day_index,
+            COALESCE(gap.page_views, 0) AS page_views,
+            COALESCE(galp.sessions, 0) AS sessions,
+            COALESCE(gap.page_views, 0) + COALESCE(galp.sessions, 0) AS combined_views,
+            COALESCE(gap.bounce_rate_percentage, NULL) AS page_bounce_rate,
+            COALESCE(galp.bounce_rate_percentage, NULL) AS landing_bounce_rate,
+            gap.page AS source_page,
+            galp.landing_page AS source_landing_page
+        FROM
+            (SELECT page, page_views, day_index, bounce_rate_percentage FROM ga_analytics_pages) AS gap
+        LEFT JOIN
+            (SELECT landing_page, sessions, day_index, bounce_rate_percentage FROM ga_analytics_landing_pages) AS galp
+        ON
+            gap.page = galp.landing_page AND gap.day_index = galp.day_index
+
+        UNION ALL
+
+        SELECT
+            CASE
+                WHEN gap.page IS NOT NULL AND gap.page NOT LIKE '%not set%' THEN gap.page
+                WHEN galp.landing_page IS NOT NULL AND galp.landing_page NOT LIKE '%not set%' THEN galp.landing_page
+                ELSE NULL
+            END AS page,
+            COALESCE(gap.day_index, galp.day_index) AS day_index,
+            COALESCE(gap.page_views, 0) AS page_views,
+            COALESCE(galp.sessions, 0) AS sessions,
+            COALESCE(gap.page_views, 0) + COALESCE(galp.sessions, 0) AS combined_views,
+            COALESCE(gap.bounce_rate_percentage, NULL) AS page_bounce_rate,
+            COALESCE(galp.bounce_rate_percentage, NULL) AS landing_bounce_rate,
+            gap.page AS source_page,
+            galp.landing_page AS source_landing_page
+        FROM
+            (SELECT page, page_views, day_index, bounce_rate_percentage FROM ga_analytics_pages) AS gap
+        RIGHT JOIN
+            (SELECT landing_page, sessions, day_index, bounce_rate_percentage FROM ga_analytics_landing_pages) AS galp
+        ON
+            gap.page = galp.landing_page AND gap.day_index = galp.day_index
+        WHERE
+            (gap.page IS NOT NULL AND gap.page NOT LIKE '%not set%')
+            OR (galp.landing_page IS NOT NULL AND galp.landing_page NOT LIKE '%not set%');
+    """
+    try:
+        cnx, cursor = get_cnx_cursor()
+
+        # Step 1: Drop the table if it exists
+        cursor.execute(drop_query)
+        print("Dropped table 'GA_combined_analytics' if it existed.")
+
+        # Step 2: Create the table
+        cursor.execute(create_query)
+        print("Created table 'GA_combined_analytics' successfully.")
+
+        cnx.commit()  # Commit changes
+    except Exception as e:
+        print(f"Error: {e}")
+    finally:
+        cursor.close()
+        cnx.close()
+
+
 ############ 
 #Program Starts From here 
 ############
@@ -492,6 +565,7 @@ def main():
 
         if(start_date >= end_date):
             print(f"Start Date: {start_date} is greater than End Date: {end_date}. There is nothing to process")
+            drop_or_create_aggregate_table()
         else: 
             for single_date in daterange(start_date, end_date):
                 print(f"StartDate : {start_date} and End Date: {end_date}")
@@ -550,6 +624,7 @@ def main():
                 else:
                     print(os.path.join(new_file_path, file_name))
                     print(" exists and processed to database")
+                drop_or_create_aggregate_table()
                 exit
     except Exception as e:
         logging.debug("Error happened")
