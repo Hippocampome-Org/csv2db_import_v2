@@ -1,6 +1,8 @@
 import re
 import errno
 import subprocess
+import sys
+
 try:
     from google.analytics.data_v1beta import BetaAnalyticsDataClient
 except ImportError:
@@ -11,6 +13,24 @@ except ImportError:
 
 from google.analytics.data_v1beta import BetaAnalyticsDataClient
 from google.analytics.data_v1beta.types import Dimension, Metric, DateRange, RunReportRequest, OrderBy
+
+def install_package(package):
+    try:
+        subprocess.check_call(['/usr/bin/python3.7', '-m', 'pip', 'install', '--upgrade', '--force-reinstall', package])
+        print(f"Successfully installed {package}")
+    except subprocess.CalledProcessError as e:
+        print(f"Error installing {package}: {e}")
+
+# Step 1: Ensure system dependencies (tzdata) are installed
+try:
+    subprocess.check_call(["sudo", "apt", "update"])
+    subprocess.check_call(["sudo", "apt", "install", "-y", "tzdata"])
+except subprocess.CalledProcessError as e:
+    print(f"Error installing system dependencies: {e}")
+
+# Step 2: Reinstall pandas and dependencies
+for package in ["pandas", "pytz", "tzdata"]:
+    install_package(package)
 
 try:
     import pandas as pd
@@ -27,21 +47,21 @@ from datetime import datetime
 import shutil
 import logging
 
-import glob                             
+import glob
 
 # Check if the 'mysql.connector' module is available
 try:
     import mysql.connector
 except ImportError:
     # If the module is not available, install it using pip
-    print("Installing 'mysql-connector-python' package...")
+print("Installing 'mysql-connector-python' package...")
     subprocess.check_call(['/usr/bin/python3.7', '-m', 'pip', 'install', 'mysql-connector-python'])
     print("Package 'mysql-connector-python' installed successfully.")
 
 # Now import the module
 import mysql.connector
 
-from pandas import to_datetime 
+from pandas import to_datetime
 
 import logging
 
@@ -69,10 +89,10 @@ db_password = os.getenv('DB_PASSWORD')
 GOOGLE_APPLICATION_CREDENTIALS = os.getenv('GOOGLE_APPLICATION_CREDENTIALS')
 
 file_table_map = {'analytics_data_exit_pages':['ga_analytics_exit_pages', 'ga_analytics_exit_pages_views'],
-             'analytics_data_pages':['ga_analytics_pages','ga_analytics_pages_views'],
-             'analytics_data_content':['ga_analytics_data_content','ga_analytics_data_content_views'],
-             'analytics_data_landing_pages':['ga_analytics_landing_pages','ga_analytics_landing_pages_views'],
-             'analytics_data_events':['ga_analytics_data_events','ga_analytics_data_events_views'] }
+        'analytics_data_pages':['ga_analytics_pages','ga_analytics_pages_views'],
+        'analytics_data_content':['ga_analytics_data_content','ga_analytics_data_content_views'],
+        'analytics_data_landing_pages':['ga_analytics_landing_pages','ga_analytics_landing_pages_views'],
+        'analytics_data_events':['ga_analytics_data_events','ga_analytics_data_events_views'] }
 ## Till Here
 
 '''
@@ -91,7 +111,7 @@ def get_percentage_newsessions(sessions, new_users):
     return percentage_new_sessions
 
 def insert_after(mydict, search_value, key, value):
-    pos = list(mydict.keys()).index(search_value)+1
+ pos = list(mydict.keys()).index(search_value)+1
     items = list(mydict.items())
     items.insert(pos, (key,value))
     mydict = dict(items)
@@ -101,6 +121,116 @@ def delete_key(mydict, col_key):
     r = dict(mydict)
     del r[col_key]
     return r
+
+'''
+def ga4_response_to_df(response, data_name, header_rows, day_index):
+    dim_len = len(response.dimension_headers)
+    headers = header_rows.split(',')
+    metric_len = len(response.metric_headers)
+    all_data = []
+    views_data = []
+    views = 0
+
+    # Check if response has rows
+    if not response.rows:
+        return [], []  # Return empty lists if no rows
+
+    for row in response.rows:
+        row_data = {}
+        # Populate dimension values
+        for i in range(dim_len):
+            row_data[headers[i]] = row.dimension_values[i].value
+        # Populate metric values
+        for i in range(metric_len):
+            row_data[response.metric_headers[i].name] = row.metric_values[i].value
+        # Data processing based on data_name
+        if data_name == "landing_page":
+            percentage_newsessions = get_percentage_newsessions(row_data.get("sessions"), row_data.get("newUsers"))
+            row_data = insert_after(row_data, "sessions", "% New Sessions", percentage_newsessions)
+            row_data = insert_after(row_data, "bounceRate", "Pages / Session", "0.00")
+            row_data = insert_after(row_data, "averageSessionDuration", "Goal Conversion Rate", "0.00%")
+            row_data = insert_after(row_data, "Goal Conversion Rate", "Goal Completions", "0")
+            row_data = insert_after(row_data, "Goal Completions", "Goal Value", "$0.00")
+            if row_data["Landing Page"] != "/php/":
+                views += int(row_data.get("sessions", 0))
+            row_data = delete_key(row_data, "engagedSessions")
+        elif data_name == "pages":
+            time_data = int(row_data.get("userEngagementDuration", 0))
+            user_engagement = "{}".format(str(timedelta(seconds=time_data)))
+            row_data['userEngagementDuration'] = user_engagement
+            row_data = insert_after(row_data, "bounceRate", "% Exit", "00.00%")
+            row_data = insert_after(row_data, "% Exit", "Page Value", "$0.00")
+            if row_data["Page"] != "/php/":
+                views += int(row_data.get("screenPageViews", 0))
+        elif data_name == "events":
+            row_data = insert_after(row_data, "eventCountPerUser", "Total revenue", "$0.00")
+            if row_data["Event name"] == "page_view":
+                views = int(row_data.get("sessions", 0))
+            row_data["Event name"] = ''.join(("/", row_data["Event name"]))
+
+        all_data.append(row_data)
+    # Format day_index
+    day_index = datetime.strptime(day_index, "%Y-%m-%d").strftime("X%m/X%d/%y").replace('X0', 'X').replace('X', '')
+    # Append views data
+    if data_name == "pages":
+        views_data.append({"Day Index": day_index, "Pageviews": views})
+    else:
+        views_data.append({"Day Index": day_index, "Sessions": views})
+
+    # Create DataFrames
+    df_1 = pd.DataFrame(all_data)
+    df_2 = pd.DataFrame(views_data)
+    return df_1, df_2  # Return dataframes separately
+'''
+
+def get_ga4_report_df(property_id, dimensions_ga4, metrics_ga4, start_date, end_date, data_name, header_rows):
+    os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = GOOGLE_APPLICATION_CREDENTIALS
+    client = BetaAnalyticsDataClient()
+    all_rows = []
+    page_size = 100000  # Set the page size
+    offset = 0
+
+    while True:
+        try:
+            start_date_obj = datetime.strptime(start_date, "%Y-%m-%d")
+            end_date_obj = datetime.strptime(end_date, "%Y-%m-%d")
+
+            # If start_date and end_date are the same, set end_date to the next day
+            end_date_obj = start_date_obj.replace(hour=23, minute=59, second=59)  # Last second of the day
+            end_date = (end_date_obj + timedelta(days=1)).strftime("%Y-%m-%d")  # Next day as end_date
+
+            request = RunReportRequest(
+                    property=property_id,
+                    dimensions=dimensions_ga4,
+                    metrics=metrics_ga4,
+                    date_ranges=[DateRange(start_date=start_date, end_date=end_date)],
+                    order_bys=[OrderBy(metric=OrderBy.MetricOrderBy(metric_name="sessions"))],
+                    limit=page_size,
+                    offset=offset
+                    )
+        except Exception as e:
+            print(f"Caught an exception while creating request: {e}")
+            exit()
+
+        try:
+            response = client.run_report(request)
+            rows = ga4_response_to_df(response, data_name, header_rows, start_date)
+            all_rows.extend(rows)
+
+            # Break if no more rows are returned
+            if len(response.rows) < page_size:
+                break
+
+            offset += page_size  # Increment the offset for the next request
+
+ except Exception as e:
+            print(f"Caught an exception while running report: {e}")
+            exit()
+    try:
+        return all_rows
+    except Exception as e:
+        print(f"Caught an exception while running report: {e}")
+        exit()
 
 def ga4_response_to_df(response, data_name, header_rows, day_index):
     dim_len = len(response.dimension_headers)
@@ -118,11 +248,11 @@ def ga4_response_to_df(response, data_name, header_rows, day_index):
         if data_name == "landing_page":
             ## the reason headers in GA4 file will not match with the UA headers is because the metrics we use will be considered as headers
             percentage_newsessions = get_percentage_newsessions(row_data.get("sessions"), row_data.get("newUsers"))
-            row_data = insert_after(row_data, "sessions", "% New Sessions", percentage_newsessions)    
-            row_data = insert_after(row_data, "bounceRate", "Pages / Session", "0.00")    
+            row_data = insert_after(row_data, "sessions", "% New Sessions", percentage_newsessions)
+            row_data = insert_after(row_data, "bounceRate", "Pages / Session", "0.00")
             row_data = insert_after(row_data, "averageSessionDuration", "Goal Conversion Rate", "0.00%")
             row_data = insert_after(row_data, "Goal Conversion Rate", "Goal Completions", "0")
-            row_data = insert_after(row_data, "Goal Completions", "Goal Value", "$0.00")    
+            row_data = insert_after(row_data, "Goal Completions", "Goal Value", "$0.00")
             if row_data["Landing Page"] != "/php/":
                 views += int(row_data.get("sessions")) #Used to be engagedSessions
             row_data = delete_key(row_data, "engagedSessions")
@@ -133,14 +263,14 @@ def ga4_response_to_df(response, data_name, header_rows, day_index):
             time_data = int(row_data.get("userEngagementDuration"))
             user_engagement = "{}".format(str(timedelta(seconds=time_data)))
             row_data['userEngagementDuration'] = "{}".format(str(timedelta(seconds=time_data)))
-            row_data = insert_after(row_data, "bounceRate", "% Exit", "00.00%")    
-            row_data = insert_after(row_data, "% Exit", "Page Value", "$0.00")    
+            row_data = insert_after(row_data, "bounceRate", "% Exit", "00.00%")
+            row_data = insert_after(row_data, "% Exit", "Page Value", "$0.00")
             if row_data["Page"] != "/php/":
                 views += int(row_data.get("screenPageViews"))
         elif data_name == "events":
             row_data = insert_after(row_data, "eventCountPerUser", "Total revenue", "$0.00")
             ###TO have count of page view only as we dont need session_start count or first_visit count or user count
-            if row_data["Event name"] == "page_view":
+if row_data["Event name"] == "page_view":
                 views = int(row_data.get("sessions"))
             ## To add / so that load to database wil handle it
             row_data["Event name"] = ''.join(("/",row_data["Event name"]))
@@ -158,22 +288,17 @@ def ga4_response_to_df(response, data_name, header_rows, day_index):
 
     lst_dfs = [df_1, df_2]
     return lst_dfs
-
+'''
 def get_ga4_report_df(property_id, dimensions_ga4, metrics_ga4, start_date, end_date, data_name, header_rows):
-
-    ##os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = '/Applications/XAMPP/hippocampome-1687549016291-058d852a885b-trackinggmail.json'
     os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = GOOGLE_APPLICATION_CREDENTIALS
-    try:
-        client = BetaAnalyticsDataClient()
-    except Exception as e:
-        # This block will catch any other exceptions that weren't caught by the previous except blocks
-        print(f"Caught an exception: {e}")
+    client = BetaAnalyticsDataClient()
     request = RunReportRequest(
             property=property_id, 
             dimensions=dimensions_ga4,
             metrics=metrics_ga4,
             date_ranges=[DateRange(start_date=start_date,end_date=end_date)],
-             )
+            order_bys=[OrderBy(metric=OrderBy.MetricOrderBy(metric_name="sessions"))]
+            )
     try:
         response = client.run_report(request)
         return ga4_response_to_df(response, data_name, header_rows, start_date)
@@ -181,6 +306,7 @@ def get_ga4_report_df(property_id, dimensions_ga4, metrics_ga4, start_date, end_
         # This block will catch any other exceptions that weren't caught by the previous except blocks
         print(f"Caught an exception: {e}")
         exit();
+'''
 
 def get_new_file_name(file_name, get_file_date=None):
     str_beforecsv  = file_name.split(".")[0] #split and get the string before.csv
@@ -194,11 +320,11 @@ def get_new_file_name(file_name, get_file_date=None):
     if get_file_date is None:
         return file_name
     else:
-        return file_date    
+        return file_date
 
 def write_csv(dir_name, file_name, header_row, df_list, date_input):
     try:
-        file = os.path.join(dir_path, dir_name, file_name)
+file = os.path.join(dir_path, dir_name, file_name)
         if file_exists(file):
             print("IN IF FILE EXISTS")
         else:
@@ -231,8 +357,8 @@ def get_new_path(date_val):
         month_val = date_object.month
         new_dir_name = dir_name+'/archive_new/'+str(year_val)+'/'+str(month_val)
         new_path = os.path.join(dir_path, new_dir_name)#, '/archive_new/{year_val}/{month_val}')
-    return new_path        
-    
+    return new_path
+
 def process_csv_file(dir_name, csv_file):
     old_path = os.path.join(dir_path, dir_name)
     file_date = None
@@ -243,7 +369,6 @@ def process_csv_file(dir_name, csv_file):
     else:
         ##Move to GA_data/archive_new/year/month    
         new_path = get_new_path(file_date)
-        
     ##Check last line of file and get the date and test if it exists using load_csv_to_database function
     from load_csv_to_database import if_file_is_loaded_into_db
     if(if_file_is_loaded_into_db(old_path, csv_file)):
@@ -275,9 +400,9 @@ def move_files(source, destination, csv_file):
 def file_exists(file_path):
     return os.path.isfile(file_path)
 
-def get_cnx_cursor():                   
+def get_cnx_cursor():
         cnx = mysql.connector.connect(user=db_user, database=db_database, password=db_password)
-        cursor = cnx.cursor()   
+        cursor = cnx.cursor()
         return cnx, cursor
 
 def get_views_day_count(sql):
@@ -299,9 +424,9 @@ def get_date_last_processed():
         cursor.execute(sql)
         results = cursor.fetchall()
         if len(results) > 0:
-            dates.append(results[0][0]) 
+            dates.append(results[0][0])
         else:
-            dates.append(None) 
+            dates.append(None)
     res = list(filter(lambda item: item is not None, dates))
     start_date = min(res)
     cursor.close()
@@ -316,15 +441,90 @@ def get_datatable_columns(datatable_columns, inttype_db_columns):
         sql ="SELECT COLUMN_NAME, DATA_TYPE FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'hippocampome_v2' AND TABLE_NAME = '%s'" %table_name;
         cursor.execute(sql)
         rows = cursor.fetchall()
+
         # Filter and categorize column names based on type and ignore list
         column_names = [row[0] for row in rows if row[0] not in ignore_columns]
         int_column_names = [row[0] for row in rows if row[1] == 'bigint']
+
         # Assign the filtered column names to their respective tables
         datatable_columns[table_name] = column_names
         inttype_db_columns[table_name] = int_column_names
     cursor.close()
     cnx.close()
     return datatable_columns, inttype_db_columns
+
+def drop_or_create_aggregate_table():
+    """
+    Drops the 'GA_combined_analytics' table if it exists, and then creates it with the specified structure.
+    """
+    drop_query = "DROP TABLE IF EXISTS GA_combined_analytics;"
+    create_query = """
+        CREATE TABLE GA_combined_analytics AS 
+        SELECT
+            CASE
+                WHEN gap.page IS NOT NULL AND gap.page NOT LIKE '%not set%' THEN gap.page
+                WHEN galp.landing_page IS NOT NULL AND galp.landing_page NOT LIKE '%not set%' THEN galp.landing_page
+                ELSE NULL
+            END AS page,
+            COALESCE(gap.day_index, galp.day_index) AS day_index,
+            COALESCE(gap.page_views, 0) AS page_views,
+            COALESCE(galp.sessions, 0) AS sessions,
+            COALESCE(gap.page_views, 0) + COALESCE(galp.sessions, 0) AS combined_views,
+            COALESCE(gap.bounce_rate, NULL) AS page_bounce_rate,
+            COALESCE(galp.bounce_rate, NULL) AS landing_bounce_rate,
+            gap.page AS source_page,
+            galp.landing_page AS source_landing_page
+        FROM
+            (SELECT page, page_views, day_index, bounce_rate FROM ga_analytics_pages) AS gap
+        LEFT JOIN
+            (SELECT landing_page, sessions, day_index, bounce_rate FROM ga_analytics_landing_pages) AS galp
+        ON
+            gap.page = galp.landing_page AND gap.day_index = galp.day_index
+
+        UNION ALL
+
+SELECT
+            CASE
+                WHEN gap.page IS NOT NULL AND gap.page NOT LIKE '%not set%' THEN gap.page
+                WHEN galp.landing_page IS NOT NULL AND galp.landing_page NOT LIKE '%not set%' THEN galp.landing_page
+                ELSE NULL
+            END AS page,
+            COALESCE(gap.day_index, galp.day_index) AS day_index,
+            COALESCE(gap.page_views, 0) AS page_views,
+            COALESCE(galp.sessions, 0) AS sessions,
+            COALESCE(gap.page_views, 0) + COALESCE(galp.sessions, 0) AS combined_views,
+            COALESCE(gap.bounce_rate, NULL) AS page_bounce_rate,
+            COALESCE(galp.bounce_rate, NULL) AS landing_bounce_rate,
+            gap.page AS source_page,
+            galp.landing_page AS source_landing_page
+        FROM
+            (SELECT page, page_views, day_index, bounce_rate FROM ga_analytics_pages) AS gap
+        RIGHT JOIN
+            (SELECT landing_page, sessions, day_index, bounce_rate FROM ga_analytics_landing_pages) AS galp
+        ON
+            gap.page = galp.landing_page AND gap.day_index = galp.day_index
+        WHERE
+            (gap.page IS NOT NULL AND gap.page NOT LIKE '%not set%')
+            OR (galp.landing_page IS NOT NULL AND galp.landing_page NOT LIKE '%not set%');
+    """
+    try:
+        cnx, cursor = get_cnx_cursor()
+
+        # Step 1: Drop the table if it exists
+        cursor.execute(drop_query)
+        print("Dropped table 'GA_combined_analytics' if it existed.")
+
+        # Step 2: Create the table
+        cursor.execute(create_query)
+        print("Created table 'GA_combined_analytics' successfully.")
+
+        cnx.commit()  # Commit changes
+    except Exception as e:
+        print(f"Error: {e}")
+    finally:
+        cursor.close()
+        cnx.close()
+
 
 ############ 
 #Program Starts From here 
@@ -349,10 +549,13 @@ def main():
             pass  # Replace 'pass' with your actual code
         else:
             start_date = start_date + timedelta(days=1)
+
         if(start_date >= end_date):
             print(f"Start Date: {start_date} is greater than End Date: {end_date}. There is nothing to process")
-        else: 
+            drop_or_create_aggregate_table()
+        else:
             for single_date in daterange(start_date, end_date):
+                print(f"StartDate : {start_date} and End Date: {end_date}")
                 date_input = single_date.strftime("%Y-%m-%d")
                 new_file_path = get_new_path(date_input)
 
@@ -372,9 +575,11 @@ def main():
                 else:
                     print(os.path.join(new_file_path, file_name))
                     print(" exists and processed to database")
-                ##########For date pages Data
+  ##########For date pages Data
                 #Page,Pageviews,Unique Pageviews,Avg. Time on Page,Entrances,Bounce Rate,% Exit,Page Value
-                dimensions=[Dimension(name="landingPagePlusQueryString")]
+                #dimensions=[Dimension(name="landingPagePlusQueryString")]
+                #commented above line and truing to get pagePath as we are missing some data modified on OCt 16 2024
+                dimensions=[Dimension(name="pagePath")]
                 metrics=[{"name":"screenPageViews"}, {"name":"activeUsers"}, {"name":"userEngagementDuration"}, {"name":"sessions"}, {"name":"bounceRate"}]
                 header_rows='Page,Pageviews,Unique Pageviews, Avg. Time on Page, Entrances, Bounce Rate, % Exit, Page Value'
                 # To add date to filename
@@ -406,9 +611,11 @@ def main():
                 else:
                     print(os.path.join(new_file_path, file_name))
                     print(" exists and processed to database")
+                drop_or_create_aggregate_table()
+                exit
     except Exception as e:
-              logging.debug("Error happened")
-              logging.debug(e)
+        logging.debug("Error happened")
+        logging.debug(e)
 
 if __name__ == '__main__':
     main()
