@@ -3,3 +3,16 @@ mysqldump/
 settings.py
 krasnow/settings.py
 database_save.sh
+
+# Server configuration, backups and generated state
+__pycache__/
+*.pyc
+.env
+.env.*
+settings_staging.py
+*.cnf
+*.tar.gz
+*.tgz
+*.sql
+*.sql.gz
+/reports/
