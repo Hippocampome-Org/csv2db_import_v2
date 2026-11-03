@@ -12,7 +12,7 @@ fi
 mode=$(stat -c '%a' "$HC_MYSQL_DEFAULTS_FILE")
 [[ "$mode" == 600 || "$mode" == 400 ]] || { printf '%s\n' 'Client configuration must have mode 600 or 400.' >&2; exit 1; }
 backup=$(realpath -m "$HC_BACKUP_DIR")
-case "$backup" in /var/www/*|/data/hippocampome-staging/production-layout/*|/data/hippocampome-staging/php83-dev/*) printf '%s\n' 'Refusing a backup directory under a website source tree.' >&2; exit 1;; esac
+case "$backup" in /var/www/*|/data/hippocampome-staging/production-layout|/data/hippocampome-staging/production-layout/*|/data/hippocampome-staging/php83-dev|/data/hippocampome-staging/php83-dev/*|/data/hippocampome-staging/www|/data/hippocampome-staging/www/*) printf '%s\n' 'Refusing a backup directory under a website source tree.' >&2; exit 1;; esac
 umask 077
 mkdir -p "$backup"
 out="$backup/HC-$(date -u +%Y%m%dT%H%M%SZ).sql"
