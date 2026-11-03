@@ -1,4 +1,32 @@
-#!/bin/sh
+#!/usr/bin/env bash
+# Source review only: never import until a clean disposable HC database is ready.
+set -euo pipefail
+if [[ "${1:---plan}" != "--execute-disposable" ]]; then
+  printf '%s\n' 'PLAN ONLY: CSV conversion, Django migrations, flush and load would modify disposable HC.'
+  printf '%s\n' 'No conversion, migration, flush, import or database backup has been run.'
+  exit 0
+fi
+[[ "${HC_IMPORT_CONFIRMATION:-}" == "I_CONFIRM_CLEAN_DISPOSABLE_HC" ]] || { printf '%s\n' 'A clean disposable HC database and explicit confirmation are required.' >&2; exit 1; }
+script_dir=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd -P)
+case "$script_dir" in
+  /data/hippocampome-staging/php83-dev/csv2db_import_v2|/opt/hippocampome-staging/releases/csv2db_import_v2-*) ;;
+  *) printf '%s\n' 'Prepare an isolated staging release before executing this importer.' >&2; exit 1;;
+esac
+cd -- "$script_dir"
+: "${DJANGO_SETTINGS_MODULE:?Use the protected external staging settings}"
+HC_PYTHON="${HC_PYTHON:-python3.10}"
+"$HC_PYTHON" - <<'PYGUARD'
+from django.conf import settings
+cfg=settings.DATABASES['default']
+assert cfg.get('NAME')=='HC', 'Only disposable HC is allowed'
+assert cfg.get('HOST')=='hippocampome-mysql-staging', 'Only staging container hostname is allowed'
+assert cfg.get('USER')=='hc_import_staging', 'Only dedicated HC staging user is allowed'
+from django.db import connection
+with connection.cursor() as cursor:
+    cursor.execute('SELECT DATABASE(), CURRENT_USER()')
+    name, user=cursor.fetchone()
+    assert name=='HC' and user.split('@')[0]=='hc_import_staging', 'Actual connection is not the disposable HC account'
+PYGUARD
 
 #iconv -UTF-8tin1 UTF-88 file_as_latin1.csv > file_as_utf8.csv
 
@@ -71,12 +99,18 @@ iconv -f latin1 -t UTF-8 iconv/latin1/SynproPairsOrder.csv > iconv/utf8/SynproPa
 
 cp -vr iconv/utf8/* static/csv2db/dat/
 
+###Changed to 3.10 on Feb 11 2025 
 printf "\n"
-python3 manage.py makemigrations
-python3 manage.py migrate
-python3 manage.py flush
+"$HC_PYTHON" manage.py makemigrations
+"$HC_PYTHON" manage.py migrate
+"$HC_PYTHON" manage.py flush
+
+#python3 manage.py makemigrations
+#python3 manage.py migrate
+#python3 manage.py flush
 printf "\n\n"
-python3 manage.py load
+"$HC_PYTHON" manage.py load
+#python3 manage.py load
 printf "\n"
 
 ./database_save.sh
